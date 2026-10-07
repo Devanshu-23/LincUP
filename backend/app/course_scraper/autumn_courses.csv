@@ -1,0 +1,554 @@
+,crsecode,crsename,totcred,crsetype,lecture,tutorial,practical,selfstudy,crseduration,prereq,homepage,textref,description,springcourse,springinstructor,autumncourse,autumninstructor,slot,offered,date,year
+0,CS 101,Computer Programming and Utilization,6,Theory + Lab,2,0,2,0,Full Semester,N/A,http://www.cse.iitb.ac.in/~cs101,"<b>Textbook</b><br/>
+<ul>
+    <li>* C++ Program Design: An introduction to Programming and Object-Oriented Design, 3rd Edition, by Cohoon and Davidson, Tata McGraw Hill. 2003. </li>
+</ul>
+<b>Other references (Not required reading)</b>
+<ul>
+   <li> * Thinking in C++ 2nd Edition by Bruce Eckel(available online).</li>
+   <li>* G. Dromey, How to Solve It by Computer, Prentice-Hall, Inc., Upper Saddle River, NJ, 1982.</li>
+   <li> * Polya, G., How to Solve _It (2nd ed.), Doubleday and co. (1957).</li>
+   <li> * Let Us C. Yashwant Kanetkar. Allied Publishers, 1998.</li>
+   <li> * The Java Tutorial, Sun Microsystems. Addison-Wesley, 1999.</li>
+</ul>","This course provides an introduction to problem solving with computers using a modern language such as Java or C/C++. Topics covered will include :<br>
+<ul>
+    <li> * Utilization : Developer fundamentals such as editor, integrated programming environment, Unix shell, modules, libraries.</li>
+    <li> * Programming features : Machine representation, primitive types,arrays and records, objects, expressions, control statements, iteration,procedures, functions, and basic i/o.</li>
+    <li> * Applications : Sample problems in engineering, science, text processing, and numerical methods.</li>
+</ul>",True,Prof. Vinay J. Ribeiro,True,Prof. Abir De,-1,True,2026-06-22T13:41:53.498830+05:30,0
+1,CS 105,Discrete Structures,6,,0,0,0,0,,N/A,,"1. Kenneth Rosen, Discrete Mathematics and its applications, 5th edition, Tata-McGraw Hill, 2002.2. C.L. Liu, Elements of Discrete mathematics, McGraw-Hill, 1985.3. D. B. West, Introduction to Graph Theory, Prentice Hall of India, 1998.4. M. Artin, Algebra, Prentice-Hall India, 1991.","Propositions and predicates, proofs and proof techniques. Sets, relations and functions, cardinality, basic counting.
+Posets and lattices: Dilworth`s theorem, inversion and distributive lattices.
+Graph theory : paths, cycles, trees, connectivity.
+Group theory : Lagrange`s theorem, homomorphisms, applications.",False,Prof. Akshay S,True,Prof. Bharat Adsul,-1,True,2026-06-18T11:50:41.393755+05:30,0
+2,CS 213,Data Structures and Algorithms,6,Theory,0,0,0,0,Full Semester,N/A,https://www.cse.iitb.ac.in/~akg/courses/2025-ds/,"1. T. Cormen, C. Leiserson, R. Rivest, C. Stein, Introduction to Algorithms, 2nd edition, Prentice-Hall India, 2001.<br/>
+2. S. Sahni, Data Structures, Algorithms and Applications in C++,2nd edition, Universities Press,2005.","Introduction to data structures, abstract data types, analysis of algorithms. Creation and manipulation of data structures: arrays, lists, stacks, queues, trees, heaps, hash tables, balanced trees, tries, graphs. Algorithms for sorting and searching, order statistics, depth-first and breadth-first search, shortest paths and minimum spanning tree.",False,,True,Prof. Manoj Prabhakaran,-1,True,2026-06-18T11:52:05.109556+05:30,0
+3,CS 215,Data Analysis and Interpretation,6,,3,0,0,0,,N/A,https://www.cse.iitb.ac.in/~ajitvr/CS215_Fall2025/,Course textbook: Introduction to Probability and Statistics for Engineers and Scientists: Fourth Edition (many copies available in the library),See course home page below.,False,,True,Prof. Sharat Chandran,3,True,2026-06-18T11:53:25.322327+05:30,0
+4,CS 228,Logic For CS,6,Theory,0,0,0,0,Full Semester,N/A,https://www.cse.iitb.ac.in/~akg/courses/2022-logic/,"Logic in Computer Science. Huth and Ryan.Cambridge University Press, 2004","1 Propositional logic:<br/>
+1.1 Declarative sentences<br/>
+1.2 Natural deduction<br/>
+1.2.<br/>
+1 Rules for natural deduction<br/>
+1.2.2 Derived rules<br/>
+1.2.3 Provable equivalence<br/>
+1.3 Propositional logic as a formal language<br/>
+1.4 Semantics of propositional logic<br/>
+1.4.1 The meaning of logical connectives<br/>
+1.4.2 Soundness of propositional logic<br/>
+1.4<br/>
+.3 Completeness of propositional logic<br/>
+1.5 Normal forms<br/>
+1.5.1 Semantic equivalence, satisfiability, and validity<br/>
+1.5.2 Conjunctive normal forms and validity<br/>
+1.5.3 Horn clauses and satisfiability<br/>
+1.6 SAT solvers<br/>
+2 Predicate logic<br/>
+2.1 Predicate logic as a formal language<br/>
+2.1.1 Terms<br/>
+2.1.2 Formulas<br/>
+2.1.3 Free and bound variables<br/>
+2.1.4 Substitution<br/>
+2.2 Proof theory of predicate logic<br/>
+2.2.1 Natural deduction rules<br/>
+2.2.2 Quantifier equivalences<br/>
+2.3 Semantics of predicate logic<br/>
+2.3.1 Models<br/>
+2.3.2 Semantic entailment<br/>
+2.3.3 The semantics of equality<br/>
+2.4 Undecidability of predicate logic<br/>
+2.5 Expressiveness of predicate logic<br/>
+3 Program correctness<br/>
+3.1 Notion of program correctness<br/>
+3.1.1 Hoare triples<br/>
+3.1.2 Partial and total correctness<br/>
+3.1.3 Program variables and logical variables<br/>
+3.2 Proof calculus for partial correctness<br/>
+3.2.1 Proof rules<br/>
+3.2.2 Proof tableaux<br/>
+3.3 Proof calculus for total correctness<br/>
+3.4 Programming by contract<br/>
+4 Other Applications such as Logic in databases, Logic programming, Puzzle solving<br/>
+5 Practice with Verification tools<br/>",False,Prof. Krishna S,True,Prof. S. Akshay,-1,True,2026-06-18T11:54:29.290091+05:30,0
+5,CS 230,Digital Logic Design and Computer Architecture,6,,0,0,0,0,,N/A,,"302225 Patterson Hennessy, Computer Organization and Design, MK Pub.302225 Hennessy and Patterson, Computer Architecture, MK Pub.302225 M. Mano, Digital Logic and Computer Design, Pearson302225 Harris and Harris, Dgitial Design and Computer Architecture, MK Pub.","1 Logic gates, SOP, POS, KMAPs, Number system: fixed point, floating-point,
+combinational circuits
+2 Combinational circuits, sequential circuits
+3 Sequential circuits, FSMs
+4 FSM, FSM Minimization
+5 Intro to processors, CPU. Von Neumann architecture, ISA vs microarchitecture,
+computer organization
+6 Instruction pipelining
+7 Mid-sem Week
+8 Superscalar processors
+9 Superscalar processors, SMTs
+10 Memory hierarchy including virtual memory
+11 More on Caches, DRAM
+12 Storage and I/O
+13 GPUs, TPUs, and accelerators, Case study: Recent Processors and GPUs",False,Prof. Sayandeep Saha,True,Prof. Sayandeep Saha,-1,True,2025-06-07T12:24:55.261698+05:30,0
+6,CS 231,Digital Logic and Computer Architecture Lab,3,Lab,0,0,0,0,,N/A,,,"Labs on (a) Verilog/VHDL, (b) combinational and sequential circuits, (c) assembly language programming, (d) Instruction pipelining and superscalar processors, and (e) Memory hierarchy optimizations involving tools like Pin and architecture simulators,",False,Prof. Bhaskaran Raman/ Prof. Sayandeep Saha,True,Prof. Biswabandan Panda,-1,True,2025-06-03T14:44:06.071030+05:30,0
+7,CS 293,Data Structures Lab,3,Lab,0,0,3,0,Full Semester,N/A,https://www.cse.iitb.ac.in/~akg/courses/2025-ds/,"Kathleen Jensen, Niklaus Wirth and A. Mickel, Pascal User Manual and Report: Iso Pascal Standard, Springer Verlag, 4th Edition, October 1991<br/>
+
+Bruno R. Preiss, Data Structures and Algorithms with Object-Oriented Design Patterns in C++, Wiley & Sons (Asia), 2001<br/>
+
+Sartaj Sahni, Data Structures, Algorithms, and Applications in C++, WCB McGraw-Hill, International Edition, 1998<br/>
+
+Michael Goodrich and Roberto Tamassia, Data Structures and Algorithms in Java, Second Edition, Wiley & Sons (Asia), 2001<br/>","Implementation of, and experiments with, basic data structures and use in dynamic operations on data for different algorithms and problem domains; comparison of asymptotic complexity with real behaviour of algorithms; project.",False,,True,Prof. Manoj Prabhakaran,-1,True,2026-06-18T11:52:31.485206+05:30,0
+8,CS 310,Automata Theory,6,,0,0,0,0,,N/A,,"1.Introduction to Automata Theory, Languages andComputation, by John. E. Hopcroft, RajeevMotwani, J. D. Ullman, published by PearsonEducation Asia, 2006.Full 2.Elements of the Theory of Computation, by H.R.Lewis and C.H.Papadimitrou, published by PrenticeHall Inc, 1981.","Finite state machines (DFA/NFA/epsilon NFAs),
+regular expressions. Properties of regular languages.
+My hill-Nerode Theorem. Non-regularity. Push
+down automata. Properties of context-free languages.
+Turing machines:Turing hypothesis, Turing
+computability, Nondeterministic, multi tape and
+other versions of Turing machines. Church`s thesis,
+recursively enumerable sets and Turing
+computability. Universal Turing machines.
+Unsolvability, The halting problem, partial
+solvability, Turing enumerability, acceptability and
+decidability, unsolvable problems about Turing
+Machines. Post`s correspondence problem.",False,Prof.  Paritosh Pandya,True,Prof. Krishna S,-1,True,2026-06-18T11:59:24.517763+05:30,0
+9,CS 339,Abstractions and Paradigms for Programming,6,Theory,0,0,0,0,Full Semester,N/A,,"1. Harold Abelson, Gerald Jay Sussman and July Sussman,Structure and Interpretation of Computer Programs, 2nd edition,The MIT Press, 1996.2. David A. Watt, Programming Language Concepts and Paradigms, Prentice-Hall, 1990.3. Rajeev Sangal, Programming Paradigms in Lisp, McGraw Hill,19914. Ravi Sethi. ""Programming Languages: Concepts andConstructs"", Second Edition, Pearson Education, 2006.5. Michael L. Scott. ""Programming Language Pragmatics"", FourthEdition, Morgan Kaufmann, 2.6. William F. Clocksin , Christopher S. Mellish, Programming inProlog, Springer, 2003.7. Programming Language Manuals which may be provided by theinstructor.","Review of the program development process, Issues in program design, Structured programming, Data and control abstractions, Programming with assertions. Reasoning about programs and proving correctness of programs. Ideas behind imperative, applicative, object oriented and logic programming paradigms such as typing, expressions, pure functions, recursion, higher order functions, encapsulation, inheritance, goal satisfaction, backtracking, unification. Some of the ideas behind the implementation of the paradigms. Course to be centered around problems and applications that demonstrate the main themes.",False,,True,Prof. Manas Thakur,-1,True,2025-06-03T14:46:24.742567+05:30,0
+10,CS 347 M,Operating Systems,6,,0,0,0,0,,CS101 & CS213 M,,"J.L.Galvin and A.Silberschatz, Operating System Concepts,Addison-Wesley, 1998.
+
+D.M.Dhamdhere, Systems Programming and Operating Systems, 1999.
+
+M.J.Bach, The design of UNIX operating system, Prentice Hall ofIndia, 1986.
+
+Uresh Vahalia, UNIX Internals : The New Frontiers, Prentice Hall, 1996.
+
+A.S.Tanenbaum, Operating System : Design and Implementation,Prentice Hall of India, 1989.","Overview of operating systems: batch processing,
+multiprogramming, time-sharing and real time systems.
+
+Concurrent processes: communication and synchronisation. Process
+management, deadlocks.
+
+Main memory management: paging, segmentation, sharing
+of programs and data.
+
+Device management.
+
+Information management: file system, security.
+
+A case study of UNIX.",False,Prof. Mythili Vutukuru,True,Prof. Varsha Apte,-1,True,2026-06-18T12:05:17.622518+05:30,0
+11,CS 348,Computer Networks,6,Theory,0,0,0,0,Full Semester,N/A,,"1.W. Stallings, Data and ComputerCommunications, 6th edition, Prentice Hall,2000.
+2.A. S. Tannenbaum, ComputerNetworks, 4th edition, Prentice Hall, 2003.
+3.F.Halsall, Data Communications, ComputerNetworks and Open Systems, 4th edition,Addison-Wesley.
+4.Walrand and Varaiya, HighPerformance Communication Networks,Morgan Kaufman, 1996.
+5.D. E. Comer,Internet working with TCP/IP: Principles,Protocols, Architecture, 3rd edition, PrenticeHall.
+6.W. R. Stevens, TCP/IP Illustrated Vol. I,Addison Wesley, 1994.","Design of Computer Networking protocols at all layers: transmission media, data link protocols, media access control, routing and congestion control, admission control, traffic
+shaping and policing, Internet working (IP) and transport layer protocols (TCP). Performance analysis of networks.",False,Prof. Vinay Ribeiro,True,Prof. Bhaskaran Raman,-1,True,2025-06-03T14:47:37.564352+05:30,0
+12,CS 355,Programming Paradigms Laboratory,3,Lab,0,0,0,0,Full Semester,N/A,,"Harold Abelson, Gerald Jay Sussman and July Sussman, Structure and Interpretation of Computer Programs, 2nd edition, The MIT Press, 1996.2. David A. Watt, Programming Language Concepts and Paradigms, Prentice-Hall, 1990.3. Rajeev Sangal, Programming Paradigms in Lisp, McGraw Hill, 1991.","• Programming abstractions
+    • Functional programming
+    • Object-oriented programming
+    • Reasoning about programs with assertions
+    • Implementation models for paradigms",False,,True,Prof. Manas Thakur,-1,True,2025-06-19T16:18:59.137240+05:30,0
+13,CS 378,Computer Networks  Lab,3,Lab,0,0,0,0,Full Semester,N/A,,,"Experiments to support study of the Internet protocol stack: 
+(a) Understand the use of various command line tools like ping, arp, route, ifconfig, host, traceroute, dig etc. 
+(b) Use packet sniffing tools like tcpdump, wireshark to understand various concepts: encapsulation/decapsulation; multiplexing demultiplexing, dhcp operation, IP fragmentation, ARP operation, ICMP operation, TCP operation, application protocols such as HTTP, FTP, SMTP.",False,Prof. Vinay Ribeiro,True,Prof. Bhaskaran Raman,-1,True,2025-06-03T14:48:40.595555+05:30,0
+14,CS 405,Game Theory and Algorithmic Mechanism Design,6,Theory,0,0,0,0,Full Semester,N/A,,"No specific textbook. However, the following books and lecture notes may be useful.    302225 Maschler, M., Solan, E., & Zamir, S. (2020). Game Theory (2nd ed.). Cambridge: Cambridge University Press.     302225 Shoham Y, Leyton-Brown K.302240Multiagent Systems: Algorithmic, Game-Theoretic, and Logical Foundations. Cambridge University Press; 2008.    302225 Osborne,302240Martin J..302240An Introduction to Game Theory.302240India:302240Oxford University Press,3022402009.    302225 Narahari, Y., 2014.302240Game theory and mechanism design302240(Vol. 4). World Scientific.    302225 Debasis Mishra, Game Theory course notes: http://www.isid.ac.in/~dmishra/gm1doc/notes_2016.pdf     302225 Debasis Mishra, Mechanism Design course notes: http://www.isid.ac.in/~dmishra/gmdoc/mdnotes.pdf","A tentative list of topics are as follows.
+    • Non-cooperative game theory – foundation for discussing mechanism design
+        ◦ Quantitative models of strategic interaction: rationality, intelligence, common knowledge
+        ◦ Complete information simultaneous move games – normal form representation
+            ▪ Ideas of equilibria: domination of strategies, Nash equilibrium
+            ▪ Existence results for mixed and pure Nash equilibrium
+            ▪ Complexity of computating Nash equilibrium
+            ▪ Correlated equilibrium.
+        ◦ Complete information sequential move games – extensive form representation
+            ▪ Perfect and imperfect information extensive form games
+            ▪ Equilibria concepts – subgame perfect equilibrium, perfect Bayesian equilibrium, analogies with pure and mixed Nash equilibrium
+        ◦ Incomplete information games
+            ▪ Bayesian games
+            ▪ Equilibria concepts tied to the belief system
+            ▪ Nash and Bayesian equilibria in incomplete information games
+    • Introduction to mechanism design
+        ◦ Incomplete information to player types
+        ◦ Social welfare function, Arrow’s impossibility result
+        ◦ Social choice function, Gibbard-Satterthwaite result
+        ◦ Domain restriction
+        ◦ Single-peaked preferences
+        ◦ Task allocation domain
+        ◦ Quasi-linear preferences
+    • Some real world applications of mechanism design",False,,True,Prof. Swaprava Nath,5,True,2026-06-29T12:57:00.066225+05:30,0
+15,CS 409,Introduction to Cryptography,6,Theory,0,0,0,0,Full Semester,N/A,https://sruthisekar.wordpress.com/introduction-to-cryptography-m,"1. Introduction to Modern Cryptography (Jonathan Katz and Yehuda Lindell, Third edition, https://www.cs.umd.edu/~jkatz/imc.html) Chapman and Hall, 2014    2. The Joy of Cryptography (Mike Rosulek, https://joyofcryptography.com/pdf/book.pdf)Creative Commons BY-NC-SA 4.0, 2021    3. A Course in Cryptography (Rafael Pass and Abhi Shelat, Third edition, https://www.cs.cornell.edu/courses/cs4830/2010fa/lecnotes.pdf)    4. A Graduate Course in Applied Cryptography (Dan Boneh and Victor Shoup, Version 0.6, Jan 2023, http://toc.cryptobook.us/book.pdf)    5. Lecture notes for fundamentals of cryptography (Leonid Reyzin, https://www.cs.bu.edu/~reyzin/teaching/cryptonotes/)    6. Foundations of Cryptography, Volume I-II, Oded GoldreichCambridge University Press, 2008","Perfectly secret encryption: one time pad, limitations of perfect security
+
+Private key encryption: defining encryption CPA security, constructing CPA secure scheme- pseudorandom functions and block ciphers, pseudorandom generators, stream ciphers, one-way functions, hardcore predicates, CCA security – motivates message authentication codes, some practical constructions.
+
+Hash Functions and applications: definition of hash functions, message authentication using hash functions, attacks, some additional applications
+
+Public key encryption: CPA security, introduction to some related modular arithmetic, El Gamal, RSA and Rabin constructions, some attacks on RSA.
+
+Zero Knowledge Proofs: introduction with motivation, definition of honest verifier zero knowledge, one protocol (graph coloring or some other NP complete problem)",False,Prof. Chethan Kamath,True,Prof. Sruthi Sekar,-1,True,2025-06-06T09:40:20.198279+05:30,0
+16,CS 409 M,Introduction to Cryptography,6,Theory,0,0,0,0,Full Semester,N/A,https://www.cse.iitb.ac.in/~ckamath/courses/2026a/CS409m.html,"1. Introduction to Modern Cryptography (Jonathan Katz and Yehuda Lindell, Third edition, https://www.cs.umd.edu/~jkatz/imc.html) Chapman and Hall, 2014    2. The Joy of Cryptography (Mike Rosulek, https://joyofcryptography.com/pdf/book.pdf)Creative Commons BY-NC-SA 4.0, 2021    3. A Course in Cryptography (Rafael Pass and Abhi Shelat, Third edition, https://www.cs.cornell.edu/courses/cs4830/2010fa/lecnotes.pdf)    4. A Graduate Course in Applied Cryptography (Dan Boneh and Victor Shoup, Version 0.6, Jan 2023, http://toc.cryptobook.us/book.pdf)    5. Lecture notes for fundamentals of cryptography (Leonid Reyzin, https://www.cs.bu.edu/~reyzin/teaching/cryptonotes/)    6. Foundations of Cryptography, Volume I-II, Oded GoldreichCambridge University Press, 2008","Cryptography is the science of securely carrying out tasks (e.g., communication) in presence of adversaries (e.g., eavesdroppers). In this course, we will first study certain basic tasks in cryptography (e.g., secure communication), with an emphasis on precise modelling of the adversary's capabilities and goal -- the threat model -- and formally proving security in this model -- the security proof. Then, we will see how more complex applications you use everyday (e.g., HTTPS, secure messaging, one-time password) can be built on top of these. Additionally, we will also have hands-on sessions aimed at exposing you to real world cryptographic libraries.",False,Prof. Sruthi Sekar,True,Prof. Chethan Kamath,-1,True,2026-07-15T14:10:44.895144+05:30,0
+17,CS 416 M,Foundations of Network Security and Cryptography,6,Theory,0,0,0,0,Full Semester,CS 224 M,,"1. Menezes, Bernard. Network Security And Cryptography, 1st ed., Cengage Learning India, 2010<br/>
+2. Stallings, William. Cryptography And Network Security, Fourth Edition, Pearson, 2006<br/>","Vulnerabilities, risks, attacks, defences, forensics. <br/>
+Examples and applications of Public Key Cryptography and Secret Key Cryptography. Crypto hash, digital signatures, digital certificates and PKI. <br/>
+Basic Authentication and Key Agreement protocols, SSL/TLS and Kerberos. Vulnerabilities and attacks on TCP, DNS, ARP, etc. and DDoS attacks. <br/>
+Network/host intelligence gathering and reconnaissance methods. <br/>
+Web security - SQL injection,  XSS, etc.  Software security and buffer overflow. Malware types and case studies. <br/>
+Access Control, firewalls and host/network intrusion detection.<br/>",False,,True,Prof. G. Sivakumar,-1,True,2026-06-18T12:18:45.051149+05:30,0
+18,CS 6001,Game Theory and Algorithmic Mechanism Design,6,Theory,3,0,0,0,Full Semester,CS6001,https://www.cse.iitb.ac.in/~swaprava/cs6001_07_2023.html,"No specific textbook. However, the following books and lecture notes may be useful.10. Michael Maschler, Eilon Solan, Shmuel Zamir: Game Theory, 2 nd Edition(https://www.cambridge.org/in/academic/subjects/economics/microeconomics/game-theory-2nd-edition) Yoav Shoham and Kevin Leyton-Brown: Multiagent Systems (www.masfoundations.org)Martin Osborne: An Introduction to Game Theory (https://india.oup.com/product/an-introduction-to-game-theory-9780198086109) Y. Narahari: Game Theory and Mechanism Design(https://www.worldscientific.com/worldscibooks/10.1142/8902) Debasis MishraGame Theory course notes: http://www.isid.ac.in/~dmishra/gm1doc/notes_2016.pdfMechanism Design course notes: http://www.isid.ac.in/~dmishra/gmdoc/mdnotes.pdf","A tentative list of topics are as follows.
+ Non-cooperative game theory – foundation for discussing mechanism design
+◦ Quantitative models of strategic interaction: rationality, intelligence, common knowledge
+◦ Complete information simultaneous move games – normal form representation
+▪ Ideas of equilibria: domination of strategies, Nash equilibrium
+▪ Existence results for mixed and pure Nash equilibrium
+▪ Complexity of computating Nash equilibrium
+▪ Correlated equilibrium.
+◦ Complete information sequential move games – extensive form representation
+▪ Perfect and imperfect information extensive form games
+▪ Equilibria concepts – subgame perfect equilibrium, perfect Bayesian equilibrium, analogies
+with pure and mixed Nash equilibrium
+◦ Incomplete information games
+▪ Bayesian games
+▪ Equilibria concepts tied to the belief system
+▪ Nash and Bayesian equilibria in incomplete information games
+ Introduction to mechanism design
+◦ Incomplete information to player types
+◦ Social welfare function, Arrow’s impossibility result
+◦ Social choice function, Gibbard-Satterthwaite result
+◦ Domain restriction
+◦ Single-peaked preferences
+◦ Task allocation domain
+◦ Quasi-linear preferences
+ Some real world applications of mechanism design",False,,True,Prof. Swaprava Nath,-1,True,2025-06-03T15:05:11.512279+05:30,0
+19,CS 6007,Multi-Agent Machine Learning (MAML),6,Theory,0,0,0,0,,N/A,,"1.	[Book] Optimization for Data Analysis, Benjamin Recht and Stephen J. Wright, Cambridge University Press, 2022
+
+2.	[Book] Optimization Algorithms for Distributed Machine Learning, Gauri Joshi, Springer, 2023
+
+3.	[Book] Federated Learning, A Comprehensive Overview of Methods and Applications, Yaochu Jin, Hangyu Zhu, Jinjin Xu, Springer, 2022
+
+4.	[Book] Bandit Algorithms, Csaba Szepesvari and Tor Lattimore, Cambridge University Press, 2020
+
+5.	[Book] Learning Theory from First Principles, Francis Bach, MIT Press, 2024
+
+6.	On the Convergence of Fed-Avg on non-iid data, X. Li et.al’, ICLR 2020
+
+7.	Byzantine-Robust Distributed Learning: Towards Optimal Statistical Rates, Dong Yin et. al, ICML, 2018
+
+8.	The Gossiping Insert-Eliminate Algorithm for Multi-Agent Bandits, Chawla et. al, AISTATS, 2020.
+
+9.	Multi-Agent Multi-Armed Bandits with Limited Communication, Agarwal et. al, JMLR, 2022.
+
+10.	Bandit Learning in Decentralized Matching Markets, Liu et. al, JMLR, 2021
+
+11.	Player-optimal Stable Regret for Bandit Learning in Matching Markets, Fang Kong et. al’, SODA 2023","Module I: Federated Learning (FL)
+Basic Formulation, FedAvg algorithm, Non-convexity. Challenges in FL : (i) Heterogeneity (ii) Communication Bottleneck (iv) Adversarial Attacks (v) Data Privacy. To address these, we study (i) Clustering in FL, Bounded Heterogeneity control (ii) Local Averaging and data compression (\delta approximate compressors) (iii) Robust estimators (Geometric Median, Trimmed Mean) and (iv) Differential Privacy. We study a variety of algorithms with sharp theoretical guarantees.
+
+Module II: Multi Agent Bandits
+
+Collaborative Multi Agent Multi Arm Bandits. Gossip Type Algorithms, Modified Upper Confidence Bound, Regret Guarantees. Federated
+Bandits-Regret and Best Arm Identification. Heterogeneous Federated Bandits, Clustering and Personalization. Federated RL (TD and Q learning).
+
+Module III: Matching Markets
+
+Formulation of matching markets with multiple agents and arms via a bipartite graph, Stable matching, Matching Algorithms: Gale-Shapley, Preference Learning via a multi armed bandit framework, Connection to economic markets.
+
+Algorithms: (i) Collision avoidance Upper Confidence Bound (CA-UCB) (ii) Explore-Then-Gale Shapley (ETGS) (iii) Dominated Upper Confidence Bound (UCBD3).
+
+Variations: Dynamic Market, Structured Market, Robust Market",False,,True,Prof. Avishek Ghosh,-1,True,2025-06-03T15:09:14.342427+05:30,0
+20,CS 6008,Network Security,6,Theory,0,0,0,0,,Desired background for taking the course:  Knowledge of computer networks. CS224 for UGs,,"Network Security Essentials: Applications and Standards by William Stallings, Sixth edition
+
+Internet Security: A Hands-on Approach by Wenliang Du, second edition
+
+Network Security: Private Communications in a Public World, 3rd Edition, 
+by Charlie Kaufman, Radia Perlman, et al
+
+https://www.wireshark.org/ (Network protocol analyzer)
+
+https://scapy.net/ (Packet manipulation library)
+
+https://www.openvas.org/ (Vulnerability scanner)
+
+https://www.snort.org/ (Network intrusion prevention system)
+
+https://www.ossec.net/ (Host intrusion detection system)","Module1: Network Background (A quick overview)
+Internet Protocol Stack, Link Layer technologies, Network Layer Protocols, Transport Layer Protocols, Popular Applications: Web, Email, Multimedia and SNMP
+
+Hand-in-hand with theory, practical sessions involving usage of  packet capture/manipulation tools like Wireshark, Scapy and popular network commands like arp, ip, ping, ss, nc, dig, wget, curl, nmap etc will be covered.
+
+Module2: Network Attacks and Defenses
+Attacks at various layers of the protocol stack will be covered.
+Link Layer: Eavesdropping via MAC flooding, ARP spoofing, VLAN Hopping, Wireless network Attacks
+NetworkLayer: IP4/IPv6, ICMP, DHCP, Routing based Attacks including DOS
+Transport Layer: UDP and TCP based Attacks including DOS
+Application Layer: DNS, Email, SNMP, Multimedia based Attacks, including DOS
+
+Practical sessions will explore a subset of these attacks hands-on
+
+Module3:  Secure Network Protocols
+Link layer: 802.1X, WEP/WPA, MAC-sec
+Network layer: IPsec, IKE, openVPN
+Transport layer: TLS
+Application Layer: SSH, DNSsec , DNS cookies, Email Security (S/MIME, DKIM, DMARC, STARTTLS, SMTP-AUTH, IMPAS), SNMP security
+
+Practical sessions will explore a subset of these protocols, configuration and exploration of the corresponding traffic via wireshark
+
+Module4: Network Hardening
+Defense in depth, Vulnerability Scanners, Secure network topologies (DMZ, Network Segmentation), Secure Network Access Control, Firewalls, IDS, Honeypots and Honeynets
+
+Practical sessions will explore network security tools like openvas (network vulnerability scanner); iptables (firewall configuration), host and network intrusion detection (OSSEC and Snort)",False,,True,Prof. Devashish Gosain,-1,True,2026-06-18T12:12:32.969796+05:30,0
+21,CS 601,Algorithms and Complexity,6,Theory,0,0,0,0,Full Semester,NIL,https://sites.google.com/view/algorithms-cs-601/home,"J. Kleinberg and E. Tardos, Algorithm Design, Addison Wesley, 2005.<br/>
+T. H. Cormen , C. E. Leiserson, R. L. Rivest and C. Stein, Introduction to Algorithms, MIT Press and McGraw Hill, 3rd Edition, 2009 .<br/>
+Rajeev Motwani, Prabhakar Raghavan, Randomized algorithms, Cambridge University Press, 1995.<br/>
+M. R. Garey and D. S. Johnson, Computers and Intractability: A Guide to the Theory of NP-Completeness, Freeman, 1979.<br/>","Check the webpage below.<br/>
+
+Techniques for the Design and Analysis of Algorithms. Formal models of computation, time and space complexity, Theory of NP-Completeness, Approximability of NP-Hard problems. Introduction to parallel, randomized and on-line algorithms.",False,Prof. Akash Kumar,True,Prof. Akash Kumar,-1,True,2025-06-03T14:26:11.911845+05:30,0
+22,CS 6010,Applied Cloud Computing,6,Theory,0,0,0,0,,N/A,,"There is no dedicated text book, but below references can help.1. Cloud Computing: Concepts, Technology & Architecture by Ricardo Puttini, Thomas Erl, and Zaigham Mahmood, 1e, 2014, Pearson Education     2. Practical Cloud Security: A Guide for Secure Design and Deployment, March 2019, by Chris Dotson, O`Reilly     3. ""The NIST Definition of Cloud Computing"" : https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-145.pdf     4. The features, hardware, and architectures of data center networks: A survey: https://www.cs.sjtu.edu.cn/~gao-xf/Research/pdf/(2016)%20The%20Features%20Hardware%20and%20Architectures%20of%20Data%20Center%20Networks%20A%20Survey.pdf     5. Virtual Machines:https://pages.cs.wisc.edu/~remzi/OSTEP/vmm-intro.pdf     6. Types of Virtualization:https://www.vmware.com/content/dam/digitalmarketing/vmware/en/pdf/techpaper/VMware_paravirtualization.pdf     7. IBM Object Storage Architecture:https://www.redbooks.ibm.com/redpapers/pdfs/redp5537.pdf     8. Case Studies: https://sre.google/sre-book/production-environment/","Theory Content:     * Introduction: Motivation, brief history, various service (Software as a Service, Platform as a Service, Infrastructure as a Service etc) and deployment models (Public, Private, Hybrid, Community)     * Cloud Building Blocks and their Cloud manifestation     - Data Centers: Internals and their cloud manifestation in the form of regions, availability zones, SLAs, fault domains, placement groups, data residency etc     - Compute Virtualization: Bare metal vs hypervisors, Virtual machines, Containers. Cloud manifestations in the form of VM services, container runtimes, managed compute     - Internet & Networking: Internet & IP networking, DNS, NAT, public vs private networks. Cloud manifestations in the form of VPC, subnets, routing tables, internet gateways, NAT gateways, load balancers, CDNs     - Identity & Access Management (IAM): Users vs roles, permissions and policies, least privilege principle, API keys vs role-based access. Cloud manifestations in the form of IAM users, roles, policies, service identities     - Storage Technologies: Block storage, File storage, Object storage. Cloud manifestations in the form of block volumes, network file systems, object storage (S3 buckets), archival tiers     - Distributed Systems: Scalability, fault tolerance, consistency challenges. Cloud manifestations in the form of message queues, managed databases, stateless vs stateful services     * Cloud Operations     - Cost awareness: pay-as-you-go model, common cost pitfalls: Idle compute resources, data transfer (egress costs), storage tier misuse     - Security basics: Shared responsibility, security groups / firewall rules, data exposure risks (e.g., public buckets)     - Observability: Logs vs metrics, basic debugging workflow using logs and metrics     - API-Driven Cloud: Console vs Command Line Interface vs Software Development Kits, Infrastructure as API calls     * Emerging Trends: Hybrid multi-cloud, Serverless, Microservices, Cloud Native, Edge computing     Above theory content will be interspersed with hands-on components, introduced as demos or lab-assignments. These sessions will be conducted during class hours, after every 3-4 theory classes.     Hands-on Component: (based on Amazon AWS free-tier offering)     * Launching VMs and Containers in cloud     * Introduction to dockers     * Identity and Access Management (IAM) exploration via programmatic access to services     * Creating Virtual Private Cloud (VPC) and launching a distributed web application     * Extending applications to use load balancers, CDNs     * Attaching different types of storage to applications     * Extending applications to use message queues",False,,True,Prof. Kameswari Chebrolu,-1,True,2026-06-22T12:58:04.256845+05:30,0
+23,CS 6011,Introduction to Cryptography,6,Theory,0,0,0,0,,N/A,https://sruthisekar.wordpress.com/introduction-to-cryptography-m/,"1. Introduction to Modern Cryptography (Jonathan Katz and YehudaLindell, Third edition, https://www.cs.umd.edu/~jkatz/imc.html)Chapman and Hall, 2014     2. The Joy of Cryptography (Mike Rosulek,https://joyofcryptography.com/pdf/book.pdf)Creative Commons BY-NC-SA 4.0, 2021     3. A Course in Cryptography (Rafael Pass and Abhi Shelat, Third edition,https://www.cs.cornell.edu/courses/cs4830/2010fa/lecnotes.pdf)     4. A Graduate Course in Applied Cryptography (Dan Boneh and VictorShoup, Version 0.6, Jan 2023, http://toc.cryptobook.us/book.pdf)     5. Lecture notes for fundamentals of cryptography (Leonid Reyzin,https://www.cs.bu.edu/~reyzin/teaching/cryptonotes/)     6. Foundations of Cryptography, Volume I-II, Oded GoldreichCambridge University Press, 2008","* Perfectly secret encryption: one time pad, limitations of perfect security
+
+     * Private key encryption: defining encryption CPA security, constructing CPA
+secure scheme- pseudorandom functions and block ciphers, pseudorandom
+generators, stream ciphers, one-way functions, hardcore predicates, CCA
+security – motivates message authentication codes, some practical constructions.
+     * Hash Functions and applications: definition of hash functions, message
+authentication using hash functions, attacks, some additional applications
+     * Public key encryption: CPA security, introduction to some related modular
+arithmetic, El Gamal, RSA and Rabin constructions, some attacks on RSA.
+
+     * Zero Knowledge Proofs: introduction with motivation, definition of honest
+verifier zero knowledge, one protocol (graph coloring or some other NP
+complete problem)",False,,True,Prof. Sruthi Sekar,-1,True,2026-07-22T08:47:15.811619+05:30,0
+24,CS 6012,Deep Learning: Foundations and Applications,6,Theory,0,0,0,0,,N/A,,"** Texts :  1. Simon J.D. Prince, Understanding Deep Learning, MIT Press, 2023.     2. Antonio Torralba, Phillip Isola, William T. Freeman, Foundations of Computer Vision, MIT Press, 2024.     3. Dan Hendrycks, Introduction to AI Safety, Ethics, and Society, 2024, Open Access (https://www.aisafetybook.com).     ** References :  1. Ian Goodfellow, Yoshua Bengio, Aaron Courville, Deep Learning, MIT Press, 2016.     2. Christopher M. Bishop, Deep Learning: Foundations and Concepts, Springer, 2023.     3. David Foster, Generative Deep Learning, O`Reilly, 2022.     4. Sebastian Raschka, Build a Large Language Model (From Scratch), Manning, 2024.    5. Brian Christian, The Alignment Problem, W. W. Norton, 2020.    6. Rainer Muhlhoff, The Ethics of AI: Power, Critique, Responsibility, Bristol University Press, 2025, Open Access.    7. Bernd Carsten Stahl, Ethics of Artificial Intelligence: Case Studies and Options, Springer, 2021, Open Access.    8. UNESCO, Recommendation on the Ethics of Artificial Intelligence, UNESCO, 2021, Open Access.","Modules :
+     1. Ethics and societal aspects: privacy, data governance, explainability and transparency, environmental and societal impact.
+     2. Basics: Function approximators, backpropagation, and automatic differentiation, loss functions, fitting models, measuring performance, regularization, supervised, unsupervised, and reinforcement learning.
+     3. Architectures: Convolutional Neural Network, Residual networks, sequence models, attention, transformers, graph neural networks.
+     4. Generative AI: Generative adversarial networks, Flows, autoencoders, diffusion models.
+     5. Agentic AI, Multimodal learning, Large language models, Retrieval-augmented learning, representation learning, Applications in computer vision, text systems, scientific domains.",False,,True,Prof. Sharat Chandran,-1,True,2026-06-23T11:22:24.735910+05:30,0
+25,CS 6013,Efficient AI,6,Theory,0,0,0,0,Full Semester,N/A,,"1. Desai, A., 2024. Elastic Parameter Memory for Efficient Machine Learning (Doctoral dissertation, Rice University).     2. Frankle, J., 2023. The Lottery Ticket Hypothesis: On Sparse, Trainable Neural Networks (Doctoral dissertation, Massachusetts Institute of Technology).     3. Quang, T.D.P., 2023. Hardware-Aware Algorithms for Efficient Machine Learning. Stanford University     4. Chen, B., 2020. Locality Sensitive Sampling for Extreme-Scale Optimization and Deep Learning (Doctoral dissertation, Rice University).     5. More references (paper list links and similar course link at MIT)     6. https://hanlab.mit.edu/courses/2024-fall-65940,     7. https://sky-light.eecs.berkeley.edu (see list of papers)     8. https://github.com/hemingkx/SpeculativeDecodingPapers (see list of papers)     9. https://github.com/NVIDIA/kvpress (see list of papers)","The course will generally cover algorithmic approaches, including hardware-aware ones, to improve efficiency in AI inference and training. It will cover topics like 
+   * Model compression
+   * Sparsity/pruning
+   * Hardware support for sparsity
+   * Quantization
+   * Hardware support for quantization
+   * Elastic Parameter Memory, Hardware-aware hashing
+   * Neural Architectural Search
+   * Low-rank (butterfly matrices, monarch matrices, etc)
+   * PEFT techniques such as LoRA and its variants, SketchTune, etc
+   * Knowledge distillation
+   * Sparse attention (Inference time/Training sparse attention, prefill/decode)
+   * Speculative decoding
+   * KV cache compression
+   * Semantic Prompt Caching
+   * Attention alternatives (SSMs, Linear Attention)
+   * IR techniques in LLM inference (SLIDE, etc)
+   * Upcoming GPU IR languages
+   * Context Extension and Compaction",False,,True,Prof. Aditya Desai,-1,True,2026-06-18T12:31:12.556428+05:30,0
+26,CS 602,Applied Algorithms,6,,3,0,0,0,,NIL,https://sites.google.com/view/cs-602-applied-algorithms-2025/home,,https://sites.google.com/view/cs-602-applied-algorithms-2025/home,False,Prof. Sujoy Bhore,True,Prof. Sujoy Bhore,0,True,2025-07-29T12:41:59.944835+05:30,0
+27,CS 604,Combinatorics,6,,3,0,0,0,,NIL,http://www.cse.iitb.ac.in/~cs604,"K. R. Parthasarathy, Basic Graph Theory, Tata McGraw-Hill, 1994.  
+
+B. Bollobas, Combinatorics, Cambridge University Press, 1986.  
+
+I. Anderson, Combinatorics of finite sets, Oxford University Press, 1987.  
+
+N. Alon and J. H. Spencer, The Probabilistic Method, John Wiley and Sons, 1992.","Min-max results. Dilworth""s theorem, Hall""s theorem.   Menger""s theorem.   Topics on tournaments. Perfect graphs. The weak perfect graph theorem.   Ramsey theory.   Set Systems. Sperner, Erdos-Rado and the Erdos-Ko-Rado theorems.   Colex orders and the Kruskal-Katona theorem.  
+
+The probabilistic method. Some sample applications of the probabilistic method. Second moment method and applications.   Matroid theory. The theory of designs.   Combinatorics and Algorithm design. The Lovasz-theta function and its use in designing algorithms.",False,Prof. Saisundararaman Vishwanathan,True,Prof. Sundar Vishwanathan,-1,True,2025-06-03T14:26:34.036886+05:30,0
+28,CS 6101,Indexing and Retrieving Text and Graphs,6,Theory,0,0,0,0,Full Semester,N/A,,"Ian H. Witten, Alistair Moffat, and Timothy C. Bell. Managing gigabytes: compressing and indexing documents and images. Morgan Kaufmann, 1999.Hinrich Sch303274tze, Christopher D. Manning, and Prabhakar Raghavan. Introduction to information retrieval. Vol. 39. Cambridge: Cambridge University Press, 2008.W. Bruce Croft, Donald Metzler, and Trevor Strohman. Search engines: Information retrieval in practice. Vol. 520. Reading: Addison-Wesley, 2010. Mitra, Bhaskar, and Nick Craswell. ""An introduction to neural information retrieval."" Foundations and Trends in Information Retrieval 13.1 (2018): 1-126.Cook, Diane J., and Lawrence B. Holder, eds. Mining graph data. John Wiley & Sons, 2006. Xuan, Qi, Zhongyuan Ruan, and Yong Min, eds. Graph data mining: Algorithm, security and application. Cham: Springer, 2021.",This course will replace CS635. That code has been reused for decades while the course was overhauled multiple times. Recent developments in deep retrieval make it necessary to launch an entirely new course.Classic inverted index for sparse retrieval; relevance ranking; learning to rank; latent semantic indexing and topic models; word embeddings; dense retrieval; locality sensitive hashing; graph proximity and matching; graph indexing and retrieval.Also see details in the attached sheet.,False,,True,Prof. Soumen Chakrabarti,-1,True,2026-06-22T12:31:12.148770+05:30,0
+29,CS 616,Parallelizing Compilers,6,Theory,3,0,0,0,Full Semester,UG com,http://www.cse.iitb.ac.in/~cs616,"M. J. Wolfe, Optimizing Supercompilers for supercomputers ,MIT Press, 1989.  V. Sarkar, Partitioning and Scheduling Parallel Programs for Execution on Multiprocessors, MIT Press, 1989.  U. Banerjee, Dependence Analysis for Supercomputing, Norwell, Kluwer Academic Publishers, 1988.","Parallelizing Compilers - motivation and overview, structure of a parallelizing compiler; review of code optimization techniques in compilers for sequential machines.   Parallelism detection - data dependence, direction vectors, loop carried and loop independent dependences; tests for data dependence and their applicability, construction of data dependence graph.   Control dependence and control dependence graph.   Restructuring transformations and automatic extraction of parallelism; representation of iteration spaces of multiply nested loops; loop based transformations such as loop distribution, loop coalescing, loop inter-change and cycle shrinking transformation.   Introduction to machine models and associated algorithms for parallel code generation and task graph construction.   Interprocedural analysis - aliasing information, summary data flow analysis, interprocedural constant propagation, interprocedural data dependence analysis and parallelisation of call statements.   Partitioning and Scheduling of a task graph; models for communication, partitioning and scheduling algorithms, dynamic scheduling algorithms, target code generation.   Case studies of contemporary parallelising compiler efforts.",False,,True,Prof. Milind Girkar,-1,True,2026-06-22T12:34:48.404900+05:30,0
+30,CS 618,Program Analysis,6,Theory,3,0,0,0,Full Semester,First course in compiler construction.,,"Uday P. Khedker, Amitabha Sanyal, Bageshri Karkare. Data flow analysis: Theory and Practice. CRC Press (Taylor and Francis Group), 2009 (Book Page: http://www.cse.iitb.ac.in/~uday/dfaBook-web)","Mathematical Foundations of Program Analysis Lattices: partial orders and approximations, bounded lattices, complete lattices. Function spaces monotonicity, distributivity, separability, boundedness. Fixed Point Computations: least fixed point and induction, greatest fixed point and co-induction. Abstract interpretation: concretisation and abstraction functions, Galois connection. Alias analysis of heap data Type of alias information: Context sentitive/insensitive, flow sensitive.insensitive, may/must aliases. 
+Representations of heap properties: shape graphs, alias graphs, storage shape graphs, k-limiting, compact representations, access graphs. Data flow analysis for aliases.  Liveness analysis of heap data Shape graphs and heap safety automaton based   approach. Static type inferencing of flow sensitive polymorphic types. Type inferencing for validation and type inferencing for optimization. Data flow analysis for monomorphic languages. Extensions for polymorphic types, type graphs and operations. Inter procedural data flow analysis Context sensitive/insensitive analysis. Functional approach. Call strings approach. Call strings graphs. Call strings approach for k-bounded problems.",False,Prof. Uday Khedker,True,Prof. Uday Khedker,-1,True,2025-06-03T14:26:44.542611+05:30,0
+31,CS 631,Implementation Techniques for Relational Database Systems,6,Theory,3,0,0,0,Full Semester,Nil,http://www.cse.iitb.ac.in/infolab/Data/Courses/CS631,"Abraham Silberschatz, Henry F. Korth and S. Sudarshan, Database System Concepts 6th Ed, McGraw Hill, 2010.. <br/>
+Transaction Processing, Concepts and Techniques, J. Gray and A. Reuter, Morgan Kauffman, 1994.<br/>
+Research papers from leading conferences and journals<br/>","Physical storage and indexing structures, Query processing algorithms, Query optimization, Transaction processing and serializability, Concurrency Control, Recovery. <br/>
+
+Big data management: transaction and query processing on parallel and distributed databases including issues of availability, replication, consistency, concurrency control, and recovery. <br/>
+
+Emerging database trends.<br/>",False,Prof. S Sudarshan,True,Prof. S Sudarshan,-1,True,2025-06-03T15:12:43.785559+05:30,0
+32,CS 632,Advanced Database Management Systems,6,,3,0,0,0,,CS 631,http://www.cse.iitb.ac.in/dbms/Data/Courses/CS632/,"Textbooks:* Abraham Silberschatz, Henry F. Korth and S. Sudarshan, Database System Concepts 7th Ed, McGraw Hill, 2020.      * Barocas, Solon, Moritz Hardt, and Arvind Narayanan, Fairness and machine learning: Limitations and opportunities. 1st Edition, MIT press, 2023.      * Graefe, Goetz. ""Modern B-tree techniques."" Foundations and Trends in Databases 3.4 (2011): 203-402.      * Graefe, Goetz. ""More Modern B-Tree Techniques."" Foundations and Trends in Databases 13.3 (2024): 169-249.       Research Base Papers:      * Fagin, R., Lotem, A., & Naor, M. (2001, May). Optimal aggregation algorithms for middleware. In Proceedings of the twentieth ACM SIGMOD-SIGACT-SIGART symposium on Principles of database systems (pp. 102-113).      * Fagin, R. (2002). Combining fuzzy information: an overview. ACM SIGMOD Record, 31(2), 109-118.      * Das, G., Gunopulos, D., Koudas, N., & Tsirogiannis, D. (2006, September). Answering top-k queries using views. In Proceedings of the 32nd international conference on Very large data bases (pp. 451-462).      * Chazelle, Bernard, Leo J. Guibas, and Der-Tsai Lee. ""The power of geometric duality."" BIT Numerical Mathematics 25.1 (1985): 76-90.       More Advanced Research Papers:      * Simon Caton and Christian Haas. 2024. Fairness in Machine Learning: A Survey. ACM Comput. Surv. 56, 7, Article 166 (July 2024), 38 pages. https://doi.org/10.1145/3616865      * Mehrabi, N., Morstatter, F., Saxena, N., Lerman, K., & Galstyan, A. (2021). A survey on bias and fairness in machine learning. ACM computing surveys (CSUR), 54(6), 1-35.      * Pessach, Dana, and Erez Shmueli. ""A review on fairness in machine learning."" ACM Computing Surveys (CSUR) 55.3 (2022): 1-44.      * Chester, S., Thomo, A., Venkatesh, S., & Whitesides, S. (2014). Computing k-regret minimizing sets. Proceedings of the VLDB Endowment, 7(5), 389-400.      * Zeighami, Sepanta, and Raymond Chi-Wing Wong. ""Finding average regret ratio minimizing set in database."" 2019 IEEE 35th International Conference on Data Engineering (ICDE). IEEE, 2019.      * Asudeh, A., Nazi, A., Zhang, N., Das, G., & Jagadish, H. V. (2019, June). RRR: Rank-regret representative. In Proceedings of the 2019 International Conference on Management of Data (pp. 263-280).      * Chen, Qixu, and Raymond Chi-Wing Wong. ""Robust Best Point Selection under Unreliable User Feedback."" Proceedings of the VLDB Endowment 17.11 (2024): 2681-2693.      * Shetiya, S., Swift, I. P., Asudeh, A., & Das, G. (2022, May). Fairness-aware range queries for selecting unbiased data. In 2022 IEEE 38th International Conference on Data Engineering (ICDE) (pp. 1423-1436). IEEE.","The course will be based primarily on research papers covering the following topics:        
+Top-k query processing including skylines, Fagin""s algorithm and quality of top-k. Materialized views and its implications in ranking. Advanced query optimization, including database tuning. Adaptive query processing and optimization; Transaction and query processing on main-memory and columnar databases; Data streams and stream management systems; Handling uncertain data; Applications of declarative querying/optimization outside of database applications. While this area has seen many traditional methods, recently ML based techniques have shown empirical superiority to the traditional statistical methods.",False,Prof. Suraj Shetiya/ Prof. S Sudarshan,True,Prof. Suraj Shetiya,-1,True,2026-06-18T12:32:26.998670+05:30,0
+33,CS 663,Fundamentals of Digital Image Processing,6,Theory,3,0,0,0,Full Semester,N/A,https://www.cse.iitb.ac.in/~suyash/digital_image_processing.html,"Please see
+https://www.cse.iitb.ac.in/~suyash/digital_image_processing.html","Please see
+https://www.cse.iitb.ac.in/~suyash/digital_image_processing.html",False,,True,Prof. Suyash P. Awate,-1,True,2026-06-22T12:27:53.587089+05:30,0
+34,CS 675,Computer Graphics,0,Theory + Project,0,0,0,0,Full Semester,"Data Structures, Linear Algebra, Proficiency in programming with C++",https://www.cse.iitb.ac.in/~paragc/course/2025-02-cs675/,"1.Interactive Computer Graphics A topdown approach using OpenGL, 5th ed., Edward Angel, Pearson Education Low Price Indian Edition, 2008.<br/>
+
+2.Computer Graphics using open GL, 3rd ed., F. S. Hill Jr. and S. M. Kelley, Pearson Education Low Price Indian Edition, 2006.<br/>
+
+3.Computer Graphics with OpenGL, 3rd ed., D. D. Hearn and M. P. Baker, Pearson Education Low Price Indian Edition, 2003.<br/>
+
+4.Fundamentals of Computer Graphics, 3rd ed., Peter Shirley, A K Peters, 2009.<br/>","Course contents:<br/>
+1.	Rasterization of lines and circles, Clipping algorithms<br/>
+2.	Synthetic Camera and Image formation models<br/>
+3.	2D and 3D transformations<br/>
+4.	The Modelling-Viewing Pipeline<br/>
+5.	Visibility<br/>
+6.	Ray Tracing<br/>
+7.	Shading and Illumination models<br/>
+8.	Texture Mapping<br/>
+9.	Curves and Surfaces<br/>
+10.	Hierarchical Modelling, Animation.<br/>",False,Prof. Parag  Chaudhuri,True,Prof. Parag Chaudhuri,10,True,2026-06-22T12:28:10.032300+05:30,0
+35,CS 683,Advanced Computer Architecture,6,Theory,3,0,0,0,Full Semester,NIL,https://www.cse.iitb.ac.in/~biswa/courses/CS683/main.html,"1. Computer Architecture: A Quantitative Approach
+
+J. Hennessy, and D. Patterson. Morgan Kaufmann, 5th edition onwards
+
+
+2. Parallel Computer Architecture: A Hardware/Software Approach
+David Culler and Jaswinder Pal Singh.  Morgan Kaufmann","Superscalar and out-of-order processors, microarchitecture techniques to improve processor performance. Advanced caches: multicore caches, cache coherence protocols, techniques to improve memory hierarchy performance, and memory hierarchy for scalable multicore design. Introduction to SIMD processors, GPUs, and accelerators like TPUs. Microarchitecture security and architecture tradeoffs in terms of performance, power, and security",False,Prof. Biswabandan Panda,True,Prof. Biswabandan Panda,0,True,2026-06-22T12:28:56.158898+05:30,0
+36,CS 691,R & D Project I (M.Tech),0,,0,0,0,0,,N/A,,,,False,---,True,---,-1,True,2025-06-04T14:55:54.459351+05:30,0
+37,CS 694,Seminar ( M.Tech./MSR),4,,0,0,4,0,,0,,,,False,---,True,,-1,True,2025-06-04T14:52:40.842979+05:30,0
+38,CS 699,Software Lab.,4,Lab,0,0,4,0,Full Semester,NIL,http://10.105.1.20/moodle/course/view.php?id=6,"Online tutorials for HTML/CSS, Inkscape, OODraw<br/>
+Unix Man Pages for all unix tools, Advanced Bash Scripting Guide from the Linux Documentation Project (www.tldp.org)<br/>
+The Python Tutorial Online Book (http://docs.python.org/3/tutorial/index.html)<br/>
+The Java Tutorials (http://docs.oracle.com/javase/tutorial/)<br/>
+Latex - A document preparation system, Leslie Lamport, 2/e, Addison-Wesley, 1994<br/>","Vim/emacs, HTML, CSS<br/>
+Preparing reports and presentations using latex, beamer, drawing software (e.g. inkscape, xfig, open-office), and graph plotting software (e.g., pyplot, gnuplot)<br/>
+Programming support: IDE (e.g. eclipse, netbeans), Makefile, debugging tools, profiling tools (e.g. gprof, prof), version management (SVN/Git),  code review, <br/>
+Basic Java, Java collections, interfaces<br/>
+Unix basics: shell, file system, permissions, process hierarchy, process monitoring, ssh, rsync<br/>
+Unix tools: e.g. awk, sed, grep, find, head, tail, tar, cut, sort, Bash scripting: I/O redirection, pipes<br/>
+Programming using scripting language (e.g. python)<br/>
+Lexical analysis and parsing tools (e.g. lex/yacc, flex/bison)<br/>
+Optional topics (may be specific to individual students' projects): intro to sockets, basic SQL for data storage, JDBC/pygresql, PHP, mobile apps<br/>
+A project would be included which touches upon many of the above topics, helping students see the connect across seemingly disparate topics. The  project is also expected to be a significant load: 20-30 hours of work.<br/>",False,Prof. Om Damani,True,Prof. Om Damani,-1,True,2025-06-03T14:28:06.807268+05:30,0
+39,CS 7001,Robot Perception and Learning,8,Theory,6,0,2,0,,N/A,,"1. Probabilistic Robotics, Sebastian Thrun, Wolfram Burgard, and Dieter Fox, MIT Press, 2005.     2. Introduction to Autonomous Mobile Robots, Roland Siegwart, Illah Reza Nourbakhsh and Davide Scaramuzza, 2nd Edition, MIT Press, 2011.     3. SLAM Handbook: From Localization and Mapping to Spatial Intelligence, Luca Carlone, Ayoung Kim, Timothy Barfoot, Daniel Cremers, Frank Dellaert, Cambridge University Press, 2025.     4. Robotics, Vision and Control, Peter Corke, Springer 3rd Edition, 2023     5. Reinforcement Learning: An Introduction, Richard S. Sutton and Andrew G. Barto, 2nd edition, MIT Press, 2018","Foundational principles of probabilistic robotics and learning-based control covering topics such as:     1.Recursive State Estimation     2.Mobile Robot Localization using Kalman Filter and Particle Filter     3.Robot Motion and Sensor Models     4.Mapping techniques such as Occupancy Grid Mapping     5.SLAM variants such as EKF-SLAM, Graph-SLAM, Particle Filter SLAM     6.Scene Exploration Algorithms such as Frontier-based exploration, Information-theoretic approaches     7.Planning under uncertainty using MDPs, POMDPs     8.Robot learning from demonstrations techniques such as Imitation learning and Behaviour Cloning     9.Application of Reinforcement learning for robot control     10.Generative models for control",False,,True,Prof. Nived Chebrolu,-1,True,2026-06-22T12:44:43.816688+05:30,0
+40,CS 721,Introduction to Computational Complexity,6,Theory,0,0,0,0,Full Semester,"Good undergraduate background in Theory of Computation (CS331) (or Automata and Logic (CS 208)), Design and Analysis of Algorithms (CS 301) (or New design and analysis of Algorithms (CS218)) or equivalent.",https://www.cse.iitb.ac.in/~vishwas/cs721.html,"M. R. Garey and D. S. Johnson. Computers and Intractability: A guide to the theory of NP-completeness, Freeman and Company, 1979.<br/>
+J. L. Balcazar, J. Diaz and J. Gabarro. Structural Complexity I, EATCS Monographs in Computer Science, Springer, 1988.<br/>
+J. L. Balcazar, J. Diaz and J. Gabarro. Structural Complexity II, EATCS Monographs in Computer Science, Springer, 1990.<br/>
+C. Pappadimitriou. Computational Complexity, Addison-Wesley, 1994.<br/>
+Dexter Kozen. Automata and Computability, Springer, 1997.<br/>
+Mike Sipser. Introduction to the Theory of Computation, PWS Publishing Company, 1997.<br/>
+Bernard ME Moret. The Theory of Computation, Addison-Wesley, 1998.<br/>
+J. E. Hopcroft, R. Motwani, and J. D. Ullman. Introduction to AutomataTheory, Languages, and Computation, Second Edition, 2001.<br/>
+Dexter Kozen. Theory of Computation, Springer, 2006.<br/>
+Sanjeev Arora and Boaz Barak. Computational Complexity: A Modern Approach, Cambridge University Press, March 2009.<br/>","A quick overview of computability The Church-Turing thesis, decidability, reducibility, The recursion theorem, self-reference, decidability of logical theories <br/>
+Time and space complexity Measuring complexity, the classes P, NP, the P versus NP question, NP-completeness, The Cook-Levin Theorem Savitch's Theorem, separation results, Immerman-Szelepcsenyi Theorem, PSPACE completeness, Logspace computability, the classes L, NL Alternation, alternating complexity classes The polynomial time hierarchy (c) Intractability Hierarchy theorems, exponential space completeness, relativization, circuit complexity (d) Parallel Complexity, Probabilistic Complexity, Interactive Proofs NC and its relation to time-space classes Probabilistic Turing Machines, the class BPP Examples of interactive proof systems, IP=PSPACE (e) Probabilistically Checkable Proofs PCP and the hardness of approximation (f) The Arithmetic Hierarchy, Post's problem Complete problems in the arithmetic hierarchy, The Friedburg-Muchnik Theorem",False,Prof. Nutan Limaye,True,Prof. Vishwas Bhargava,-1,True,2026-08-01T20:21:22.663425+05:30,0
+41,CS 725,Foundations of machine learning,6,Theory,0,0,0,0,Full Semester,N/A,https://www.cse.iitb.ac.in/~sunita/cs725/index.html,"Most of the suggested readings will be freely available online. Here are some textbooks to refer to:<br/>
+
+1.<a href=""http://www.cs.huji.ac.il/~shais/UnderstandingMachineLearning/"">Understanding Machine Learning</a>. Shai Shalev-Shwartz and Shai Ben-David. Cambridge University Press. 2017.</li>
+2. <a href=""https://web.stanford.edu/~hastie/ElemStatLearn/"">The Elements of Statistical Learning</a>. Trevor Hastie, Robert Tibshirani and Jerome Friedman. Second Edition. 2009.</li>
+3. <a href=""http://www.springer.com/in/book/9780387310732"">Pattern Recognition and Machine Learning</a>. Christopher Bishop. Springer. 2006.</li>
+4. <a href=""https://www.cs.cornell.edu/jeh/book.pdf"">Foundations of Data Science</a>. Avrim Blum, John Hopcroft and Ravindran Kannan. January 2017.</li>","Remedial co-requisite: Mathematical foundations (Separately proposed by Prof. Saketh Nath)<br/>
+
+Recommended parallel courses: CS709 (Convex optimization)<br/>
+
+Course Content :<br/>
+
+Supervised learning: decision trees, nearest neighbor classifiers, generative classifiers like naive Bayes, linear discriminate analysis, loss regularization framework for classification, Support vector Machines<br/>
+
+Regression methods: least-square regression, kernel regression, regression trees<br/>
+
+Unsupervised learning: k-means, hierarchical, EM, non-negative matrix factorization, rate distortion theory.<br/>",False,Prof. Preethi Jyothi,True,Prof. Sunita Sarawagi,-1,True,2026-06-22T12:46:31.991132+05:30,0
+42,CS 740,Mathematics for Visual Computing,6,Theory,0,0,0,0,Full Semester,N/A,https://www.cse.iitb.ac.in/~ajitvr/CS740_Fall2026/,"1.
+Title: Numerical Recipes - The Art of Scientific Computing
+Authors: William H. Press, Saul A. Teukolsky, William T. Vetterling, Brian P. Flannery
+Cambridge University Press 2007<br/>
+
+2.
+Title: Scientific Computing
+Author: Michael T. Heath
+McGraw-Hill 2002
+<br/>
+3.
+Title: Numerical Linear Algebra
+Authors: Lloyd N. Trefethen, David Bau III
+SIAM 1997
+<br/>
+4.
+Title: A First Course in Probability
+Author: Sheldon Ross
+Pearson Education 2012
+<br/>
+5.
+Title: Probability, Random Variables and Stochastic Processes
+Authors: Athanasios Papoulis, S. Unnikrishna Pillai
+McGraw-Hill 2002
+<br/>
+6.
+Title: Numerical Optimization
+Authors: Jorge Nocedal, Stephen Wright
+Springer 2006
+<br/>
+7.
+Title: Elements of Information Theory
+Authors: Thomas M. Cover, Joy A. Thomas
+Wiley-Interscience 2006","The syllabus includes a subset of topics from the following list:
+<br/>
+1) Multivariate Calculus<br/>
+* Functions (multi-variable, vector-valued) and their derivatives, Taylor series, matrix calculus, basic vector calculus
+<br/>
+2) Numerical Linear Algebra<br/>
+* Special matrices (e.g., orthogonal, SPD), matrix decompositions (e.g., SVD, eigen analysis)
+<br/>
+3) Probability and Statistics<br/>
+* Distributions, mean, variance, covariance, bounds, likelihood function, Bayes rule, entropy, divergence, mutual information
+<br/>
+4) Optimization<br/>
+* Unconstrained (gradient descent, Newton's method, Levenberg-Marquardt algorithm, quasi-Newton methods), constrained (equality constraints, Lagrange multipliers)
+<br/>",False,,True,Prof. Ajit Rajwade,12,True,2026-07-21T20:03:37.115428+05:30,0
+43,CS 744,Design and Engineering of Computing Systems,6,Theory,0,0,0,0,Full Semester,"Undergraduate level familiarity with Data Structures and Programming, Computer Networks and  Operating Systems",,"Operating System Principles: Silberschatz, Gavin and Gagne, Publisher: Wiley, 8th Edition, 2008<br/>
+Linux System Programming: Talking Directly to the Kernel and C Library, Robert Love, O'Reilly Media; Second Edition, (2013)<br/>
+Advanced Programming in the UNIX Environment, W. Richard Stevens, Stephen. A. Rago, Addison-Wesley Professional; 3rd edition (2013)<br/>
+Distributed Systems (Concepts and Design): Colouris et. al., Addison Wesley; 5 edition (2011) <br/>
+The Art of UNIX Programming, Eric. S. Raymond, The Addison-Wesley Professional Computing Series, (2003)<br/>
+Operating Systems--A Concept Based Approach,  D. M. Dhamdhere, Tata McGraw-Hill,  Third Edition, 2012<br/>","CPU scheduling, process management and inter-process communication, memory management, thread-safe programming, synchronization and concurrency control, synchronous and asynchronous I/O access mechanisms, design and implementation of scalable distributed systems, metrics for evaluation, tools and techniques for measurement, profiling  and analysis of systems. These concepts will be taught through a series of exercises and assignments involving the  design, implementation and evaluation of applications such web server, file server, game engine etc.",False,Prof. Purushottam Kulkarni,True,Prof. Purushottam  Kulkarni,-1,True,2026-06-22T12:47:43.380076+05:30,0
+44,CS 767,Theoretical Machine Learning,6,Theory,3,0,0,0,Full Semester,N/A,,"Understanding Machine Learning: From theory to algorithms, Shai Shalev-Schwartz and Shai Ben-David, Cambridge University Press, 2014
+An introduction to computational learning theory, M J Kearns and U Vazirani, MIT Press, 1994
+Algorithmic aspects of Machine learning, Ankur Moitra, Manuscript, 2014        http://people.csail.mit.edu/moitra/docs/bookex.pdf
+Theory of Machine learning, Lecture notes, Elad Hazan, Princeton, 2015                  https://www.cs.princeton.edu/courses/archive/spring15/cos511/
+Beyond worst case analysis in Machine Learning, Lecture notes, Pranjal Awasthi, Rutgers, 2016                   https://www.cs.rutgers.edu/~pa336/bwca_f15.html","Given the ever-evolving nature of the field and recent enthusiasm of theoreticians in ML, we have picked a large collection of topics. The plan would be to cover a subset of the modules listed below (not more than 2-3 in an offering).
+ Module I:
+Introduction to PAC learning
+
+Framework of Statistical learning
+Theory of VC dimension 
+ Module II:
+Online algorithms
+Bandit algorithms
+Dimensionality reduction
+Sketching and Streaming algorithms
+Boosting
+ Module III:
+Theoretical aspects of deep learning Module IV:
+Support vector machines
+Convex optimization
+Non-negative matrix factorization
+Tensors in machine learning and applications
+Stochastic Block models
+Module V:
+Learning constant depth Boolean circuits (Linial-Mansour-Nisan)
+Learning from Natural proofs (Carmosino-Impagliazzo-Kabanets-Kolokolova)
+                Computational limits to learnability
+Module VI:
+Newer connection between theory and ML
+Connections to Game theory
+Connections to Coding Theory",False,Prof. Arpit Agarwal,True,Prof. Arpit Agarwal,-1,True,2025-06-03T15:15:12.395456+05:30,0
+45,CS 769,Optimization in Machine Learning,6,Theory,3,0,0,0,,N/A,,"1) S303251bastien Bubeck, 302223Convex Optimization: Algorithms and Complexity302224, In  Foundations and Trends in Machine Learning 8(3-4): 231-357 (2). Online copy: https://arxiv.org/abs/1405.4980 2) Zhang, Aston, et al., 302223Dive into Deep Learning302224, Chapter 11,  Unpublished draft. Retrieved 3 (2019): 319, by Zhang, Lipton, Li and Smola. Online copy:  http://d2l.ai/3) Bach, Francis. ""Learning with submodular functions: A convex optimization perspective."" Foundations and Trends302256 in Machine Learning 6.2-3 (2013): 145-373. Online copy: https://arxiv.org/pdf/1111.6453.pdf4) Boyd, Stephen, Stephen P. Boyd, and Lieven Vandenberghe, 302223Convex optimization302224, Cambridge university press, 2004. Online copy:https://web.stanford.edu/~boyd/cvxbook/bv_cvxbook.pdf5) Yurii Nesterov, ""Introductory lectures on convex optimization."" (2004). Online copy:https://www.springer.com/gp/book/97814020755376) Schrijver, Alexander. ""A course in combinatorial optimization"", CWI, Kruislaan 413 (2003): 1098. Online copy: https://homepages.cwi.nl/~lex/files/dict.pdf7) Schrijver, Alexander. Combinatorial optimization: polyhedra and efficiency. Vol. 24. Springer Science & Business Media, 2003. Online copy:https://www.springer.com/gp/book/97835404438968) Fujishige, Satoru. Submodular functions and optimization. Elsevier, 2005. Online copy: https://www.elsevier.com/books/submodular-functions-and-optimization/fujishige/978-0-444-52086-9","Intention is to cover a reasonable subset of the following topics. 
+
+Continuous and Discrete Optimization are two important pillars of machine learning. Continuous optimization typically occurs in learning model parameters while discrete optimization problems appear in inference and auxiliary tasks such as feature selection, data subset selection, model compression etc.
+
+In the first part of this course, we will cover continuous optimization with applications in machine learning. Topics to discuss will include Convexity, Gradient Methods, Proximal algorithms, Stochastic and Online Variants of mentioned methods, Coordinate Descent Methods, Subgradient Methods, Non-Convex Optimization, FrankWolfe, Accelerated Methods, Lagrange
+and Fenchel Duality, Second-Order Methods, Quasi-Newton Methods, Gradient-Free and Zero-Order Optimization. We will also cover some advanced topics including non-convex optimization, alternating minimization algorithms and parallel/distributed variants of algorithms. We will ground all these algorithms with applications and loss functions in machine
+learning (starting from logistic regression, linear regression, svms, matrix factorization right up to deep neural networks). Summarily,in Continuous Optimization we will cover topics such as Basics of Continuous Optimization,  Convexity,  Gradient Descent,  Projected/Proximal GD,  Subgradient Descent,  Accelerated Gradient Descent,   Newton & Quasi Newton,    Duality: Legrange, Fenchel, Coordinate Descent, Frank Wolfe,     Continuous Optimization in Practice, etc. 
+
+The second part of this course will cover the fundamentals of discrete optimization. We will start with basic forms of combinatorial optimization (knapsack, s-t
+cuts/paths, matchings and matroids) and then discuss submodular functions and their applications. We will cover algorithms for submodular minimization and maximization under various combinatorial constraints. We will also discuss discrete probabilistic models such as Determinantal Point Processes (DPPs). We will ground all these algorithmic and theoretical
+results with real world applications in feature selection, summarization and diversified search, structured prediction, data subset selection and model compression. Summarily, in Discrete Optimization we will cover topics such as Linear Cost Problems with Applications in ML,  Matroids, Spanning Trees,  s-t paths, s-t cuts,   Matchings,   Covers (Set Covers, Vertex Covers, Edge Covers),  Non-Linear Discrete Optimization,   Submodular Functions and Applications in Machine Learning,   Submodularity and Convexity,   Submodular Minimization,   Submodular Maximization, Beyond Minimization and Maximization: Other forms of Submodular Optimization,   Discrete Optimization in Practice",False,Prof. Ganesh Ramakrishnan,True,Prof. Ganesh Ramakrishnan,-1,True,2026-06-22T12:49:59.266369+05:30,0
+46,CS 771,Foundations of verification and automated reasoning,6,Theory,0,0,0,0,Full Semester,N/A,,"(a) M. Huth and M. Ryan, Logic in Computer Science: Modeling and Reasoning about Systems,
+Cambridge University Press, 2004 (b) D. Kroening and O. Strichman, ”Decision Procedures: An
+Algorithmic Point of View”, 2nd edition, Springer 2017 (c) Javier Esparza, Lecture Notes on ”Automata
+Theory: An Algorithmic Approach” https://www7. in.tum.de/~esparza/autoskript.pdf, 2017 (d) A.
+Robinson (Editor), et al 2001. Handbook of Automated reasoning. North Holland, eBook ISBN:
+9780080532790 (e) Z3 source code https://github.com/Z3Prover/z3, 2020","Module 1 : Logic (21 hours) • Propositional logic: syntax and semantics, truth table, satisfiability proof
+systems, equivalences, normal forms, tseitin encoding, (3 hours) • FOL(First order logic) syntax and
+semantics, SAT problem in FOL, proof systems (without completeness), FOL Theories, (6 hours) 2 •
+Simple programming language, small and big step semantics, strongest post, weakest pre, Hoare logic,
+invariants, tools for invariant checking (6 hours) • Satisfiability(SAT) solvers for propositional logic,
+CDCL, optimizations in CDCL, encoding problems into SAT problems, satisfiability modulo theory(SMT)
+solvers (6 hours) Module 2 : Automata (21 hours) • Linear temporal logic (LTL) and Computation tree
+logic(CTL) syntax and semantics, normal forms, satisfiability problems ( 6 hours ) • Automata on finite
+words, DFA and NFA, subset construction, regular expression pumping lemma (3 hours) • Automata on
+infinite words, Buchi automaton(BA), vs ω-regular languages, NBA equivalence to LTL, emptiness. (6
+hours) • Computability, Turing machine, decidability (6 hours)",False,Prof. Paritosh Pandya,True,Prof. Paritosh Pandya,-1,True,2026-06-22T12:50:23.706769+05:30,0
+47,CS 777,R & D Project I (MSR),8,,0,0,0,0,,N/A,,,,False,,True,,-1,True,2025-06-04T12:34:22.459494+05:30,0
+48,CS 782,Algebra and Computation,6,Theory,3,0,0,0,,N/A,,"Modern Computer Algebra, Gerhard and von zur Gathen, Cambridge University Press, 2013● Computational Introduction to Number Theory and Algebra, Victor Shoup, Cambridge UniversityPress, 2008● Finite Fields, Lidl and Niederreiter, Cambridge University Press, 1996● Equations over finite fields by Schmidt, Springer, 1976","Algorithms for fast polynomial evaluation, polynomial multiplication, division with remainder
+GCD of polynomials, Resultant and properties
+Algorithms for polynomial factorization, and applications
+Lattices, Shortest vector problem and LLL algorithm and applications
+Number theoretic algorithms like GCD, Solving linear systems over integers, rational
+approximation of irrational numbers
+Algorithms for integer factorization
+Shor’s algorithm for integer factorization on quantum computers
+Algorithms for primality testing including both randomized and deterministic algorithms
+Computational algebraic geometry, Ideal Membership problem, degree bounds, Groebner basis
+based methods
+Algebraic independence, Jacobian and applications
+Topics in algebraic complexity theory",False,Prof. Bharat Adsul /Prof. Milind Sohoni,True,Prof. Milind Sohoni,-1,True,2026-06-22T12:52:55.942750+05:30,0
+49,CS 787,Language Engineering for Complex Programs: A C++ Perspective,6,Theory,3,6,0,0,Full Semester,N/A,,"1) B. Stroustrup: A Tour of C++ (3rd Edition). Addison-Wesley, 2022.        2) Gamma Erich, Helm Richard, Johnson Ralph, Vlissides John, Grady Booch, Design Patterns: Elements of Reusable Object-Oriented Software, Addison-Wesley, 1994.        3) B. Stroustrup: The C++ Programming Language (Fourth Edition), Addison Wesley, 2013        4) ISO/SE Standard for Programming Language C ++, 2020.","The course deals with the extensive set of language engineering and design features that C++ Programming Language offers to develop complex programs, and their applications to systems software and tools.       (i) Components and modularity: Namespaces, Koneig lookup, scoping rules, initializers, different kinds of constructors/destructors, separate compilation, libraries, errors and exceptions.      (ii) Functions and control: Overloading and operator cascading, Lambda functions, parameter passing models, iterators, assignment semantics, dynamic dispatch/virtual table implementations.     (iii) Concurrency and distributed programming: Threading, Synchronization, Parallel and distributed programs     (iv) Generic Programming: Building templates, and the feature set in the standard template library, variadic functions and macros, variadic templates, template metaprogramming     (v) Data, streams and conversions: Types and typing rules, type inferencing, type-safety issues, Memory models,  strings, regular expressions, containers, ranges, file streams, string streams.     (vi) Patterns and compositions: Design pattern implementations for patterns such as Strategy, Prototype, Builder, Visitor, Composite, Adapter, Proxy, Observer and Iterator.     (vii) Advanced Applications in C++: Engineering and implementations of programs utilizing the rich set of features and design patterns, applying them to systems software such as distributed publisher subscriber event services, sequential algorithmics, model-based tools such as model translators, analyzers, file systems, interpreters and execution engines of experimental languages and extended language features for specialized purposes.",False,,True,Prof. Rushikesh  Joshi,-1,True,2026-07-02T10:28:00.324906+05:30,0
+50,CS 797,I Stage Project (M. Tech.),0,,0,0,0,0,,N/A,,,,False,---,True,---,-1,True,2026-06-22T12:59:02.412075+05:30,0
+51,CSS 801,Seminar (Ph. D.),4,,0,0,0,0,,N/A,,,,False,,True,,-1,True,2026-06-29T12:57:44.951491+05:30,0
