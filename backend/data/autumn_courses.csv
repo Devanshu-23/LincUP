@@ -1,0 +1,53 @@
+,crsecode,crsename,autumncourse,autumninstructor,offered,year
+0,CS 101,Computer Programming and Utilization,True,Prof. Abir De,True,2026
+1,CS 105,Discrete Structures,True,Prof. Bharat Adsul,True,2026
+2,CS 213,Data Structures and Algorithms,True,Prof. Manoj Prabhakaran,True,2026
+3,CS 215,Data Analysis and Interpretation,True,Prof. Sharat Chandran,True,2026
+4,CS 228,Logic For CS,True,Prof. S. Akshay,True,2026
+5,CS 230,Digital Logic Design and Computer Architecture,True,Prof. Sayandeep Saha,True,2025
+6,CS 231,Digital Logic and Computer Architecture Lab,True,Prof. Biswabandan Panda,True,2025
+7,CS 293,Data Structures Lab,True,Prof. Manoj Prabhakaran,True,2026
+8,CS 310,Automata Theory,True,Prof. Krishna S,True,2026
+9,CS 339,Abstractions and Paradigms for Programming,True,Prof. Manas Thakur,True,2025
+10,CS 347 M,Operating Systems,True,Prof. Varsha Apte,True,2026
+11,CS 348,Computer Networks,True,Prof. Bhaskaran Raman,True,2025
+12,CS 355,Programming Paradigms Laboratory,True,Prof. Manas Thakur,True,2025
+13,CS 378,Computer Networks  Lab,True,Prof. Bhaskaran Raman,True,2025
+14,CS 405,Game Theory and Algorithmic Mechanism Design,True,Prof. Swaprava Nath,True,2026
+15,CS 409,Introduction to Cryptography,True,Prof. Sruthi Sekar,True,2025
+16,CS 409 M,Introduction to Cryptography,True,Prof. Chethan Kamath,True,2026
+17,CS 416 M,Foundations of Network Security and Cryptography,True,Prof. G. Sivakumar,True,2026
+18,CS 6001,Game Theory and Algorithmic Mechanism Design,True,Prof. Swaprava Nath,True,2025
+19,CS 6007,Multi-Agent Machine Learning (MAML),True,Prof. Avishek Ghosh,True,2025
+20,CS 6008,Network Security,True,Prof. Devashish Gosain,True,2026
+21,CS 601,Algorithms and Complexity,True,Prof. Akash Kumar,True,2025
+22,CS 6010,Applied Cloud Computing,True,Prof. Kameswari Chebrolu,True,2026
+23,CS 6011,Introduction to Cryptography,True,Prof. Sruthi Sekar,True,2026
+24,CS 6012,Deep Learning: Foundations and Applications,True,Prof. Sharat Chandran,True,2026
+25,CS 6013,Efficient AI,True,Prof. Aditya Desai,True,2026
+26,CS 602,Applied Algorithms,True,Prof. Sujoy Bhore,True,2025
+27,CS 604,Combinatorics,True,Prof. Sundar Vishwanathan,True,2025
+28,CS 6101,Indexing and Retrieving Text and Graphs,True,Prof. Soumen Chakrabarti,True,2026
+29,CS 616,Parallelizing Compilers,True,Prof. Milind Girkar,True,2026
+30,CS 618,Program Analysis,True,Prof. Uday Khedker,True,2025
+31,CS 631,Implementation Techniques for Relational Database Systems,True,Prof. S Sudarshan,True,2025
+32,CS 632,Advanced Database Management Systems,True,Prof. Suraj Shetiya,True,2026
+33,CS 663,Fundamentals of Digital Image Processing,True,Prof. Suyash P. Awate,True,2026
+34,CS 675,Computer Graphics,True,Prof. Parag Chaudhuri,True,2026
+35,CS 683,Advanced Computer Architecture,True,Prof. Biswabandan Panda,True,2026
+36,CS 691,R & D Project I (M.Tech),True,---,True,2025
+37,CS 694,Seminar ( M.Tech./MSR),True,,True,2025
+38,CS 699,Software Lab.,True,Prof. Om Damani,True,2025
+39,CS 7001,Robot Perception and Learning,True,Prof. Nived Chebrolu,True,2026
+40,CS 721,Introduction to Computational Complexity,True,Prof. Vishwas Bhargava,True,2026
+41,CS 725,Foundations of machine learning,True,Prof. Sunita Sarawagi,True,2026
+42,CS 740,Mathematics for Visual Computing,True,Prof. Ajit Rajwade,True,2026
+43,CS 744,Design and Engineering of Computing Systems,True,Prof. Purushottam  Kulkarni,True,2026
+44,CS 767,Theoretical Machine Learning,True,Prof. Arpit Agarwal,True,2025
+45,CS 769,Optimization in Machine Learning,True,Prof. Ganesh Ramakrishnan,True,2026
+46,CS 771,Foundations of verification and automated reasoning,True,Prof. Paritosh Pandya,True,2026
+47,CS 777,R & D Project I (MSR),True,,True,2025
+48,CS 782,Algebra and Computation,True,Prof. Milind Sohoni,True,2026
+49,CS 787,Language Engineering for Complex Programs: A C++ Perspective,True,Prof. Rushikesh  Joshi,True,2026
+50,CS 797,I Stage Project (M. Tech.),True,---,True,2026
+51,CSS 801,Seminar (Ph. D.),True,,True,2026
