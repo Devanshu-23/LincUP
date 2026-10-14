@@ -1,3 +1,4 @@
+import Discover from "./Discover";
 import { useEffect, useState } from "react";
 import "./App.css";
 
@@ -91,6 +92,7 @@ function OpportunityCard({ opportunity }) {
 }
 
 function App() {
+  const [currentPage, setCurrentPage] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
   const [theme, setTheme] = useState(
     () => localStorage.getItem("lincup-theme") || "dark",
@@ -130,6 +132,16 @@ function App() {
     setMenuOpen(false);
   }
 
+  if (currentPage === "discover") {
+  return (
+    <Discover
+      theme={theme}
+      toggleTheme={toggleTheme}
+      onHome={() => setCurrentPage("home")}
+    />
+  );
+  }
+
   return (
     <div id="home" className={`site-shell theme-${theme}`}>
       <div className="announcement">
@@ -152,8 +164,15 @@ function App() {
           </button>
 
           <nav className={`nav-links ${menuOpen ? "nav-open" : ""}`}>
-            <a href="#discover" onClick={closeMenu}>
-              Discover
+            <a
+              href="#discover"
+              onClick={(event) => {
+                event.preventDefault();
+                closeMenu();
+                setCurrentPage("discover");
+              }}
+            >
+            Discover
             </a>
             <a href="#matching" onClick={closeMenu}>
               How it works
