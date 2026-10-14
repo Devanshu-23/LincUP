@@ -1,5 +1,4 @@
-
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 
 const opportunities = [
@@ -93,6 +92,18 @@ function OpportunityCard({ opportunity }) {
 
 function App() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [theme, setTheme] = useState(
+    () => localStorage.getItem("lincup-theme") || "dark",
+  );
+
+  useEffect(() => {
+    localStorage.setItem("lincup-theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    setTheme((current) => (current === "dark" ? "light" : "dark"));
+  };
+
   const [email, setEmail] = useState("");
   const [notice, setNotice] = useState("");
 
@@ -111,7 +122,7 @@ function App() {
 
     // Demo only: real college verification will use the backend OTP API.
     setNotice(
-      "You're ready to get started! College email verification will be available when authentication is connected."
+      "You're ready to get started! College email verification will be available when authentication is connected.",
     );
   }
 
@@ -120,10 +131,10 @@ function App() {
   }
 
   return (
-    <div id="home" className="site-shell">
+    <div id="home" className={`site-shell theme-${theme}`}>
       <div className="announcement">
-        <span className="announcement-dot" />
-        A little more connection can go a long way.
+        <span className="announcement-dot" />A little more connection can go a
+        long way.
       </div>
 
       <header className="site-header">
@@ -150,6 +161,18 @@ function App() {
             <a href="#community" onClick={closeMenu}>
               Community
             </a>
+            <button
+              className="theme-toggle"
+              type="button"
+              onClick={toggleTheme}
+              aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+              title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+            >
+              <span aria-hidden="true">{theme === "dark" ? "☀" : "☾"}</span>
+              <span className="theme-toggle-label">
+                {theme === "dark" ? "Light mode" : "Dark mode"}
+              </span>
+            </button>
             <a className="nav-join" href="#join" onClick={closeMenu}>
               Find your people <Arrow diagonal />
             </a>
@@ -325,8 +348,8 @@ function App() {
 
               <p>
                 Great teams aren't made of people who all know the same things.
-                They're made of people who bring different strengths to a
-                shared goal.
+                They're made of people who bring different strengths to a shared
+                goal.
               </p>
 
               <p>
@@ -389,8 +412,8 @@ function App() {
               <span className="serif-accent">Let's find it together.</span>
             </h2>
             <p className="join-description">
-              Bring your ideas, your skills, your curiosity. There's a place
-              for you in this community.
+              Bring your ideas, your skills, your curiosity. There's a place for
+              you in this community.
             </p>
 
             <form className="join-form" onSubmit={handleJoin}>
@@ -432,8 +455,7 @@ function App() {
             <Brand light />
             <p>
               A little less alone.
-              <br />
-              A lot more together.
+              <br />A lot more together.
             </p>
           </div>
 
