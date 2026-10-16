@@ -1,4 +1,4 @@
-0,1
+dept_code,dept_name
 AE,Aerospace Engineering
 AES,Aerospace Engineering
 GP,Applied Geophysics
@@ -16,7 +16,6 @@ CES,Civil Engineering
 CS,Computer Science and Engineering
 CSS,Computer Science and Engineering
 GS,Earth Sciences
-GP,Earth Sciences
 GSS,Earth Sciences
 EC,Economics
 EE,Electrical Engineering
@@ -27,16 +26,12 @@ EP,Engineering Physics
 HS,Humanities and Social Sciences
 HSS,Humanities and Social Sciences
 MA,Mathematics
-MA,Mathematics
-MA,Mathematics
 ME,Mechanical Engineering
 MES,Mechanical Engineering
 MM,Metallurgical Engineering and Materials Science
 MMS,Metallurgical Engineering and Materials Science
 PH,Physics
 PHS,Physics
-SI,Statistics
-SI,Statistics
 SI,Statistics
 PS,Ashank Desai Centre for Policy Studies
 PSS,Ashank Desai Centre for Policy Studies

@@ -24,10 +24,13 @@ for d in soup.find_all("a", attrs={"onclick": True}):
     name = d.get_text()
     codes = d["onclick"].split("'")[1].split(",")[:-1]
     for c in codes:
-        departments.append((c, name))
+        departments.append({"dept_code": c, "dept_name": name})
 
 courses = []
-for code, name in departments:
+for d in departments:
+    code = d["dept_code"]
+    name = d["dept_name"]
+
     r1 = session.post(url, data = {"deptcd": code, "deptname": name}, headers = headers)
     s1 = BeautifulSoup(r1.text, "html.parser")
     for f in s1.find_all("frame", attrs = {"name": "content"}):
@@ -49,7 +52,9 @@ for code, name in departments:
                 })
 
 df1 = pd.DataFrame(departments)
+df1 = df1.drop_duplicates(subset=["dept_code"], keep="first")
 df1.to_csv("../../data/departments.csv", index = False)
 df2 = pd.DataFrame(courses)
+df2 = df2.drop_duplicates(subset=["course_code"], keep="first")
 df2.to_csv("../../data/courses.csv", index = False)
 
