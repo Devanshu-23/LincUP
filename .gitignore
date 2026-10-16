@@ -1,5 +1,11 @@
 
 .DS_Store
-.vscode
-.venv
-.ipynb_checkpoints
+.vscode/
+.venv/
+.ipynb_checkpoints/
+__pycache__/
+*.py[cod]
+.env
+.env.*
+!.env.example
+
