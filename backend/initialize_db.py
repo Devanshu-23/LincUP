@@ -21,10 +21,12 @@ try :
     cursor.executescript(schema_sql)
     conn.commit()
 
-    courses = pd.read_csv(COURSES_CSV)
     departments = pd.read_csv(DEPARTMENTS_CSV)
-    courses.to_sql("courses", conn, if_exists = "append", index = False)
+    courses = pd.read_csv(COURSES_CSV)
     departments.to_sql("departments", conn, if_exists = "append", index = False)
+    courses["instructor"] = courses["instructor"].fillna("TBA")
+    courses.to_sql("courses", conn, if_exists = "append", index = False)
+
 
 except Exception as e:
     # print(f"error: {e}")

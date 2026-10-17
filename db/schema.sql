@@ -20,7 +20,7 @@ create table if not exists courses (
     dept_code varchar(10) not null references departments(dept_code),
     course_code varchar(8) primary key,  -- unique course code so will have to update sem id every year or something or we can delete these and make new ones with same code but diff id and sem id so wont have to update enrolled and just truncate old course ids from there too
     course_name varchar(100) not null,
-    instructor varchar(40) ,
+    instructor varchar(40) not null,
     year int not null,
     semester int not null
     -- sem_id varchar(10) references semester(id), -- 
