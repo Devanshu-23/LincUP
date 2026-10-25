@@ -1,0 +1,1071 @@
+dept_code,course_code,course_name,instructor,year,semester
+AE,AE 103,A historical perspective of Aerospace Engineering,Chandra Sekher Yerramalli,2026,1
+AE,AE 152,Introduction to Aerospace Engg.,Rajkumar Sureshchandra Pant,2026,1
+AE,AE 153,Introduction to Aerospace Engg.,Rajkumar Sureshchandra Pant,2026,1
+AE,AE 219,Supervised Learning,Rohit Vishwajit Nanavati,2026,1
+AE,AE 223,Thermodynamics and Propulsion,Chandra Sekar Thyagarajan,2026,1
+AE,AE 227,Solid Mechanics,Krishnendu Haldar,2026,1
+AE,AE 229,Introduction to Aerodynamics and Propulsion Laboratory,Chandra Sekar ThyagarajanDhwanil ShuklaNagendra KumarPrabhu Ramachandran,2026,1
+AE,AE 231,Introduction to Aerospace Structures and Control  Laboratory,Hemendra AryaKrishnendu Haldar,2026,1
+AE,AE 234,Aircraft Propulsion,Pradeep Amboor Madathil,2026,1
+AE,AE 236,Compressible Fluid Mechanics,Aniruddha Sinha,2026,1
+AE,AE 308,Control Theory,Rohit Vishwajit Nanavati,2026,1
+AE,AE 316,Aircraft Propulsion Laboratory,Nagendra Kumar,2026,1
+AE,AE 326,Vibrations and Structural Dynamics,Abhijit Gogulapati,2026,1
+AE,AE 339,High Speed Aerodynamics,Vineeth Nair,2026,1
+AE,AE 341,Flight Mechanics of Aircrafts and Spacecrafts,Rohit Gupta,2026,1
+AE,AE 343,Aerodynamics Laboratory,Aniruddha SinhaVineeth NairViren I. Menezes,2026,1
+AE,AE 344,Aero Propulsion,Hrishikesh Gadgil,2026,1
+AE,AE 345,Aircraft Propulsion Laboratory,Nagendra Kumar,2026,1
+AE,AE 419,Supervised Learning,Deepak Prakash KumarRohit Vishwajit Nanavati,2026,1
+AE,AE 429,Aircraft Design Project,Avijit ChatterjeeGanapathi Bhat,2026,1
+AE,AE 493,BTP - I,Arnab Maity,2026,1
+AE,AE 494,BTP - II,Vineeth Nair,2026,1
+AE,AE 616,Gas Dynamics,Aniruddha Sinha,2026,1
+AE,AE 623,Computing  of Turbulent Flows,Krishnendu Bimalendu Sinha,2026,1
+AE,AE 641,Introduction to Navigation and Guidance,Arnab Maity,2026,1
+AE,AE 649,Finite Element Method,Chandra Sekher Yerramalli,2026,1
+AE,AE 650,Mini Project,Nagendra Kumar,2026,1
+AE,AE 667,Rotary Wing Aerodynamics,Dhwanil Shukla,2026,1
+AE,AE 683,Fluid Dynamics,Nagendra Kumar,2026,1
+AE,AE 688,Navigation of Autonomous Vehicles,Hemendra Arya,2026,1
+AE,AE 694,Seminar,Krishnendu HaldarVasudeva Raghavendra Kowsik Bodi,2026,1
+AE,AE 695,State Space Methods for Flight Vehicles,Shashi Ranjan Kumar,2026,1
+AE,AE 705,Introduction to Flight,Rajkumar Sureshchandra Pant,2026,1
+AE,AE 707,Aerodynamics of Aerospace Vehicles,Viren I. Menezes,2026,1
+AE,AE 709,Aerospace Structures,Padubidri Janardhan Achar Guruprasad,2026,1
+AE,AE 711,Aircraft Propulsion,Pradeep Amboor Madathil,2026,1
+AE,AE 715,Structural Dynamics,Abhijit Gogulapati,2026,1
+AE,AE 720,Advanced Numerical Methods for Compressible Flows,Jadav Chandra Mandal,2026,1
+AE,AE 726,Heat Transfer - Aerospace Applications,Ganapathi Bhat,2026,1
+AE,AE 727,Aircraft Structural Mechanics Lab.,Krishnendu Haldar,2026,1
+AE,AE 775,"System Modelling, Dynamics and Control",Rohit Vishwajit Nanavati,2026,1
+AE,AE 899,Communication Skills,Krishnendu HaldarVasudeva Raghavendra Kowsik Bodi,2026,1
+AE,AES801,Seminar,Krishnendu HaldarVasudeva Raghavendra Kowsik Bodi,2026,1
+AE,AES802,Seminar,Krishnendu HaldarVasudeva Raghavendra Kowsik Bodi,2026,1
+GP,GP 101,Solid-Earth Geophysics,Kumar Hemant Singh,2026,1
+GP,GP 201,Elements of Mineralogy and Petrology,George MathewSameer Ranjan,2026,1
+GP,GP 203,Engineering Geology and Hydrogeology,D RamakrishnanVikram Vishal,2026,1
+GP,GP 205,Elements of Mineralogy and Petrology Lab,Nibedita RakshitSameer Ranjan,2026,1
+GP,GP 207,Engineering Geology and Hydrogeology Lab,D RamakrishnanVikram Vishal,2026,1
+GP,GP 401,Global Geophysics,Srinivasa Rao Gangumalla,2026,1
+GP,GP 403,Earthquake and Engineering Seismology,Gollapally MohanSatish Maurya,2026,1
+GP,GP 407,Seismology Lab,Satish Maurya,2026,1
+GP,GP 413,Mineralogy & Petrology,Prabhakar NaragaSudipta Dasgupta,2026,1
+GP,GP 415,Mineralogy & Petrology Lab,Prabhakar NaragaSudipta Dasgupta,2026,1
+GP,GP 503,Geophysical Signal Processing,Enamundram Chandrasekhar,2026,1
+GP,GP 505,Electromagnetic Methods,Enamundram Chandrasekhar,2026,1
+GP,GP 517,Exploration Seismology II,Vivek Kumar,2026,1
+GP,GP 519,Engineering & Ground Water Geology Lab,Rambabu  SinghVikram Vishal,2026,1
+GP,GP 521,Electromagnetic Lab,Anand Singh,2026,1
+GP,GP 523,Industrial Training,Enamundram Chandrasekhar,2026,1
+BM,BM 659,Elements of Circuits and Instrumentation,Ambarish Kunwar,2026,1
+BB,BB 101,Biology,Prasenjit Ranjith Kumar BhaumikSandip Laxman KaledhonkarSwapnil Rohidas Shinde,2026,1
+BB,BB 415,Cell and Molecular Biology,Sreelaja Nair,2026,1
+BB,BB 454,Programming for Bioinformatics,Deepak Kumar Agrawal,2026,1
+BB,BB 505,Molecular Immunology,Sushil Kumar,2026,1
+BB,BB 519,Project Proposal Presentation and Dissertation,Sreelaja Nair,2026,1
+BB,BB 525,Biological Thermodynamics and Kinetics,Ranjith Padinhateeri,2026,1
+BB,BB 527,Molecular Enzymology,Petety V Balaji,2026,1
+BB,BB 529,Research Methodology and Scientific Communication Skills,Swati Arvind Patankar,2026,1
+BB,BB 531,Plant Biotechnology,Rajesh Patkar,2026,1
+BB,BB 535,Environmental Biotechnology,Prashant Sitakant Phale,2026,1
+BB,BB 540,Microbiology,Anirban Chanchal Kumar BanerjeeRajesh Patkar,2026,1
+BB,BB 541,Biochemistry and Analytical Biochemistry,Petety V BalajiPrashant Sitakant Phale,2026,1
+BB,BB 542,Mathematics and Statistics,Deepak Kumar AgrawalSandeep Kumar Kalva,2026,1
+BB,BB 600,Introduction to Biomedical Engineering,Mukherji Soumyo,2026,1
+BB,BB 601,Introduction to Bio-nanotechnology,Rohit Srivastava,2026,1
+BB,BB 603,Physiology for Engineers,Vivek P Soni,2026,1
+BB,BB 617,Biophysical Chemistry,Ashutosh KumarSamir Kumar Maji,2026,1
+BB,BB 619,Mathematics for Biologists,Shamik Rabindranath Sen,2026,1
+BB,BB 627,Medical Imaging Methods,Hari M. Varma,2026,1
+BB,BB 633,Movement Neuroscience,Neeta Kanekar,2026,1
+BB,BB 653,Experimental Techniques in Biomedical Engineering,Ambarish KunwarDeepak Kumar AgrawalNivethida ThirugnanasambandamSandeep Kumar Kalva,2026,1
+BB,BB 659,Applied Microbiology and Biotechnology Laboratory,Prashant Sitakant Phale,2026,1
+BB,BB 661,Biopotentials I: Cellular Signals,Rohit Manchanda,2026,1
+BB,BB 663,Medical Imaging Physics,Debjani Paul,2026,1
+BB,BB 669,Signals & Systems in Biomedical Engineering,Ambarish Kunwar,2026,1
+BB,BB 673,Medical Sensors,Mukherji Soumyo,2026,1
+BB,BB 677,Introduction to Biomechanics,Tuhin  Roy,2026,1
+BB,BB 681,Biological Physics at Microscopic Scales,Ambarish Kunwar,2026,1
+BB,BB 683,Introduction to Quantum Science,Hari M. Varma,2026,1
+BB,BB 701,Research Proposal,Tuhin  Roy,2026,1
+BB,BB 706,Fundamental and Practical Aspects of Microscopy,Roop Mallik,2026,1
+BB,BB 708,Introduction to Quantitative Physiology,Deepak Kumar AgrawalNivethida Thirugnanasambandam,2026,1
+BB,BB 709,Mathematics for Biomedical Data Analysis,Deepak Kumar Agrawal,2026,1
+BB,BB 797,I Stage Project,Sandeep Kumar Kalva,2026,1
+BB,BB 899,Communication Skills,Debjani PaulNivethida ThirugnanasambandamRoop MallikSreelaja NairSushil KumarSwapnil Rohidas ShindeTuhin  Roy,2026,1
+BB,BBS801,Seminar,Shamik Rabindranath Sen,2026,1
+CL,CL 205,AI and Data Science,Sarika MehraSharad Bhartiya,2026,1
+CL,CL 207,Chemical Engineering Thermodynamics,Guruswamy KumaraswamySudarshan Vijay,2026,1
+CL,CL 249,Computational Methods Lab,Swati Bhattacharya,2026,1
+CL,CL 254,Process Fluid Mechanics,Jhumpa AdhikariMahesh S. Tirumkudulu,2026,1
+CL,CL 306,Chemical Processes,Madhu VinjamurRahul Nabar,2026,1
+CL,CL 307,Chemical Industry Bootcamp,Madhu VinjamurRahul NabarSanjay Mahajani,2026,1
+CL,CL 309,Conception of Chemical Projects,Hemant Jayantkumar NanavatiRajeev  PandiaSanjay Mahajani,2026,1
+CL,CL 327,Chemical Process Design I,P SuntharSanjay Mahajani,2026,1
+CL,CL 329,Process Control,Sayantan DuttaSujit Suresh Jogwar,2026,1
+CL,CL 333,Chemical Engineering Lab. II,Chandra VenkataramanOjus MohanRochish Madhukar Rao ThaokarSonali Das,2026,1
+CL,CL 336,Advanced Transport Phenomena,Devang Vipin Khakhar,2026,1
+CL,CL 409,Material Science,Rajdip Bandyopadhyaya,2026,1
+CL,CL 420,Introduction to Biochemical Engg.,Pramod Prabhakar Wangikar,2026,1
+CL,CL 437,Chemical Projects Management,Madhu VinjamurRajaram  KrishnaswamiSanjay Mahajani,2026,1
+CL,CL 443,Supervised learning I,Venkata Ramana Gundabala,2026,1
+CL,CL4497,B.Tech.Project(grade points will be included in CL,Rochish Madhukar Rao Thaokar,2026,1
+CL,CL 461,Colloid & Interfacial Engineering,Jayesh Ramesh Bellare,2026,1
+CL,CL 464,Process Safety and Risk Management,Sandip Salil Roy,2026,1
+CL,CL 491,B.Tech. Project I,Venkata Ramana Gundabala,2026,1
+CL,CL 601,Advanced Transport Phenomena,Jason Ryan Picardo,2026,1
+CL,CL 602,Mathematical and Statistical Methods in Chemical Engineering,Amol Subhedar,2026,1
+CL,CL 605,Advanced Reaction Engineering,Nagappan Ramaswamy,2026,1
+CL,CL 607,Advanced Thermodynamics,Ateeque Ahmad Abdul Gaffar Malani,2026,1
+CL,CL 611,Electrochemical Reaction Engineering,Bharatkumar SutharNagappan Ramaswamy,2026,1
+CL,CL 653,State Estimation:  Theory and Applications,Sachin Chandrasekhar Patwardhan,2026,1
+CL,CL 656,Colloid and Interfacial Engineering,Rochish Madhukar Rao Thaokar,2026,1
+CL,CL 665,Sustainable Engineering Principles,Yogendra Narayan Shastri,2026,1
+CL,CL 669,Product Research & Development,Hemant Jayantkumar NanavatiVijay Mukund Naik,2026,1
+CL,CL 673,Turbulent Multiphase Flow,Partha Sarathi Goswami,2026,1
+CL,CL 683,Introduction to Microfluidics and its Applications,Venkata Ramana Gundabala,2026,1
+CL,CL 685,Novel Alternative Models for Drug Discovery,Abhijit Majumder,2026,1
+CL,CL 688,Artificial Intelligence in Process Engineering,Santosh Bonaventure Noronha,2026,1
+CL,CL 701,Computational Methods in Chemical Engineering,Ratul Dasgupta,2026,1
+CL,CL 702,Lecture Series,Sayantan DuttaSonali DasSudarshan Vijay,2026,1
+CL,CL 706,Molecular Principles in Chemical Engineering,Abhijit Chatterjee,2026,1
+CL,CL 710,Aerosol Technology,Chandra Venkataraman,2026,1
+CL,CL 713,Introduction to Network Analysis,Ganesh Ariyur Viswanathan,2026,1
+CL,CL 716,Modelling  Chemical and Biiological Patterns,Sameer Ralph Jadhav,2026,1
+CL,CL 899,Communication Skills,Mani Bhushan,2026,1
+CL,CLS801,Seminar,Partha Sarathi Goswami,2026,1
+CH,CH 111,Chemistry,Chandra Mouleeswara Rao VollaChidambar KulkarniDeepti KalsiIshita SenguptaMurugavel RamaswamyRahul MaitraSandip KarShobhna Kapoor,2026,1
+CH,CH 117,Chemistry Lab,Deepti KalsiNaresh Patwari GanpathiPradeep Kumar P. I.Rajarshi ChakrabartiSajal  SenSubramaniam ChandramouliVenkatakrishnarao Dasari,2026,1
+CH,CH 209,Basic Organic Chemistry,Anil Kumar,2026,1
+CH,CH 219,Inorganic Chemistry Lab-I,Maheswaran ShanmugamMurugavel Ramaswamy,2026,1
+CH,CH 225,Data Analysis for Chemists,Naresh Patwari Ganpathi,2026,1
+CH,CH 231,Organic Chemistry Lab I,Krishna Pillai Kaliappan,2026,1
+CH,CH 301,Co-ordination Chemistry and Magnetic Properties,M. RavikanthSrinivasan Ramakrishnan,2026,1
+CH,CH 305,Chemistry of Functional Groups,Nandita MadhavanVenkateswarlu Yarlagadda,2026,1
+CH,CH 309,Introduction to Electrochemistry,Kamendra Prakash Sharma,2026,1
+CH,CH 311,Solid State,Ruchi Anand,2026,1
+CH,CH 313,Organic Chemistry Lab III,Venkateswarlu Yarlagadda,2026,1
+CH,CH 315,Physical Chemistry Lab II,Ishita SenguptaKamendra Prakash Sharma,2026,1
+CH,CH 397,Mini Project I,Sanjog Sunil Nagarkar,2026,1
+CH,CH 401,Organic Reactions,Santosh Janardan GharpureSatyadeep  Waiba,2026,1
+CH,CH 403,Electrochemistry of Solutions and Interfaces,Subramaniam Chandramouli,2026,1
+CH,CH 405,Advanced Transition Metal Chemistry,Gopalan RajaramanSanjog Sunil Nagarkar,2026,1
+CH,CH 415,Inorganic Chemistry Lab II,Gopalan RajaramanSrinivasan Ramakrishnan,2026,1
+CH,CH 417,Organic Chemistry Lab II,Irishi N. Narayanan NamboothiriSatyadeep  Waiba,2026,1
+CH,CH 425,Chemical Bond and Molecular Geometry,Arindam ChowdhuryRahul Maitra,2026,1
+CH,CH 433,Physical Chemistry Lab II,Ruchi AnandShobhna Kapoor,2026,1
+CH,CH 481,Chemistry and Computers,Achintya Kumar Dutta,2026,1
+CH,CH 507,Methods in Organic Synthesis,Rodney Agustinho Fernandes,2026,1
+CH,CH 521,Interpretative Molecular Spectroscopy,Suvarn Subhash KulkarniVenkatakrishnarao Dasari,2026,1
+CH,CH 546,Introduction to Biomolecules,Pradeep Kumar P. I.,2026,1
+CH,CH 547,Organometallic Chemistry,Arnab DuttaDebabrata Maiti,2026,1
+CH,CH 584,Biophysical Chemistry,Nand Kishore,2026,1
+CH,CH 591,Research Project I,Sanjog Sunil Nagarkar,2026,1
+CH,CH 593,Project Stage I,Sanjog Sunil Nagarkar,2026,1
+CH,CH 595,M.Sc. Project I,Sanjog Sunil Nagarkar,2026,1
+CH,CH 605,"Chemical dynamics: quantum, classical and semiclassical methods",Amber Jain,2026,1
+CH,CH 812,Funadamentals of  Quantum Chemistry,Rajarshi Chakrabarti,2026,1
+CH,CH 817,Advanced Co-ordination Chemistry,Maheswaran ShanmugamPrasenjit Ghosh,2026,1
+CH,CH 827,Inorganic Complexes,Maheswaran ShanmugamPrasenjit Ghosh,2026,1
+CH,CH 831,Advanced Laboratory Techniques,Arindam ChowdhuryChidambar KulkarniM. RavikanthSanjog Sunil Nagarkar,2026,1
+CH,CH 839,Physical Organic and Stereochemistry,Irishi N. Narayanan Namboothiri,2026,1
+CH,CH 845,Organic Reactions and Synthesis,Krishna Pillai Kaliappan,2026,1
+CH,CH 899,Communication Skills,Amber JainNandita MadhavanPrasenjit Ghosh,2026,1
+CH,CHS801,Seminar,Chandra Mouleeswara Rao VollaDebabrata MaitiSandip Kar,2026,1
+CE,CE 103,Introduction to Civil Engineering,Albert ThomasNagendra Rao Velaga,2026,1
+CE,CE 203,Solid Mechanics,Jayadipta GhoshNajeeb Mohammad ShariffNaresh Kotumal Chandiramani,2026,1
+CE,CE 207,Hydromechanics,Anshul  YadavBasudev BiswalSrineash V.K.,2026,1
+CE,CE 209,Building Materials and Construction,Muhammad SalmanSwathy Manohar,2026,1
+CE,CE 235,Artificial Intelligence & Data Science,Gopal Ramachandra PatilSangram Krishna Nirmale,2026,1
+CE,CE 240,Soil Mechanics Laboratory,Ashish JunejaSatyanarayana Murty Dasaka,2026,1
+CE,CE 324,Engineering Law,Milind S. WankhedeRavi Sinha,2026,1
+CE,CE 333,Foundation Engineering,Deepankar ChoudhuryPrasenjit BasuSantiram Chatterjee,2026,1
+CE,CE 337,Introduction to Structural Design,Arghadeep LaskarAshish PalManish Kumar,2026,1
+CE,CE 339,Structural Mechanics Level II,R. S. Jangid,2026,1
+CE,CE 341,Transportation Engineering Laboratory,Avijit MajiDharamveer SinghNagendra Rao VelagaSolomon Debbarma,2026,1
+CE,CE 433,Water Supply and Waste Water Engineering,V. Jothiprakash,2026,1
+CE,CE 463,Probabilistic and Statistical Methods in Civil Eng,Arpita MondalSubimal Ghosh,2026,1
+CE,CE 465,Numerical Methods in Civil Engineering,Mandar M InamdarPinom Ering,2026,1
+CE,CE 482,Construction Management,Albert Thomas,2026,1
+CE,CE 491,Integrated Design Project,Tom V. Mathew,2026,1
+CE,CE 494,BTP I,Tom V. Mathew,2026,1
+CE,CE 496,Irrigation Engineering and Technology,Manne Janga Reddy,2026,1
+CE,CE 593,Dual Degree Project I,,2026,1
+CE,CE 603,Numerical Methods,Tushar Kanti Mandal,2026,1
+CE,CE 605,Applied Statistics,Bellie Sivakumar,2026,1
+CE,CE6102,Introduction to Building: Functional Design and Science,Arnab Jana,2026,1
+CE,CE 616,Structural Dynamics,Ravi Sinha,2026,1
+CE,CE 623,Advanced Solids Mechanics,Yogeshkumar Mangubhai Desai,2026,1
+CE,CE 626,Groundwater Systems Planning and Management,Bellie Sivakumar,2026,1
+CE,CE 627,Structural Design,Siddhartha Ghosh,2026,1
+CE,CE 630,Geographical Information Systems in Civil Engineering,RAAJ RamsankaranSanchari  Thakur,2026,1
+CE,CE 641,Environmental Geomechanics,Devendra Narain Singh,2026,1
+CE,CE 643,Experimental Geotechnics,Ashish JunejaBhamidipati Venkata Surya viswanadhamDeepankar ChoudhuryDevendra Narain SinghPinom EringPrasenjit BasuSantiram ChatterjeeSatyanarayana Murty Dasaka,2026,1
+CE,CE 653,Structural Reliability and Risk Analysis,Swagata Basu,2026,1
+CE,CE 675,Advanced Experimental Fluid Mechanics,Manne Janga Reddy,2026,1
+CE,CE 680,Mechanics of Water Waves,Manasa Ranjan Behera,2026,1
+CE,CE 681,Advance Pavement Engineering Lab,Dharamveer Singh,2026,1
+CE,CE 694,Seminar,Tom V. Mathew,2026,1
+CE,CE 695,R & D Project,Tom V. Mathew,2026,1
+CE,CE 701,Remote Sensing Technology,Eswar Rajasekaran,2026,1
+CE,CE 703,Remote Sensing Laboratory,Eswar Rajasekaran,2026,1
+CE,CE 706,Ocean Engineering Laboratory,Ananth WuppukondurSrineash V.K.,2026,1
+CE,CE 712,Digital Image Processing of Remotely Sensed Data,Jayaluxmi Indu,2026,1
+CE,CE 713,Advanced Concrete Technology,Prakash Nanthagopalan,2026,1
+CE,CE 717,Construction Planning and Control,Varun Kumar  Reja,2026,1
+CE,CE 718,Construction Materials Laboratory,Prakash Nanthagopalan,2026,1
+CE,CE 720,Non-Destructive Testing of Materials,Sauvik Banerjee,2026,1
+CE,CE 725,Construction Economics and Finance,Venkata Santosh Kumar Delhi,2026,1
+CE,CE 727,Construction Materials,Muhammad Salman,2026,1
+CE,CE 731,Mechanics of Fluid Flow,Eldho Thekkilakkattu Iype,2026,1
+CE,CE 740,Traffic Engineering,Tom V. Mathew,2026,1
+CE,CE 742,Pavement Systems Engineering,Dharamveer Singh,2026,1
+CE,CE 746,Reinforced Earth and Geotextiles,Bhamidipati Venkata Surya viswanadham,2026,1
+CE,CE 751,Urban Transportation Systems Planning,Kurra Venkata Krishna RaoNagendra Rao Velaga,2026,1
+CE,CE 766,Watershed Management,Riddhi Singh,2026,1
+CE,CE 768,Urban Water and Environmental Management,Kapil Gupta,2026,1
+CE,CE 769,Coastal and Ocean Environment,Gowri Shankar  C.,2026,1
+CE,CE 771,Optimization in Civil Engineering,Avijit Maji,2026,1
+CE,CE 781,Advanced Foundation Engineering,Satyanarayana Murty Dasaka,2026,1
+CE,CE 782,Advanced Soil Mechanics,Ashish Juneja,2026,1
+CE,CE 899,Communication Skills,Archak MittalArnab Jana,2026,1
+CE,CES801,Seminar,Tom V. Mathew,2026,1
+CS,CS 101,Computer Programming and Utilization,Abir De,2026,1
+CS,CS 105,Discrete Structures,Bharat Gopichand Adsul,2026,1
+CS,CS 213,Data Structures and Algorithms,Manoj Prabhakaran,2026,1
+CS,CS 215,Data Analysis and Interpretation,Sharat Chandran,2026,1
+CS,CS 228,Logic for Computer Science,S. Akshay,2026,1
+CS,CS 230,Digital Logic Design and Computer Architecture,Sayandeep Saha,2026,1
+CS,CS 231,Digital Logic and Computer Architecture Lab,Biswabandan Panda,2026,1
+CS,CS 293,Data Structures and Algorithms Lab,Manoj Prabhakaran,2026,1
+CS,CS 310,Automata Theory,Krishna Shankara Narayanan,2026,1
+CS,CS 339,Abstractions and Paradigms for Programming,Manas Thakur,2026,1
+CS,CS 347,Operating Systems,Varsha Apte,2026,1
+CS,CS 348,Computer Networks,Bhaskaran Raman,2026,1
+CS,CS 355,Programming Paradigms Laboratory,Manas Thakur,2026,1
+CS,CS 378,Computer Networks Lab,Bhaskaran Raman,2026,1
+CS,CS 385,B.Tech. Seminar,Mythili VutukuruRohit Gurjar,2026,1
+CS,CS 396,Seminar,Mythili VutukuruRohit Gurjar,2026,1
+CS,CS 405,Game Theory and Algorithmic Mechanism Design,Swaprava Nath,2026,1
+CS,CS 409,Introduction to Cryptography,Chethan KamathSruthi Sekar,2026,1
+CS,CS 416,Computer and Network Security,G Sivakumar,2026,1
+CS,CS 485,R & D Project II,Mythili VutukuruRohit Gurjar,2026,1
+CS,CS 490,R & D Project,Mythili VutukuruRohit Gurjar,2026,1
+CS,CS 492,BTP I,Mythili VutukuruRohit Gurjar,2026,1
+CS,CS 496,BTP II,Mythili VutukuruRohit Gurjar,2026,1
+CS,CS 593,Dual Degree Project I,Milind Ashok SohoniSwaprava Nath,2026,1
+CS,CS6001,Game Theory and Algorithmic Mechanism Design,Swaprava Nath,2026,1
+CS,CS6007,Multi-Agent Machine Learning (MAML),Avishek Ghosh,2026,1
+CS,CS6008,Network Security,Devashish Gosain,2026,1
+CS,CS 601,Algorithms and Complexity,Akash Kumar,2026,1
+CS,CS6010,Applied Cloud Computing,Kameswari Chebrolu,2026,1
+CS,CS6011,Introduction to Cryptography,Sruthi Sekar,2026,1
+CS,CS6012,Deep Learning: Foundations and Applications,Sharat Chandran,2026,1
+CS,CS6013,Efficient AI,Aditya  Desai,2026,1
+CS,CS 602,Applied Algorithms,Sujoy Bhore,2026,1
+CS,CS 604,Combinatorics,Saisundararaman Vishwanathan,2026,1
+CS,CS6101,Indexing and Retrieving Text and Graphs,Soumen Chakrabarti,2026,1
+CS,CS 616,Parallelizing Compilers,Uday Prabhakar Khedker,2026,1
+CS,CS 618,Program Analysis,Uday Prabhakar Khedker,2026,1
+CS,CS 631,Implementation Techniques for Relational Database Systems,S Sudarshan,2026,1
+CS,CS 632,Advanced Database Management Systems,Suraj Shetiya,2026,1
+CS,CS 663,Fundamentals of Digital Image Processing,Suyash Prakash Awate,2026,1
+CS,CS 675,Computer Graphics,Parag Kumar Chaudhuri,2026,1
+CS,CS 683,Advanced Computer Architecture,Biswabandan Panda,2026,1
+CS,CS 691,R & D Project,Arpit AgarwalAvishek Ghosh,2026,1
+CS,CS 692,R & D Project II,Arpit AgarwalAvishek Ghosh,2026,1
+CS,CS 694,Seminar,Arpit AgarwalAvishek Ghosh,2026,1
+CS,CS 699,Software Lab.,Om P. Damani,2026,1
+CS,CS7001,Robot Perception and Learning,Nived  Chebrolu,2026,1
+CS,CS 721,Introduction to Computational Complexity,Vishwas  Bhargava,2026,1
+CS,CS 725,Foundations of Machine Learning,Sunita Bishwanath Sarawagi,2026,1
+CS,CS 740,Mathematics for Visual Computing,Ajit Vilas Rajwade,2026,1
+CS,CS 744,Design and Engineering of Computing Systems,Purushottam Shrinivas Kulkarni,2026,1
+CS,CS 767,Theoretical Machine Learning,Arpit Agarwal,2026,1
+CS,CS 769,Optimization in Machine Learning,Ganesh Seshan Ramakrishnan,2026,1
+CS,CS 771,Foundations of verification and automated reasoning,Paritosh K. Pandya,2026,1
+CS,CS 777,M.S. R&D 1,Akash KumarChethan Kamath,2026,1
+CS,CS 778,M.S. R&D 2,Akash KumarChethan Kamath,2026,1
+CS,CS 782,Algebra and Computation,Milind Ashok Sohoni,2026,1
+CS,CS 787,Language Engineering for Complex Programs: A C++ Perspective,Rushikesh Krishnakant Joshi,2026,1
+CS,CS 797,I Stage Project,Arpit AgarwalAvishek Ghosh,2026,1
+CS,CS 899,Communication Skills,,2026,1
+CS,CSS801,Seminar,Suyash Prakash Awate,2026,1
+CS,CSS802,Seminar,Suyash Prakash Awate,2026,1
+GS,GS 407,Structural Geology,Soumyajit Shyamal Kumar Mukherjee,2026,1
+GS,GS 413,Structural Geology Lab,Soumyajit Shyamal Kumar Mukherjee,2026,1
+GS,GS 415,Applied Mineralogy and X-Ray Crystallography,George Mathew,2026,1
+GS,GS 421,Palaeontology,Jahnavi PunekarNibedita Rakshit,2026,1
+GS,GS 433,Palaeontology Lab,Jahnavi PunekarNibedita Rakshit,2026,1
+GS,GS 435,"Mineralogy, Crystallography and Optics Lab",George Mathew,2026,1
+GS,GS 507,Engineering & Ground Water Geology,Rambabu  SinghVikram Vishal,2026,1
+GS,GS 517,Solid Earth and Exploration Geophysics,Gollapally MohanM Radhakrishna,2026,1
+GS,GS 519,Ore Petrography Lab,Sakthi Saravanan Chinnasamy,2026,1
+GS,GS 527,Ore Petrology,Sakthi Saravanan Chinnasamy,2026,1
+GS,GS 535,Statistical Methods in Geosciences,Kumar Hemant SinghSatish Maurya,2026,1
+GS,GS 537,Geochemistry and Geochemical Thermodynamics,Bivin Geo GeorgePrabhakar Naraga,2026,1
+GS,GS 539,Engineering Geology and Groundwater Lab,Rambabu  SinghVikram Vishal,2026,1
+GS,GS 541,Analytical Geochemistry Lab,Prabhakar Naraga,2026,1
+GS,GS 543,Computer Programming for Geosciences,Anand Singh,2026,1
+GS,GS 551,Industrial Training,D RamakrishnanSakthi Saravanan Chinnasamy,2026,1
+GS,GS 647,Principles and Applications in Isotope Geology,Bivin Geo GeorgeSameer Ranjan,2026,1
+GS,GS 663,Exploration Geophysics,Srinivasa Rao GangumallaVivek Kumar,2026,1
+GS,GS 671,Groundwater Exploration,Rambabu  Singh,2026,1
+GS,GS 673,Mineral Exploration,Sakthi Saravanan ChinnasamySameer Ranjan,2026,1
+GS,GS 675,Petroleum Exploration,Santanu BanerjeeSudipta Dasgupta,2026,1
+GS,GS 679,Basin Analysis and Applied Micropalaeontology,Jahnavi PunekarSantanu Banerjee,2026,1
+GS,GS 683,Advanced Structural Analysis,Malay Mukul,2026,1
+GS,GS 686,Introduction to Machine Learning in Geophysics,Satish Maurya,2026,1
+GS,GS 687,Methods in Structural Geology,Malay Mukul,2026,1
+GS,GS 688,Petroleum Geochemistry,Suryendu Kinkar Kumar Dutta,2026,1
+GS,GS 694,Seminar,Jahnavi PunekarMalay Mukul,2026,1
+GS,GS 701,Seismic Data Processing and Seismic Stratigraphy,Vivek Kumar,2026,1
+GS,GS 703,Structural Geology and Subsurface Geological Mapping,Soumyajit Shyamal Kumar Mukherjee,2026,1
+GS,GS 709,Reservoir Geomechanics,Raj Deo TewariVikram Vishal,2026,1
+GS,GS 795,I Stage Project,Santanu Banerjee,2026,1
+GS,GS 797,I Stage Project,Nibedita Rakshit,2026,1
+GS,GS 814,Topics in Isotope Geology,Bivin Geo GeorgeSameer Ranjan,2026,1
+GS,GS 815,Sedimentary Environments and Facies,Santanu Banerjee,2026,1
+GS,GS 827,Seismology and Earth Structure,Satish Maurya,2026,1
+GS,GS 831,Global Tectonics,M RadhakrishnaSrinivasa Rao Gangumalla,2026,1
+GS,GS 899,Communication Skills,Hetu Chandrakant Sheth,2026,1
+GS,GSS801,Seminar,Sudipta Dasgupta,2026,1
+EC,EC 101,Economics,Aditi Balkrishna ChaubalHaripriya GundimedaPuja PadhiRadeef Chundakkadan,2026,1
+EC,EC 213,Statistics for Economics,Rama Pal,2026,1
+EC,EC 217,Statistics for Economics Lab,Rama Pal,2026,1
+EC,EC 221,Intermediate Microeconomics I,Krishnan NarayananSurajit Bhattacharyya,2026,1
+EC,EC 223,Intermediate Macroeconomics-I,Pintu Parui,2026,1
+EC,EC 225,Mathematics for Economics,Tara Shankar Shaw,2026,1
+EC,EC 306,Econometrics I,Souvik Banerjee,2026,1
+EC,EC 308,Econometrics I Lab,Souvik Banerjee,2026,1
+EC,EC 311,International Economics I,Radeef Chundakkadan,2026,1
+EC,EC 313,Development Economics I,Haripriya Gundimeda,2026,1
+EC,EC 402,Game Theory and Economic Analysis,Saptarshi Prosonno Ghosh,2026,1
+EC,EC 440,Industrial Economics,Subrato Banerjee,2026,1
+EC,EC 457,Managerial Economics,Surajit Bhattacharyya,2026,1
+EC,EC 495,BS Project Stage I,Saptarshi Prosonno Ghosh,2026,1
+EC,EC 602,Time Series Econometrics for Economic Analysis-I,Aditi Balkrishna Chaubal,2026,1
+EC,EC 700,Applied Economics,Krishnan Narayanan,2026,1
+EC,EC 802,Advanced Economic Theory,Pintu ParuiSubrato Banerjee,2026,1
+EC,EC 899,Communication Skills,,2026,1
+EC,ECS801,Seminar,Rama Pal,2026,1
+EC,ECS802,Seminar,Rama Pal,2026,1
+EE,EE 103,Introduction to Electrical Engineering,Kishore Chatterjee,2026,1
+EE,EE 204,Analog Circuits,Rajesh Harishchandra ZeleVeeresh Vidyadhar Deshpande,2026,1
+EE,EE 214,Digital Circuits Lab,Saurabh Vijaykumar Lodha,2026,1
+EE,EE 224,Digital Systems,Debanjan BhowmikSudip  Nag,2026,1
+EE,EE 229,Signal Processing  I,Satish MulletiSubhasis Chaudhuri,2026,1
+EE,EE 236,Electronic Devices Lab,Pradeep Ramachandran Nair,2026,1
+EE,EE 240,Power Engineering Lab,Anshuman Narendra Deo ShuklaAnupama KowliPrashant NavalkarShreevardhan Arunchandra Soman,2026,1
+EE,EE 301,Electromagnetic Waves,Ashwin Awadhootshastri TulapurkarSwaroop Ganguly,2026,1
+EE,EE 324,Control Systems Lab,Debraj ChakrabortyParthib Khound,2026,1
+EE,EE 325,Probability and Random Processes,D. ManjunathNikhil Prakash Karamchandani,2026,1
+EE,EE 340,Communications Lab,Rajbabu Velmurugan,2026,1
+EE,EE 341,Communication Systems - I,Kumar AppaiahPrasanna S. Chaporkar,2026,1
+EE,EE 353,Introduction to Data Science and Machine Learning,Harish Kumar PillaiJayakrishnan Nair,2026,1
+EE,EE 432,Special Semiconductor Devices,Apurba Narayan Bhattacharya,2026,1
+EE,EE 451,Supervised Research Exposition,Harish Kumar Pillai,2026,1
+EE,EE 457,Compound Semiconductor Material and Devices,Dipankar Saha,2026,1
+EE,EE 467,Energy Data Analytics,Anupama Kowli,2026,1
+EE,EE 491,BTP I,Harish Kumar Pillai,2026,1
+EE,EE 593,Dual Degree Project I,Harish Kumar Pillai,2026,1
+EE,EE 601,Statistical Signal Analysis,Sharayu Moharir,2026,1
+EE,EE 603,Digital Signal Processing and its Applications,Vikram Manohar Gadre,2026,1
+EE,EE 609,Radiating Systems,Anirban Sarkar,2026,1
+EE,EE6105,Power System Modeling and Control,Anil Manohar Kulkarni,2026,1
+EE,EE6109,EV Powertrains (EVP),Sandeep Anand,2026,1
+EE,EE 611,Microwave Integrated Circuits,Jayanta Mukherjee,2026,1
+EE,EE 616,Electronic Systems Design,Siddharth Tallur,2026,1
+EE,EE 617,Sensors in Instrumentation,Siddhartha Duttagupta,2026,1
+EE,EE 618,CMOS Analog VLSI Design,Rahul Singh,2026,1
+EE,EE 634,Simulation of Devices and Circuits,Sandip Mondal,2026,1
+EE,EE 635,Applied Linear Algebra,Madhu Nagraj Belur,2026,1
+EE,EE 638,Estimation and Identification,Debraj Chakraborty,2026,1
+EE,EE 640,Multivariable Control Systems,Dwaipayan Mukherjee,2026,1
+EE,EE 651,Digital Protection of Power Systems,Himanshu J. Bahirat,2026,1
+EE,EE 653,Power Electronics -I,Vivek Agarwal,2026,1
+EE,EE 657,Electric Drives,P. Baylon Godfrey Fernandes,2026,1
+EE,EE 659,A First Course in Optimization,Debasattam Pal,2026,1
+EE,EE 669,VLSI Technology,Anil Gopalan Kottantharayil,2026,1
+EE,EE 671,VLSI Design,Laxmeesha Somappa,2026,1
+EE,EE 675,Microprocessor Applications in Power Electronics,Anwesha  Mukhopadhyay,2026,1
+EE,EE 677,Foundation of VLSI CAD,Virendra Singh,2026,1
+EE,EE 691,R & D Project,Harish Kumar Pillai,2026,1
+EE,EE 692,R & D Project,Harish Kumar Pillai,2026,1
+EE,EE 694,Seminar,Harish Kumar Pillai,2026,1
+EE,EE7001,Quantum Communications and Networking,Gaurav Sudhir Kasbekar,2026,1
+EE,EE7003,Principles of Digital Communication,Bikash Kumar Dey,2026,1
+EE,EE7004,Power Electronic Converter Hardware Design,Shiladri Chakraborty,2026,1
+EE,EE7005,Advanced Driver Assistance Systems,Parthib Khound,2026,1
+EE,EE 701,Introduction to MEMS,Ashwin Arunkumar Seshia,2026,1
+EE,EE 709,Testing and Verification of VLSI Circuits,Madhav Pandurang Desai,2026,1
+EE,EE 720,An Introduction to Number Theory and Cryptography,Saravanan Vijayakumaran,2026,1
+EE,EE 722,Restructured Power Systems,Shreevardhan Arunchandra Soman,2026,1
+EE,EE 723,Physics of Nanoelectronic Devices - I,Kasturi Saha,2026,1
+EE,EE 733,Solid State Devices,Udayan Ganguly,2026,1
+EE,EE 748,Advanced Topics in Computer Architecture,Virendra Singh,2026,1
+EE,EE 753,High Power Converters and their Utility Applications,Anshuman Narendra Deo Shukla,2026,1
+EE,EE 756,Network Information Theory,Sibi raj Bhaskaran Pillai,2026,1
+EE,EE 757,Crystalline Silicon Solar Cells: Theory and Practice,Anil Gopalan Kottantharayil,2026,1
+EE,EE 765,Reliability and Failure Analysis of Electronic Devices,Narendra Shiradkar,2026,1
+EE,EE 768,Electric Distribution Systems,Prashant Navalkar,2026,1
+EE,EE 770,Design and Evaluation of Photovoltaic Power Plants,Pradeep Ramachandran Nair,2026,1
+EE,EE 779,Advanced Topics in Signal Processing,Srikanth Raj Chetupalli,2026,1
+EE,EE 781,Integrated Circuit  Design for Sensor Systems,Maryam Shojaei Baghini,2026,1
+EE,EE 787,Topological Electronics,Bhaskaran Muralidharan,2026,1
+EE,EE 800,High Speed Interconnects: Signaling and Synchronization,Shalabh Gupta,2026,1
+EE,EE 802,Integrated Photonics,Arun Surendran,2026,1
+EE,EE 899,Communication Skills,Mahesh Bhagwat PatilVivek Agarwal,2026,1
+EE,EES801,Seminar,Harish Kumar Pillai,2026,1
+EN,EN 110,Energy Engineering Fundamentals,Santanu Bandyopadhyay,2026,1
+EN,EN 203,Thermodynamics and Energy Conversion,Lalit Kumar,2026,1
+EN,EN 204,Material Science for Energy Applications,Shaibal Kanti Krishna Chaitanya Sarkar,2026,1
+EN,EN 213,Electrical Networks and Machines,Ravi Prakash Reddy SiddavatamSuryanarayana Doolla,2026,1
+EN,EN 215,AI and Data Science for Energy,Venkatasailanathan Ramadesigan,2026,1
+EN,EN 309,Thermal & Fluid Engineering Lab,Manaswita Bimal Kumar Bose,2026,1
+EN,EN 321,Supervised Learning Project,Lalit KumarRavi Prakash Reddy Siddavatam,2026,1
+EN,EN 323,Renewable Energy Generation and Storage,Prakash Chandra Ghosh,2026,1
+EN,EN 325,Dynamics and Control,Venkatramanan D.,2026,1
+EN,EN 327,Power Electronics and Instrumentation Lab,Venkatramanan D.V.S.S. Pavan Kumar Hari,2026,1
+EN,EN 401,Energy Systems modelling and analysis,V.S.S. Pavan Kumar Hari,2026,1
+EN,EN 407,Chemistry for Energy Science,Sankara Sarma Venkata Tatiparti,2026,1
+EN,EN 409,Mathematical Foundation for Energy Science,Pratibha Sharma,2026,1
+EN,EN 411,Physics for Energy Science,Balasubramaniam Ramanathan Kavaipatti,2026,1
+EN,EN 413,Materials Science for Energy,Karthik Sasihithlu,2026,1
+EN,EN 415,Energy Laboratory I,Dayadeep Singh Monder,2026,1
+EN,EN 417,Computer Programming,Dayadeep Singh Monder,2026,1
+EN,EN 422,Seminar,Manoj Neergat,2026,1
+EN,EN 491,BTech Project I,Ravi Prakash Reddy Siddavatam,2026,1
+EN,EN 593,Dual Degree Project I,Venkatasailanathan Ramadesigan,2026,1
+EN,EN 601,Nonconventional Energy Sources,Sagar Mitra,2026,1
+EN,EN 602,Foundation for Energy Engineering,Gurubalan AnnaduraiZakir Hussain Rather,2026,1
+EN,EN 606,"Energy Resources, Economics and Environment",Sandeep Kumar,2026,1
+EN,EN 609,Energy Systems Laboratory,Gurubalan Annadurai,2026,1
+EN,EN 613,Nuclear Reactor Theory,Suneet Singh,2026,1
+EN,EN 618,Energy Systems Modelling & Analysis,Seethamraju Srinivas,2026,1
+EN,EN 632,Waste to Energy,Sandeep Kumar,2026,1
+EN,EN 649,Introduction to Particulate Flow,Manaswita Bimal Kumar Bose,2026,1
+EN,EN 655,Energy Laboratory III,Anish Modi,2026,1
+EN,EN 657,"IC Engine, Alternate Fuels and Emissions",Asish Sarangi,2026,1
+EN,EN 658,Electrochemical Energy Storage,Manoj Neergat,2026,1
+EN,EN 664,"Energy Storage: Technology, Grid Application, and Economics",Zakir Hussain Rather,2026,1
+EN,EN 665,Power Converters for Electric Vehicle Charging,Ravi Prakash Reddy Siddavatam,2026,1
+EN,EN 691,M.Sc.-Ph.D. Project I,Manoj Neergat,2026,1
+EN,EN 694,Seminar,Anish Modi,2026,1
+EN,EN 797,I Stage Project,Asish Sarangi,2026,1
+EN,EN 899,Communication Skills,Anish ModiManoj Neergat,2026,1
+EN,ENS801,Seminar,Gurubalan Annadurai,2026,1
+EN,ENS802,Seminar,Dayadeep Singh Monder,2026,1
+EN,ENT101,Introduction to Innovation & Entrepreneurship,Anuradha NarasimhanRamesh Mangaleswaran,2026,1
+EN,ENT602,Technology Venture Creation,Ramesh KuruvaSankalp Pratap,2026,1
+EN,ENT606,Developing a Proof of Concept- Basic,Sankalp PratapVishal  Gupta,2026,1
+EN,ENT609,Marketing & Finance for Entrepreneurs,Devdip PurkayasthaUmakant Jayaram,2026,1
+EN,ENT612,Field Immersion for Researchers and Entrepreneurs,Sankalp Pratap,2026,1
+EN,ENT615,Strategy and Leadership for Entrepreneurs,Anuradha NarasimhanRajesh GopinathanRamesh Mangaleswaran,2026,1
+EN,ENT617,Tech-Opportunities Identification,Anuradha NarasimhanRajkumar R. Hirwani,2026,1
+EN,ENT620,AI for Business and Entrepreneurs,Lina Sonne Vyas,2026,1
+EN,ENT623,Fintech Entrepreneurship,Ramesh Kuruva,2026,1
+EN,ENT625,Branding & Digital Marketing for Entrepreneurs,Anuradha Narasimhan,2026,1
+EN,ENT701,Core Topics in Innovation and Entrepreneurship,Lina Sonne VyasRamesh KuruvaSankalp Pratap,2026,1
+EN,ENT702,Advanced Research Methodology for Entrepreneurship,Ramesh KuruvaTrupti Mishra,2026,1
+EN,ENT899,Communication Skills,Lina Sonne Vyas,2026,1
+EN,ENTS01,Seminar,,2026,1
+HS,HS 108,Doing Sociology,Kushal DebMahendra Dindayal Shahare,2026,1
+HS,HS 109,Introduction to Philosophy,Pravesh Jung GolayRanjan Kumar Panda,2026,1
+HS,HS 113,Academic English,Vaijayanthi Mala Sarma,2026,1
+HS,HS 250,Environmental Studies,Radeef ChundakkadanRatikanta PandaRowena Robinson,2026,1
+HS,HS 404,Rationality in Indian Thought,C. D. Sebastian,2026,1
+HS,HS 406,Philosophy of Technology,Mahendra Dindayal ShahareSiby K. George,2026,1
+HS,HS 408,Shakespearean Afterlives,Sudha Shastri,2026,1
+HS,HS 436,Indian Culture and Tradition,Malhar Arvind Kulkarni,2026,1
+HS,HS 449,"Capitalism : theories, histories, varieties",Anush Kapadia,2026,1
+HS,HS 455,Development and Modern Society: Approaches and Perspectives,Ilito H. Achumi,2026,1
+HS,HS 459,Cognitive and Psychological Testing: Labs to Life,Shweta Kiran Chawak,2026,1
+HS,HS 467,Indian Philosophy,Ratikanta Panda,2026,1
+HS,HS 472,Psychology of Health,Mrinmoyi Kulkarni,2026,1
+HS,HS 490,Organizational Behaviour and Implications for Management,Pooja Purang,2026,1
+HS,HS 498,Life Span Development : Infancy to Old Age,Azizuddin Ali Mardan Khan,2026,1
+HS,HS 501,Vedanta Philosophy in the Vedic Tradition,Mrinal Kaul,2026,1
+HS,HS 503,Philosophy in the Age of the Greeks,Rajakishore Nath,2026,1
+HS,HS 505,Western Philosophy and the Advent of Modern Science,Ranjan Kumar Panda,2026,1
+HS,HS 552,Twentieth Century Political Philosophy,Amrita Banerjee,2026,1
+HS,HS 555,Social Epistemology,Vikram Singh Sirola,2026,1
+HS,HS 556,Sankhya Philosophy,C. D. Sebastian,2026,1
+HS,HS 597,Project Stage I,Ratikanta Panda,2026,1
+HS,HS 599,Project Stage III,Mrinal Kaul,2026,1
+HS,HS 626,Framing Caste,Suryakant Waghmore,2026,1
+HS,HS 636,Development of Mathematics in India,Krishnamurthi Ramasubramanian,2026,1
+HS,HS 644,History as a Discipline: Elementary Concepts,Neha Chatterji,2026,1
+HS,HS 646,Understanding the Past,Rachel A. Varghese,2026,1
+HS,HS 647,Social Theory - I,Ramesh Bairy T.S.,2026,1
+HS,HS 652,Research Methods: Qualitative Methods,Suryakant Waghmore,2026,1
+HS,HS 653,Research Methods : Sources and Methods and the Past,Naina Manjrekar,2026,1
+HS,HS 663,Tribal Studies: Concepts and Perspective,Raile Rocky Ziipao,2026,1
+HS,HS 665,Sociology of Gender,Ahonaa Roy,2026,1
+HS,HS 673,Affective Neuroscience,Rashmi Gupta,2026,1
+HS,HS 676,The Philosophy of Shabdayoga,Malhar Arvind Kulkarni,2026,1
+HS,HS 703,Mind and Machine : Experimental Psychology for Tech and Innovation,Rashmi Gupta,2026,1
+HS,HS 711,Philosophy of Janasabdavada,Malhar Arvind Kulkarni,2026,1
+HS,HS 712,Research Project -I,Smriti Haricharan,2026,1
+HS,HS 715,"Methods: Language, Text, and the Performative",A.P. RajaramSharmila Sreekumar,2026,1
+HS,HS 716,"Language, Text, and the Performative",A.P. RajaramSudha ShastriVaijayanthi Mala Sarma,2026,1
+HS,HS 718,Advanced Research and Writing in Philosophy-I,Amrita BanerjeeMrinal KaulRajakishore Nath,2026,1
+HS,HS 720,Humans and Landscapes across Deep Time,Eswar RajasekaranSmriti Haricharan,2026,1
+HS,HS 800,Research Methods in Social Sciences,Sarmistha Pattanaik,2026,1
+HS,HS 803,Advanced Psychological Theory,Azizuddin Ali Mardan KhanMrinmoyi KulkarniPooja PurangRashmi GuptaShweta Kiran Chawak,2026,1
+HS,HS 807,Phenomenology and Existentialism,Siby K. George,2026,1
+HS,HS 809,Practice and Theory of  Literary Research,Paulomi Chakraborty,2026,1
+HS,HS 811,Literary Theory,A.P. RajaramSharmila Sreekumar,2026,1
+HS,HS 814,"Architecture of Grammer & its applications, Syntax Semantics and Sociolinguistics",Vaijayanthi Mala Sarma,2026,1
+HS,HS 815,Languages in Cognitive Science,Vaijayanthi Mala Sarma,2026,1
+HS,HS 862,Archaeological methods and theory,Smriti Haricharan,2026,1
+HS,HS 865,The Philosophy of Sarvasatyavada,Malhar Arvind Kulkarni,2026,1
+HS,HS 867,Historical Research : Archival Methods,Deepak Naorem,2026,1
+HS,HS 899,Communication Skills,Amrita BanerjeeDeepak NaoremKrishnamurthi RamasubramanianPaulomi ChakrabortyPooja PurangRowena Robinson,2026,1
+HS,HSS801,Seminar,Sharmila Sreekumar,2026,1
+MA,MA 105,Calculus,Debanjana MitraPrachi MahajanSaikat MazumdarSuman Kumar Sahoo,2026,1
+MA,MA 113,Mathematics and Its History,Ronnie Mani Sebastain,2026,1
+MA,MA 401,Linear Algebra,Bata Krishna Das,2026,1
+MA,MA 403,Real Analysis,Sanjoy PustiSourav Pal,2026,1
+MA,MA 417,Ordinary Differential Equations,Gopala Krishna Srinivasan,2026,1
+MA,MA 419,Basic Algebra,Saurav BhaumikU. K. Anandavardhanan,2026,1
+MA,MA5001,Mathematics of Deep Learning Architectures,S Baskar,2026,1
+MA,MA 503,Functional Analysis,Sutanu Roy,2026,1
+MA,MA5101,Algebra II,Manoj Kumar Keshari,2026,1
+MA,MA5102,Basic Algebraic Topology,Sandip Singh,2026,1
+MA,MA5109,Graph Theory,Niranjan Balachandran,2026,1
+MA,MA5112,Introduction to Mathematical Methods,Harsha Hutridurga Ramaiah,2026,1
+MA,MA 515,Partial Differential Equations,Sivaji Ganesh Sista,2026,1
+MA,MA 521,Theory of Analytic Functions,Sudarshan Rajendra Gurjar,2026,1
+MA,MA 523,Basic Number Theory,Keshav Aggarwal,2026,1
+MA,MA 538,Representation Theory of Finite Groups,Preeti Raman,2026,1
+MA,MA 593,Optional Project I,Anusha Mangala Krishnan,2026,1
+MA,MA 599,M.Sc. Project Stage II,,2026,1
+MA,MA 811,Algebra I,Dipendra Prasad,2026,1
+MA,MA 813,Measure Theory,Mayukh Mukherjee,2026,1
+MA,MA 815,Differential Topology,Anusha Mangala Krishnan,2026,1
+MA,MA 817,Partial Differential Equations I,Neela Nataraj,2026,1
+MA,MA 823,Probability,Koushik Saha,2026,1
+MA,MA 833,Weak Convergance and Martingale Theory,Ayan Bhattacharya,2026,1
+MA,MA 841,Topics in Algebra I,Shripad Manoharrao Garge,2026,1
+MA,MA 843,Topics in Analysis I,Santanu Dey,2026,1
+MA,MA 851,Topics in Number Theory I,Mallesham Kummari,2026,1
+MA,MA 855,Topics in Numerical Analysis I,Manas Nitin Rachh,2026,1
+MA,MA 861,Combinatorics I,Krishnan Sivasubramanian,2026,1
+MA,MA 863,Theoretical Statistics I,Monika Bhattacharjee,2026,1
+MA,MA 899,Communication Skills,Rekha Santhanam,2026,1
+MA,MAS801,Seminar,Prachi Mahajan,2026,1
+ME,ME 103,Mechanical Department Introductory Course I,Neeraj Ratnakar Kumbhakarna,2026,1
+ME,ME 209,Thermodynamics,Dipanshu BansalS. V. V. PrabhuUpendra Bhandarkar,2026,1
+ME,ME 221,Structural Materials,Prashant Prabhakar DateSoham Mujumdar,2026,1
+ME,ME 223,Solid Mechanics and Strength of Materials,Hrishikesh Gajanan DanaweR. GaneshShailesh Govind Ganpule,2026,1
+ME,ME 224,Fluid Mechanics Lab,Anjishnu ChoudhuryPrateek  AnandShivasubramanian GopalakrishnanS. V. V. Prabhu,2026,1
+ME,ME 225,Numerical Analysis,Abhishek GuptaAnkit JainSalil Shreekant Kulkarni,2026,1
+ME,ME 306,Applied Thermodynamics,Shankar KrishnanSreedhara Sheshadri,2026,1
+ME,ME 315,Supervised Learning Project,Gurminder Singh,2026,1
+ME,ME 319,Control Systems,Krishna Nagasai JonnalagaddaPriyanshu  AgarwalSripriya Ramamoorthy,2026,1
+ME,ME 323,Thermal and Chemical processing of materials,Deepak MarlaGurminder SinghRamesh Kumar Singh,2026,1
+ME,ME 346,Heat Transfer,Arunkumar SridharanSandip Kumar SahaSridhar Balasubramanian,2026,1
+ME,ME 374,Manufacturing Processes Lab,Amitava DeAsim TewariGurminder SinghPradeep DixitRakesh Ganpat MoteShyamprasad KaragaddeSushil Kumar Mishra,2026,1
+ME,ME 415,Computational Fluid Dynamics and Heat Transfer,Anjishnu Choudhury,2026,1
+ME,ME 494,BTP I,Gurminder Singh,2026,1
+ME,ME 593,Dual Degree Project I,,2026,1
+ME,ME 601,Stress Analysis,Tanmay Kishore Bhandakkar,2026,1
+ME,ME6102,Design of Mechatronic Systems,Prasanna Subhash Gandhi,2026,1
+ME,ME6103,Ultrafast Lasers: Fundamentals and Applications,Deepak MarlaDipanshu Bansal,2026,1
+ME,ME6107,Group Theory for Physics and Mechanics of Solids,Amit Kumar Singh,2026,1
+ME,ME6110,Nanomanufacturing Processes,Rakesh Ganpat Mote,2026,1
+ME,ME6119,Vibration and Control,Nitesh Prakash Yelve,2026,1
+ME,ME 613,Finite Element and Boundary Element Methods,Seshu Pasumarthy,2026,1
+ME,ME 623,Cryogenic Engineering II,Milind Diwakar Atrey,2026,1
+ME,ME 637,Manufacturing Automation,Amber ShrivastavaKarunakara Poopathi Kapuppasamy Poolan,2026,1
+ME,ME 651,Fluid Dynamics,Abhilash Chandy,2026,1
+ME,ME 655,Theory and Design of Fluid Machinery,S. V. V. Prabhu,2026,1
+ME,ME 662,Convective Heat and Mass Transfer,Prateek  Anand,2026,1
+ME,ME 663,Advanced Heat Transfer,Atul Srivastava,2026,1
+ME,ME 673,Mathematical Methods in Engineering,Avishek Ranjan,2026,1
+ME,ME 681,Thermal Environmental Engg,Milind Vishwanath Rane,2026,1
+ME,ME 691,R & D Project,Krishna Nagasai Jonnalagadda,2026,1
+ME,ME7002,Production Systems and Sustainability,Soham MujumdarVibhor  Pandhare,2026,1
+ME,ME 704,Computational Methods in Thermal & Fluid Engg,Rajneesh Bhardwaj,2026,1
+ME,ME 721,Design Engg. Lab,Nitesh Prakash YelveParag Umashankar TandaiyaVivek Sangwan,2026,1
+ME,ME 751,Mechanics of Deformable Bodies,Shrinidhi S. Pandurangi,2026,1
+ME,ME 756,Numerical Modelling of Manufacturing Processes,Amitava De,2026,1
+ME,ME 773,Reliability Modelling and Analysis for Engineering Systems,"Makarand S, Kulkarni",2026,1
+ME,ME 781,Statistical Machine Learning and Data Mining,Asim Tewari,2026,1
+ME,ME 782,Design Optimization,Dnyanesh Nitin Pawaskar,2026,1
+ME,ME 789,Computational Tools for Process Modeling,Shyamprasad Karagadde,2026,1
+ME,ME 796,Sensors and Actuators,Pradeep Dixit,2026,1
+ME,ME 797,I Stage Project,,2026,1
+ME,ME 899,Communication Skills,Deepak MarlaPrashant Prabhakar DateSushil Kumar MishraV. Kartik,2026,1
+ME,MES801,Seminar,Prasanna Subhash Gandhi,2026,1
+MM,MM 219,Structure of Materials,Abhijeet Sangle,2026,1
+MM,MM 221,Sensors and Measurements Lab,Sudhanshu MallickTitas Dasgupta,2026,1
+MM,MM 223,Thermodynamics of Materials,Karthikeyan  HariharanManish Marotrao PandeNithyanand Prabhu,2026,1
+MM,MM 225,AI and Data Science,Hina Amol GokhaleNurni Neelakantan Viswanathan,2026,1
+MM,MM 226,Supervised Learning Project,Prita PantTanushree H. Choudhury,2026,1
+MM,MM 329,Diffusion and Phase Transformations,Ashutosh Suresh Gandhi,2026,1
+MM,MM 331,Mechanical Behaviour of Materials,Abhinandan GangopadhyayKrishnaiyengar NarasimhanPrasad Manepalli,2026,1
+MM,MM 333,"Electronic, Magnetic and Optical Properties of Materials",Triratna Muneshwar,2026,1
+MM,MM 335,Alloy Processing and Characterization Lab,Arka  MandalNithyanand PrabhuPrita Pant,2026,1
+MM,MM 341,Processing and Characterization Lab: Thin Films,Avradeep PalRajiv Onkar Dusane,2026,1
+MM,MM 407,Iron & Steelmaking,Manish Marotrao Pande,2026,1
+MM,MM 409,Colloidal & Interfacial Science,Mithun Chowdhury,2026,1
+MM,MM 451,Instrumentation and Process Control Theory,Asis Kumar  Adak,2026,1
+MM,MM 474,Science and Technology of Thin Films,Rajiv Onkar Dusane,2026,1
+MM,MM 477,Ceramic Processing Techniques,Parag Kishore Bhargava,2026,1
+MM,MM 492,B.Tech Project I,Avradeep Pal,2026,1
+MM,MM 494,B.Tech Project II,Avradeep Pal,2026,1
+MM,MM 593,Dual Degree Project I,Titas DasguptaVijayshankar Dandapani,2026,1
+MM,MM6003,Principles of Crystallographic Texture,Arka  Mandal,2026,1
+MM,MM6102,Computational Thermodynamics,Deepoo KumarNurni Neelakantan Viswanathan,2026,1
+MM,MM6103,Differential Equations for Modeling Transport Phenomena,Anirban Patra,2026,1
+MM,MM 611,Processing and Characterization of Steel (Lab.),Aparna SinghIndradev SamajdarJayasree Biswas,2026,1
+MM,MM 612,Computational Laboratory,Ajay Singh PanwarHina Amol GokhaleSanjay Chandra,2026,1
+MM,MM 621,Advanced Physical and Mechanical Metallurgy,Indradev Samajdar,2026,1
+MM,MM 641,Numerical Methods in Materials Processing,Krishnaiyengar Narasimhan,2026,1
+MM,MM 651,Thermodynamics of Materials,T R S Prasanna,2026,1
+MM,MM 654,Advanced Composites,Amartya MukhopadhyayMithun Chowdhury,2026,1
+MM,MM 658,Fracture Mechanics and Failure Analysis,Nagamani Jaya Balila,2026,1
+MM,MM 659,Transport Phenomena,Jayasree Biswas,2026,1
+MM,MM 681,Plastic Deformation and Microstructure Evolution,Prasad Manepalli,2026,1
+MM,MM 685,Electrical Materials: fundamentals and applications,Titas Dasgupta,2026,1
+MM,MM 694,Seminar,Karthikeyan  HariharanT R S Prasanna,2026,1
+MM,MM 695,High Temperature Corrosion,Vijayshankar Dandapani,2026,1
+MM,MM 699,Corrosion Laboratory,Smrutiranjan ParidaVijayshankar Dandapani,2026,1
+MM,MM 713,Aqueous Corrosion and its Control,Darothi  Bairagi,2026,1
+MM,MM 719,Inttroduction to Ab-initio Methods in Materials Modelling,Sumit Saxena,2026,1
+MM,MM 722,Molecular Simulations for Mateirals Engineering,Ajay Singh Panwar,2026,1
+MM,MM 729,Characterization of Materials for Corrosion Control,Smrutiranjan Parida,2026,1
+MM,MM 730,Topics in Mechanical Behaviour of Materials,Prita Pant,2026,1
+MM,MM 732,Structural Characterization of Materials,Amartya Mukhopadhyay,2026,1
+MM,MM 733,Mechanical Characterization of Materials,Aparna Singh,2026,1
+MM,MM 734,Electrical Characterization of Materials,Dipti Gupta,2026,1
+MM,MM 735,Material Chracterization at High Temperatures,Somnath Amar Nath Basu,2026,1
+MM,MM 747,First Principles Approach to Materials Science,Amrita Bhattacharya,2026,1
+MM,MM 754,Sustainable Materials for Water Treatment,Prasanna Kumar S Mural,2026,1
+MM,MM 755,Kinetics of High Temperature processes,Deepoo Kumar,2026,1
+MM,MM 759,Structure and Defects,Abhinandan GangopadhyayAvradeep Pal,2026,1
+MM,MM 762,Materials Processing in Semiconductor Technology - I,Tanushree H. Choudhury,2026,1
+MM,MM 763,Semiconductor Processing Laboratory I,Aswani YellaDipti GuptaTriratna Muneshwar,2026,1
+MM,MM 765,Semiconductor Devices and Their Working Principles,Abhijeet SangleAswani Yella,2026,1
+MM,MM 768,Materials Processing & Characterization Laboratory I (Thin Film Techniques),Asis Kumar  AdakAswani YellaDipti Gupta,2026,1
+MM,MM 772,Thermomechanical Metallurgy: Experiment to Reality,Sanjay Chandra,2026,1
+MM,MM 797,I Stage Project,Titas DasguptaVijayshankar Dandapani,2026,1
+MM,MM 899,Communication Skills,Shobha Shukla,2026,1
+MM,MMS801,Seminar,Arup Ranjan Bhattacharyya,2026,1
+PH,PH 109,Fundamental Themes in Physics,Archana Arun Pai,2026,1
+PH,PH 113,Oscillations and Waves,Soumya Bera,2026,1
+PH,PH 114,Thermal Physics,Soumya Bera,2026,1
+PH,PH 117,Physics Lab,Debojit  SarkarNitin KumarPramod KumarSubhabrata Dhar,2026,1
+PH,PH 217,Classical Mechanics,Prashant Kumar,2026,1
+PH,PH 221,Analog Electronics,Pradeep Subashchandra Sarin,2026,1
+PH,PH 223,Complex Analysis and Integral Transforms,Sumiran Pujari,2026,1
+PH,PH 227,AI and Data Science,Aftab AlamAlok Shukla,2026,1
+PH,PH 251,Classical Mechanics,Pragya Das,2026,1
+PH,PH 253,Thermal and Statistical Physics,Raghunath Chelakkot,2026,1
+PH,PH 303,Supervised Learning,Prashant KumarSayantika Bhowal,2026,1
+PH,PH 307,Introduction to Numerical Analysis,Rahul Kashyap,2026,1
+PH,PH 309,Quantum Mechanics II,Pichai Ramadevi,2026,1
+PH,PH 401,Classical Mechanics,Kantimay Das Gupta,2026,1
+PH,PH 403,Quantum Mechanics I,Hridis Kumar Pal,2026,1
+PH,PH 405,Electronics,Maniraj Mahalingam,2026,1
+PH,PH 407,Mathematical Physics I,Anirban Sain,2026,1
+PH,PH 434,Programming Lab,Himadri Shekhar Dhar,2026,1
+PH,PH 436,Introduction to Condensed Matter Physics,Senthilkumar Manickam,2026,1
+PH,PH 443,Electronics Laboratory,Pradeep Subashchandra Sarin,2026,1
+PH,PH 446,Physics Laboratory (Solid state and Nuclear Physics),Debojit  SarkarSunita Premshankarlal Srivastava,2026,1
+PH,PH 505,Introduction to Nuclear  & Particle Physics,Basanta Kumar Nandi,2026,1
+PH,PH 512,Physics Lab (Optics and Spectroscopy),Anshuman Kumar,2026,1
+PH,PH 515,Introduction  to Atomic and Molecular Physics,Gopal Dixit,2026,1
+PH,PH 517,Methods in Analytical Techniques,Mohammed Shabbir Aslam,2026,1
+PH,PH 523,Quantum Mechanics III,Manibrata Sen,2026,1
+PH,PH 534,Quantum Information and Computing,Siddhartha Santra,2026,1
+PH,PH 543,Advanced Statistical Mechanics,Mithun Kumar Mitra,2026,1
+PH,PH 549,Physics of Biological Systems,Dibyendu Das,2026,1
+PH,PH 555,Project  Stage III,Prashant KumarSayantika Bhowal,2026,1
+PH,PH 556,Astrophysics,Varun Bhalerao,2026,1
+PH,PH 557,Theoretical Condensed Matter Physics,Sayantika Bhowal,2026,1
+PH,PH 561,Ultrafast Sciences,Subhaskar Mandal,2026,1
+PH,PH 563,Group Theory Methods,Vikram Rentala,2026,1
+PH,PH 565,Semiconductor Physics,Suddhasatta Bibhuti Mahapatra,2026,1
+PH,PH 567,Non-linear Dynamics,Amitabha Nandi,2026,1
+PH,PH 569,Applied Solid State Physics,Uditendu Mukhopadhyay,2026,1
+PH,PH 570,Advanced Laboratory Techniques  in Nanosience,Maniraj MahalingamMohammed Shabbir Aslam,2026,1
+PH,PH 575,Nanoscience: Fundamentals to Fabrication,Parinda Rahul Vasa,2026,1
+PH,PH 585,Dual Degree Project I,Sai Vinjanampathy,2026,1
+PH,PH 587,B.Tech Project I,Prashant KumarSayantika Bhowal,2026,1
+PH,PH 588,B.Tech. Project II,Prashant KumarSayantika Bhowal,2026,1
+PH,PH 589,Bachelors Thesis Project  III (BTP III),Prashant KumarSayantika Bhowal,2026,1
+PH,PH 591,Dual Degree Project I,,2026,1
+PH,PH 595,M.Sc. project stage 1,Prashant KumarSayantika Bhowal,2026,1
+PH,PH 899,Communication Skills,,2026,1
+PH,PHS801,Seminar,Prashant KumarSayantika Bhowal,2026,1
+SI,SI 419,Combinatorics,Swapneel Arvind Mahajan,2026,1
+SI,SI 423,Linear Algebra and its Applications,Ananthnarayan Hariharan,2026,1
+SI,SI 424,Statistical Inference I,Radhendushka Srivastava,2026,1
+SI,SI 427,Probability I,K. SureshkumarRavi Raghunathan,2026,1
+SI,SI 429,Real analysis,Sumit  Kumar,2026,1
+SI,SI 431,Introduction to Data Analysis using R,Ayan BhattacharyaMonika Bhattacharjee,2026,1
+SI,SI 503,Categorical Data Analysis,Ashish Das,2026,1
+SI,SI 505,Multivariate Analysis,Debraj Das,2026,1
+SI,SI 507,Numerical Analysis,Tony Puthenpurakal Joseph,2026,1
+SI,SI 543,Asymptotic Statistics,Parthanil Roy,2026,1
+SI,SI 593,Project Stage I,Anusha Mangala Krishnan,2026,1
+PS,PS 601,Public Policy Theory I,Himanshu BurtePrabhir Vishnu Poruthiyil,2026,1
+PS,PS 605,Social Science Perspective in Public Policy,Rahul Suresh Sapkal,2026,1
+PS,PS 606,"Public Policy in India: History, Institutions and Practice",Naveen Bharathi,2026,1
+PS,PS 610,Quantitative and Qualitative Research Methods,Vinish Kumar Kathuria,2026,1
+PS,PS 621,Internship,Anupam Guha,2026,1
+PS,PS 632,Contemporary Issues in Data Policy and Management,Anupam GuhaSundeep Oberoi,2026,1
+PS,PS 635,Economic Analysis for Public Policy,Rahul Suresh Sapkal,2026,1
+PS,PS 643,"Introduction to AI, Data, and Policy",Anupam Guha,2026,1
+PS,PS 646,Public Finance and Budget Analysis,Nitin  KareerRahul Suresh Sapkal,2026,1
+PS,PS 647,Data Analytics for Public Policy,Ashish DesaiVinish Kumar Kathuria,2026,1
+PS,PS 648,Data Visualization for Public Policy,Sekhar  BonuVinish Kumar Kathuria,2026,1
+PS,PS 652,Crafting Narratives to Shape Policy,Prabhir Vishnu Poruthiyil,2026,1
+PS,PS 660,Documentaries for Policy Change,Naveen Bharathi,2026,1
+PS,PS 661,Data Science for Policy Studies,Santosh Bonaventure Noronha,2026,1
+PS,PS 663,"Urban Planning in India: Policy implications, Challenges and Approaches",Himanshu BurteMalini Krishnankutty,2026,1
+PS,PS 796,MPP Dissertation -I Stage,Anupam Guha,2026,1
+PS,PS 899,Communication Skills,,2026,1
+PS,PSS801,Seminar,Shishir Kumar Jha,2026,1
+DS,DS 203,Programming for Data Science,Arjun Nitin BhagojiPrabhu RamachandranShyamprasad Karagadde,2026,1
+DS,DS 593,Dual Degree Project 1,Mani Bhushan,2026,1
+DS,DS 601,Learning and Inference in High Dimensions,Parthe Pandit,2026,1
+DS,DS 604,Mathematics for Machine Learning: Optimization and Linear Algebra,Pranay SharmaPratik Kumar Jawanpuria,2026,1
+DS,DS 607,Optimization for Data Science,Pranay SharmaPratik Kumar Jawanpuria,2026,1
+DS,DS 691,R & D Project,Mani Bhushan,2026,1
+DS,DS 703,Introduction to Statistical Inference and Machine Learning,Arjun Nitin BhagojiParthe Pandit,2026,1
+DS,DSS801,Seminar,Mani Bhushan,2026,1
+CME,CME491,BS Project 1,Rajesh Harishchandra Zele,2026,1
+TD,TD 390,Supervised Learning - Study,Priyadarshani Jayawant Jadhav,2026,1
+TD,TD 490,Supervised Learning- Analysis,Priyadarshani Jayawant Jadhav,2026,1
+TD,TD 491,Supervised Learning - Design,Priyadarshani Jayawant Jadhav,2026,1
+TD,TD 602,"Soil, Land Use, GIS and Agriculture",G. N.  HariharanPennan Chinnasamy,2026,1
+TD,TD 603,Water Resources Management,Parmeshwar Digamber Udmale,2026,1
+TD,TD 607,Energy Sources and their Utilization,Priyadarshani Jayawant Jadhav,2026,1
+TD,TD 608,Project Management and Project Analysis,Bakul Rao,2026,1
+TD,TD 609,Field Work,G. N.  Hariharan,2026,1
+TD,TD 613,Ecology and Environment,Anand B RaoG. N.  HariharanPankajkumar Sekhsaria,2026,1
+TD,TD 626,"Technology, Society and Development",Pankajkumar Sekhsaria,2026,1
+TD,TD 628,Applied Statistical Methods and Data Analysis,Amit Yashpal Arora,2026,1
+TD,TD 631,Qualitative Data Collection and Analysis Methods,Kuru DindiPankajkumar Sekhsaria,2026,1
+TD,TD 638,"Development Perspectives: Ideas, Approaches, and Theories",Anand B RaoKuru DindiSanjay  Chahande,2026,1
+TD,TD 651,Technology in Practice,Amit Yashpal Arora,2026,1
+TD,TD 694,Seminar,Amit Yashpal Arora,2026,1
+TD,TD 695,I Stage Project,Kuru Dindi,2026,1
+TD,TD 696,II Stage Project,Pankajkumar Sekhsaria,2026,1
+TD,TD 899,Communication Skills,Chaaruchandra KordePennan Chinnasamy,2026,1
+GNR,GNR401,Remote sensing and Image Processing,Avik BhattacharyaBiplab BanerjeeGulab Singh,2026,1
+GNR,GNR603,Principles of Remote Sensing,Alok Kumar PorwalAvik Bhattacharya,2026,1
+GNR,GNR605,Principles of Geographic Information Systems,Surya S Durbha,2026,1
+GNR,GNR607,Principles of Satellite Image Processing,Buddhiraju Krishna Mohan,2026,1
+GNR,GNR615,GIS Laboratory,Surya S Durbha,2026,1
+GNR,GNR617,Image Interpretation Laboratory,Yalamanchili Rao,2026,1
+GNR,GNR619,Natural Resources : Lithosphere and Biosphere,Karthikeyan LankaPritam  Das,2026,1
+GNR,GNR621,"Natural Resources: Hydroshpere, Cryosphere and Atmosphere",Deepak SinghGulab SinghKarthikeyan Lanka,2026,1
+GNR,GNR627,Geospatial Predictive Modelling,Alok Kumar Porwal,2026,1
+GNR,GNR642,Scattering Models in Microwave Remote Sensing,Gulab Singh,2026,1
+GNR,GNR649,Planetary Sciences: Earth and Beyond,Deepak Singh,2026,1
+GNR,GNR650,Advanced topics in deep learning for image analysis,Biplab Banerjee,2026,1
+GNR,GNR653,Data Analysis Methods for Geospatial Applications,Avik BhattacharyaKarthikeyan LankaPritam  Das,2026,1
+GNR,GNR694,Seminar,Pritam  Das,2026,1
+GNR,GNR697,R & D Project,Karthikeyan Lanka,2026,1
+GNR,GNR797,I Stage Project,Alok Kumar PorwalAvik Bhattacharya,2026,1
+GNR,GNR805,Advanced Concepts in Polarimetric SAR Image Analysis,Avik BhattacharyaYalamanchili Rao,2026,1
+GNR,GNR899,Communication Skills,,2026,1
+ES,ES 101,Introduction to Environmental Science & Engineering,Tabish NawazVirendra Sethi,2026,1
+ES,ES 200,Environmental Studies: Science and Engineering,Renuka VermaSubhankar Karmakar,2026,1
+ES,ES 201,Applied Environmental Microbiology and Ecology,Indrajit ChakrabortySuparna Mukherji,2026,1
+ES,ES 203,Water and Wastewater Engineering,Renuka Verma,2026,1
+ES,ES 213,Environmental Microbiology Laboratory,Indrajit Chakraborty,2026,1
+ES,ES 216,GIS Aided Environmental Planning and Management,Srinidhi Balasubramanian,2026,1
+ES,ES 225,Artificial Intelligence & Data Science,Manoranjan Sahu,2026,1
+ES,ES 250,Environmental Studies : Science and Engineering,Renuka VermaSubhankar Karmakar,2026,1
+ES,ES 296,Seminar,Abhishek ChakrabortySwatantra Pratap Singh,2026,1
+ES,ES 303,Municipal waste and biomedical waste management,Anurag Garg,2026,1
+ES,ES 308,Solid and Hazardous Waste Laboratory,Anurag GargVenkata Sai Vamsi Botlaguduru,2026,1
+ES,ES 315,Solid Waste Management - Basic Principles and Technical Aspects,Munish Kumar Chandel,2026,1
+ES,ES 317,Fundamentals of Air Pollution Science and Engineering,Abhishek Chakraborty,2026,1
+ES,ES 351,Air Pollution Monitoring Laboratory,Manoranjan Sahu,2026,1
+ES,ES 401,Environmental management,Pradip Pandurang KalbarShankar  Murthy,2026,1
+ES,ES 407,Simulation & Optimization Techniques in Environmental Systems,Subhankar KarmakarTabish Nawaz,2026,1
+ES,ES 451,Field Studies,Swatantra Pratap Singh,2026,1
+ES,ES 491,B.Tech. Project I (BТР І),Anil Kumar DikshitSrinidhi Balasubramanian,2026,1
+ES,ES 494,MSc-PhD Project II,Abhishek ChakrabortySwatantra Pratap Singh,2026,1
+ES,ES 495,MSc-PhD Project III,Abhishek ChakrabortySwatantra Pratap Singh,2026,1
+ES,ES 593,Dual Degree Project Stage  I,Harish Chandra PhuleriaTabish Nawaz,2026,1
+ES,ES 601,Environmental Health and Safety,Renuka VermaShankar  Murthy,2026,1
+ES,ES 607,Environmental Informatics,Manoranjan Sahu,2026,1
+ES,ES 630,Environmental Nanotechnology,Amritanshu ShriwastavSuparna Mukherji,2026,1
+ES,ES 631,Environmental Chemistry,Tabish Nawaz,2026,1
+ES,ES 633,Environmental Microbiology and Ecology,Swatantra Pratap Singh,2026,1
+ES,ES 635,Air Pollution Science and Engineering,Harish Chandra PhuleriaSrinidhi Balasubramanian,2026,1
+ES,ES 637,Municipal Water and Wastewater Systems,Sanjeev Chaudhari,2026,1
+ES,ES 639,Physico-Chemical Treatment Technologies,Suparna MukherjiVenkata Sai Vamsi Botlaguduru,2026,1
+ES,ES 645,Environmental Law and Policy,Munish Kumar ChandelPradip Pandurang Kalbar,2026,1
+ES,ES 647,Municipal Solid and Biomedical Waste Management,Anil Kumar DikshitAnurag Garg,2026,1
+ES,ES 649,Atmospheric Processes and Climate Change,Abhishek Chakraborty,2026,1
+ES,ES 651,Environmental Monitoring Laboratory,Amritanshu ShriwastavHarish Chandra PhuleriaSwatantra Pratap Singh,2026,1
+ES,ES 653,Environmental Impact Assessment,Anil Kumar DikshitHarish Chandra Phuleria,2026,1
+ES,ES 655,Environmental Management,Pradip Pandurang Kalbar,2026,1
+ES,ES 657,Water Resources and Environmental Hydraulics,Subhankar KarmakarVenkata Sai Vamsi Botlaguduru,2026,1
+ES,ES 659,Mathematics and Statistics for Environmental Engineering,Amritanshu ShriwastavIndrajit Chakraborty,2026,1
+ES,ES 691,R & D Project I,Renuka VermaSubhankar Karmakar,2026,1
+ES,ES 692,R & D Project II,Renuka VermaSubhankar Karmakar,2026,1
+ES,ES 694,Seminar,Amritanshu ShriwastavPradip Pandurang Kalbar,2026,1
+ES,ES 797,I Stage Project,Amritanshu ShriwastavPradip Pandurang Kalbar,2026,1
+ES,ES 899,Communication Skills,Harish Chandra PhuleriaVirendra Sethi,2026,1
+ES,ESS801,Seminar,Swatantra Pratap SinghVenkata Sai Vamsi Botlaguduru,2026,1
+DH,DH 302,Introduction to Public Health Informatics,Kalyani AddyaKshitij  Jadhav,2026,1
+DH,DH 307,R & D Project,Nirmal Suresh Punjabi,2026,1
+DH,DH 308,Clinical Data Management,Kalyani Addya,2026,1
+DH,DH 605,R&D Project-II,Raghav  Tandon,2026,1
+DH,DH 607,Introduction to Computational Multi-omics,Saket Choudhary,2026,1
+DH,DH 694,Seminar,Sini  Nagpal,2026,1
+DH,DH 801,Biostatistics in Healthcare,Ranjith PadinhateeriSaket Choudhary,2026,1
+DH,DH 803,Wearable Health Technologies,Nirmal Suresh Punjabi,2026,1
+DH,DH 899,Communication Skills,Mohit  Singhala,2026,1
+DH,DHS801,Seminar,Sini  Nagpal,2026,1
+DE,DE 101,Art and Design Fundamental 2D,Raja MohantySreekumar G.V,2026,1
+DE,DE 107,A Study of the Power of Words,Lalitha Sarma,2026,1
+DE,DE 109,Introduction to Design,Arun MascarenhasPradip SaveRajib  KalitaSwati AgarwalVidhya Appu,2026,1
+DE,DE 112,Communication Through Illustrations,Arun Mascarenhas,2026,1
+DE,DE 114,Basics of Film Editing,Bharat Chhitubhai Parmar,2026,1
+DE,DE 115,"Drawing Tools, Lines and Forms",Jinal Sangoi,2026,1
+DE,DE 117,Introduction to Writing,Lalitha Sarma,2026,1
+DE,DE 119,Material Exploration,Nishant Kamboj,2026,1
+DE,DE 129,Introduction to Weaving,Latha Tummuru,2026,1
+DE,DE 139,Typography Fundamentals,Aman Rupesh XaxaUdaya Kumar  Dharmalingam,2026,1
+DE,DE 191,Visual Design Project,Anisha Malhotra Dalvi,2026,1
+DE,DE 211,Introduction to Web Development,Kartikeya Anil Date,2026,1
+DE,DE 215,Reading the World through Many Lenses,Lalitha Sarma,2026,1
+DE,DE 216,Classics of  Popular Indian Cinema,Mazhar Kamran,2026,1
+DE,DE 223,Wood and Bamboo Studio,Sandesh M. Ramu,2026,1
+DE,DE 224,Natural Dyeing Techniques,Shilpa Ranade,2026,1
+DE,DE 229,Global and Indian Design History - Current Perspectives,Anirudha Nanasaheb Joshi,2026,1
+DE,DE 235,Moving Image Design Project,Mazhar KamranSudesh Balan,2026,1
+DE,DE 237,Color Materials Finish (CMF),Kanika Jolly,2026,1
+DE,DE 250,Design Thinking for Innovation,Dhruv ParmarPradip SaveRavi  RaoVinayak Nabar,2026,1
+DE,DE 301,Introduction to Sound Design,Sumant Muralidhar Rao,2026,1
+DE,DE 302,Animation Design,Somnath Pal,2026,1
+DE,DE 303,Information Graphics and Visualisation,Venkatesh Rajamanickam,2026,1
+DE,DE 308,Product Design II,Sandesh M. Ramu,2026,1
+DE,DE 319,Interaction Design Process and Methods,Anirudha Nanasaheb Joshi,2026,1
+DE,DE 320,Designing Books for children,Deepa Balsavar,2026,1
+DE,DE 323,Stopmotion Animation,Dhimant VyasSwati Agarwal,2026,1
+DE,DE 325,2D Animation Fundamentals and Techniques,Shilpa Ranade,2026,1
+DE,DE 327,Basics of Materials and Processes,Nishant Kamboj,2026,1
+DE,DE 328,Board Game Design,Prasad Bokil,2026,1
+DE,DE 335,Handloom Weaving for Beginners,Latha Tummuru,2026,1
+DE,DE 337,Introduction to Sound Design,P M Satheesh,2026,1
+DE,DE 340,Pottery for Beginners,Raja Mohanty,2026,1
+DE,DE 341,An Introduction to the City,Himanshu BurteKartikeya Anil Date,2026,1
+DE,DE 343,Introduction to Print Making,Deepa Balsavar,2026,1
+DE,DE 349,Immersive Art in VR,Sugandh Pardeep Malhotra,2026,1
+DE,DE 351,Introduction to Elements of Design,Ulemba Meetei Hirom,2026,1
+DE,DE 353,"History, Technology, and the Future of Filmmaking",Sudesh Balan,2026,1
+DE,DE 417,Physical Ergonomics,Swati Pal,2026,1
+DE,DE 419,Visual and Cognitive Ergonomics,Wricha  Mishra,2026,1
+DE,DE 601,Introduction to Studio Photography,Sanket Parshuram Patil,2026,1
+DE,DE 603,Presentation and Communication Skills,Rajat Namdeo Patle,2026,1
+DE,DE 605,Workshop Skills,Avinash Shende,2026,1
+DE,DE 607,Studies in Form-1,Rajat Namdeo Patle,2026,1
+DE,DE 609,Product Design-1,Sandesh M. Ramu,2026,1
+DE,DE 610,Nature of Materials and Processes,Purba Joshi,2026,1
+DE,DE6101,ELEMENTS OF PHOTOGRAPHY,Sanket Parshuram Patil,2026,1
+DE,DE6103,Advanced Product Design,Sandesh M. Ramu,2026,1
+DE,DE 611,Elements of Design,Kums P Kumaresan,2026,1
+DE,DE 613,Visual Language Syntactics,Prasad Bokil,2026,1
+DE,DE 615,Studies in Typography,Aman Rupesh Xaxa,2026,1
+DE,DE 617,Introduction to Advanced Photography,Sanket Parshuram Patil,2026,1
+DE,DE 619,The Speaking Image,Arun MascarenhasRaja Mohanty,2026,1
+DE,DE 621,Media Technology,Jinal Sangoi,2026,1
+DE,DE 623,Visual Design,Mandar Shashikant Rane,2026,1
+DE,DE 627,Indian Thought and Tradition,Sumant Muralidhar Rao,2026,1
+DE,DE 630,Trends in Interactive Technologies,Kartikeya Anil Date,2026,1
+DE,DE 641,"Interactions, Media, Senses",Jayati Bandyopadhyay,2026,1
+DE,DE 643,Digital Animation-1,Ravi  Rao,2026,1
+DE,DE 645,Animation Theory-1,Shilpa RanadeSomnath Pal,2026,1
+DE,DE 647,Animation Principles-1,Phani Prasad Rao TetaliShyam Subhashrao Wanare,2026,1
+DE,DE 649,Animation Design-1,Abhishek VermaShilpa Ranade,2026,1
+DE,DE 651,Sketching and Anatomy-1,Shyam Subhashrao WanareSomnath Pal,2026,1
+DE,DE 653,Material and Manufacturing,Kanika Jolly,2026,1
+DE,DE 657,Vehicle Ergonomics,Swati Pal,2026,1
+DE,DE 659,Forms Space and Order,Sridhar Mahadevan,2026,1
+DE,DE 661,Mobility Design-1,Nishant Sharma,2026,1
+DE,DE 663,Sketching-1,Dhruv Parmar,2026,1
+DE,DE 665,Model Making-1,Unni Mohan Mohanan,2026,1
+DE,DE 668,Instructional Design,Anisha Malhotra Dalvi,2026,1
+DE,DE 675,Sketchning for Mobilty and Vehicle Design,Rajib  Kalita,2026,1
+DE,DE 677,Design for Virtual Reality - Basic,Jayesh S. Pillai,2026,1
+DE,DE 678,Structures and Spaces Furniture,Avinash Shende,2026,1
+DE,DE 679,Experimental Animation,Dhimant Vyas,2026,1
+DE,DE 688,Sketching for Communication Design,Jinal Sangoi,2026,1
+DE,DE 692,Advanced Topics in Service Design,Ravi Mahamuni,2026,1
+DE,DE 693,Experimental Film,Bharat Chhitubhai Parmar,2026,1
+DE,DE 698,Introduction to Pottery,Raja Mohanty,2026,1
+DE,DE 699,Basics of Entrepreneurship for Designers,Pankaj Jhunja,2026,1
+DE,DE 701,Visual Ergonomics & Human Perception,Wricha  Mishra,2026,1
+DE,DE 702,Arts Design and Society-1,Aditi ChitreAman Rupesh Xaxa,2026,1
+DE,DE 705,Interactive Data Visualization,Venkatesh Rajamanickam,2026,1
+DE,DE 708,Introduction to Interface Design,Sudhir Ram Bhatia,2026,1
+DE,DE 710,Design Evaluation,Vidhya AppuWricha  Mishra,2026,1
+DE,DE 711,Animation Production,Abhishek Verma,2026,1
+DE,DE 713,Seminar and Critical Writing,Jinal Sangoi,2026,1
+DE,DE 714,Design Fiction,Jayesh S. Pillai,2026,1
+DE,DE 720,Power of Colour,Kanika Jolly,2026,1
+DE,DE 721,Representation Techniques for Animation,Aditi Chitre,2026,1
+DE,DE 726,Introduction to Film and Filmmaking,Bharat Chhitubhai Parmar,2026,1
+DE,DE 733,Mobility Systems and Technology,Sridhar MahadevanUnni Mohan Mohanan,2026,1
+DE,DE 801,Mini Project-I,Anisha Malhotra Dalvi,2026,1
+DE,DE 802,Mini Project-II,Anisha Malhotra Dalvi,2026,1
+DE,DE 803,Quantitative Design Research Methods,Anirudha Nanasaheb Joshi,2026,1
+DE,DE 804,Qualitative Design Research Methods,Girish Vinod Dalvi,2026,1
+DE,DE 899,Communication Skills,Anisha Malhotra Dalvi,2026,1
+DE,DEP301,Collaborative Design Project,Milouni Desai KapoorSudhir Ram BhatiaSwati Agarwal,2026,1
+DE,DEP405,BDes Design Project - 1,Abhishek Verma,2026,1
+DE,DEP408,Design Research Project,Swati Pal,2026,1
+DE,DEP410,B. Des. Design Project II,Abhishek Verma,2026,1
+DE,DEP501,Design Research Project-Part I,Arun MascarenhasJayesh S. PillaiPurba JoshiSwati Agarwal,2026,1
+DE,DEP502,Design Research Seminar II,Swati Pal,2026,1
+DE,DEP504,Design Research Project-Part II,Purba Joshi,2026,1
+DE,DEP701,M.Des. Project-1,Arun MascarenhasKanika JollyPurba JoshiSwati Agarwal,2026,1
+DE,DEP702,M.Des. Project- 2,Arun MascarenhasJayesh S. PillaiKanika JollyPurba JoshiSwati Agarwal,2026,1
+DE,DEP703,M.Des. Project- 3,Purba JoshiUnni Mohan Mohanan,2026,1
+DE,DEP704,Design Research Project - I,Anirudha Nanasaheb Joshi,2026,1
+CM,CM 507,Numerical Methods for Climate Science,S. Ravichandran,2026,1
+CM,CM 617,Sustainability Principles and Practices,Jaideep Joshi,2026,1
+CM,CM 618,Introduction to Climate Science,Vishal Dixit,2026,1
+CM,CM 619,Thermodynamics of Climate System,Angshuman Modak,2026,1
+CM,CM 621,Ocean Dynamics,Suyash Ulhas Bire,2026,1
+CM,CM 694,Seminar,Angshuman Modak,2026,1
+CM,CM 704,Machine Learning for Climate and Sustainability,Suyash Ulhas Bire,2026,1
+CM,CM 797,I Stage Project,Angshuman Modak,2026,1
+CM,CM 899,Communication Skills,Angshuman ModakAnjali Sharma,2026,1
+CM,CMS801,Seminar,Vishal Dixit,2026,1
+CM,CMS802,Seminar,Vishal Dixit,2026,1
+ET,ET 601,Introduction to Educational Technology,Sahana Venkatesha Murthy,2026,1
+ET,ET 606,Educational Technology -Tools Lab,Sridhar Rajamani Iyer,2026,1
+ET,ET 610,Learning Analytics and Educational Data Mining,Ramkumar Rajendran,2026,1
+ET,ET 612,Statistical Methods for Educational Research,Durgaprasad Karnam,2026,1
+ET,ET 613,Human-Computer Interaction for Educational Technology,Syaamantak Das,2026,1
+ET,ET 617,Educational App Design,Ramkumar Rajendran,2026,1
+ET,ET 619,Field Work in Educational Technology,Syaamantak Das,2026,1
+ET,ET 627,Designing Learning Experiences for Developing AI Literacy in Schools,Lakshmi  T. Ganesh,2026,1
+ET,ET 628,Theory of Change in Education,Lakshmi  T. Ganesh,2026,1
+ET,ET 694,Seminar,Syaamantak Das,2026,1
+ET,ET 797,I Stage Project,Syaamantak Das,2026,1
+ET,ET 802,Research Project,,2026,1
+ET,ET 899,Communication Skills,Sahana Venkatesha Murthy,2026,1
+ET,ETS801,Seminar,Syaamantak Das,2026,1
+SC,SC 593,Dual Degree Project I,Rajasekhar  Anguluri,2026,1
+SC,SC 625,Systems Theory,Arpita Sinha,2026,1
+SC,SC 631,Games and Information,Ankur Kulkarni,2026,1
+SC,SC 639,Mathematical Structures for Control,Debasish Chatterjee,2026,1
+SC,SC 651,Estimation on Lie Groups,Ravi N Banavar,2026,1
+SC,SC 655,Random Processes in Learning and Control,Debasish Chatterjee,2026,1
+SC,SC 658,Modeling for Aero-Mechanical Systems (MAMS),Sukumar Srikant,2026,1
+SC,SC 663,Optimization and Inference in Sparse Network Models,Rajasekhar  Anguluri,2026,1
+SC,SC 664,Active Vibration Control,Vivek Natarajan,2026,1
+SC,SC 691,R & D Project,Debasish Chatterjee,2026,1
+SC,SC 797,I Stage Project,Rajasekhar  Anguluri,2026,1
+SC,SC 899,Communication Skills,Ankur KulkarniArpita SinhaDebasish ChatterjeeLeena VachhaniNavin KhanejaRajasekhar  AnguluriRavi N BanavarSukumar SrikantVivek Natarajan,2026,1
+SC,SCS801,Seminar,Rajasekhar  Anguluri,2026,1
+IE,IE 101,Introduction to IE and OR,Jayendran Venkateswaran,2026,1
+IE,IE 203,Data Structures and Algorithms,Arunselvan  RamaswamyAshutosh Mahajan,2026,1
+IE,IE 205,Industrial Engineering Lab,Bijulal  D.Jayendran VenkateswaranPriyank Sinha,2026,1
+IE,IE 207,Industrial Systems,Priyank Sinha,2026,1
+IE,IE 209,Linear Optimization and Network Flows,Vishnu Bhama Narayanan,2026,1
+IE,IE 211,Programming & Computing Lab,Arunselvan  RamaswamyBalamurugan Palaniappan,2026,1
+IE,IE 301,Operations Analysis,Narayan Rangaraj,2026,1
+IE,IE 303,Simulation,Saurabh Jain,2026,1
+IE,IE 305,Simulation Lab,Jayendran VenkateswaranSaurabh Jain,2026,1
+IE,IE 306,Supervised Learning Project,Avinash BhardwajNarayan Rangaraj,2026,1
+IE,IE 307,Stochastic Processes & Queuing Systems,Nandyala HemachandraVinay Kumar  Bindiganavile Ramadas,2026,1
+IE,IE 491,B. Tech. Project 1 (BTP1),Jayendran Venkateswaran,2026,1
+IE,IE 492,B.Tech. Project 2 (ВТР 2),Jayendran Venkateswaran,2026,1
+IE,IE 501,Optimization Models,Vishnu Bhama Narayanan,2026,1
+IE,IE 503,Operations Analysis,Narayan Rangaraj,2026,1
+IE,IE 507,Modeling & Computation Lab,Ashutosh Mahajanvoleti Veeraruna Kavitha,2026,1
+IE,IE 509,Computer Programming Lab,Balamurugan Palaniappan,2026,1
+IE,IE 609,Mathematical Optimisation Techniques,Avinash Bhardwaj,2026,1
+IE,IE 612,Introduction to Financial Engineering,K.S Mallikarjuna Rao,2026,1
+IE,IE 618,Advanced Stochastic Processes for Operations Research,voleti Veeraruna Kavitha,2026,1
+IE,IE 621,Probability and Stochastic Processes I,Sarath Ampadi Yasodharan,2026,1
+IE,IE 624,Generative and Agentic Al,Manjesh Kumar Hanawal,2026,1
+IE,IE 630,Simulation Modeling and Analysis,Saurabh Jain,2026,1
+IE,IE 643,Deep Learning - Theory and Practice,Balamurugan Palaniappan,2026,1
+IE,IE 647,Applied Integer Programming,Vishnu Bhama Narayanan,2026,1
+IE,IE 685,MSc.Phd. Research Project I,Sarath Ampadi Yasodharan,2026,1
+IE,IE 688,R & D Project,Balamurugan Palaniappan,2026,1
+IE,IE 708,Markov Decision Processes,Nandyala HemachandraSarath Ampadi Yasodharan,2026,1
+IE,IE 797,I Stage Project,Priyank Sinha,2026,1
+IE,IE 899,Communication Skills,,2026,1
+IE,IES801,Seminar,Jayendran Venkateswaran,2026,1
+MG,MG 401,Marketing Management,Srinwanti Hazra  Chaudhury,2026,1
+MG,MG 402,Human Resource Management,Soumya G. Rajan,2026,1
+MG,MG 403,Accounting and Finance,Piyush PandeyVed Dilip Beloskar,2026,1
+MG,MGS801,Credit Seminar,Omkar Dattatray Palsule-Desai,2026,1
+MG,MGS802,Seminar,Omkar Dattatray Palsule-Desai,2026,1
+SOM,SOM101,Introduction to Management,Ashish Harinarayan PandeyMayank Pareek,2026,1
+SOM,SOM601,Communication and Interpersonal Skill,Ashish Harinarayan Pandey,2026,1
+SOM,SOM602,Microeconomics,Trupti Mishra,2026,1
+SOM,SOM603,Fundamentals of Financial and Managerial Accounting,Varadraj Bhalchandra Bapat,2026,1
+SOM,SOM604,Marketing Management - I,Arti Deepak Kalro,2026,1
+SOM,SOM605,Statistical Methods,Pankaj Dutta,2026,1
+SOM,SOM606,Corporate Finance - I,Sapar Narayan Rao,2026,1
+SOM,SOM607,Macroeconomics,Sarthak Gaurav,2026,1
+SOM,SOM608,Decision Models in Management,Omkar Dattatray Palsule-Desai,2026,1
+SOM,SOM609,Information Systems,Rajendra Madhukar Sonar,2026,1
+SOM,SOM610,Marketing Management - II,Dinesh Sharma,2026,1
+SOM,SOM611,Operations Management  I,Indrajit Narayan Mukherjee,2026,1
+SOM,SOM620,Business and Sustainable Development,Trupti Mishra,2026,1
+SOM,SOM622,Strategic Marketing,Mayank Pareek,2026,1
+SOM,SOM624,Warehouse Operations,Gajendra Kumar Adil,2026,1
+SOM,SOM625,Summer Project Work,Arti Deepak Kalro,2026,1
+SOM,SOM626,Advanced Planning and Scheduling,Rahul Jagannath Patil,2026,1
+SOM,SOM631,Game Theory for Business Decisions,Sarthak Gaurav,2026,1
+SOM,SOM634,Purchasing and Supply Management,Atul Prabhakar Kanyalkar,2026,1
+SOM,SOM635,Operations Strategy,Gajendra Kumar Adil,2026,1
+SOM,SOM636,Innovation Management,Sawan Rathi,2026,1
+SOM,SOM642,Business Forecasting,Pankaj Dutta,2026,1
+SOM,SOM643,Introduction to ERP,Atul Prabhakar Kanyalkar,2026,1
+SOM,SOM650,"Mergers, Acquisitions and Business Valuation",Sapar Narayan Rao,2026,1
+SOM,SOM653,Security Analysis and Portfolio Management,Rohan Chinchwadkar,2026,1
+SOM,SOM655,Derivatives and Risk Management,Piyush Pandey,2026,1
+SOM,SOM663,Brand Management,Dinesh Sharma,2026,1
+SOM,SOM671,International Competitiveness,Kirankumar Somchand Momaya,2026,1
+SOM,SOM675,Organization Theory and Design,Soumya G. Rajan,2026,1
+SOM,SOM690,Software Project Management,Rajendra Madhukar Sonar,2026,1
+SOM,SOM697,Electronic Business Strategies and Implementation,Rajendra Madhukar Sonar,2026,1
+SOM,SOM698,Management of Banking and Financial Services,Piyush Pandey,2026,1
+SOM,SOM703,Sales and Distribution Management,Mayank Pareek,2026,1
+SOM,SOM705,Supply Chain Optimization,Rahul Jagannath Patil,2026,1
+SOM,SOM709,International Business,Snehal Awate,2026,1
+SOM,SOM726,Political Economy of Development in India,Ashish Singh,2026,1
+SOM,SOM727,Applied Quality Engineering and Management,Indrajit Narayan Mukherjee,2026,1
+SOM,SOM738,Data Science for Management,Rajendra Madhukar Sonar,2026,1
+SOM,SOM739,Applications of AI in Marketing,Bithindra  Biswas,2026,1
+SOM,SOM740,Social Media Management,Srinwanti Hazra  Chaudhury,2026,1
+SOM,SOM741,Financial Statement Analysis,Ved Dilip Beloskar,2026,1
+SOM,SOM749,"Consumer Psychology, Behaviour, and Neuroscience",Arti Deepak Kalro,2026,1
+SOM,SOM750,International Financial Management,Sonti Venkata Durga Nageswara Rao,2026,1
+SOM,SOM793,Compulsory IDDDP Project,Omkar Dattatray Palsule-DesaiPiyush Pandey,2026,1
+SOM,SOM794,Optional IDDDP Project,Omkar Dattatray Palsule-DesaiPiyush Pandey,2026,1
+SOM,SOM807,Economics,Ashish Singh,2026,1
+SOM,SOM808,Introduction to Research Methods,Ashish Singh,2026,1
+SOM,SOM810,Qualitative Research Methodologies,Soumya G. Rajan,2026,1
+SOM,SOM811,Survey Research & Experimentation,Arti Deepak Kalro,2026,1
+SOM,SOM814,Statistics for Management Research,Sudeep R. Bapat,2026,1
+SOM,SOM816,Advanced Seminar in Consumer Behaviour,Srinwanti Hazra  Chaudhury,2026,1
+SOM,SOM899,Communication Skills,Omkar Dattatray Palsule-Desai,2026,1
+IWE,IWE701,Strategic Management,Snehal Awate,2026,1
+IWE,IWE707,Communication and Negotiation Skills,Dinesh Sharma,2026,1
+IWE,IWE708,Operations and Manufacturing Management,Indrajit Narayan Mukherjee,2026,1
+IWE,IWE709,Strategic Cost Analysis,Dinesh Sharma,2026,1
+IWE,IWE710,Corporate Finance,Sonti Venkata Durga Nageswara Rao,2026,1
+IWE,IWE713,Managing Power and Influence in Organizations,Dinesh Sharma,2026,1

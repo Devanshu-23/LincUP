@@ -9,3 +9,7 @@ __pycache__/
 .env.*
 !.env.example
 
+.vscode
+.venv
+.ipynb_checkpoints
+*.db

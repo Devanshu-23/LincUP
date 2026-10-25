@@ -1,0 +1,1224 @@
+,dept_code,course_code,course_name,instructor
+0,AE,AE 103,A historical perspective of Aerospace Engineering,Chandra Sekher Yerramalli
+1,AE,AE 152,Introduction to Aerospace Engg.,Rajkumar Sureshchandra Pant
+2,AE,AE 153,Introduction to Aerospace Engg.,Rajkumar Sureshchandra Pant
+3,AE,AE 219,Supervised Learning,Rohit Vishwajit Nanavati
+4,AE,AE 223,Thermodynamics and Propulsion,Chandra Sekar Thyagarajan
+5,AE,AE 227,Solid Mechanics,Krishnendu Haldar
+6,AE,AE 229,Introduction to Aerodynamics and Propulsion Laboratory,Chandra Sekar ThyagarajanDhwanil ShuklaNagendra KumarPrabhu Ramachandran
+7,AE,AE 231,Introduction to Aerospace Structures and Control  Laboratory,Hemendra AryaKrishnendu Haldar
+8,AE,AE 234,Aircraft Propulsion,Pradeep Amboor Madathil
+9,AE,AE 236,Compressible Fluid Mechanics,Aniruddha Sinha
+10,AE,AE 308,Control Theory,Rohit Vishwajit Nanavati
+11,AE,AE 316,Aircraft Propulsion Laboratory,Nagendra Kumar
+12,AE,AE 326,Vibrations and Structural Dynamics,Abhijit Gogulapati
+13,AE,AE 339,High Speed Aerodynamics,Vineeth Nair
+14,AE,AE 341,Flight Mechanics of Aircrafts and Spacecrafts,Rohit Gupta
+15,AE,AE 343,Aerodynamics Laboratory,Aniruddha SinhaVineeth NairViren I. Menezes
+16,AE,AE 344,Aero Propulsion,Hrishikesh Gadgil
+17,AE,AE 345,Aircraft Propulsion Laboratory,Nagendra Kumar
+18,AE,AE 419,Supervised Learning,Deepak Prakash KumarRohit Vishwajit Nanavati
+19,AE,AE 429,Aircraft Design Project,Avijit ChatterjeeGanapathi Bhat
+20,AE,AE 493,BTP - I,Arnab Maity
+21,AE,AE 494,BTP - II,Vineeth Nair
+22,AE,AE 616,Gas Dynamics,Aniruddha Sinha
+23,AE,AE 623,Computing  of Turbulent Flows,Krishnendu Bimalendu Sinha
+24,AE,AE 641,Introduction to Navigation and Guidance,Arnab Maity
+25,AE,AE 649,Finite Element Method,Chandra Sekher Yerramalli
+26,AE,AE 650,Mini Project,Nagendra Kumar
+27,AE,AE 667,Rotary Wing Aerodynamics,Dhwanil Shukla
+28,AE,AE 683,Fluid Dynamics,Nagendra Kumar
+29,AE,AE 688,Navigation of Autonomous Vehicles,Hemendra Arya
+30,AE,AE 694,Seminar,Krishnendu HaldarVasudeva Raghavendra Kowsik Bodi
+31,AE,AE 695,State Space Methods for Flight Vehicles,Shashi Ranjan Kumar
+32,AE,AE 705,Introduction to Flight,Rajkumar Sureshchandra Pant
+33,AE,AE 707,Aerodynamics of Aerospace Vehicles,Viren I. Menezes
+34,AE,AE 709,Aerospace Structures,Padubidri Janardhan Achar Guruprasad
+35,AE,AE 711,Aircraft Propulsion,Pradeep Amboor Madathil
+36,AE,AE 715,Structural Dynamics,Abhijit Gogulapati
+37,AE,AE 720,Advanced Numerical Methods for Compressible Flows,Jadav Chandra Mandal
+38,AE,AE 726,Heat Transfer - Aerospace Applications,Ganapathi Bhat
+39,AE,AE 727,Aircraft Structural Mechanics Lab.,Krishnendu Haldar
+40,AE,AE 775,"System Modelling, Dynamics and Control",Rohit Vishwajit Nanavati
+41,AE,AE 899,Communication Skills,Krishnendu HaldarVasudeva Raghavendra Kowsik Bodi
+42,AE,AES801,Seminar,Krishnendu HaldarVasudeva Raghavendra Kowsik Bodi
+43,AE,AES802,Seminar,Krishnendu HaldarVasudeva Raghavendra Kowsik Bodi
+44,AES,AES801,Seminar,Krishnendu HaldarVasudeva Raghavendra Kowsik Bodi
+45,AES,AES802,Seminar,Krishnendu HaldarVasudeva Raghavendra Kowsik Bodi
+46,GP,GP 101,Solid-Earth Geophysics,Kumar Hemant Singh
+47,GP,GP 201,Elements of Mineralogy and Petrology,George MathewSameer Ranjan
+48,GP,GP 203,Engineering Geology and Hydrogeology,D RamakrishnanVikram Vishal
+49,GP,GP 205,Elements of Mineralogy and Petrology Lab,Nibedita RakshitSameer Ranjan
+50,GP,GP 207,Engineering Geology and Hydrogeology Lab,D RamakrishnanVikram Vishal
+51,GP,GP 401,Global Geophysics,Srinivasa Rao Gangumalla
+52,GP,GP 403,Earthquake and Engineering Seismology,Gollapally MohanSatish Maurya
+53,GP,GP 407,Seismology Lab,Satish Maurya
+54,GP,GP 413,Mineralogy & Petrology,Prabhakar NaragaSudipta Dasgupta
+55,GP,GP 415,Mineralogy & Petrology Lab,Prabhakar NaragaSudipta Dasgupta
+56,GP,GP 503,Geophysical Signal Processing,Enamundram Chandrasekhar
+57,GP,GP 505,Electromagnetic Methods,Enamundram Chandrasekhar
+58,GP,GP 517,Exploration Seismology II,Vivek Kumar
+59,GP,GP 519,Engineering & Ground Water Geology Lab,Rambabu  SinghVikram Vishal
+60,GP,GP 521,Electromagnetic Lab,Anand Singh
+61,GP,GP 523,Industrial Training,Enamundram Chandrasekhar
+62,BM,BM 659,Elements of Circuits and Instrumentation,Ambarish Kunwar
+63,BB,BB 101,Biology,Prasenjit Ranjith Kumar BhaumikSandip Laxman KaledhonkarSwapnil Rohidas Shinde
+64,BB,BB 415,Cell and Molecular Biology,Sreelaja Nair
+65,BB,BB 454,Programming for Bioinformatics,Deepak Kumar Agrawal
+66,BB,BB 505,Molecular Immunology,Sushil Kumar
+67,BB,BB 519,Project Proposal Presentation and Dissertation,Sreelaja Nair
+68,BB,BB 525,Biological Thermodynamics and Kinetics,Ranjith Padinhateeri
+69,BB,BB 527,Molecular Enzymology,Petety V Balaji
+70,BB,BB 529,Research Methodology and Scientific Communication Skills,Swati Arvind Patankar
+71,BB,BB 531,Plant Biotechnology,Rajesh Patkar
+72,BB,BB 535,Environmental Biotechnology,Prashant Sitakant Phale
+73,BB,BB 540,Microbiology,Anirban Chanchal Kumar BanerjeeRajesh Patkar
+74,BB,BB 541,Biochemistry and Analytical Biochemistry,Petety V BalajiPrashant Sitakant Phale
+75,BB,BB 542,Mathematics and Statistics,Deepak Kumar AgrawalSandeep Kumar Kalva
+76,BB,BB 600,Introduction to Biomedical Engineering,Mukherji Soumyo
+77,BB,BB 601,Introduction to Bio-nanotechnology,Rohit Srivastava
+78,BB,BB 603,Physiology for Engineers,Vivek P Soni
+79,BB,BB 617,Biophysical Chemistry,Ashutosh KumarSamir Kumar Maji
+80,BB,BB 619,Mathematics for Biologists,Shamik Rabindranath Sen
+81,BB,BB 627,Medical Imaging Methods,Hari M. Varma
+82,BB,BB 633,Movement Neuroscience,Neeta Kanekar
+83,BB,BB 653,Experimental Techniques in Biomedical Engineering,Ambarish KunwarDeepak Kumar AgrawalNivethida ThirugnanasambandamSandeep Kumar Kalva
+84,BB,BB 659,Applied Microbiology and Biotechnology Laboratory,Prashant Sitakant Phale
+85,BB,BB 661,Biopotentials I: Cellular Signals,Rohit Manchanda
+86,BB,BB 663,Medical Imaging Physics,Debjani Paul
+87,BB,BB 669,Signals & Systems in Biomedical Engineering,Ambarish Kunwar
+88,BB,BB 673,Medical Sensors,Mukherji Soumyo
+89,BB,BB 677,Introduction to Biomechanics,Tuhin  Roy
+90,BB,BB 681,Biological Physics at Microscopic Scales,Ambarish Kunwar
+91,BB,BB 683,Introduction to Quantum Science,Hari M. Varma
+92,BB,BB 701,Research Proposal,Tuhin  Roy
+93,BB,BB 706,Fundamental and Practical Aspects of Microscopy,Roop Mallik
+94,BB,BB 708,Introduction to Quantitative Physiology,Deepak Kumar AgrawalNivethida Thirugnanasambandam
+95,BB,BB 709,Mathematics for Biomedical Data Analysis,Deepak Kumar Agrawal
+96,BB,BB 797,I Stage Project,Sandeep Kumar Kalva
+97,BB,BB 899,Communication Skills,Debjani PaulNivethida ThirugnanasambandamRoop MallikSreelaja NairSushil KumarSwapnil Rohidas ShindeTuhin  Roy
+98,BB,BBS801,Seminar,Shamik Rabindranath Sen
+99,BBS,BBS801,Seminar,Shamik Rabindranath Sen
+100,CL,CL 205,AI and Data Science,Sarika MehraSharad Bhartiya
+101,CL,CL 207,Chemical Engineering Thermodynamics,Guruswamy KumaraswamySudarshan Vijay
+102,CL,CL 249,Computational Methods Lab,Swati Bhattacharya
+103,CL,CL 254,Process Fluid Mechanics,Jhumpa AdhikariMahesh S. Tirumkudulu
+104,CL,CL 306,Chemical Processes,Madhu VinjamurRahul Nabar
+105,CL,CL 307,Chemical Industry Bootcamp,Madhu VinjamurRahul NabarSanjay Mahajani
+106,CL,CL 309,Conception of Chemical Projects,Hemant Jayantkumar NanavatiRajeev  PandiaSanjay Mahajani
+107,CL,CL 327,Chemical Process Design I,P SuntharSanjay Mahajani
+108,CL,CL 329,Process Control,Sayantan DuttaSujit Suresh Jogwar
+109,CL,CL 333,Chemical Engineering Lab. II,Chandra VenkataramanOjus MohanRochish Madhukar Rao ThaokarSonali Das
+110,CL,CL 336,Advanced Transport Phenomena,Devang Vipin Khakhar
+111,CL,CL 409,Material Science,Rajdip Bandyopadhyaya
+112,CL,CL 420,Introduction to Biochemical Engg.,Pramod Prabhakar Wangikar
+113,CL,CL 437,Chemical Projects Management,Madhu VinjamurRajaram  KrishnaswamiSanjay Mahajani
+114,CL,CL 443,Supervised learning I,Venkata Ramana Gundabala
+115,CL,CL4497,B.Tech.Project(grade points will be included in CL,Rochish Madhukar Rao Thaokar
+116,CL,CL 461,Colloid & Interfacial Engineering,Jayesh Ramesh Bellare
+117,CL,CL 464,Process Safety and Risk Management,Sandip Salil Roy
+118,CL,CL 491,B.Tech. Project I,Venkata Ramana Gundabala
+119,CL,CL 601,Advanced Transport Phenomena,Jason Ryan Picardo
+120,CL,CL 602,Mathematical and Statistical Methods in Chemical Engineering,Amol Subhedar
+121,CL,CL 605,Advanced Reaction Engineering,Nagappan Ramaswamy
+122,CL,CL 607,Advanced Thermodynamics,Ateeque Ahmad Abdul Gaffar Malani
+123,CL,CL 611,Electrochemical Reaction Engineering,Bharatkumar SutharNagappan Ramaswamy
+124,CL,CL 653,State Estimation:  Theory and Applications,Sachin Chandrasekhar Patwardhan
+125,CL,CL 656,Colloid and Interfacial Engineering,Rochish Madhukar Rao Thaokar
+126,CL,CL 665,Sustainable Engineering Principles,Yogendra Narayan Shastri
+127,CL,CL 669,Product Research & Development,Hemant Jayantkumar NanavatiVijay Mukund Naik
+128,CL,CL 673,Turbulent Multiphase Flow,Partha Sarathi Goswami
+129,CL,CL 683,Introduction to Microfluidics and its Applications,Venkata Ramana Gundabala
+130,CL,CL 685,Novel Alternative Models for Drug Discovery,Abhijit Majumder
+131,CL,CL 688,Artificial Intelligence in Process Engineering,Santosh Bonaventure Noronha
+132,CL,CL 701,Computational Methods in Chemical Engineering,Ratul Dasgupta
+133,CL,CL 702,Lecture Series,Sayantan DuttaSonali DasSudarshan Vijay
+134,CL,CL 706,Molecular Principles in Chemical Engineering,Abhijit Chatterjee
+135,CL,CL 710,Aerosol Technology,Chandra Venkataraman
+136,CL,CL 713,Introduction to Network Analysis,Ganesh Ariyur Viswanathan
+137,CL,CL 716,Modelling  Chemical and Biiological Patterns,Sameer Ralph Jadhav
+138,CL,CL 899,Communication Skills,Mani Bhushan
+139,CL,CLS801,Seminar,Partha Sarathi Goswami
+140,CLS,CLS801,Seminar,Partha Sarathi Goswami
+141,CH,CH 111,Chemistry,Chandra Mouleeswara Rao VollaChidambar KulkarniDeepti KalsiIshita SenguptaMurugavel RamaswamyRahul MaitraSandip KarShobhna Kapoor
+142,CH,CH 117,Chemistry Lab,Deepti KalsiNaresh Patwari GanpathiPradeep Kumar P. I.Rajarshi ChakrabartiSajal  SenSubramaniam ChandramouliVenkatakrishnarao Dasari
+143,CH,CH 209,Basic Organic Chemistry,Anil Kumar
+144,CH,CH 219,Inorganic Chemistry Lab-I,Maheswaran ShanmugamMurugavel Ramaswamy
+145,CH,CH 225,Data Analysis for Chemists,Naresh Patwari Ganpathi
+146,CH,CH 231,Organic Chemistry Lab I,Krishna Pillai Kaliappan
+147,CH,CH 301,Co-ordination Chemistry and Magnetic Properties,M. RavikanthSrinivasan Ramakrishnan
+148,CH,CH 305,Chemistry of Functional Groups,Nandita MadhavanVenkateswarlu Yarlagadda
+149,CH,CH 309,Introduction to Electrochemistry,Kamendra Prakash Sharma
+150,CH,CH 311,Solid State,Ruchi Anand
+151,CH,CH 313,Organic Chemistry Lab III,Venkateswarlu Yarlagadda
+152,CH,CH 315,Physical Chemistry Lab II,Ishita SenguptaKamendra Prakash Sharma
+153,CH,CH 397,Mini Project I,Sanjog Sunil Nagarkar
+154,CH,CH 401,Organic Reactions,Santosh Janardan GharpureSatyadeep  Waiba
+155,CH,CH 403,Electrochemistry of Solutions and Interfaces,Subramaniam Chandramouli
+156,CH,CH 405,Advanced Transition Metal Chemistry,Gopalan RajaramanSanjog Sunil Nagarkar
+157,CH,CH 415,Inorganic Chemistry Lab II,Gopalan RajaramanSrinivasan Ramakrishnan
+158,CH,CH 417,Organic Chemistry Lab II,Irishi N. Narayanan NamboothiriSatyadeep  Waiba
+159,CH,CH 425,Chemical Bond and Molecular Geometry,Arindam ChowdhuryRahul Maitra
+160,CH,CH 433,Physical Chemistry Lab II,Ruchi AnandShobhna Kapoor
+161,CH,CH 481,Chemistry and Computers,Achintya Kumar Dutta
+162,CH,CH 507,Methods in Organic Synthesis,Rodney Agustinho Fernandes
+163,CH,CH 521,Interpretative Molecular Spectroscopy,Suvarn Subhash KulkarniVenkatakrishnarao Dasari
+164,CH,CH 546,Introduction to Biomolecules,Pradeep Kumar P. I.
+165,CH,CH 547,Organometallic Chemistry,Arnab DuttaDebabrata Maiti
+166,CH,CH 584,Biophysical Chemistry,Nand Kishore
+167,CH,CH 591,Research Project I,Sanjog Sunil Nagarkar
+168,CH,CH 593,Project Stage I,Sanjog Sunil Nagarkar
+169,CH,CH 595,M.Sc. Project I,Sanjog Sunil Nagarkar
+170,CH,CH 605,"Chemical dynamics: quantum, classical and semiclassical methods",Amber Jain
+171,CH,CH 812,Funadamentals of  Quantum Chemistry,Rajarshi Chakrabarti
+172,CH,CH 817,Advanced Co-ordination Chemistry,Maheswaran ShanmugamPrasenjit Ghosh
+173,CH,CH 827,Inorganic Complexes,Maheswaran ShanmugamPrasenjit Ghosh
+174,CH,CH 831,Advanced Laboratory Techniques,Arindam ChowdhuryChidambar KulkarniM. RavikanthSanjog Sunil Nagarkar
+175,CH,CH 839,Physical Organic and Stereochemistry,Irishi N. Narayanan Namboothiri
+176,CH,CH 845,Organic Reactions and Synthesis,Krishna Pillai Kaliappan
+177,CH,CH 899,Communication Skills,Amber JainNandita MadhavanPrasenjit Ghosh
+178,CH,CHS801,Seminar,Chandra Mouleeswara Rao VollaDebabrata MaitiSandip Kar
+179,CHS,CHS801,Seminar,Chandra Mouleeswara Rao VollaDebabrata MaitiSandip Kar
+180,CE,CE 103,Introduction to Civil Engineering,Albert ThomasNagendra Rao Velaga
+181,CE,CE 203,Solid Mechanics,Jayadipta GhoshNajeeb Mohammad ShariffNaresh Kotumal Chandiramani
+182,CE,CE 207,Hydromechanics,Anshul  YadavBasudev BiswalSrineash V.K.
+183,CE,CE 209,Building Materials and Construction,Muhammad SalmanSwathy Manohar
+184,CE,CE 235,Artificial Intelligence & Data Science,Gopal Ramachandra PatilSangram Krishna Nirmale
+185,CE,CE 240,Soil Mechanics Laboratory,Ashish JunejaSatyanarayana Murty Dasaka
+186,CE,CE 324,Engineering Law,Milind S. WankhedeRavi Sinha
+187,CE,CE 333,Foundation Engineering,Deepankar ChoudhuryPrasenjit BasuSantiram Chatterjee
+188,CE,CE 337,Introduction to Structural Design,Arghadeep LaskarAshish PalManish Kumar
+189,CE,CE 339,Structural Mechanics Level II,R. S. Jangid
+190,CE,CE 341,Transportation Engineering Laboratory,Avijit MajiDharamveer SinghNagendra Rao VelagaSolomon Debbarma
+191,CE,CE 433,Water Supply and Waste Water Engineering,V. Jothiprakash
+192,CE,CE 463,Probabilistic and Statistical Methods in Civil Eng,Arpita MondalSubimal Ghosh
+193,CE,CE 465,Numerical Methods in Civil Engineering,Mandar M InamdarPinom Ering
+194,CE,CE 482,Construction Management,Albert Thomas
+195,CE,CE 491,Integrated Design Project,Tom V. Mathew
+196,CE,CE 494,BTP I,Tom V. Mathew
+197,CE,CE 496,Irrigation Engineering and Technology,Manne Janga Reddy
+198,CE,CE 593,Dual Degree Project I,
+199,CE,CE 603,Numerical Methods,Tushar Kanti Mandal
+200,CE,CE 605,Applied Statistics,Bellie Sivakumar
+201,CE,CE6102,Introduction to Building: Functional Design and Science,Arnab Jana
+202,CE,CE 616,Structural Dynamics,Ravi Sinha
+203,CE,CE 623,Advanced Solids Mechanics,Yogeshkumar Mangubhai Desai
+204,CE,CE 626,Groundwater Systems Planning and Management,Bellie Sivakumar
+205,CE,CE 627,Structural Design,Siddhartha Ghosh
+206,CE,CE 630,Geographical Information Systems in Civil Engineering,RAAJ RamsankaranSanchari  Thakur
+207,CE,CE 641,Environmental Geomechanics,Devendra Narain Singh
+208,CE,CE 643,Experimental Geotechnics,Ashish JunejaBhamidipati Venkata Surya viswanadhamDeepankar ChoudhuryDevendra Narain SinghPinom EringPrasenjit BasuSantiram ChatterjeeSatyanarayana Murty Dasaka
+209,CE,CE 653,Structural Reliability and Risk Analysis,Swagata Basu
+210,CE,CE 675,Advanced Experimental Fluid Mechanics,Manne Janga Reddy
+211,CE,CE 680,Mechanics of Water Waves,Manasa Ranjan Behera
+212,CE,CE 681,Advance Pavement Engineering Lab,Dharamveer Singh
+213,CE,CE 694,Seminar,Tom V. Mathew
+214,CE,CE 695,R & D Project,Tom V. Mathew
+215,CE,CE 701,Remote Sensing Technology,Eswar Rajasekaran
+216,CE,CE 703,Remote Sensing Laboratory,Eswar Rajasekaran
+217,CE,CE 706,Ocean Engineering Laboratory,Ananth WuppukondurSrineash V.K.
+218,CE,CE 712,Digital Image Processing of Remotely Sensed Data,Jayaluxmi Indu
+219,CE,CE 713,Advanced Concrete Technology,Prakash Nanthagopalan
+220,CE,CE 717,Construction Planning and Control,Varun Kumar  Reja
+221,CE,CE 718,Construction Materials Laboratory,Prakash Nanthagopalan
+222,CE,CE 720,Non-Destructive Testing of Materials,Sauvik Banerjee
+223,CE,CE 725,Construction Economics and Finance,Venkata Santosh Kumar Delhi
+224,CE,CE 727,Construction Materials,Muhammad Salman
+225,CE,CE 731,Mechanics of Fluid Flow,Eldho Thekkilakkattu Iype
+226,CE,CE 740,Traffic Engineering,Tom V. Mathew
+227,CE,CE 742,Pavement Systems Engineering,Dharamveer Singh
+228,CE,CE 746,Reinforced Earth and Geotextiles,Bhamidipati Venkata Surya viswanadham
+229,CE,CE 751,Urban Transportation Systems Planning,Kurra Venkata Krishna RaoNagendra Rao Velaga
+230,CE,CE 766,Watershed Management,Riddhi Singh
+231,CE,CE 768,Urban Water and Environmental Management,Kapil Gupta
+232,CE,CE 769,Coastal and Ocean Environment,Gowri Shankar  C.
+233,CE,CE 771,Optimization in Civil Engineering,Avijit Maji
+234,CE,CE 781,Advanced Foundation Engineering,Satyanarayana Murty Dasaka
+235,CE,CE 782,Advanced Soil Mechanics,Ashish Juneja
+236,CE,CE 899,Communication Skills,Archak MittalArnab Jana
+237,CE,CES801,Seminar,Tom V. Mathew
+238,CES,CES801,Seminar,Tom V. Mathew
+239,CS,CS 101,Computer Programming and Utilization,Abir De
+240,CS,CS 105,Discrete Structures,Bharat Gopichand Adsul
+241,CS,CS 213,Data Structures and Algorithms,Manoj Prabhakaran
+242,CS,CS 215,Data Analysis and Interpretation,Sharat Chandran
+243,CS,CS 228,Logic for Computer Science,S. Akshay
+244,CS,CS 230,Digital Logic Design and Computer Architecture,Sayandeep Saha
+245,CS,CS 231,Digital Logic and Computer Architecture Lab,Biswabandan Panda
+246,CS,CS 293,Data Structures and Algorithms Lab,Manoj Prabhakaran
+247,CS,CS 310,Automata Theory,Krishna Shankara Narayanan
+248,CS,CS 339,Abstractions and Paradigms for Programming,Manas Thakur
+249,CS,CS 347,Operating Systems,Varsha Apte
+250,CS,CS 348,Computer Networks,Bhaskaran Raman
+251,CS,CS 355,Programming Paradigms Laboratory,Manas Thakur
+252,CS,CS 378,Computer Networks Lab,Bhaskaran Raman
+253,CS,CS 385,B.Tech. Seminar,Mythili VutukuruRohit Gurjar
+254,CS,CS 396,Seminar,Mythili VutukuruRohit Gurjar
+255,CS,CS 405,Game Theory and Algorithmic Mechanism Design,Swaprava Nath
+256,CS,CS 409,Introduction to Cryptography,Chethan KamathSruthi Sekar
+257,CS,CS 416,Computer and Network Security,G Sivakumar
+258,CS,CS 485,R & D Project II,Mythili VutukuruRohit Gurjar
+259,CS,CS 490,R & D Project,Mythili VutukuruRohit Gurjar
+260,CS,CS 492,BTP I,Mythili VutukuruRohit Gurjar
+261,CS,CS 496,BTP II,Mythili VutukuruRohit Gurjar
+262,CS,CS 593,Dual Degree Project I,Milind Ashok SohoniSwaprava Nath
+263,CS,CS6001,Game Theory and Algorithmic Mechanism Design,Swaprava Nath
+264,CS,CS6007,Multi-Agent Machine Learning (MAML),Avishek Ghosh
+265,CS,CS6008,Network Security,Devashish Gosain
+266,CS,CS 601,Algorithms and Complexity,Akash Kumar
+267,CS,CS6010,Applied Cloud Computing,Kameswari Chebrolu
+268,CS,CS6011,Introduction to Cryptography,Sruthi Sekar
+269,CS,CS6012,Deep Learning: Foundations and Applications,Sharat Chandran
+270,CS,CS6013,Efficient AI,Aditya  Desai
+271,CS,CS 602,Applied Algorithms,Sujoy Bhore
+272,CS,CS 604,Combinatorics,Saisundararaman Vishwanathan
+273,CS,CS6101,Indexing and Retrieving Text and Graphs,Soumen Chakrabarti
+274,CS,CS 616,Parallelizing Compilers,Uday Prabhakar Khedker
+275,CS,CS 618,Program Analysis,Uday Prabhakar Khedker
+276,CS,CS 631,Implementation Techniques for Relational Database Systems,S Sudarshan
+277,CS,CS 632,Advanced Database Management Systems,Suraj Shetiya
+278,CS,CS 663,Fundamentals of Digital Image Processing,Suyash Prakash Awate
+279,CS,CS 675,Computer Graphics,Parag Kumar Chaudhuri
+280,CS,CS 683,Advanced Computer Architecture,Biswabandan Panda
+281,CS,CS 691,R & D Project,Arpit AgarwalAvishek Ghosh
+282,CS,CS 692,R & D Project II,Arpit AgarwalAvishek Ghosh
+283,CS,CS 694,Seminar,Arpit AgarwalAvishek Ghosh
+284,CS,CS 699,Software Lab.,Om P. Damani
+285,CS,CS7001,Robot Perception and Learning,Nived  Chebrolu
+286,CS,CS 721,Introduction to Computational Complexity,Vishwas  Bhargava
+287,CS,CS 725,Foundations of Machine Learning,Sunita Bishwanath Sarawagi
+288,CS,CS 740,Mathematics for Visual Computing,Ajit Vilas Rajwade
+289,CS,CS 744,Design and Engineering of Computing Systems,Purushottam Shrinivas Kulkarni
+290,CS,CS 767,Theoretical Machine Learning,Arpit Agarwal
+291,CS,CS 769,Optimization in Machine Learning,Ganesh Seshan Ramakrishnan
+292,CS,CS 771,Foundations of verification and automated reasoning,Paritosh K. Pandya
+293,CS,CS 777,M.S. R&D 1,Akash KumarChethan Kamath
+294,CS,CS 778,M.S. R&D 2,Akash KumarChethan Kamath
+295,CS,CS 782,Algebra and Computation,Milind Ashok Sohoni
+296,CS,CS 787,Language Engineering for Complex Programs: A C++ Perspective,Rushikesh Krishnakant Joshi
+297,CS,CS 797,I Stage Project,Arpit AgarwalAvishek Ghosh
+298,CS,CS 899,Communication Skills,
+299,CS,CSS801,Seminar,Suyash Prakash Awate
+300,CS,CSS802,Seminar,Suyash Prakash Awate
+301,CSS,CSS801,Seminar,Suyash Prakash Awate
+302,CSS,CSS802,Seminar,Suyash Prakash Awate
+303,GS,GS 407,Structural Geology,Soumyajit Shyamal Kumar Mukherjee
+304,GS,GS 413,Structural Geology Lab,Soumyajit Shyamal Kumar Mukherjee
+305,GS,GS 415,Applied Mineralogy and X-Ray Crystallography,George Mathew
+306,GS,GS 421,Palaeontology,Jahnavi PunekarNibedita Rakshit
+307,GS,GS 433,Palaeontology Lab,Jahnavi PunekarNibedita Rakshit
+308,GS,GS 435,"Mineralogy, Crystallography and Optics Lab",George Mathew
+309,GS,GS 507,Engineering & Ground Water Geology,Rambabu  SinghVikram Vishal
+310,GS,GS 517,Solid Earth and Exploration Geophysics,Gollapally MohanM Radhakrishna
+311,GS,GS 519,Ore Petrography Lab,Sakthi Saravanan Chinnasamy
+312,GS,GS 527,Ore Petrology,Sakthi Saravanan Chinnasamy
+313,GS,GS 535,Statistical Methods in Geosciences,Kumar Hemant SinghSatish Maurya
+314,GS,GS 537,Geochemistry and Geochemical Thermodynamics,Bivin Geo GeorgePrabhakar Naraga
+315,GS,GS 539,Engineering Geology and Groundwater Lab,Rambabu  SinghVikram Vishal
+316,GS,GS 541,Analytical Geochemistry Lab,Prabhakar Naraga
+317,GS,GS 543,Computer Programming for Geosciences,Anand Singh
+318,GS,GS 551,Industrial Training,D RamakrishnanSakthi Saravanan Chinnasamy
+319,GS,GS 647,Principles and Applications in Isotope Geology,Bivin Geo GeorgeSameer Ranjan
+320,GS,GS 663,Exploration Geophysics,Srinivasa Rao GangumallaVivek Kumar
+321,GS,GS 671,Groundwater Exploration,Rambabu  Singh
+322,GS,GS 673,Mineral Exploration,Sakthi Saravanan ChinnasamySameer Ranjan
+323,GS,GS 675,Petroleum Exploration,Santanu BanerjeeSudipta Dasgupta
+324,GS,GS 679,Basin Analysis and Applied Micropalaeontology,Jahnavi PunekarSantanu Banerjee
+325,GS,GS 683,Advanced Structural Analysis,Malay Mukul
+326,GS,GS 686,Introduction to Machine Learning in Geophysics,Satish Maurya
+327,GS,GS 687,Methods in Structural Geology,Malay Mukul
+328,GS,GS 688,Petroleum Geochemistry,Suryendu Kinkar Kumar Dutta
+329,GS,GS 694,Seminar,Jahnavi PunekarMalay Mukul
+330,GS,GS 701,Seismic Data Processing and Seismic Stratigraphy,Vivek Kumar
+331,GS,GS 703,Structural Geology and Subsurface Geological Mapping,Soumyajit Shyamal Kumar Mukherjee
+332,GS,GS 709,Reservoir Geomechanics,Raj Deo TewariVikram Vishal
+333,GS,GS 795,I Stage Project,Santanu Banerjee
+334,GS,GS 797,I Stage Project,Nibedita Rakshit
+335,GS,GS 814,Topics in Isotope Geology,Bivin Geo GeorgeSameer Ranjan
+336,GS,GS 815,Sedimentary Environments and Facies,Santanu Banerjee
+337,GS,GS 827,Seismology and Earth Structure,Satish Maurya
+338,GS,GS 831,Global Tectonics,M RadhakrishnaSrinivasa Rao Gangumalla
+339,GS,GS 899,Communication Skills,Hetu Chandrakant Sheth
+340,GS,GSS801,Seminar,Sudipta Dasgupta
+341,GP,GP 101,Solid-Earth Geophysics,Kumar Hemant Singh
+342,GP,GP 201,Elements of Mineralogy and Petrology,George MathewSameer Ranjan
+343,GP,GP 203,Engineering Geology and Hydrogeology,D RamakrishnanVikram Vishal
+344,GP,GP 205,Elements of Mineralogy and Petrology Lab,Nibedita RakshitSameer Ranjan
+345,GP,GP 207,Engineering Geology and Hydrogeology Lab,D RamakrishnanVikram Vishal
+346,GP,GP 401,Global Geophysics,Srinivasa Rao Gangumalla
+347,GP,GP 403,Earthquake and Engineering Seismology,Gollapally MohanSatish Maurya
+348,GP,GP 407,Seismology Lab,Satish Maurya
+349,GP,GP 413,Mineralogy & Petrology,Prabhakar NaragaSudipta Dasgupta
+350,GP,GP 415,Mineralogy & Petrology Lab,Prabhakar NaragaSudipta Dasgupta
+351,GP,GP 503,Geophysical Signal Processing,Enamundram Chandrasekhar
+352,GP,GP 505,Electromagnetic Methods,Enamundram Chandrasekhar
+353,GP,GP 517,Exploration Seismology II,Vivek Kumar
+354,GP,GP 519,Engineering & Ground Water Geology Lab,Rambabu  SinghVikram Vishal
+355,GP,GP 521,Electromagnetic Lab,Anand Singh
+356,GP,GP 523,Industrial Training,Enamundram Chandrasekhar
+357,GSS,GSS801,Seminar,Sudipta Dasgupta
+358,EC,EC 101,Economics,Aditi Balkrishna ChaubalHaripriya GundimedaPuja PadhiRadeef Chundakkadan
+359,EC,EC 213,Statistics for Economics,Rama Pal
+360,EC,EC 217,Statistics for Economics Lab,Rama Pal
+361,EC,EC 221,Intermediate Microeconomics I,Krishnan NarayananSurajit Bhattacharyya
+362,EC,EC 223,Intermediate Macroeconomics-I,Pintu Parui
+363,EC,EC 225,Mathematics for Economics,Tara Shankar Shaw
+364,EC,EC 306,Econometrics I,Souvik Banerjee
+365,EC,EC 308,Econometrics I Lab,Souvik Banerjee
+366,EC,EC 311,International Economics I,Radeef Chundakkadan
+367,EC,EC 313,Development Economics I,Haripriya Gundimeda
+368,EC,EC 402,Game Theory and Economic Analysis,Saptarshi Prosonno Ghosh
+369,EC,EC 440,Industrial Economics,Subrato Banerjee
+370,EC,EC 457,Managerial Economics,Surajit Bhattacharyya
+371,EC,EC 495,BS Project Stage I,Saptarshi Prosonno Ghosh
+372,EC,EC 602,Time Series Econometrics for Economic Analysis-I,Aditi Balkrishna Chaubal
+373,EC,EC 700,Applied Economics,Krishnan Narayanan
+374,EC,EC 802,Advanced Economic Theory,Pintu ParuiSubrato Banerjee
+375,EC,EC 899,Communication Skills,
+376,EC,ECS801,Seminar,Rama Pal
+377,EC,ECS802,Seminar,Rama Pal
+378,EE,EE 103,Introduction to Electrical Engineering,Kishore Chatterjee
+379,EE,EE 204,Analog Circuits,Rajesh Harishchandra ZeleVeeresh Vidyadhar Deshpande
+380,EE,EE 214,Digital Circuits Lab,Saurabh Vijaykumar Lodha
+381,EE,EE 224,Digital Systems,Debanjan BhowmikSudip  Nag
+382,EE,EE 229,Signal Processing  I,Satish MulletiSubhasis Chaudhuri
+383,EE,EE 236,Electronic Devices Lab,Pradeep Ramachandran Nair
+384,EE,EE 240,Power Engineering Lab,Anshuman Narendra Deo ShuklaAnupama KowliPrashant NavalkarShreevardhan Arunchandra Soman
+385,EE,EE 301,Electromagnetic Waves,Ashwin Awadhootshastri TulapurkarSwaroop Ganguly
+386,EE,EE 324,Control Systems Lab,Debraj ChakrabortyParthib Khound
+387,EE,EE 325,Probability and Random Processes,D. ManjunathNikhil Prakash Karamchandani
+388,EE,EE 340,Communications Lab,Rajbabu Velmurugan
+389,EE,EE 341,Communication Systems - I,Kumar AppaiahPrasanna S. Chaporkar
+390,EE,EE 353,Introduction to Data Science and Machine Learning,Harish Kumar PillaiJayakrishnan Nair
+391,EE,EE 432,Special Semiconductor Devices,Apurba Narayan Bhattacharya
+392,EE,EE 451,Supervised Research Exposition,Harish Kumar Pillai
+393,EE,EE 457,Compound Semiconductor Material and Devices,Dipankar Saha
+394,EE,EE 467,Energy Data Analytics,Anupama Kowli
+395,EE,EE 491,BTP I,Harish Kumar Pillai
+396,EE,EE 593,Dual Degree Project I,Harish Kumar Pillai
+397,EE,EE 601,Statistical Signal Analysis,Sharayu Moharir
+398,EE,EE 603,Digital Signal Processing and its Applications,Vikram Manohar Gadre
+399,EE,EE 609,Radiating Systems,Anirban Sarkar
+400,EE,EE6105,Power System Modeling and Control,Anil Manohar Kulkarni
+401,EE,EE6109,EV Powertrains (EVP),Sandeep Anand
+402,EE,EE 611,Microwave Integrated Circuits,Jayanta Mukherjee
+403,EE,EE 616,Electronic Systems Design,Siddharth Tallur
+404,EE,EE 617,Sensors in Instrumentation,Siddhartha Duttagupta
+405,EE,EE 618,CMOS Analog VLSI Design,Rahul Singh
+406,EE,EE 634,Simulation of Devices and Circuits,Sandip Mondal
+407,EE,EE 635,Applied Linear Algebra,Madhu Nagraj Belur
+408,EE,EE 638,Estimation and Identification,Debraj Chakraborty
+409,EE,EE 640,Multivariable Control Systems,Dwaipayan Mukherjee
+410,EE,EE 651,Digital Protection of Power Systems,Himanshu J. Bahirat
+411,EE,EE 653,Power Electronics -I,Vivek Agarwal
+412,EE,EE 657,Electric Drives,P. Baylon Godfrey Fernandes
+413,EE,EE 659,A First Course in Optimization,Debasattam Pal
+414,EE,EE 669,VLSI Technology,Anil Gopalan Kottantharayil
+415,EE,EE 671,VLSI Design,Laxmeesha Somappa
+416,EE,EE 675,Microprocessor Applications in Power Electronics,Anwesha  Mukhopadhyay
+417,EE,EE 677,Foundation of VLSI CAD,Virendra Singh
+418,EE,EE 691,R & D Project,Harish Kumar Pillai
+419,EE,EE 692,R & D Project,Harish Kumar Pillai
+420,EE,EE 694,Seminar,Harish Kumar Pillai
+421,EE,EE7001,Quantum Communications and Networking,Gaurav Sudhir Kasbekar
+422,EE,EE7003,Principles of Digital Communication,Bikash Kumar Dey
+423,EE,EE7004,Power Electronic Converter Hardware Design,Shiladri Chakraborty
+424,EE,EE7005,Advanced Driver Assistance Systems,Parthib Khound
+425,EE,EE 701,Introduction to MEMS,Ashwin Arunkumar Seshia
+426,EE,EE 709,Testing and Verification of VLSI Circuits,Madhav Pandurang Desai
+427,EE,EE 720,An Introduction to Number Theory and Cryptography,Saravanan Vijayakumaran
+428,EE,EE 722,Restructured Power Systems,Shreevardhan Arunchandra Soman
+429,EE,EE 723,Physics of Nanoelectronic Devices - I,Kasturi Saha
+430,EE,EE 733,Solid State Devices,Udayan Ganguly
+431,EE,EE 748,Advanced Topics in Computer Architecture,Virendra Singh
+432,EE,EE 753,High Power Converters and their Utility Applications,Anshuman Narendra Deo Shukla
+433,EE,EE 756,Network Information Theory,Sibi raj Bhaskaran Pillai
+434,EE,EE 757,Crystalline Silicon Solar Cells: Theory and Practice,Anil Gopalan Kottantharayil
+435,EE,EE 765,Reliability and Failure Analysis of Electronic Devices,Narendra Shiradkar
+436,EE,EE 768,Electric Distribution Systems,Prashant Navalkar
+437,EE,EE 770,Design and Evaluation of Photovoltaic Power Plants,Pradeep Ramachandran Nair
+438,EE,EE 779,Advanced Topics in Signal Processing,Srikanth Raj Chetupalli
+439,EE,EE 781,Integrated Circuit  Design for Sensor Systems,Maryam Shojaei Baghini
+440,EE,EE 787,Topological Electronics,Bhaskaran Muralidharan
+441,EE,EE 800,High Speed Interconnects: Signaling and Synchronization,Shalabh Gupta
+442,EE,EE 802,Integrated Photonics,Arun Surendran
+443,EE,EE 899,Communication Skills,Mahesh Bhagwat PatilVivek Agarwal
+444,EE,EES801,Seminar,Harish Kumar Pillai
+445,EES,EES801,Seminar,Harish Kumar Pillai
+446,EN,EN 110,Energy Engineering Fundamentals,Santanu Bandyopadhyay
+447,EN,EN 203,Thermodynamics and Energy Conversion,Lalit Kumar
+448,EN,EN 204,Material Science for Energy Applications,Shaibal Kanti Krishna Chaitanya Sarkar
+449,EN,EN 213,Electrical Networks and Machines,Ravi Prakash Reddy SiddavatamSuryanarayana Doolla
+450,EN,EN 215,AI and Data Science for Energy,Venkatasailanathan Ramadesigan
+451,EN,EN 309,Thermal & Fluid Engineering Lab,Manaswita Bimal Kumar Bose
+452,EN,EN 321,Supervised Learning Project,Lalit KumarRavi Prakash Reddy Siddavatam
+453,EN,EN 323,Renewable Energy Generation and Storage,Prakash Chandra Ghosh
+454,EN,EN 325,Dynamics and Control,Venkatramanan D.
+455,EN,EN 327,Power Electronics and Instrumentation Lab,Venkatramanan D.V.S.S. Pavan Kumar Hari
+456,EN,EN 401,Energy Systems modelling and analysis,V.S.S. Pavan Kumar Hari
+457,EN,EN 407,Chemistry for Energy Science,Sankara Sarma Venkata Tatiparti
+458,EN,EN 409,Mathematical Foundation for Energy Science,Pratibha Sharma
+459,EN,EN 411,Physics for Energy Science,Balasubramaniam Ramanathan Kavaipatti
+460,EN,EN 413,Materials Science for Energy,Karthik Sasihithlu
+461,EN,EN 415,Energy Laboratory I,Dayadeep Singh Monder
+462,EN,EN 417,Computer Programming,Dayadeep Singh Monder
+463,EN,EN 422,Seminar,Manoj Neergat
+464,EN,EN 491,BTech Project I,Ravi Prakash Reddy Siddavatam
+465,EN,EN 593,Dual Degree Project I,Venkatasailanathan Ramadesigan
+466,EN,EN 601,Nonconventional Energy Sources,Sagar Mitra
+467,EN,EN 602,Foundation for Energy Engineering,Gurubalan AnnaduraiZakir Hussain Rather
+468,EN,EN 606,"Energy Resources, Economics and Environment",Sandeep Kumar
+469,EN,EN 609,Energy Systems Laboratory,Gurubalan Annadurai
+470,EN,EN 613,Nuclear Reactor Theory,Suneet Singh
+471,EN,EN 618,Energy Systems Modelling & Analysis,Seethamraju Srinivas
+472,EN,EN 632,Waste to Energy,Sandeep Kumar
+473,EN,EN 649,Introduction to Particulate Flow,Manaswita Bimal Kumar Bose
+474,EN,EN 655,Energy Laboratory III,Anish Modi
+475,EN,EN 657,"IC Engine, Alternate Fuels and Emissions",Asish Sarangi
+476,EN,EN 658,Electrochemical Energy Storage,Manoj Neergat
+477,EN,EN 664,"Energy Storage: Technology, Grid Application, and Economics",Zakir Hussain Rather
+478,EN,EN 665,Power Converters for Electric Vehicle Charging,Ravi Prakash Reddy Siddavatam
+479,EN,EN 691,M.Sc.-Ph.D. Project I,Manoj Neergat
+480,EN,EN 694,Seminar,Anish Modi
+481,EN,EN 797,I Stage Project,Asish Sarangi
+482,EN,EN 899,Communication Skills,Anish ModiManoj Neergat
+483,EN,ENS801,Seminar,Gurubalan Annadurai
+484,EN,ENS802,Seminar,Dayadeep Singh Monder
+485,EN,ENT101,Introduction to Innovation & Entrepreneurship,Anuradha NarasimhanRamesh Mangaleswaran
+486,EN,ENT602,Technology Venture Creation,Ramesh KuruvaSankalp Pratap
+487,EN,ENT606,Developing a Proof of Concept- Basic,Sankalp PratapVishal  Gupta
+488,EN,ENT609,Marketing & Finance for Entrepreneurs,Devdip PurkayasthaUmakant Jayaram
+489,EN,ENT612,Field Immersion for Researchers and Entrepreneurs,Sankalp Pratap
+490,EN,ENT615,Strategy and Leadership for Entrepreneurs,Anuradha NarasimhanRajesh GopinathanRamesh Mangaleswaran
+491,EN,ENT617,Tech-Opportunities Identification,Anuradha NarasimhanRajkumar R. Hirwani
+492,EN,ENT620,AI for Business and Entrepreneurs,Lina Sonne Vyas
+493,EN,ENT623,Fintech Entrepreneurship,Ramesh Kuruva
+494,EN,ENT625,Branding & Digital Marketing for Entrepreneurs,Anuradha Narasimhan
+495,EN,ENT701,Core Topics in Innovation and Entrepreneurship,Lina Sonne VyasRamesh KuruvaSankalp Pratap
+496,EN,ENT702,Advanced Research Methodology for Entrepreneurship,Ramesh KuruvaTrupti Mishra
+497,EN,ENT899,Communication Skills,Lina Sonne Vyas
+498,EN,ENTS01,Seminar,
+499,ENS,ENS801,Seminar,Gurubalan Annadurai
+500,ENS,ENS802,Seminar,Dayadeep Singh Monder
+501,HS,HS 108,Doing Sociology,Kushal DebMahendra Dindayal Shahare
+502,HS,HS 109,Introduction to Philosophy,Pravesh Jung GolayRanjan Kumar Panda
+503,HS,HS 113,Academic English,Vaijayanthi Mala Sarma
+504,HS,HS 250,Environmental Studies,Radeef ChundakkadanRatikanta PandaRowena Robinson
+505,HS,HS 404,Rationality in Indian Thought,C. D. Sebastian
+506,HS,HS 406,Philosophy of Technology,Mahendra Dindayal ShahareSiby K. George
+507,HS,HS 408,Shakespearean Afterlives,Sudha Shastri
+508,HS,HS 436,Indian Culture and Tradition,Malhar Arvind Kulkarni
+509,HS,HS 449,"Capitalism : theories, histories, varieties",Anush Kapadia
+510,HS,HS 455,Development and Modern Society: Approaches and Perspectives,Ilito H. Achumi
+511,HS,HS 459,Cognitive and Psychological Testing: Labs to Life,Shweta Kiran Chawak
+512,HS,HS 467,Indian Philosophy,Ratikanta Panda
+513,HS,HS 472,Psychology of Health,Mrinmoyi Kulkarni
+514,HS,HS 490,Organizational Behaviour and Implications for Management,Pooja Purang
+515,HS,HS 498,Life Span Development : Infancy to Old Age,Azizuddin Ali Mardan Khan
+516,HS,HS 501,Vedanta Philosophy in the Vedic Tradition,Mrinal Kaul
+517,HS,HS 503,Philosophy in the Age of the Greeks,Rajakishore Nath
+518,HS,HS 505,Western Philosophy and the Advent of Modern Science,Ranjan Kumar Panda
+519,HS,HS 552,Twentieth Century Political Philosophy,Amrita Banerjee
+520,HS,HS 555,Social Epistemology,Vikram Singh Sirola
+521,HS,HS 556,Sankhya Philosophy,C. D. Sebastian
+522,HS,HS 597,Project Stage I,Ratikanta Panda
+523,HS,HS 599,Project Stage III,Mrinal Kaul
+524,HS,HS 626,Framing Caste,Suryakant Waghmore
+525,HS,HS 636,Development of Mathematics in India,Krishnamurthi Ramasubramanian
+526,HS,HS 644,History as a Discipline: Elementary Concepts,Neha Chatterji
+527,HS,HS 646,Understanding the Past,Rachel A. Varghese
+528,HS,HS 647,Social Theory - I,Ramesh Bairy T.S.
+529,HS,HS 652,Research Methods: Qualitative Methods,Suryakant Waghmore
+530,HS,HS 653,Research Methods : Sources and Methods and the Past,Naina Manjrekar
+531,HS,HS 663,Tribal Studies: Concepts and Perspective,Raile Rocky Ziipao
+532,HS,HS 665,Sociology of Gender,Ahonaa Roy
+533,HS,HS 673,Affective Neuroscience,Rashmi Gupta
+534,HS,HS 676,The Philosophy of Shabdayoga,Malhar Arvind Kulkarni
+535,HS,HS 703,Mind and Machine : Experimental Psychology for Tech and Innovation,Rashmi Gupta
+536,HS,HS 711,Philosophy of Janasabdavada,Malhar Arvind Kulkarni
+537,HS,HS 712,Research Project -I,Smriti Haricharan
+538,HS,HS 715,"Methods: Language, Text, and the Performative",A.P. RajaramSharmila Sreekumar
+539,HS,HS 716,"Language, Text, and the Performative",A.P. RajaramSudha ShastriVaijayanthi Mala Sarma
+540,HS,HS 718,Advanced Research and Writing in Philosophy-I,Amrita BanerjeeMrinal KaulRajakishore Nath
+541,HS,HS 720,Humans and Landscapes across Deep Time,Eswar RajasekaranSmriti Haricharan
+542,HS,HS 800,Research Methods in Social Sciences,Sarmistha Pattanaik
+543,HS,HS 803,Advanced Psychological Theory,Azizuddin Ali Mardan KhanMrinmoyi KulkarniPooja PurangRashmi GuptaShweta Kiran Chawak
+544,HS,HS 807,Phenomenology and Existentialism,Siby K. George
+545,HS,HS 809,Practice and Theory of  Literary Research,Paulomi Chakraborty
+546,HS,HS 811,Literary Theory,A.P. RajaramSharmila Sreekumar
+547,HS,HS 814,"Architecture of Grammer & its applications, Syntax Semantics and Sociolinguistics",Vaijayanthi Mala Sarma
+548,HS,HS 815,Languages in Cognitive Science,Vaijayanthi Mala Sarma
+549,HS,HS 862,Archaeological methods and theory,Smriti Haricharan
+550,HS,HS 865,The Philosophy of Sarvasatyavada,Malhar Arvind Kulkarni
+551,HS,HS 867,Historical Research : Archival Methods,Deepak Naorem
+552,HS,HS 899,Communication Skills,Amrita BanerjeeDeepak NaoremKrishnamurthi RamasubramanianPaulomi ChakrabortyPooja PurangRowena Robinson
+553,HS,HSS801,Seminar,Sharmila Sreekumar
+554,HSS,HSS801,Seminar,Sharmila Sreekumar
+555,MA,MA 105,Calculus,Debanjana MitraPrachi MahajanSaikat MazumdarSuman Kumar Sahoo
+556,MA,MA 113,Mathematics and Its History,Ronnie Mani Sebastain
+557,MA,MA 401,Linear Algebra,Bata Krishna Das
+558,MA,MA 403,Real Analysis,Sanjoy PustiSourav Pal
+559,MA,MA 417,Ordinary Differential Equations,Gopala Krishna Srinivasan
+560,MA,MA 419,Basic Algebra,Saurav BhaumikU. K. Anandavardhanan
+561,MA,MA5001,Mathematics of Deep Learning Architectures,S Baskar
+562,MA,MA 503,Functional Analysis,Sutanu Roy
+563,MA,MA5101,Algebra II,Manoj Kumar Keshari
+564,MA,MA5102,Basic Algebraic Topology,Sandip Singh
+565,MA,MA5109,Graph Theory,Niranjan Balachandran
+566,MA,MA5112,Introduction to Mathematical Methods,Harsha Hutridurga Ramaiah
+567,MA,MA 515,Partial Differential Equations,Sivaji Ganesh Sista
+568,MA,MA 521,Theory of Analytic Functions,Sudarshan Rajendra Gurjar
+569,MA,MA 523,Basic Number Theory,Keshav Aggarwal
+570,MA,MA 538,Representation Theory of Finite Groups,Preeti Raman
+571,MA,MA 593,Optional Project I,Anusha Mangala Krishnan
+572,MA,MA 599,M.Sc. Project Stage II,
+573,MA,MA 811,Algebra I,Dipendra Prasad
+574,MA,MA 813,Measure Theory,Mayukh Mukherjee
+575,MA,MA 815,Differential Topology,Anusha Mangala Krishnan
+576,MA,MA 817,Partial Differential Equations I,Neela Nataraj
+577,MA,MA 823,Probability,Koushik Saha
+578,MA,MA 833,Weak Convergance and Martingale Theory,Ayan Bhattacharya
+579,MA,MA 841,Topics in Algebra I,Shripad Manoharrao Garge
+580,MA,MA 843,Topics in Analysis I,Santanu Dey
+581,MA,MA 851,Topics in Number Theory I,Mallesham Kummari
+582,MA,MA 855,Topics in Numerical Analysis I,Manas Nitin Rachh
+583,MA,MA 861,Combinatorics I,Krishnan Sivasubramanian
+584,MA,MA 863,Theoretical Statistics I,Monika Bhattacharjee
+585,MA,MA 899,Communication Skills,Rekha Santhanam
+586,MA,MAS801,Seminar,Prachi Mahajan
+587,MA,MA 105,Calculus,Debanjana MitraPrachi MahajanSaikat MazumdarSuman Kumar Sahoo
+588,MA,MA 113,Mathematics and Its History,Ronnie Mani Sebastain
+589,MA,MA 401,Linear Algebra,Bata Krishna Das
+590,MA,MA 403,Real Analysis,Sanjoy PustiSourav Pal
+591,MA,MA 417,Ordinary Differential Equations,Gopala Krishna Srinivasan
+592,MA,MA 419,Basic Algebra,Saurav BhaumikU. K. Anandavardhanan
+593,MA,MA5001,Mathematics of Deep Learning Architectures,S Baskar
+594,MA,MA 503,Functional Analysis,Sutanu Roy
+595,MA,MA5101,Algebra II,Manoj Kumar Keshari
+596,MA,MA5102,Basic Algebraic Topology,Sandip Singh
+597,MA,MA5109,Graph Theory,Niranjan Balachandran
+598,MA,MA5112,Introduction to Mathematical Methods,Harsha Hutridurga Ramaiah
+599,MA,MA 515,Partial Differential Equations,Sivaji Ganesh Sista
+600,MA,MA 521,Theory of Analytic Functions,Sudarshan Rajendra Gurjar
+601,MA,MA 523,Basic Number Theory,Keshav Aggarwal
+602,MA,MA 538,Representation Theory of Finite Groups,Preeti Raman
+603,MA,MA 593,Optional Project I,Anusha Mangala Krishnan
+604,MA,MA 599,M.Sc. Project Stage II,
+605,MA,MA 811,Algebra I,Dipendra Prasad
+606,MA,MA 813,Measure Theory,Mayukh Mukherjee
+607,MA,MA 815,Differential Topology,Anusha Mangala Krishnan
+608,MA,MA 817,Partial Differential Equations I,Neela Nataraj
+609,MA,MA 823,Probability,Koushik Saha
+610,MA,MA 833,Weak Convergance and Martingale Theory,Ayan Bhattacharya
+611,MA,MA 841,Topics in Algebra I,Shripad Manoharrao Garge
+612,MA,MA 843,Topics in Analysis I,Santanu Dey
+613,MA,MA 851,Topics in Number Theory I,Mallesham Kummari
+614,MA,MA 855,Topics in Numerical Analysis I,Manas Nitin Rachh
+615,MA,MA 861,Combinatorics I,Krishnan Sivasubramanian
+616,MA,MA 863,Theoretical Statistics I,Monika Bhattacharjee
+617,MA,MA 899,Communication Skills,Rekha Santhanam
+618,MA,MAS801,Seminar,Prachi Mahajan
+619,MA,MA 105,Calculus,Debanjana MitraPrachi MahajanSaikat MazumdarSuman Kumar Sahoo
+620,MA,MA 113,Mathematics and Its History,Ronnie Mani Sebastain
+621,MA,MA 401,Linear Algebra,Bata Krishna Das
+622,MA,MA 403,Real Analysis,Sanjoy PustiSourav Pal
+623,MA,MA 417,Ordinary Differential Equations,Gopala Krishna Srinivasan
+624,MA,MA 419,Basic Algebra,Saurav BhaumikU. K. Anandavardhanan
+625,MA,MA5001,Mathematics of Deep Learning Architectures,S Baskar
+626,MA,MA 503,Functional Analysis,Sutanu Roy
+627,MA,MA5101,Algebra II,Manoj Kumar Keshari
+628,MA,MA5102,Basic Algebraic Topology,Sandip Singh
+629,MA,MA5109,Graph Theory,Niranjan Balachandran
+630,MA,MA5112,Introduction to Mathematical Methods,Harsha Hutridurga Ramaiah
+631,MA,MA 515,Partial Differential Equations,Sivaji Ganesh Sista
+632,MA,MA 521,Theory of Analytic Functions,Sudarshan Rajendra Gurjar
+633,MA,MA 523,Basic Number Theory,Keshav Aggarwal
+634,MA,MA 538,Representation Theory of Finite Groups,Preeti Raman
+635,MA,MA 593,Optional Project I,Anusha Mangala Krishnan
+636,MA,MA 599,M.Sc. Project Stage II,
+637,MA,MA 811,Algebra I,Dipendra Prasad
+638,MA,MA 813,Measure Theory,Mayukh Mukherjee
+639,MA,MA 815,Differential Topology,Anusha Mangala Krishnan
+640,MA,MA 817,Partial Differential Equations I,Neela Nataraj
+641,MA,MA 823,Probability,Koushik Saha
+642,MA,MA 833,Weak Convergance and Martingale Theory,Ayan Bhattacharya
+643,MA,MA 841,Topics in Algebra I,Shripad Manoharrao Garge
+644,MA,MA 843,Topics in Analysis I,Santanu Dey
+645,MA,MA 851,Topics in Number Theory I,Mallesham Kummari
+646,MA,MA 855,Topics in Numerical Analysis I,Manas Nitin Rachh
+647,MA,MA 861,Combinatorics I,Krishnan Sivasubramanian
+648,MA,MA 863,Theoretical Statistics I,Monika Bhattacharjee
+649,MA,MA 899,Communication Skills,Rekha Santhanam
+650,MA,MAS801,Seminar,Prachi Mahajan
+651,ME,ME 103,Mechanical Department Introductory Course I,Neeraj Ratnakar Kumbhakarna
+652,ME,ME 209,Thermodynamics,Dipanshu BansalS. V. V. PrabhuUpendra Bhandarkar
+653,ME,ME 221,Structural Materials,Prashant Prabhakar DateSoham Mujumdar
+654,ME,ME 223,Solid Mechanics and Strength of Materials,Hrishikesh Gajanan DanaweR. GaneshShailesh Govind Ganpule
+655,ME,ME 224,Fluid Mechanics Lab,Anjishnu ChoudhuryPrateek  AnandShivasubramanian GopalakrishnanS. V. V. Prabhu
+656,ME,ME 225,Numerical Analysis,Abhishek GuptaAnkit JainSalil Shreekant Kulkarni
+657,ME,ME 306,Applied Thermodynamics,Shankar KrishnanSreedhara Sheshadri
+658,ME,ME 315,Supervised Learning Project,Gurminder Singh
+659,ME,ME 319,Control Systems,Krishna Nagasai JonnalagaddaPriyanshu  AgarwalSripriya Ramamoorthy
+660,ME,ME 323,Thermal and Chemical processing of materials,Deepak MarlaGurminder SinghRamesh Kumar Singh
+661,ME,ME 346,Heat Transfer,Arunkumar SridharanSandip Kumar SahaSridhar Balasubramanian
+662,ME,ME 374,Manufacturing Processes Lab,Amitava DeAsim TewariGurminder SinghPradeep DixitRakesh Ganpat MoteShyamprasad KaragaddeSushil Kumar Mishra
+663,ME,ME 415,Computational Fluid Dynamics and Heat Transfer,Anjishnu Choudhury
+664,ME,ME 494,BTP I,Gurminder Singh
+665,ME,ME 593,Dual Degree Project I,
+666,ME,ME 601,Stress Analysis,Tanmay Kishore Bhandakkar
+667,ME,ME6102,Design of Mechatronic Systems,Prasanna Subhash Gandhi
+668,ME,ME6103,Ultrafast Lasers: Fundamentals and Applications,Deepak MarlaDipanshu Bansal
+669,ME,ME6107,Group Theory for Physics and Mechanics of Solids,Amit Kumar Singh
+670,ME,ME6110,Nanomanufacturing Processes,Rakesh Ganpat Mote
+671,ME,ME6119,Vibration and Control,Nitesh Prakash Yelve
+672,ME,ME 613,Finite Element and Boundary Element Methods,Seshu Pasumarthy
+673,ME,ME 623,Cryogenic Engineering II,Milind Diwakar Atrey
+674,ME,ME 637,Manufacturing Automation,Amber ShrivastavaKarunakara Poopathi Kapuppasamy Poolan
+675,ME,ME 651,Fluid Dynamics,Abhilash Chandy
+676,ME,ME 655,Theory and Design of Fluid Machinery,S. V. V. Prabhu
+677,ME,ME 662,Convective Heat and Mass Transfer,Prateek  Anand
+678,ME,ME 663,Advanced Heat Transfer,Atul Srivastava
+679,ME,ME 673,Mathematical Methods in Engineering,Avishek Ranjan
+680,ME,ME 681,Thermal Environmental Engg,Milind Vishwanath Rane
+681,ME,ME 691,R & D Project,Krishna Nagasai Jonnalagadda
+682,ME,ME7002,Production Systems and Sustainability,Soham MujumdarVibhor  Pandhare
+683,ME,ME 704,Computational Methods in Thermal & Fluid Engg,Rajneesh Bhardwaj
+684,ME,ME 721,Design Engg. Lab,Nitesh Prakash YelveParag Umashankar TandaiyaVivek Sangwan
+685,ME,ME 751,Mechanics of Deformable Bodies,Shrinidhi S. Pandurangi
+686,ME,ME 756,Numerical Modelling of Manufacturing Processes,Amitava De
+687,ME,ME 773,Reliability Modelling and Analysis for Engineering Systems,"Makarand S, Kulkarni"
+688,ME,ME 781,Statistical Machine Learning and Data Mining,Asim Tewari
+689,ME,ME 782,Design Optimization,Dnyanesh Nitin Pawaskar
+690,ME,ME 789,Computational Tools for Process Modeling,Shyamprasad Karagadde
+691,ME,ME 796,Sensors and Actuators,Pradeep Dixit
+692,ME,ME 797,I Stage Project,
+693,ME,ME 899,Communication Skills,Deepak MarlaPrashant Prabhakar DateSushil Kumar MishraV. Kartik
+694,ME,MES801,Seminar,Prasanna Subhash Gandhi
+695,MES,MES801,Seminar,Prasanna Subhash Gandhi
+696,MM,MM 219,Structure of Materials,Abhijeet Sangle
+697,MM,MM 221,Sensors and Measurements Lab,Sudhanshu MallickTitas Dasgupta
+698,MM,MM 223,Thermodynamics of Materials,Karthikeyan  HariharanManish Marotrao PandeNithyanand Prabhu
+699,MM,MM 225,AI and Data Science,Hina Amol GokhaleNurni Neelakantan Viswanathan
+700,MM,MM 226,Supervised Learning Project,Prita PantTanushree H. Choudhury
+701,MM,MM 329,Diffusion and Phase Transformations,Ashutosh Suresh Gandhi
+702,MM,MM 331,Mechanical Behaviour of Materials,Abhinandan GangopadhyayKrishnaiyengar NarasimhanPrasad Manepalli
+703,MM,MM 333,"Electronic, Magnetic and Optical Properties of Materials",Triratna Muneshwar
+704,MM,MM 335,Alloy Processing and Characterization Lab,Arka  MandalNithyanand PrabhuPrita Pant
+705,MM,MM 341,Processing and Characterization Lab: Thin Films,Avradeep PalRajiv Onkar Dusane
+706,MM,MM 407,Iron & Steelmaking,Manish Marotrao Pande
+707,MM,MM 409,Colloidal & Interfacial Science,Mithun Chowdhury
+708,MM,MM 451,Instrumentation and Process Control Theory,Asis Kumar  Adak
+709,MM,MM 474,Science and Technology of Thin Films,Rajiv Onkar Dusane
+710,MM,MM 477,Ceramic Processing Techniques,Parag Kishore Bhargava
+711,MM,MM 492,B.Tech Project I,Avradeep Pal
+712,MM,MM 494,B.Tech Project II,Avradeep Pal
+713,MM,MM 593,Dual Degree Project I,Titas DasguptaVijayshankar Dandapani
+714,MM,MM6003,Principles of Crystallographic Texture,Arka  Mandal
+715,MM,MM6102,Computational Thermodynamics,Deepoo KumarNurni Neelakantan Viswanathan
+716,MM,MM6103,Differential Equations for Modeling Transport Phenomena,Anirban Patra
+717,MM,MM 611,Processing and Characterization of Steel (Lab.),Aparna SinghIndradev SamajdarJayasree Biswas
+718,MM,MM 612,Computational Laboratory,Ajay Singh PanwarHina Amol GokhaleSanjay Chandra
+719,MM,MM 621,Advanced Physical and Mechanical Metallurgy,Indradev Samajdar
+720,MM,MM 641,Numerical Methods in Materials Processing,Krishnaiyengar Narasimhan
+721,MM,MM 651,Thermodynamics of Materials,T R S Prasanna
+722,MM,MM 654,Advanced Composites,Amartya MukhopadhyayMithun Chowdhury
+723,MM,MM 658,Fracture Mechanics and Failure Analysis,Nagamani Jaya Balila
+724,MM,MM 659,Transport Phenomena,Jayasree Biswas
+725,MM,MM 681,Plastic Deformation and Microstructure Evolution,Prasad Manepalli
+726,MM,MM 685,Electrical Materials: fundamentals and applications,Titas Dasgupta
+727,MM,MM 694,Seminar,Karthikeyan  HariharanT R S Prasanna
+728,MM,MM 695,High Temperature Corrosion,Vijayshankar Dandapani
+729,MM,MM 699,Corrosion Laboratory,Smrutiranjan ParidaVijayshankar Dandapani
+730,MM,MM 713,Aqueous Corrosion and its Control,Darothi  Bairagi
+731,MM,MM 719,Inttroduction to Ab-initio Methods in Materials Modelling,Sumit Saxena
+732,MM,MM 722,Molecular Simulations for Mateirals Engineering,Ajay Singh Panwar
+733,MM,MM 729,Characterization of Materials for Corrosion Control,Smrutiranjan Parida
+734,MM,MM 730,Topics in Mechanical Behaviour of Materials,Prita Pant
+735,MM,MM 732,Structural Characterization of Materials,Amartya Mukhopadhyay
+736,MM,MM 733,Mechanical Characterization of Materials,Aparna Singh
+737,MM,MM 734,Electrical Characterization of Materials,Dipti Gupta
+738,MM,MM 735,Material Chracterization at High Temperatures,Somnath Amar Nath Basu
+739,MM,MM 747,First Principles Approach to Materials Science,Amrita Bhattacharya
+740,MM,MM 754,Sustainable Materials for Water Treatment,Prasanna Kumar S Mural
+741,MM,MM 755,Kinetics of High Temperature processes,Deepoo Kumar
+742,MM,MM 759,Structure and Defects,Abhinandan GangopadhyayAvradeep Pal
+743,MM,MM 762,Materials Processing in Semiconductor Technology - I,Tanushree H. Choudhury
+744,MM,MM 763,Semiconductor Processing Laboratory I,Aswani YellaDipti GuptaTriratna Muneshwar
+745,MM,MM 765,Semiconductor Devices and Their Working Principles,Abhijeet SangleAswani Yella
+746,MM,MM 768,Materials Processing & Characterization Laboratory I (Thin Film Techniques),Asis Kumar  AdakAswani YellaDipti Gupta
+747,MM,MM 772,Thermomechanical Metallurgy: Experiment to Reality,Sanjay Chandra
+748,MM,MM 797,I Stage Project,Titas DasguptaVijayshankar Dandapani
+749,MM,MM 899,Communication Skills,Shobha Shukla
+750,MM,MMS801,Seminar,Arup Ranjan Bhattacharyya
+751,MMS,MMS801,Seminar,Arup Ranjan Bhattacharyya
+752,PH,PH 109,Fundamental Themes in Physics,Archana Arun Pai
+753,PH,PH 113,Oscillations and Waves,Soumya Bera
+754,PH,PH 114,Thermal Physics,Soumya Bera
+755,PH,PH 117,Physics Lab,Debojit  SarkarNitin KumarPramod KumarSubhabrata Dhar
+756,PH,PH 217,Classical Mechanics,Prashant Kumar
+757,PH,PH 221,Analog Electronics,Pradeep Subashchandra Sarin
+758,PH,PH 223,Complex Analysis and Integral Transforms,Sumiran Pujari
+759,PH,PH 227,AI and Data Science,Aftab AlamAlok Shukla
+760,PH,PH 251,Classical Mechanics,Pragya Das
+761,PH,PH 253,Thermal and Statistical Physics,Raghunath Chelakkot
+762,PH,PH 303,Supervised Learning,Prashant KumarSayantika Bhowal
+763,PH,PH 307,Introduction to Numerical Analysis,Rahul Kashyap
+764,PH,PH 309,Quantum Mechanics II,Pichai Ramadevi
+765,PH,PH 401,Classical Mechanics,Kantimay Das Gupta
+766,PH,PH 403,Quantum Mechanics I,Hridis Kumar Pal
+767,PH,PH 405,Electronics,Maniraj Mahalingam
+768,PH,PH 407,Mathematical Physics I,Anirban Sain
+769,PH,PH 434,Programming Lab,Himadri Shekhar Dhar
+770,PH,PH 436,Introduction to Condensed Matter Physics,Senthilkumar Manickam
+771,PH,PH 443,Electronics Laboratory,Pradeep Subashchandra Sarin
+772,PH,PH 446,Physics Laboratory (Solid state and Nuclear Physics),Debojit  SarkarSunita Premshankarlal Srivastava
+773,PH,PH 505,Introduction to Nuclear  & Particle Physics,Basanta Kumar Nandi
+774,PH,PH 512,Physics Lab (Optics and Spectroscopy),Anshuman Kumar
+775,PH,PH 515,Introduction  to Atomic and Molecular Physics,Gopal Dixit
+776,PH,PH 517,Methods in Analytical Techniques,Mohammed Shabbir Aslam
+777,PH,PH 523,Quantum Mechanics III,Manibrata Sen
+778,PH,PH 534,Quantum Information and Computing,Siddhartha Santra
+779,PH,PH 543,Advanced Statistical Mechanics,Mithun Kumar Mitra
+780,PH,PH 549,Physics of Biological Systems,Dibyendu Das
+781,PH,PH 555,Project  Stage III,Prashant KumarSayantika Bhowal
+782,PH,PH 556,Astrophysics,Varun Bhalerao
+783,PH,PH 557,Theoretical Condensed Matter Physics,Sayantika Bhowal
+784,PH,PH 561,Ultrafast Sciences,Subhaskar Mandal
+785,PH,PH 563,Group Theory Methods,Vikram Rentala
+786,PH,PH 565,Semiconductor Physics,Suddhasatta Bibhuti Mahapatra
+787,PH,PH 567,Non-linear Dynamics,Amitabha Nandi
+788,PH,PH 569,Applied Solid State Physics,Uditendu Mukhopadhyay
+789,PH,PH 570,Advanced Laboratory Techniques  in Nanosience,Maniraj MahalingamMohammed Shabbir Aslam
+790,PH,PH 575,Nanoscience: Fundamentals to Fabrication,Parinda Rahul Vasa
+791,PH,PH 585,Dual Degree Project I,Sai Vinjanampathy
+792,PH,PH 587,B.Tech Project I,Prashant KumarSayantika Bhowal
+793,PH,PH 588,B.Tech. Project II,Prashant KumarSayantika Bhowal
+794,PH,PH 589,Bachelors Thesis Project  III (BTP III),Prashant KumarSayantika Bhowal
+795,PH,PH 591,Dual Degree Project I,
+796,PH,PH 595,M.Sc. project stage 1,Prashant KumarSayantika Bhowal
+797,PH,PH 899,Communication Skills,
+798,PH,PHS801,Seminar,Prashant KumarSayantika Bhowal
+799,PHS,PHS801,Seminar,Prashant KumarSayantika Bhowal
+800,SI,SI 419,Combinatorics,Swapneel Arvind Mahajan
+801,SI,SI 423,Linear Algebra and its Applications,Ananthnarayan Hariharan
+802,SI,SI 424,Statistical Inference I,Radhendushka Srivastava
+803,SI,SI 427,Probability I,K. SureshkumarRavi Raghunathan
+804,SI,SI 429,Real analysis,Sumit  Kumar
+805,SI,SI 431,Introduction to Data Analysis using R,Ayan BhattacharyaMonika Bhattacharjee
+806,SI,SI 503,Categorical Data Analysis,Ashish Das
+807,SI,SI 505,Multivariate Analysis,Debraj Das
+808,SI,SI 507,Numerical Analysis,Tony Puthenpurakal Joseph
+809,SI,SI 543,Asymptotic Statistics,Parthanil Roy
+810,SI,SI 593,Project Stage I,Anusha Mangala Krishnan
+811,SI,SI 419,Combinatorics,Swapneel Arvind Mahajan
+812,SI,SI 423,Linear Algebra and its Applications,Ananthnarayan Hariharan
+813,SI,SI 424,Statistical Inference I,Radhendushka Srivastava
+814,SI,SI 427,Probability I,K. SureshkumarRavi Raghunathan
+815,SI,SI 429,Real analysis,Sumit  Kumar
+816,SI,SI 431,Introduction to Data Analysis using R,Ayan BhattacharyaMonika Bhattacharjee
+817,SI,SI 503,Categorical Data Analysis,Ashish Das
+818,SI,SI 505,Multivariate Analysis,Debraj Das
+819,SI,SI 507,Numerical Analysis,Tony Puthenpurakal Joseph
+820,SI,SI 543,Asymptotic Statistics,Parthanil Roy
+821,SI,SI 593,Project Stage I,Anusha Mangala Krishnan
+822,SI,SI 419,Combinatorics,Swapneel Arvind Mahajan
+823,SI,SI 423,Linear Algebra and its Applications,Ananthnarayan Hariharan
+824,SI,SI 424,Statistical Inference I,Radhendushka Srivastava
+825,SI,SI 427,Probability I,K. SureshkumarRavi Raghunathan
+826,SI,SI 429,Real analysis,Sumit  Kumar
+827,SI,SI 431,Introduction to Data Analysis using R,Ayan BhattacharyaMonika Bhattacharjee
+828,SI,SI 503,Categorical Data Analysis,Ashish Das
+829,SI,SI 505,Multivariate Analysis,Debraj Das
+830,SI,SI 507,Numerical Analysis,Tony Puthenpurakal Joseph
+831,SI,SI 543,Asymptotic Statistics,Parthanil Roy
+832,SI,SI 593,Project Stage I,Anusha Mangala Krishnan
+833,PS,PS 601,Public Policy Theory I,Himanshu BurtePrabhir Vishnu Poruthiyil
+834,PS,PS 605,Social Science Perspective in Public Policy,Rahul Suresh Sapkal
+835,PS,PS 606,"Public Policy in India: History, Institutions and Practice",Naveen Bharathi
+836,PS,PS 610,Quantitative and Qualitative Research Methods,Vinish Kumar Kathuria
+837,PS,PS 621,Internship,Anupam Guha
+838,PS,PS 632,Contemporary Issues in Data Policy and Management,Anupam GuhaSundeep Oberoi
+839,PS,PS 635,Economic Analysis for Public Policy,Rahul Suresh Sapkal
+840,PS,PS 643,"Introduction to AI, Data, and Policy",Anupam Guha
+841,PS,PS 646,Public Finance and Budget Analysis,Nitin  KareerRahul Suresh Sapkal
+842,PS,PS 647,Data Analytics for Public Policy,Ashish DesaiVinish Kumar Kathuria
+843,PS,PS 648,Data Visualization for Public Policy,Sekhar  BonuVinish Kumar Kathuria
+844,PS,PS 652,Crafting Narratives to Shape Policy,Prabhir Vishnu Poruthiyil
+845,PS,PS 660,Documentaries for Policy Change,Naveen Bharathi
+846,PS,PS 661,Data Science for Policy Studies,Santosh Bonaventure Noronha
+847,PS,PS 663,"Urban Planning in India: Policy implications, Challenges and Approaches",Himanshu BurteMalini Krishnankutty
+848,PS,PS 796,MPP Dissertation -I Stage,Anupam Guha
+849,PS,PS 899,Communication Skills,
+850,PS,PSS801,Seminar,Shishir Kumar Jha
+851,PSS,PSS801,Seminar,Shishir Kumar Jha
+852,DS,DS 203,Programming for Data Science,Arjun Nitin BhagojiPrabhu RamachandranShyamprasad Karagadde
+853,DS,DS 593,Dual Degree Project 1,Mani Bhushan
+854,DS,DS 601,Learning and Inference in High Dimensions,Parthe Pandit
+855,DS,DS 604,Mathematics for Machine Learning: Optimization and Linear Algebra,Pranay SharmaPratik Kumar Jawanpuria
+856,DS,DS 607,Optimization for Data Science,Pranay SharmaPratik Kumar Jawanpuria
+857,DS,DS 691,R & D Project,Mani Bhushan
+858,DS,DS 703,Introduction to Statistical Inference and Machine Learning,Arjun Nitin BhagojiParthe Pandit
+859,DS,DSS801,Seminar,Mani Bhushan
+860,CME,CME491,BS Project 1,Rajesh Harishchandra Zele
+861,TD,TD 390,Supervised Learning - Study,Priyadarshani Jayawant Jadhav
+862,TD,TD 490,Supervised Learning- Analysis,Priyadarshani Jayawant Jadhav
+863,TD,TD 491,Supervised Learning - Design,Priyadarshani Jayawant Jadhav
+864,TD,TD 602,"Soil, Land Use, GIS and Agriculture",G. N.  HariharanPennan Chinnasamy
+865,TD,TD 603,Water Resources Management,Parmeshwar Digamber Udmale
+866,TD,TD 607,Energy Sources and their Utilization,Priyadarshani Jayawant Jadhav
+867,TD,TD 608,Project Management and Project Analysis,Bakul Rao
+868,TD,TD 609,Field Work,G. N.  Hariharan
+869,TD,TD 613,Ecology and Environment,Anand B RaoG. N.  HariharanPankajkumar Sekhsaria
+870,TD,TD 626,"Technology, Society and Development",Pankajkumar Sekhsaria
+871,TD,TD 628,Applied Statistical Methods and Data Analysis,Amit Yashpal Arora
+872,TD,TD 631,Qualitative Data Collection and Analysis Methods,Kuru DindiPankajkumar Sekhsaria
+873,TD,TD 638,"Development Perspectives: Ideas, Approaches, and Theories",Anand B RaoKuru DindiSanjay  Chahande
+874,TD,TD 651,Technology in Practice,Amit Yashpal Arora
+875,TD,TD 694,Seminar,Amit Yashpal Arora
+876,TD,TD 695,I Stage Project,Kuru Dindi
+877,TD,TD 696,II Stage Project,Pankajkumar Sekhsaria
+878,TD,TD 899,Communication Skills,Chaaruchandra KordePennan Chinnasamy
+879,GNR,GNR401,Remote sensing and Image Processing,Avik BhattacharyaBiplab BanerjeeGulab Singh
+880,GNR,GNR603,Principles of Remote Sensing,Alok Kumar PorwalAvik Bhattacharya
+881,GNR,GNR605,Principles of Geographic Information Systems,Surya S Durbha
+882,GNR,GNR607,Principles of Satellite Image Processing,Buddhiraju Krishna Mohan
+883,GNR,GNR615,GIS Laboratory,Surya S Durbha
+884,GNR,GNR617,Image Interpretation Laboratory,Yalamanchili Rao
+885,GNR,GNR619,Natural Resources : Lithosphere and Biosphere,Karthikeyan LankaPritam  Das
+886,GNR,GNR621,"Natural Resources: Hydroshpere, Cryosphere and Atmosphere",Deepak SinghGulab SinghKarthikeyan Lanka
+887,GNR,GNR627,Geospatial Predictive Modelling,Alok Kumar Porwal
+888,GNR,GNR642,Scattering Models in Microwave Remote Sensing,Gulab Singh
+889,GNR,GNR649,Planetary Sciences: Earth and Beyond,Deepak Singh
+890,GNR,GNR650,Advanced topics in deep learning for image analysis,Biplab Banerjee
+891,GNR,GNR653,Data Analysis Methods for Geospatial Applications,Avik BhattacharyaKarthikeyan LankaPritam  Das
+892,GNR,GNR694,Seminar,Pritam  Das
+893,GNR,GNR697,R & D Project,Karthikeyan Lanka
+894,GNR,GNR797,I Stage Project,Alok Kumar PorwalAvik Bhattacharya
+895,GNR,GNR805,Advanced Concepts in Polarimetric SAR Image Analysis,Avik BhattacharyaYalamanchili Rao
+896,GNR,GNR899,Communication Skills,
+897,ENT,ENT101,Introduction to Innovation & Entrepreneurship,Anuradha NarasimhanRamesh Mangaleswaran
+898,ENT,ENT602,Technology Venture Creation,Ramesh KuruvaSankalp Pratap
+899,ENT,ENT606,Developing a Proof of Concept- Basic,Sankalp PratapVishal  Gupta
+900,ENT,ENT609,Marketing & Finance for Entrepreneurs,Devdip PurkayasthaUmakant Jayaram
+901,ENT,ENT612,Field Immersion for Researchers and Entrepreneurs,Sankalp Pratap
+902,ENT,ENT615,Strategy and Leadership for Entrepreneurs,Anuradha NarasimhanRajesh GopinathanRamesh Mangaleswaran
+903,ENT,ENT617,Tech-Opportunities Identification,Anuradha NarasimhanRajkumar R. Hirwani
+904,ENT,ENT620,AI for Business and Entrepreneurs,Lina Sonne Vyas
+905,ENT,ENT623,Fintech Entrepreneurship,Ramesh Kuruva
+906,ENT,ENT625,Branding & Digital Marketing for Entrepreneurs,Anuradha Narasimhan
+907,ENT,ENT701,Core Topics in Innovation and Entrepreneurship,Lina Sonne VyasRamesh KuruvaSankalp Pratap
+908,ENT,ENT702,Advanced Research Methodology for Entrepreneurship,Ramesh KuruvaTrupti Mishra
+909,ENT,ENT899,Communication Skills,Lina Sonne Vyas
+910,ENT,ENTS01,Seminar,
+911,ES,ES 101,Introduction to Environmental Science & Engineering,Tabish NawazVirendra Sethi
+912,ES,ES 200,Environmental Studies: Science and Engineering,Renuka VermaSubhankar Karmakar
+913,ES,ES 201,Applied Environmental Microbiology and Ecology,Indrajit ChakrabortySuparna Mukherji
+914,ES,ES 203,Water and Wastewater Engineering,Renuka Verma
+915,ES,ES 213,Environmental Microbiology Laboratory,Indrajit Chakraborty
+916,ES,ES 216,GIS Aided Environmental Planning and Management,Srinidhi Balasubramanian
+917,ES,ES 225,Artificial Intelligence & Data Science,Manoranjan Sahu
+918,ES,ES 250,Environmental Studies : Science and Engineering,Renuka VermaSubhankar Karmakar
+919,ES,ES 296,Seminar,Abhishek ChakrabortySwatantra Pratap Singh
+920,ES,ES 303,Municipal waste and biomedical waste management,Anurag Garg
+921,ES,ES 308,Solid and Hazardous Waste Laboratory,Anurag GargVenkata Sai Vamsi Botlaguduru
+922,ES,ES 315,Solid Waste Management - Basic Principles and Technical Aspects,Munish Kumar Chandel
+923,ES,ES 317,Fundamentals of Air Pollution Science and Engineering,Abhishek Chakraborty
+924,ES,ES 351,Air Pollution Monitoring Laboratory,Manoranjan Sahu
+925,ES,ES 401,Environmental management,Pradip Pandurang KalbarShankar  Murthy
+926,ES,ES 407,Simulation & Optimization Techniques in Environmental Systems,Subhankar KarmakarTabish Nawaz
+927,ES,ES 451,Field Studies,Swatantra Pratap Singh
+928,ES,ES 491,B.Tech. Project I (BТР І),Anil Kumar DikshitSrinidhi Balasubramanian
+929,ES,ES 494,MSc-PhD Project II,Abhishek ChakrabortySwatantra Pratap Singh
+930,ES,ES 495,MSc-PhD Project III,Abhishek ChakrabortySwatantra Pratap Singh
+931,ES,ES 593,Dual Degree Project Stage  I,Harish Chandra PhuleriaTabish Nawaz
+932,ES,ES 601,Environmental Health and Safety,Renuka VermaShankar  Murthy
+933,ES,ES 607,Environmental Informatics,Manoranjan Sahu
+934,ES,ES 630,Environmental Nanotechnology,Amritanshu ShriwastavSuparna Mukherji
+935,ES,ES 631,Environmental Chemistry,Tabish Nawaz
+936,ES,ES 633,Environmental Microbiology and Ecology,Swatantra Pratap Singh
+937,ES,ES 635,Air Pollution Science and Engineering,Harish Chandra PhuleriaSrinidhi Balasubramanian
+938,ES,ES 637,Municipal Water and Wastewater Systems,Sanjeev Chaudhari
+939,ES,ES 639,Physico-Chemical Treatment Technologies,Suparna MukherjiVenkata Sai Vamsi Botlaguduru
+940,ES,ES 645,Environmental Law and Policy,Munish Kumar ChandelPradip Pandurang Kalbar
+941,ES,ES 647,Municipal Solid and Biomedical Waste Management,Anil Kumar DikshitAnurag Garg
+942,ES,ES 649,Atmospheric Processes and Climate Change,Abhishek Chakraborty
+943,ES,ES 651,Environmental Monitoring Laboratory,Amritanshu ShriwastavHarish Chandra PhuleriaSwatantra Pratap Singh
+944,ES,ES 653,Environmental Impact Assessment,Anil Kumar DikshitHarish Chandra Phuleria
+945,ES,ES 655,Environmental Management,Pradip Pandurang Kalbar
+946,ES,ES 657,Water Resources and Environmental Hydraulics,Subhankar KarmakarVenkata Sai Vamsi Botlaguduru
+947,ES,ES 659,Mathematics and Statistics for Environmental Engineering,Amritanshu ShriwastavIndrajit Chakraborty
+948,ES,ES 691,R & D Project I,Renuka VermaSubhankar Karmakar
+949,ES,ES 692,R & D Project II,Renuka VermaSubhankar Karmakar
+950,ES,ES 694,Seminar,Amritanshu ShriwastavPradip Pandurang Kalbar
+951,ES,ES 797,I Stage Project,Amritanshu ShriwastavPradip Pandurang Kalbar
+952,ES,ES 899,Communication Skills,Harish Chandra PhuleriaVirendra Sethi
+953,ES,ESS801,Seminar,Swatantra Pratap SinghVenkata Sai Vamsi Botlaguduru
+954,ESS,ESS801,Seminar,Swatantra Pratap SinghVenkata Sai Vamsi Botlaguduru
+955,DH,DH 302,Introduction to Public Health Informatics,Kalyani AddyaKshitij  Jadhav
+956,DH,DH 307,R & D Project,Nirmal Suresh Punjabi
+957,DH,DH 308,Clinical Data Management,Kalyani Addya
+958,DH,DH 605,R&D Project-II,Raghav  Tandon
+959,DH,DH 607,Introduction to Computational Multi-omics,Saket Choudhary
+960,DH,DH 694,Seminar,Sini  Nagpal
+961,DH,DH 801,Biostatistics in Healthcare,Ranjith PadinhateeriSaket Choudhary
+962,DH,DH 803,Wearable Health Technologies,Nirmal Suresh Punjabi
+963,DH,DH 899,Communication Skills,Mohit  Singhala
+964,DH,DHS801,Seminar,Sini  Nagpal
+965,DE,DE 101,Art and Design Fundamental 2D,Raja MohantySreekumar G.V
+966,DE,DE 107,A Study of the Power of Words,Lalitha Sarma
+967,DE,DE 109,Introduction to Design,Arun MascarenhasPradip SaveRajib  KalitaSwati AgarwalVidhya Appu
+968,DE,DE 112,Communication Through Illustrations,Arun Mascarenhas
+969,DE,DE 114,Basics of Film Editing,Bharat Chhitubhai Parmar
+970,DE,DE 115,"Drawing Tools, Lines and Forms",Jinal Sangoi
+971,DE,DE 117,Introduction to Writing,Lalitha Sarma
+972,DE,DE 119,Material Exploration,Nishant Kamboj
+973,DE,DE 129,Introduction to Weaving,Latha Tummuru
+974,DE,DE 139,Typography Fundamentals,Aman Rupesh XaxaUdaya Kumar  Dharmalingam
+975,DE,DE 191,Visual Design Project,Anisha Malhotra Dalvi
+976,DE,DE 211,Introduction to Web Development,Kartikeya Anil Date
+977,DE,DE 215,Reading the World through Many Lenses,Lalitha Sarma
+978,DE,DE 216,Classics of  Popular Indian Cinema,Mazhar Kamran
+979,DE,DE 223,Wood and Bamboo Studio,Sandesh M. Ramu
+980,DE,DE 224,Natural Dyeing Techniques,Shilpa Ranade
+981,DE,DE 229,Global and Indian Design History - Current Perspectives,Anirudha Nanasaheb Joshi
+982,DE,DE 235,Moving Image Design Project,Mazhar KamranSudesh Balan
+983,DE,DE 237,Color Materials Finish (CMF),Kanika Jolly
+984,DE,DE 250,Design Thinking for Innovation,Dhruv ParmarPradip SaveRavi  RaoVinayak Nabar
+985,DE,DE 301,Introduction to Sound Design,Sumant Muralidhar Rao
+986,DE,DE 302,Animation Design,Somnath Pal
+987,DE,DE 303,Information Graphics and Visualisation,Venkatesh Rajamanickam
+988,DE,DE 308,Product Design II,Sandesh M. Ramu
+989,DE,DE 319,Interaction Design Process and Methods,Anirudha Nanasaheb Joshi
+990,DE,DE 320,Designing Books for children,Deepa Balsavar
+991,DE,DE 323,Stopmotion Animation,Dhimant VyasSwati Agarwal
+992,DE,DE 325,2D Animation Fundamentals and Techniques,Shilpa Ranade
+993,DE,DE 327,Basics of Materials and Processes,Nishant Kamboj
+994,DE,DE 328,Board Game Design,Prasad Bokil
+995,DE,DE 335,Handloom Weaving for Beginners,Latha Tummuru
+996,DE,DE 337,Introduction to Sound Design,P M Satheesh
+997,DE,DE 340,Pottery for Beginners,Raja Mohanty
+998,DE,DE 341,An Introduction to the City,Himanshu BurteKartikeya Anil Date
+999,DE,DE 343,Introduction to Print Making,Deepa Balsavar
+1000,DE,DE 349,Immersive Art in VR,Sugandh Pardeep Malhotra
+1001,DE,DE 351,Introduction to Elements of Design,Ulemba Meetei Hirom
+1002,DE,DE 353,"History, Technology, and the Future of Filmmaking",Sudesh Balan
+1003,DE,DE 417,Physical Ergonomics,Swati Pal
+1004,DE,DE 419,Visual and Cognitive Ergonomics,Wricha  Mishra
+1005,DE,DE 601,Introduction to Studio Photography,Sanket Parshuram Patil
+1006,DE,DE 603,Presentation and Communication Skills,Rajat Namdeo Patle
+1007,DE,DE 605,Workshop Skills,Avinash Shende
+1008,DE,DE 607,Studies in Form-1,Rajat Namdeo Patle
+1009,DE,DE 609,Product Design-1,Sandesh M. Ramu
+1010,DE,DE 610,Nature of Materials and Processes,Purba Joshi
+1011,DE,DE6101,ELEMENTS OF PHOTOGRAPHY,Sanket Parshuram Patil
+1012,DE,DE6103,Advanced Product Design,Sandesh M. Ramu
+1013,DE,DE 611,Elements of Design,Kums P Kumaresan
+1014,DE,DE 613,Visual Language Syntactics,Prasad Bokil
+1015,DE,DE 615,Studies in Typography,Aman Rupesh Xaxa
+1016,DE,DE 617,Introduction to Advanced Photography,Sanket Parshuram Patil
+1017,DE,DE 619,The Speaking Image,Arun MascarenhasRaja Mohanty
+1018,DE,DE 621,Media Technology,Jinal Sangoi
+1019,DE,DE 623,Visual Design,Mandar Shashikant Rane
+1020,DE,DE 627,Indian Thought and Tradition,Sumant Muralidhar Rao
+1021,DE,DE 630,Trends in Interactive Technologies,Kartikeya Anil Date
+1022,DE,DE 641,"Interactions, Media, Senses",Jayati Bandyopadhyay
+1023,DE,DE 643,Digital Animation-1,Ravi  Rao
+1024,DE,DE 645,Animation Theory-1,Shilpa RanadeSomnath Pal
+1025,DE,DE 647,Animation Principles-1,Phani Prasad Rao TetaliShyam Subhashrao Wanare
+1026,DE,DE 649,Animation Design-1,Abhishek VermaShilpa Ranade
+1027,DE,DE 651,Sketching and Anatomy-1,Shyam Subhashrao WanareSomnath Pal
+1028,DE,DE 653,Material and Manufacturing,Kanika Jolly
+1029,DE,DE 657,Vehicle Ergonomics,Swati Pal
+1030,DE,DE 659,Forms Space and Order,Sridhar Mahadevan
+1031,DE,DE 661,Mobility Design-1,Nishant Sharma
+1032,DE,DE 663,Sketching-1,Dhruv Parmar
+1033,DE,DE 665,Model Making-1,Unni Mohan Mohanan
+1034,DE,DE 668,Instructional Design,Anisha Malhotra Dalvi
+1035,DE,DE 675,Sketchning for Mobilty and Vehicle Design,Rajib  Kalita
+1036,DE,DE 677,Design for Virtual Reality - Basic,Jayesh S. Pillai
+1037,DE,DE 678,Structures and Spaces Furniture,Avinash Shende
+1038,DE,DE 679,Experimental Animation,Dhimant Vyas
+1039,DE,DE 688,Sketching for Communication Design,Jinal Sangoi
+1040,DE,DE 692,Advanced Topics in Service Design,Ravi Mahamuni
+1041,DE,DE 693,Experimental Film,Bharat Chhitubhai Parmar
+1042,DE,DE 698,Introduction to Pottery,Raja Mohanty
+1043,DE,DE 699,Basics of Entrepreneurship for Designers,Pankaj Jhunja
+1044,DE,DE 701,Visual Ergonomics & Human Perception,Wricha  Mishra
+1045,DE,DE 702,Arts Design and Society-1,Aditi ChitreAman Rupesh Xaxa
+1046,DE,DE 705,Interactive Data Visualization,Venkatesh Rajamanickam
+1047,DE,DE 708,Introduction to Interface Design,Sudhir Ram Bhatia
+1048,DE,DE 710,Design Evaluation,Vidhya AppuWricha  Mishra
+1049,DE,DE 711,Animation Production,Abhishek Verma
+1050,DE,DE 713,Seminar and Critical Writing,Jinal Sangoi
+1051,DE,DE 714,Design Fiction,Jayesh S. Pillai
+1052,DE,DE 720,Power of Colour,Kanika Jolly
+1053,DE,DE 721,Representation Techniques for Animation,Aditi Chitre
+1054,DE,DE 726,Introduction to Film and Filmmaking,Bharat Chhitubhai Parmar
+1055,DE,DE 733,Mobility Systems and Technology,Sridhar MahadevanUnni Mohan Mohanan
+1056,DE,DE 801,Mini Project-I,Anisha Malhotra Dalvi
+1057,DE,DE 802,Mini Project-II,Anisha Malhotra Dalvi
+1058,DE,DE 803,Quantitative Design Research Methods,Anirudha Nanasaheb Joshi
+1059,DE,DE 804,Qualitative Design Research Methods,Girish Vinod Dalvi
+1060,DE,DE 899,Communication Skills,Anisha Malhotra Dalvi
+1061,DE,DEP301,Collaborative Design Project,Milouni Desai KapoorSudhir Ram BhatiaSwati Agarwal
+1062,DE,DEP405,BDes Design Project - 1,Abhishek Verma
+1063,DE,DEP408,Design Research Project,Swati Pal
+1064,DE,DEP410,B. Des. Design Project II,Abhishek Verma
+1065,DE,DEP501,Design Research Project-Part I,Arun MascarenhasJayesh S. PillaiPurba JoshiSwati Agarwal
+1066,DE,DEP502,Design Research Seminar II,Swati Pal
+1067,DE,DEP504,Design Research Project-Part II,Purba Joshi
+1068,DE,DEP701,M.Des. Project-1,Arun MascarenhasKanika JollyPurba JoshiSwati Agarwal
+1069,DE,DEP702,M.Des. Project- 2,Arun MascarenhasJayesh S. PillaiKanika JollyPurba JoshiSwati Agarwal
+1070,DE,DEP703,M.Des. Project- 3,Purba JoshiUnni Mohan Mohanan
+1071,DE,DEP704,Design Research Project - I,Anirudha Nanasaheb Joshi
+1072,DEP,DEP301,Collaborative Design Project,Milouni Desai KapoorSudhir Ram BhatiaSwati Agarwal
+1073,DEP,DEP405,BDes Design Project - 1,Abhishek Verma
+1074,DEP,DEP408,Design Research Project,Swati Pal
+1075,DEP,DEP410,B. Des. Design Project II,Abhishek Verma
+1076,DEP,DEP501,Design Research Project-Part I,Arun MascarenhasJayesh S. PillaiPurba JoshiSwati Agarwal
+1077,DEP,DEP502,Design Research Seminar II,Swati Pal
+1078,DEP,DEP504,Design Research Project-Part II,Purba Joshi
+1079,DEP,DEP701,M.Des. Project-1,Arun MascarenhasKanika JollyPurba JoshiSwati Agarwal
+1080,DEP,DEP702,M.Des. Project- 2,Arun MascarenhasJayesh S. PillaiKanika JollyPurba JoshiSwati Agarwal
+1081,DEP,DEP703,M.Des. Project- 3,Purba JoshiUnni Mohan Mohanan
+1082,DEP,DEP704,Design Research Project - I,Anirudha Nanasaheb Joshi
+1083,CM,CM 507,Numerical Methods for Climate Science,S. Ravichandran
+1084,CM,CM 617,Sustainability Principles and Practices,Jaideep Joshi
+1085,CM,CM 618,Introduction to Climate Science,Vishal Dixit
+1086,CM,CM 619,Thermodynamics of Climate System,Angshuman Modak
+1087,CM,CM 621,Ocean Dynamics,Suyash Ulhas Bire
+1088,CM,CM 694,Seminar,Angshuman Modak
+1089,CM,CM 704,Machine Learning for Climate and Sustainability,Suyash Ulhas Bire
+1090,CM,CM 797,I Stage Project,Angshuman Modak
+1091,CM,CM 899,Communication Skills,Angshuman ModakAnjali Sharma
+1092,CM,CME491,BS Project 1,Rajesh Harishchandra Zele
+1093,CM,CMS801,Seminar,Vishal Dixit
+1094,CM,CMS802,Seminar,Vishal Dixit
+1095,CMS,CMS801,Seminar,Vishal Dixit
+1096,CMS,CMS802,Seminar,Vishal Dixit
+1097,ET,ET 601,Introduction to Educational Technology,Sahana Venkatesha Murthy
+1098,ET,ET 606,Educational Technology -Tools Lab,Sridhar Rajamani Iyer
+1099,ET,ET 610,Learning Analytics and Educational Data Mining,Ramkumar Rajendran
+1100,ET,ET 612,Statistical Methods for Educational Research,Durgaprasad Karnam
+1101,ET,ET 613,Human-Computer Interaction for Educational Technology,Syaamantak Das
+1102,ET,ET 617,Educational App Design,Ramkumar Rajendran
+1103,ET,ET 619,Field Work in Educational Technology,Syaamantak Das
+1104,ET,ET 627,Designing Learning Experiences for Developing AI Literacy in Schools,Lakshmi  T. Ganesh
+1105,ET,ET 628,Theory of Change in Education,Lakshmi  T. Ganesh
+1106,ET,ET 694,Seminar,Syaamantak Das
+1107,ET,ET 797,I Stage Project,Syaamantak Das
+1108,ET,ET 802,Research Project,
+1109,ET,ET 899,Communication Skills,Sahana Venkatesha Murthy
+1110,ET,ETS801,Seminar,Syaamantak Das
+1111,ETS,ETS801,Seminar,Syaamantak Das
+1112,SC,SC 593,Dual Degree Project I,Rajasekhar  Anguluri
+1113,SC,SC 625,Systems Theory,Arpita Sinha
+1114,SC,SC 631,Games and Information,Ankur Kulkarni
+1115,SC,SC 639,Mathematical Structures for Control,Debasish Chatterjee
+1116,SC,SC 651,Estimation on Lie Groups,Ravi N Banavar
+1117,SC,SC 655,Random Processes in Learning and Control,Debasish Chatterjee
+1118,SC,SC 658,Modeling for Aero-Mechanical Systems (MAMS),Sukumar Srikant
+1119,SC,SC 663,Optimization and Inference in Sparse Network Models,Rajasekhar  Anguluri
+1120,SC,SC 664,Active Vibration Control,Vivek Natarajan
+1121,SC,SC 691,R & D Project,Debasish Chatterjee
+1122,SC,SC 797,I Stage Project,Rajasekhar  Anguluri
+1123,SC,SC 899,Communication Skills,Ankur KulkarniArpita SinhaDebasish ChatterjeeLeena VachhaniNavin KhanejaRajasekhar  AnguluriRavi N BanavarSukumar SrikantVivek Natarajan
+1124,SC,SCS801,Seminar,Rajasekhar  Anguluri
+1125,SCS,SCS801,Seminar,Rajasekhar  Anguluri
+1126,IE,IE 101,Introduction to IE and OR,Jayendran Venkateswaran
+1127,IE,IE 203,Data Structures and Algorithms,Arunselvan  RamaswamyAshutosh Mahajan
+1128,IE,IE 205,Industrial Engineering Lab,Bijulal  D.Jayendran VenkateswaranPriyank Sinha
+1129,IE,IE 207,Industrial Systems,Priyank Sinha
+1130,IE,IE 209,Linear Optimization and Network Flows,Vishnu Bhama Narayanan
+1131,IE,IE 211,Programming & Computing Lab,Arunselvan  RamaswamyBalamurugan Palaniappan
+1132,IE,IE 301,Operations Analysis,Narayan Rangaraj
+1133,IE,IE 303,Simulation,Saurabh Jain
+1134,IE,IE 305,Simulation Lab,Jayendran VenkateswaranSaurabh Jain
+1135,IE,IE 306,Supervised Learning Project,Avinash BhardwajNarayan Rangaraj
+1136,IE,IE 307,Stochastic Processes & Queuing Systems,Nandyala HemachandraVinay Kumar  Bindiganavile Ramadas
+1137,IE,IE 491,B. Tech. Project 1 (BTP1),Jayendran Venkateswaran
+1138,IE,IE 492,B.Tech. Project 2 (ВТР 2),Jayendran Venkateswaran
+1139,IE,IE 501,Optimization Models,Vishnu Bhama Narayanan
+1140,IE,IE 503,Operations Analysis,Narayan Rangaraj
+1141,IE,IE 507,Modeling & Computation Lab,Ashutosh Mahajanvoleti Veeraruna Kavitha
+1142,IE,IE 509,Computer Programming Lab,Balamurugan Palaniappan
+1143,IE,IE 609,Mathematical Optimisation Techniques,Avinash Bhardwaj
+1144,IE,IE 612,Introduction to Financial Engineering,K.S Mallikarjuna Rao
+1145,IE,IE 618,Advanced Stochastic Processes for Operations Research,voleti Veeraruna Kavitha
+1146,IE,IE 621,Probability and Stochastic Processes I,Sarath Ampadi Yasodharan
+1147,IE,IE 624,Generative and Agentic Al,Manjesh Kumar Hanawal
+1148,IE,IE 630,Simulation Modeling and Analysis,Saurabh Jain
+1149,IE,IE 643,Deep Learning - Theory and Practice,Balamurugan Palaniappan
+1150,IE,IE 647,Applied Integer Programming,Vishnu Bhama Narayanan
+1151,IE,IE 685,MSc.Phd. Research Project I,Sarath Ampadi Yasodharan
+1152,IE,IE 688,R & D Project,Balamurugan Palaniappan
+1153,IE,IE 708,Markov Decision Processes,Nandyala HemachandraSarath Ampadi Yasodharan
+1154,IE,IE 797,I Stage Project,Priyank Sinha
+1155,IE,IE 899,Communication Skills,
+1156,IE,IES801,Seminar,Jayendran Venkateswaran
+1157,IES,IES801,Seminar,Jayendran Venkateswaran
+1158,MG,MG 401,Marketing Management,Srinwanti Hazra  Chaudhury
+1159,MG,MG 402,Human Resource Management,Soumya G. Rajan
+1160,MG,MG 403,Accounting and Finance,Piyush PandeyVed Dilip Beloskar
+1161,MG,MGS801,Credit Seminar,Omkar Dattatray Palsule-Desai
+1162,MG,MGS802,Seminar,Omkar Dattatray Palsule-Desai
+1163,SOM,SOM101,Introduction to Management,Ashish Harinarayan PandeyMayank Pareek
+1164,SOM,SOM601,Communication and Interpersonal Skill,Ashish Harinarayan Pandey
+1165,SOM,SOM602,Microeconomics,Trupti Mishra
+1166,SOM,SOM603,Fundamentals of Financial and Managerial Accounting,Varadraj Bhalchandra Bapat
+1167,SOM,SOM604,Marketing Management - I,Arti Deepak Kalro
+1168,SOM,SOM605,Statistical Methods,Pankaj Dutta
+1169,SOM,SOM606,Corporate Finance - I,Sapar Narayan Rao
+1170,SOM,SOM607,Macroeconomics,Sarthak Gaurav
+1171,SOM,SOM608,Decision Models in Management,Omkar Dattatray Palsule-Desai
+1172,SOM,SOM609,Information Systems,Rajendra Madhukar Sonar
+1173,SOM,SOM610,Marketing Management - II,Dinesh Sharma
+1174,SOM,SOM611,Operations Management  I,Indrajit Narayan Mukherjee
+1175,SOM,SOM620,Business and Sustainable Development,Trupti Mishra
+1176,SOM,SOM622,Strategic Marketing,Mayank Pareek
+1177,SOM,SOM624,Warehouse Operations,Gajendra Kumar Adil
+1178,SOM,SOM625,Summer Project Work,Arti Deepak Kalro
+1179,SOM,SOM626,Advanced Planning and Scheduling,Rahul Jagannath Patil
+1180,SOM,SOM631,Game Theory for Business Decisions,Sarthak Gaurav
+1181,SOM,SOM634,Purchasing and Supply Management,Atul Prabhakar Kanyalkar
+1182,SOM,SOM635,Operations Strategy,Gajendra Kumar Adil
+1183,SOM,SOM636,Innovation Management,Sawan Rathi
+1184,SOM,SOM642,Business Forecasting,Pankaj Dutta
+1185,SOM,SOM643,Introduction to ERP,Atul Prabhakar Kanyalkar
+1186,SOM,SOM650,"Mergers, Acquisitions and Business Valuation",Sapar Narayan Rao
+1187,SOM,SOM653,Security Analysis and Portfolio Management,Rohan Chinchwadkar
+1188,SOM,SOM655,Derivatives and Risk Management,Piyush Pandey
+1189,SOM,SOM663,Brand Management,Dinesh Sharma
+1190,SOM,SOM671,International Competitiveness,Kirankumar Somchand Momaya
+1191,SOM,SOM675,Organization Theory and Design,Soumya G. Rajan
+1192,SOM,SOM690,Software Project Management,Rajendra Madhukar Sonar
+1193,SOM,SOM697,Electronic Business Strategies and Implementation,Rajendra Madhukar Sonar
+1194,SOM,SOM698,Management of Banking and Financial Services,Piyush Pandey
+1195,SOM,SOM703,Sales and Distribution Management,Mayank Pareek
+1196,SOM,SOM705,Supply Chain Optimization,Rahul Jagannath Patil
+1197,SOM,SOM709,International Business,Snehal Awate
+1198,SOM,SOM726,Political Economy of Development in India,Ashish Singh
+1199,SOM,SOM727,Applied Quality Engineering and Management,Indrajit Narayan Mukherjee
+1200,SOM,SOM738,Data Science for Management,Rajendra Madhukar Sonar
+1201,SOM,SOM739,Applications of AI in Marketing,Bithindra  Biswas
+1202,SOM,SOM740,Social Media Management,Srinwanti Hazra  Chaudhury
+1203,SOM,SOM741,Financial Statement Analysis,Ved Dilip Beloskar
+1204,SOM,SOM749,"Consumer Psychology, Behaviour, and Neuroscience",Arti Deepak Kalro
+1205,SOM,SOM750,International Financial Management,Sonti Venkata Durga Nageswara Rao
+1206,SOM,SOM793,Compulsory IDDDP Project,Omkar Dattatray Palsule-DesaiPiyush Pandey
+1207,SOM,SOM794,Optional IDDDP Project,Omkar Dattatray Palsule-DesaiPiyush Pandey
+1208,SOM,SOM807,Economics,Ashish Singh
+1209,SOM,SOM808,Introduction to Research Methods,Ashish Singh
+1210,SOM,SOM810,Qualitative Research Methodologies,Soumya G. Rajan
+1211,SOM,SOM811,Survey Research & Experimentation,Arti Deepak Kalro
+1212,SOM,SOM814,Statistics for Management Research,Sudeep R. Bapat
+1213,SOM,SOM816,Advanced Seminar in Consumer Behaviour,Srinwanti Hazra  Chaudhury
+1214,SOM,SOM899,Communication Skills,Omkar Dattatray Palsule-Desai
+1215,IWE,IWE701,Strategic Management,Snehal Awate
+1216,IWE,IWE707,Communication and Negotiation Skills,Dinesh Sharma
+1217,IWE,IWE708,Operations and Manufacturing Management,Indrajit Narayan Mukherjee
+1218,IWE,IWE709,Strategic Cost Analysis,Dinesh Sharma
+1219,IWE,IWE710,Corporate Finance,Sonti Venkata Durga Nageswara Rao
+1220,IWE,IWE713,Managing Power and Influence in Organizations,Dinesh Sharma
+1221,MGS,MGS801,Credit Seminar,Omkar Dattatray Palsule-Desai
+1222,MGS,MGS802,Seminar,Omkar Dattatray Palsule-Desai
