@@ -1,5 +1,6 @@
 
 from pydantic import BaseModel, EmailStr, Field, field_validator
+from typing import Optional
 
 
 class Request4registration(BaseModel):
@@ -41,3 +42,22 @@ class Request4registration(BaseModel):
             raise ValueError("Password must contain a special character")
 
         return password
+
+#Community GET Request
+class Request4community(BaseModel):
+    name: str = Field(min_length=2, max_length=100)
+    description: Optional[str] = Field(default=None, max_length=500)
+    @field_validator("name")
+    @classmethod
+    def validate_name(cls, value):
+        value = value.strip()
+        if not value:
+            raise ValueError("Community name cannot be empty")
+        return value
+
+    @field_validator("description")
+    @classmethod
+    def validate_description(cls, value):
+        if value is not None:
+            value = value.strip()
+        return value

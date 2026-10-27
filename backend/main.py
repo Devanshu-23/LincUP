@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Depends, HTTPException, status
 from sqlalchemy.orm import Session
 from app.database import SessionLocal
-from app.models import User
-from app.DbAPIStructures import Request4registration
+from app.models import User, Community
+from app.DbAPIStructures import Request4registration, Request4community
 from app.security import hash_password, verify_password
 
 app = FastAPI(title="LincUP API")
@@ -109,4 +109,94 @@ def login(
         "user_id": user.id,
         "full_name": user.full_name,
         "email": user.email,
+    }
+
+#community
+
+@app.get("/communities") #Get all existing communities
+def list_communities(db: Session = Depends(get_db)):
+    communities = db.query(Community).order_by(Community.id).all()
+
+    return [
+        {
+            "id": community.id,
+            "name": community.name,
+            "description": community.description,
+            "created_by": community.created_by,
+        }
+        for community in communities
+    ]
+
+@app.get("/communities/{community_id}") #Get community in specific
+def get_community(
+    community_id: int,
+    db: Session = Depends(get_db)
+):
+    community = db.query(Community).filter(
+        Community.id == community_id
+    ).first()
+
+    if community is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Community not found"
+        )
+
+    return {
+        "id": community.id,
+        "name": community.name,
+        "description": community.description,
+        "created_by": community.created_by,
+    }
+
+@app.post("/communities", status_code=status.HTTP_201_CREATED)
+def create_community(
+    request: Request4community,
+    created_by: int,
+    db: Session = Depends(get_db),
+):
+    # Check whether the creator exists
+    creator = db.query(User).filter(User.id == created_by).first()
+
+    if creator is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="User not found",
+        )
+
+    # Check whether a community with this name already exists
+    existing = (
+        db.query(Community)
+        .filter(Community.name == request.name)
+        .first()
+    )
+
+    if existing:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="A community with this name already exists",
+        )
+
+    community = Community(
+        name=request.name,
+        description=request.description,
+        created_by=created_by,
+    )
+
+    try:
+        db.add(community)
+        db.commit()
+        db.refresh(community)
+    except Exception:
+        db.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to create community",
+        )
+
+    return {
+        "id": community.id,
+        "name": community.name,
+        "description": community.description,
+        "created_by": community.created_by,
     }
