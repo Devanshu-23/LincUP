@@ -54,7 +54,6 @@ def register(
         degree_program=request.degree_program,
         study_year=request.study_year,
         password_hash=hash_password(request.password),
-        email_verified=True,
     )
 
     try:

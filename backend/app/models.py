@@ -1,8 +1,8 @@
+
 from datetime import datetime, timezone
-from app.database import Base
+
 from sqlalchemy import (
     String,
-    Boolean,
     UniqueConstraint,
     ForeignKey,
     Integer,
@@ -11,10 +11,12 @@ from sqlalchemy import (
 )
 from sqlalchemy.orm import relationship
 
+from app.database import Base
+
+
 class User(Base):
     __tablename__ = "users"
 
-    # Automatically generated user ID
     id = Column(Integer, primary_key=True, index=True)
 
     # User profile
@@ -26,7 +28,6 @@ class User(Base):
 
     # Authentication
     password_hash = Column(String(255), nullable=False)
-    email_verified = Column(Boolean, default=False, nullable=False)
 
     # Account creation timestamp
     created_at = Column(
@@ -39,12 +40,6 @@ class User(Base):
     memberships = relationship(
         "Membership",
         back_populates="user",
-    )
-
-    verification_tokens = relationship(
-        "EmailVerificationToken",
-        back_populates="user",
-        cascade="all, delete-orphan",
     )
 
 
@@ -113,33 +108,4 @@ class Membership(Base):
     community = relationship(
         "Community",
         back_populates="memberships",
-    )
-
-
-class EmailVerificationToken(Base):
-    __tablename__ = "email_verification_tokens"
-
-    id = Column(Integer, primary_key=True, index=True)
-
-    user_id = Column(
-        Integer,
-        ForeignKey("users.id"),
-        nullable=False,
-    )
-
-    # Store the hash of the verification token, not the raw token
-    token_hash = Column(String(64), unique=True, nullable=False)
-
-    expires_at = Column(DateTime(timezone=True), nullable=False)
-    used_at = Column(DateTime(timezone=True), nullable=True)
-
-    created_at = Column(
-        DateTime(timezone=True),
-        default=lambda: datetime.now(timezone.utc),
-        nullable=False,
-    )
-
-    user = relationship(
-        "User",
-        back_populates="verification_tokens",
     )
