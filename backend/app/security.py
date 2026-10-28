@@ -1,5 +1,4 @@
-import hashlib
-import secrets
+
 from pwdlib import PasswordHash
 
 # Password hashing using Argon2
