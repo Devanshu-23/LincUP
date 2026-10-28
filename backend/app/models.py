@@ -109,3 +109,48 @@ class Membership(Base):
         "Community",
         back_populates="memberships",
     )
+
+#Events 
+class CommunityEvent(Base):
+    __tablename__ = "community_events"
+
+    id = Column(Integer, primary_key=True, index=True)
+
+    # Community organising the event
+    community_id = Column(
+        Integer,
+        ForeignKey("communities.id"),
+        nullable=False,
+    )
+
+    # User who created the event
+    created_by = Column(
+        Integer,
+        ForeignKey("users.id"),
+        nullable=False,
+    )
+
+    # Event details
+    title = Column(String(150), nullable=False)
+    description = Column(String(1000), nullable=False)
+
+    # Event schedule
+    start_at = Column(DateTime(timezone=True), nullable=False)
+    end_at = Column(DateTime(timezone=True), nullable=False)
+
+    # Event location is mandatory
+    location = Column(String(255), nullable=False)
+
+    # Optional cover image reference
+    image_url = Column(String(500), nullable=True)
+
+    # When the event was created
+    created_at = Column(
+        DateTime(timezone=True),
+        default=lambda: datetime.now(timezone.utc),
+        nullable=False,
+    )
+
+    # Relationships
+    community = relationship("Community")
+    creator = relationship("User")

@@ -1,7 +1,7 @@
 
-from pydantic import BaseModel, EmailStr, Field, field_validator
+from pydantic import BaseModel, EmailStr, Field, field_validator, model_validator
 from typing import Optional
-
+from datetime import datetime
 
 class Request4registration(BaseModel):
     full_name: str = Field(min_length=2, max_length=100)
@@ -61,3 +61,32 @@ class Request4community(BaseModel):
         if value is not None:
             value = value.strip()
         return value
+
+
+class Request4event(BaseModel):
+    title: str = Field(min_length=2, max_length=150)
+    description: str = Field(min_length=1, max_length=1000)
+    start_at: datetime
+    end_at: datetime
+    location: str = Field(min_length=1, max_length=255)
+
+    @field_validator("title", "description", "location")
+    @classmethod
+    def strip_required_text(cls, value):
+        value = value.strip()
+        if not value:
+            raise ValueError("This field cannot be empty")
+        return value
+
+    @model_validator(mode="after")
+    def validate_event_times(self):
+        if self.end_at <= self.start_at:
+            raise ValueError("End time must be after start time")
+
+        if self.start_at.tzinfo is None or self.start_at.utcoffset() is None:
+            raise ValueError("Start time must include a timezone")
+
+        if self.end_at.tzinfo is None or self.end_at.utcoffset() is None:
+            raise ValueError("End time must include a timezone")
+
+        return self

@@ -1,8 +1,8 @@
 from fastapi import FastAPI, Depends, HTTPException, status, Request, Response
 from sqlalchemy.orm import Session
 from app.database import SessionLocal
-from app.models import User, Community, Membership
-from app.DbAPIStructures import Request4registration, Request4community
+from app.models import User, Community, Membership, CommunityEvent
+from app.DbAPIStructures import Request4registration, Request4community, Request4event
 from app.security import hash_password, verify_password
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError
@@ -216,21 +216,14 @@ def get_community(
         "created_by": community.created_by,
     }
 
+#creating new communities
+
 @app.post("/communities", status_code=status.HTTP_201_CREATED)
 def create_community(
     request: Request4community,
-    created_by: int,
+    current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
-    # Check whether the creator exists
-    creator = db.query(User).filter(User.id == created_by).first()
-
-    if creator is None:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="User not found",
-        )
-
     # Check whether a community with this name already exists
     existing = (
         db.query(Community)
@@ -244,16 +237,32 @@ def create_community(
             detail="A community with this name already exists",
         )
 
+    # Create the community using the logged-in user's ID
     community = Community(
         name=request.name,
         description=request.description,
-        created_by=created_by,
+        created_by=current_user.id,
     )
 
     try:
         db.add(community)
+
+        # Get the new community ID before creating its membership
+        db.flush()
+
+        # Automatically make the creator an owner and member
+        membership = Membership(
+            user_id=current_user.id,
+            community_id=community.id,
+            role="owner",
+        )
+
+        db.add(membership)
+
+        # Save both records together
         db.commit()
         db.refresh(community)
+
     except Exception:
         db.rollback()
         raise HTTPException(
@@ -266,7 +275,9 @@ def create_community(
         "name": community.name,
         "description": community.description,
         "created_by": community.created_by,
+        "role": "owner",
     }
+
 
 @app.post("/communities/{community_id}/join")
 def join_community(
@@ -349,4 +360,114 @@ def get_my_communities(
             "role": membership.role,
         }
         for membership in memberships
+    ]
+
+#Event creation by community creator only
+
+@app.post(
+    "/communities/{community_id}/events",
+    status_code=status.HTTP_201_CREATED,
+)
+def create_community_event(
+    community_id: int,
+    request: Request4event,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    community = (
+        db.query(Community)
+        .filter(Community.id == community_id)
+        .first()
+    )
+
+    if community is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Community not found",
+        )
+
+    # Only the creator of this community may create its events
+    if community.created_by != current_user.id:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail=(
+                "You don't have permission to create events for "
+                "this community. Please contact the community creator."
+            ),
+        )
+
+    event = CommunityEvent(
+        community_id=community.id,
+        created_by=current_user.id,
+        title=request.title,
+        description=request.description,
+        start_at=request.start_at,
+        end_at=request.end_at,
+        location=request.location,
+    )
+
+    try:
+        db.add(event)
+        db.commit()
+        db.refresh(event)
+    except Exception:
+        db.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to create event",
+        )
+
+    return {
+        "id": event.id,
+        "community_id": event.community_id,
+        "created_by": event.created_by,
+        "title": event.title,
+        "description": event.description,
+        "start_at": event.start_at,
+        "end_at": event.end_at,
+        "location": event.location,
+        "image_url": event.image_url,
+    }
+
+#Fetch events pertaining to a community
+
+@app.get("/communities/{community_id}/events")
+def list_community_events(
+    community_id: int,
+    db: Session = Depends(get_db),
+):
+    # Check that the community exists
+    community = (
+        db.query(Community)
+        .filter(Community.id == community_id)
+        .first()
+    )
+
+    if community is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Community not found",
+        )
+
+    # Retrieve events for this community, earliest first
+    events = (
+        db.query(CommunityEvent)
+        .filter(CommunityEvent.community_id == community_id)
+        .order_by(CommunityEvent.start_at)
+        .all()
+    )
+
+    return [
+        {
+            "id": event.id,
+            "community_id": event.community_id,
+            "created_by": event.created_by,
+            "title": event.title,
+            "description": event.description,
+            "start_at": event.start_at,
+            "end_at": event.end_at,
+            "location": event.location,
+            "image_url": event.image_url,
+        }
+        for event in events
     ]
