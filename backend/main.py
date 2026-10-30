@@ -1,7 +1,7 @@
 from fastapi import FastAPI, Depends, HTTPException, status, Request, Response
 from sqlalchemy.orm import Session
 from app.database import SessionLocal
-from app.models import User, Community, Membership, CommunityEvent
+from app.models import User, Community, Membership, CommunityEvent, EventAttendance
 from app.DbAPIStructures import Request4registration, Request4community, Request4event
 from app.security import hash_password, verify_password
 from fastapi.security import OAuth2PasswordBearer
@@ -278,6 +278,7 @@ def create_community(
         "role": "owner",
     }
 
+#API for joining the communities
 
 @app.post("/communities/{community_id}/join")
 def join_community(
@@ -361,6 +362,63 @@ def get_my_communities(
         }
         for membership in memberships
     ]
+
+#Exiting the community
+
+
+@app.delete("/communities/{community_id}/leave")
+def leave_community(
+    community_id: int,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    community = (
+        db.query(Community)
+        .filter(Community.id == community_id)
+        .first()
+    )
+
+    if community is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Community not found",
+        )
+
+    membership = (
+        db.query(Membership)
+        .filter(
+            Membership.user_id == current_user.id,
+            Membership.community_id == community_id,
+        )
+        .first()
+    )
+
+    if membership is None:
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="You are not a member of this community",
+        )
+
+    if community.created_by == current_user.id:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Community owners cannot leave their own community",
+        )
+
+    try:
+        db.delete(membership)
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to leave community",
+        )
+
+    return {
+        "message": "Successfully left community",
+        "community_id": community_id,
+    }
 
 #Event creation by community creator only
 
@@ -471,3 +529,184 @@ def list_community_events(
         }
         for event in events
     ]
+
+#Attend Events organized by community
+
+@app.post("/events/{event_id}/attend", status_code=status.HTTP_201_CREATED)
+def attend_event(
+    event_id: int,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    # 1. Check whether the event exists
+    event = (
+        db.query(CommunityEvent)
+        .filter(CommunityEvent.id == event_id)
+        .first()
+    )
+
+    if event is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Event not found",
+        )
+
+    # 2. Check whether the user belongs to this community
+    membership = (
+        db.query(Membership)
+        .filter(
+            Membership.user_id == current_user.id,
+            Membership.community_id == event.community_id,
+        )
+        .first()
+    )
+
+    if membership is None:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Join this community before attending its events",
+        )
+
+    # 3. Check for an existing attendance record
+    attendance = (
+        db.query(EventAttendance)
+        .filter(
+            EventAttendance.event_id == event_id,
+            EventAttendance.user_id == current_user.id,
+        )
+        .first()
+    )
+
+    if attendance is not None:
+        if attendance.status == "going":
+            raise HTTPException(
+                status_code=status.HTTP_409_CONFLICT,
+                detail="You are already attending this event",
+            )
+
+        # Reactivate a previously cancelled RSVP
+        attendance.status = "going"
+
+    else:
+        attendance = EventAttendance(
+            event_id=event_id,
+            user_id=current_user.id,
+            status="going",
+        )
+        db.add(attendance)
+
+    try:
+        db.commit()
+        db.refresh(attendance)
+    except Exception:
+        db.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to register attendance",
+        )
+
+    return {
+        "message": "Successfully registered for the event",
+        "event_id": event_id,
+        "user_id": current_user.id,
+        "status": attendance.status,
+    }
+
+#API to choose to abstain from attending the event which was previously opted to attend
+
+
+@app.delete("/events/{event_id}/attend")
+def cancel_event_attendance(
+    event_id: int,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    # 1. Check whether the event exists
+    event = (
+        db.query(CommunityEvent)
+        .filter(CommunityEvent.id == event_id)
+        .first()
+    )
+
+    if event is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Event not found",
+        )
+
+    # 2. Find this user's attendance record
+    attendance = (
+        db.query(EventAttendance)
+        .filter(
+            EventAttendance.event_id == event_id,
+            EventAttendance.user_id == current_user.id,
+        )
+        .first()
+    )
+
+    if attendance is None or attendance.status != "going":
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="You are not currently attending this event",
+        )
+
+    # 3. Change status instead of deleting the record
+    attendance.status = "cancelled"
+
+    try:
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to cancel attendance",
+        )
+
+    return {
+        "message": "Attendance successfully cancelled",
+        "event_id": event_id,
+        "user_id": current_user.id,
+        "status": attendance.status,
+    }
+
+#Events being attended by a specific logged in user
+
+@app.get("/my-events")
+def get_my_events(
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    attendances = (
+        db.query(EventAttendance)
+        .filter(
+            EventAttendance.user_id == current_user.id,
+            EventAttendance.status == "going",
+        )
+        .all()
+    )
+
+    events = []
+
+    for attendance in attendances:
+        event = (
+            db.query(CommunityEvent)
+            .filter(CommunityEvent.id == attendance.event_id)
+            .first()
+        )
+
+        if event is None:
+            continue
+
+        events.append({
+            "id": event.id,
+            "community_id": event.community_id,
+            "title": event.title,
+            "description": event.description,
+            "start_at": event.start_at,
+            "end_at": event.end_at,
+            "location": event.location,
+            "image_url": event.image_url,
+            "attendance_status": attendance.status,
+        })
+
+    return events

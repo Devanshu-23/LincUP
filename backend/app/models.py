@@ -154,3 +154,28 @@ class CommunityEvent(Base):
     # Relationships
     community = relationship("Community")
     creator = relationship("User")
+
+#Event Attendence
+
+class EventAttendance(Base):
+    __tablename__ = "event_attendances"
+
+    id = Column(Integer, primary_key=True, index=True)
+    event_id = Column(Integer, ForeignKey("community_events.id"), nullable=False)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+
+    status = Column(String(20), nullable=False, default="going")
+
+    created_at = Column(
+        DateTime(timezone=True),
+        default=lambda: datetime.now(timezone.utc),
+        nullable=False
+    )
+
+    event = relationship("CommunityEvent")
+    user = relationship("User")
+
+    __table_args__ = (
+        UniqueConstraint("event_id", "user_id", name="unique_event_attendance"),
+    )
+
