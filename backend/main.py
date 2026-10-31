@@ -156,6 +156,52 @@ def get_current_user(
 
     return user
 
+#Function for Verifying the privilege level of user before giving him access to privileged functionalities
+ 
+def verify_community_privilege(
+    community_id: int,
+    current_user: User,
+    db: Session,
+):
+    # 1. Check whether the community exists
+    community = (
+        db.query(Community)
+        .filter(Community.id == community_id)
+        .first()
+    )
+
+    if community is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Community not found",
+        )
+
+    # 2. Find the user's membership
+    membership = (
+        db.query(Membership)
+        .filter(
+            Membership.community_id == community_id,
+            Membership.user_id == current_user.id,
+        )
+        .first()
+    )
+
+    # 3. Check whether the user is a member
+    if membership is None:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="You are not a member of this community",
+        )
+
+    # 4. Check the user's privilege level
+    if membership.role not in ["owner", "convener"]:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="You don't have permission to perform this action",
+        )
+
+    return membership
+
 @app.post("/logout")
 def logout(response: Response):
     response.delete_cookie(
@@ -365,13 +411,13 @@ def get_my_communities(
 
 #Exiting the community
 
-
 @app.delete("/communities/{community_id}/leave")
 def leave_community(
     community_id: int,
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
+    # 1. Check whether the community exists
     community = (
         db.query(Community)
         .filter(Community.id == community_id)
@@ -384,6 +430,7 @@ def leave_community(
             detail="Community not found",
         )
 
+    # 2. Check whether the user is a member of this community
     membership = (
         db.query(Membership)
         .filter(
@@ -399,6 +446,7 @@ def leave_community(
             detail="You are not a member of this community",
         )
 
+    # 3. Prevent the community owner from leaving
     if community.created_by == current_user.id:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
@@ -406,8 +454,29 @@ def leave_community(
         )
 
     try:
+        # 4. Find all events belonging to this community
+        community_event_ids = (
+            db.query(CommunityEvent.id)
+            .filter(CommunityEvent.community_id == community_id)
+            .subquery()
+        )
+
+        # 5. Cancel all active event RSVPs made by this user
+        db.query(EventAttendance).filter(
+            EventAttendance.user_id == current_user.id,
+            EventAttendance.event_id.in_(community_event_ids),
+            EventAttendance.status == "going",
+        ).update(
+            {EventAttendance.status: "cancelled"},
+            synchronize_session=False,
+        )
+
+        # 6. Remove the user's community membership
         db.delete(membership)
+
+        # 7. Save both changes together
         db.commit()
+
     except Exception:
         db.rollback()
         raise HTTPException(
@@ -710,3 +779,123 @@ def get_my_events(
         })
 
     return events
+
+#Endpoint for getting list of all participants of a community
+
+@app.get("/communities/{community_id}/members")
+def get_community_members(
+    community_id: int,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+
+    # 1. Check whether the community exists
+    community = (
+        db.query(Community)
+        .filter(Community.id == community_id)
+        .first()
+    )
+
+    if community is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Community not found",
+        )
+
+    # 2. Check whether the requesting user is a member
+    membership = (
+        db.query(Membership)
+        .filter(
+            Membership.community_id == community_id,
+            Membership.user_id == current_user.id,
+        )
+        .first()
+    )
+
+    if membership is None:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="You must be a member of this community to view its participants",
+        )
+
+    # 3. Fetch all community participants
+    members = (
+        db.query(Membership, User)
+        .join(User, Membership.user_id == User.id)
+        .filter(Membership.community_id == community_id)
+        .all()
+    )
+
+    # 4. Prepare the response
+    return [
+        {
+            "user_id": user.id,
+            "full_name": user.full_name,
+            "department": user.department,
+            "degree_program": user.degree_program,
+            "study_year": user.study_year,
+            "role": membership.role,
+            "joined_at": membership.joined_at,
+        }
+        for membership, user in members
+    ]
+#Endpoint for finding all the attendees of an event
+
+@app.get("/events/{event_id}/attendees")
+def get_event_attendees(
+    event_id: int,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+
+    # 1. Check whether the event exists
+    event = (
+        db.query(CommunityEvent)
+        .filter(CommunityEvent.id == event_id)
+        .first()
+    )
+
+    if event is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Event not found",
+        )
+
+    # 2. Check whether the requesting user belongs to the event's community
+    membership = (
+        db.query(Membership)
+        .filter(
+            Membership.community_id == event.community_id,
+            Membership.user_id == current_user.id,
+        )
+        .first()
+    )
+
+    if membership is None:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="You must be a member of this community to view event attendees",
+        )
+
+    # 3. Fetch all users who are currently attending
+    attendees = (
+        db.query(EventAttendance, User)
+        .join(User, EventAttendance.user_id == User.id)
+        .filter(
+            EventAttendance.event_id == event_id,
+            EventAttendance.status == "going",
+        )
+        .all()
+    )
+
+    # 4. Prepare the response
+    return [
+        {
+            "user_id": user.id,
+            "full_name": user.full_name,
+            "department": user.department,
+            "degree_program": user.degree_program,
+            "study_year": user.study_year,
+        }
+        for attendance, user in attendees
+    ]
