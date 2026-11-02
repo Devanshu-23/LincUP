@@ -90,3 +90,19 @@ class Request4event(BaseModel):
             raise ValueError("End time must include a timezone")
 
         return self
+
+#For user to update his profile
+
+class Request4profileUpdate(BaseModel):
+    full_name: str = Field(min_length=2, max_length=100)
+    department: str = Field(min_length=2, max_length=150)
+    degree_program: str
+    study_year: int = Field(ge=1)
+
+    @field_validator("full_name", "department", "degree_program")
+    @classmethod
+    def strip_required_text(cls, value):
+        value = value.strip()
+        if not value:
+            raise ValueError("This field cannot be empty")
+        return value

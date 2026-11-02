@@ -2,7 +2,7 @@ from fastapi import FastAPI, Depends, HTTPException, status, Request, Response
 from sqlalchemy.orm import Session
 from app.database import SessionLocal
 from app.models import User, Community, Membership, CommunityEvent, EventAttendance
-from app.DbAPIStructures import Request4registration, Request4community, Request4event
+from app.DbAPIStructures import Request4registration, Request4community, Request4event, Request4profileUpdate
 from app.security import hash_password, verify_password
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError
@@ -222,6 +222,91 @@ def session_check(
         "message": "You are logged in",
         "user_id": current_user.id,
         "full_name": current_user.full_name,
+    }
+
+# API to get the profile of the currently logged-in user
+
+@app.get("/me")
+def get_my_profile(
+    current_user: User = Depends(get_current_user),
+):
+    return {
+        "id": current_user.id,
+        "full_name": current_user.full_name,
+        "email": current_user.email,
+        "department": current_user.department,
+        "degree_program": current_user.degree_program,
+        "study_year": current_user.study_year,
+        "created_at": current_user.created_at,
+    }
+
+# APT to update the profile of the currently logged-in user
+
+@app.put("/me")
+def update_my_profile(
+    request: Request4profileUpdate,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    try:
+        # Update the logged-in user's profile
+        current_user.full_name = request.full_name
+        current_user.department = request.department
+        current_user.degree_program = request.degree_program
+        current_user.study_year = request.study_year
+
+        # Save changes to the database
+        db.commit()
+        db.refresh(current_user)
+
+    except Exception:
+        db.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to update profile",
+        )
+
+    return {
+        "message": "Profile updated successfully",
+        "id": current_user.id,
+        "full_name": current_user.full_name,
+        "email": current_user.email,
+        "department": current_user.department,
+        "degree_program": current_user.degree_program,
+        "study_year": current_user.study_year,
+        "created_at": current_user.created_at,
+    }
+
+
+# API to get the public profile of another student
+
+@app.get("/users/{user_id}")
+def get_user_profile(
+    user_id: int,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    # 1. Find the requested user
+    user = (
+        db.query(User)
+        .filter(User.id == user_id)
+        .first()
+    )
+
+    # 2. Check whether the user exists
+    if user is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="User not found",
+        )
+
+    # 3. Return public profile information
+    return {
+        "id": user.id,
+        "full_name": user.full_name,
+        "department": user.department,
+        "degree_program": user.degree_program,
+        "study_year": user.study_year,
     }
 
 #community
