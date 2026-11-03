@@ -2,140 +2,155 @@
 
 ## Team Ownership
 
-### D :
+### D : Activities, Posts & Database
 
-- db schema
-- mathing engine,
-- course scrapping from the department site(cse only for now),
-- sql queries?,
-- final merges
+- db schema and models
+- course and department scraping (might not need now but can use for profile? argh)
+- activities and posts APIs
+- RSVP toggle(marking interested for activities) and personal planner.  // use something other than rsvp? like interested or
+- comments and discussion threads
+- home feed queries (thinking of whowing activites that are rsvped and at bottom communities you are a member of)
+- database seeding and final merges
 
-### A : Frontend - REACT
+### V : Auth & Communities Backend - FastAPI
 
 - signup and login
-- search results
-- posts
+- password hashing and email verification
+- Pydantic schemas
+- communities APIs
+- community creation and listing
+- join/leave functionality
+- official club information
 
-  - create posts
-  - post lists
-  - apply to posts
-- live notifications
-- customizing profile + skills form
-- special roles based ui ?
+### A : Frontend - React
 
-### V: Backend - FastAPI
+- signup and login UI
+- bottom navigation (Feed, Communities, Planner)
+- home feed and community cards
+- communities directory
+- community detail page
+- activities and general posts tabs
+- personal planner
+- comments drawer
+- API integration
 
-- authorization through otp
-- course team search
-- posts/application
+## 2. Navigation Flow & Pages
 
+![1793651103777](image/design_doc/1793651103777.png)
 
-## DB schema
+### Home page tabs
 
-### Users
+Tab 1: Home Feed (`/home`) 
 
-- id
-- name
-- email
-- branch
-- year ?
+- Upcoming RSVP'd activities and posts
+- Joined community cards
 
-### skills
+Tab 2: Communities (`/communities`)
 
-- id
-- name
+- Browse all communities
+- Join/leave communities
+- Open community pages
 
-### user skills
+Tab 3: Planner (`/planner`)
 
-- user_id
-- skill_id
-- level
+- All RSVP'd activities and posts
+- Chronological schedule
+- Remove RSVP or view discussions
 
-### Semesters
+### Other pages
 
-* id
-* label
-* is_current
+Community Page (`/communities/:id`)
 
-### Courses
+- Community details and club info
+- Join/leave toggle
+- Activities tab (official club events)
+- General Posts tab (student hangouts)
+- Create activity or post
 
-* id
-* code
-* name
-* semester (Fall/Spring)
-* year
+Comments Drawer
 
-### Enrollments
+- Activity/post details
+- RSVP count
+- Live discussion thread
 
-* user_id
-* course_id
+## 3. Database Schema (`app/models.py`)
 
-### Teams
+### Users (V / D)
 
-* id
-* course_id
-* created_by
+- id, full\_name, email
+- department, degree\_program, study\_year
+- password\_hash, email\_verified, created\_at
 
-### Team Members
+### Communities (V)
 
-* team_id
-* user_id
+- id, name, category, description
+- club\_name, club\_info
+- created\_by, created\_at
 
-### Posts
+### Memberships (V)
 
-* id
-* type
-* title
-* description
-* skill_needed_id
-* course-id ??
-* created_by
+- id, user\_id, community\_id
+- role, joined\_at
 
-### Applications
+### Activities (D)
 
-* id
-* post_id
-* user_id
-* status
+- id, community\_id, title, description
+- location, start\_time, created\_by, created\_at
 
-### Comments
+### Posts (D)
 
-- id
-- post_id
-- user_id
-- comment_text
-- created_at
+- id, community\_id, title, content
+- location, event\_time, author\_id, created\_at
 
-## Backend APIs
+### RSVPs (D) 
 
+- id, user\_id, activity\_id, post\_id
+- created\_at
 
+### Comments (V)
 
-POST /auth/signup
+- id, user\_id, activity\_id, post\_id
+- comment\_text, created\_at
 
-POST /auth/verify-otp
+// check if both a..id and p..id needed or can be merged into one single id of some kind that if start with A activity and P for post
 
-GET  /me
+### Email Verification Tokens (V)
 
-PUT  /me/skills
+- id, user\_id, token\_hash
+- expires\_at, used\_at, created\_at
 
-GET  /courses               (D)
+## 4. Backend APIs
 
-GET  /enrollments/me        (D)
+### Auth & Communities (V)
 
-GET  /search/course-team
+- `POST /register` — Register student
+- `POST /login` — Login
+- `GET /communities` — List communities
+- `POST /communities` — Create community
+- `GET /communities/:id` — Get community details
+- `POST /communities/:id/join` — Join/leave community.  // membership and all that sir has added will need to be checked if needed or not
+- `GET /comments` — Get comments
+- `POST /comments` — Add comment
 
-POST /teams
+### Activities, Posts & Discussions (D)
 
-POST /posts
+- `GET /departments` — List departments
+- `GET /users/:id/feed` — Get home feed
+- `GET /users/:id/planner` — Get personal planner
+- `GET /communities/:id/activities` — List activities
+- `POST /communities/:id/activities` — Create activity
+- `GET /communities/:id/posts` — List posts
+- `POST /communities/:id/posts` — Create post
+- `POST /rsvps` — Toggle RSVP
+- 
 
-GET  /posts
+## 5. Frontend Files (`frontend/src/`)
 
-POST /posts/:id/apply
-
-GET  /posts/:id/applicants
-
-GET  /notifications
-
-POST /posts/:id/comments
-
-GET /posts/:id/comments
+- `pages/AuthPage.jsx` — Login and signup
+- `components/BottomNav.jsx` — Bottom navigation
+- `pages/FeedPage.jsx` — Home feed
+- `pages/CommunitiesPage.jsx` — Communities directory
+- `pages/CommunityDetailPage.jsx` — Community details and tabs
+- `pages/PlannerPage.jsx` — Personal planner
+- `components/CommentsSection.jsx` — Discussion section    // rename?
+- `api/client.js` — Backend API integration
