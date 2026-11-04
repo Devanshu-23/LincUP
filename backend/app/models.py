@@ -1,8 +1,8 @@
+
 from datetime import datetime, timezone
-from app.database import Base
+
 from sqlalchemy import (
     String,
-    Boolean,
     UniqueConstraint,
     ForeignKey,
     Integer,
@@ -11,10 +11,12 @@ from sqlalchemy import (
 )
 from sqlalchemy.orm import relationship
 
+from app.database import Base
+
+
 class User(Base):
     __tablename__ = "users"
 
-    # Automatically generated user ID
     id = Column(Integer, primary_key=True, index=True)
 
     # User profile
@@ -26,7 +28,6 @@ class User(Base):
 
     # Authentication
     password_hash = Column(String(255), nullable=False)
-    email_verified = Column(Boolean, default=False, nullable=False)
 
     # Account creation timestamp
     created_at = Column(
@@ -39,12 +40,6 @@ class User(Base):
     memberships = relationship(
         "Membership",
         back_populates="user",
-    )
-
-    verification_tokens = relationship(
-        "EmailVerificationToken",
-        back_populates="user",
-        cascade="all, delete-orphan",
     )
 
 
@@ -115,31 +110,72 @@ class Membership(Base):
         back_populates="memberships",
     )
 
-
-class EmailVerificationToken(Base):
-    __tablename__ = "email_verification_tokens"
+#Events 
+class CommunityEvent(Base):
+    __tablename__ = "community_events"
 
     id = Column(Integer, primary_key=True, index=True)
 
-    user_id = Column(
+    # Community organising the event
+    community_id = Column(
+        Integer,
+        ForeignKey("communities.id"),
+        nullable=False,
+    )
+
+    # User who created the event
+    created_by = Column(
         Integer,
         ForeignKey("users.id"),
         nullable=False,
     )
 
-    # Store the hash of the verification token, not the raw token
-    token_hash = Column(String(64), unique=True, nullable=False)
+    # Event details
+    title = Column(String(150), nullable=False)
+    description = Column(String(1000), nullable=False)
 
-    expires_at = Column(DateTime(timezone=True), nullable=False)
-    used_at = Column(DateTime(timezone=True), nullable=True)
+    # Event schedule
+    start_at = Column(DateTime(timezone=True), nullable=False)
+    end_at = Column(DateTime(timezone=True), nullable=False)
 
+    # Event location is mandatory
+    location = Column(String(255), nullable=False)
+
+    # Optional cover image reference
+    image_url = Column(String(500), nullable=True)
+
+    # When the event was created
     created_at = Column(
         DateTime(timezone=True),
         default=lambda: datetime.now(timezone.utc),
         nullable=False,
     )
 
-    user = relationship(
-        "User",
-        back_populates="verification_tokens",
+    # Relationships
+    community = relationship("Community")
+    creator = relationship("User")
+
+#Event Attendence
+
+class EventAttendance(Base):
+    __tablename__ = "event_attendances"
+
+    id = Column(Integer, primary_key=True, index=True)
+    event_id = Column(Integer, ForeignKey("community_events.id"), nullable=False)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+
+    status = Column(String(20), nullable=False, default="going")
+
+    created_at = Column(
+        DateTime(timezone=True),
+        default=lambda: datetime.now(timezone.utc),
+        nullable=False
     )
+
+    event = relationship("CommunityEvent")
+    user = relationship("User")
+
+    __table_args__ = (
+        UniqueConstraint("event_id", "user_id", name="unique_event_attendance"),
+    )
+
