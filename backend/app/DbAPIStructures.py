@@ -3,7 +3,9 @@ from pydantic import BaseModel, EmailStr, Field, field_validator, model_validato
 from typing import Optional
 from datetime import datetime
 
-class Request4registration(BaseModel):
+CANNOT_BE_NULL = "This field cannot be empty"
+
+class UserCreate(BaseModel):
     full_name: str = Field(min_length=2, max_length=100)
     email: EmailStr
     password: str = Field(min_length=8, max_length=128)
@@ -16,7 +18,7 @@ class Request4registration(BaseModel):
     def strip_whitespace(cls, value):
         value = value.strip()
         if not value:
-            raise ValueError("This field cannot be empty")
+            raise ValueError(CANNOT_BE_NULL)
         return value
 
     @field_validator("email")
@@ -43,8 +45,7 @@ class Request4registration(BaseModel):
 
         return password
 
-#Community GET Request
-class Request4community(BaseModel):
+class CommunityCreate(BaseModel):
     name: str = Field(min_length=2, max_length=100)
     description: Optional[str] = Field(default=None, max_length=500)
     @field_validator("name")
@@ -63,19 +64,20 @@ class Request4community(BaseModel):
         return value
 
 
-class Request4event(BaseModel):
+class EventCreate(BaseModel):
     title: str = Field(min_length=2, max_length=150)
     description: str = Field(min_length=1, max_length=1000)
     start_at: datetime
     end_at: datetime
     location: str = Field(min_length=1, max_length=255)
+    image_url: Optional[str] = Field(default=None, max_length=250)
 
     @field_validator("title", "description", "location")
     @classmethod
     def strip_required_text(cls, value):
         value = value.strip()
         if not value:
-            raise ValueError("This field cannot be empty")
+            raise ValueError(CANNOT_BE_NULL)
         return value
 
     @model_validator(mode="after")
@@ -91,9 +93,8 @@ class Request4event(BaseModel):
 
         return self
 
-#For user to update his profile
 
-class Request4profileUpdate(BaseModel):
+class UserProfileUpdate(BaseModel):
     full_name: str = Field(min_length=2, max_length=100)
     department: str = Field(min_length=2, max_length=150)
     degree_program: str
@@ -104,5 +105,5 @@ class Request4profileUpdate(BaseModel):
     def strip_required_text(cls, value):
         value = value.strip()
         if not value:
-            raise ValueError("This field cannot be empty")
+            raise ValueError(CANNOT_BE_NULL)
         return value
