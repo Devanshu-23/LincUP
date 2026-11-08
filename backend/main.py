@@ -9,10 +9,26 @@ from app.security import hash_password, verify_password
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError
 from app.auth import create_access_token, verify_access_token
+from fastapi.middleware.cors import CORSMiddleware
 
 import os
 
 app = FastAPI(title="LincUP API")
+#cors middleware to allow frontend to also access these apis
+origins = [
+    "http://localhost:3000",
+    "http://127.0.0.1:3000"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+
 COOKIE_SECURE = os.getenv("COOKIE_SECURE", "false").lower() == "true"
 SESSION_COOKIE = "lincup_session"
 oauth2_scheme = OAuth2PasswordBearer(tokenUrl="login")
