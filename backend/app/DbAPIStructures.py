@@ -107,3 +107,8 @@ class UserProfileUpdate(BaseModel):
         if not value:
             raise ValueError(CANNOT_BE_NULL)
         return value
+
+
+class CommentCreate(BaseModel):
+    content: str = Field(min_length = 1, max_length=200)
+    

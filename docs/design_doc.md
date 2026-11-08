@@ -128,7 +128,8 @@ Comments Drawer
 - `GET /communities` — List communities
 - `POST /communities` — Create community
 - `GET /communities/:id` — Get community details
-- `POST /communities/:id/join` — Join/leave community.  // membership and all that sir has added will need to be checked if needed or not
+- `POST /communities/:id/join` — Join community.  // membership and all that sir has added will need to be checked if needed or not
+- `DELETE /communitites/:id/leave` leave community
 - `GET /comments` — Get comments
 - `POST /comments` — Add comment
 

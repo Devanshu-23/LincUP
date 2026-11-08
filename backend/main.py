@@ -1,17 +1,16 @@
+from dotenv import load_dotenv
+load_dotenv()
 from fastapi import FastAPI, Depends, HTTPException, status, Request, Response
 from sqlalchemy.orm import Session
 from app.database import SessionLocal
-from app.models import User, Community, Membership, CommunityEvent, EventAttendance
-from app.DbAPIStructures import Request4registration, Request4community, Request4event, Request4profileUpdate
+from app.models import User, Community, Membership, Event, EventRSVP, Comment
+from app.DbAPIStructures import UserCreate, CommunityCreate, EventCreate, UserProfileUpdate, CommentCreate
 from app.security import hash_password, verify_password
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError
 from app.auth import create_access_token, verify_access_token
 
 import os
-
-from jose import JWTError
-
 
 app = FastAPI(title="LincUP API")
 COOKIE_SECURE = os.getenv("COOKIE_SECURE", "false").lower() == "true"
@@ -32,24 +31,20 @@ def home():
     return {"message": "Welcome to LincUP API"}
 
 
-@app.get("/hello")
-def hello():
-    return {"message": "Hello, LincUP!"}
+# @app.get("/hello")
+# def hello():
+#     return {"message": "Hello, LincUP!"}
 
 
 @app.post("/register", status_code=status.HTTP_201_CREATED)
 def register(
-    request: Request4registration,
+    request: UserCreate,
     db: Session = Depends(get_db),
 ):
     email = str(request.email).strip().lower()
 
     # Check whether this email is already registered
-    existing_user = (
-        db.query(User)
-        .filter(User.email == email)
-        .first()
-    )
+    existing_user = (db.query(User).filter(User.email == email).first())
 
     if existing_user:
         raise HTTPException(
@@ -76,11 +71,11 @@ def register(
         db.rollback()
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Registration failed",
+            detail="User Registration failed",
         )
 
     return {
-        "message": "Registration successful",
+        "message": "User Registration successful",
         "user_id": user.id,
         "full_name": user.full_name,
         "email": user.email,
@@ -156,14 +151,13 @@ def get_current_user(
 
     return user
 
-#Function for Verifying the privilege level of user before giving him access to privileged functionalities
- 
+#Function for Verifying the privilege level of user before giving him access to privileged functionalities, #future scope for now
 def verify_community_privilege(
     community_id: int,
     current_user: User,
     db: Session,
 ):
-    # 1. Check whether the community exists
+    #Check whether the community exists
     community = (
         db.query(Community)
         .filter(Community.id == community_id)
@@ -176,7 +170,7 @@ def verify_community_privilege(
             detail="Community not found",
         )
 
-    # 2. Find the user's membership
+    # Find the user's membership
     membership = (
         db.query(Membership)
         .filter(
@@ -186,14 +180,14 @@ def verify_community_privilege(
         .first()
     )
 
-    # 3. Check whether the user is a member
+    # Check whether the user is a member
     if membership is None:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
             detail="You are not a member of this community",
         )
 
-    # 4. Check the user's privilege level
+    # Check the user's privilege level
     if membership.role not in ["owner", "convener"]:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
@@ -225,7 +219,6 @@ def session_check(
     }
 
 # API to get the profile of the currently logged-in user
-
 @app.get("/me")
 def get_my_profile(
     current_user: User = Depends(get_current_user),
@@ -240,22 +233,20 @@ def get_my_profile(
         "created_at": current_user.created_at,
     }
 
-# APT to update the profile of the currently logged-in user
-
+# API to update the profile of the currently logged-in user
 @app.put("/me")
 def update_my_profile(
-    request: Request4profileUpdate,
+    request: UserProfileUpdate,
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
     try:
-        # Update the logged-in user's profile
+
         current_user.full_name = request.full_name
         current_user.department = request.department
         current_user.degree_program = request.degree_program
         current_user.study_year = request.study_year
 
-        # Save changes to the database
         db.commit()
         db.refresh(current_user)
 
@@ -286,21 +277,21 @@ def get_user_profile(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
-    # 1. Find the requested user
+    # Find the requested user
     user = (
         db.query(User)
         .filter(User.id == user_id)
         .first()
     )
 
-    # 2. Check whether the user exists
+    # Check whether the user exists
     if user is None:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="User not found",
         )
 
-    # 3. Return public profile information
+    # Return public profile information
     return {
         "id": user.id,
         "full_name": user.full_name,
@@ -351,11 +342,11 @@ def get_community(
 
 @app.post("/communities", status_code=status.HTTP_201_CREATED)
 def create_community(
-    request: Request4community,
+    request: CommunityCreate,
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
-    # Check whether a community with this name already exists
+
     existing = (
         db.query(Community)
         .filter(Community.name == request.name)
@@ -472,7 +463,7 @@ def join_community(
     }
 #Display communities which we have joined
 
-@app.get("/my-communities")
+@app.get("/me/communities")
 def get_my_communities(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
@@ -502,7 +493,7 @@ def leave_community(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
-    # 1. Check whether the community exists
+    # Check whether the community exists
     community = (
         db.query(Community)
         .filter(Community.id == community_id)
@@ -515,7 +506,7 @@ def leave_community(
             detail="Community not found",
         )
 
-    # 2. Check whether the user is a member of this community
+    # Check whether the user is a member of this community
     membership = (
         db.query(Membership)
         .filter(
@@ -531,7 +522,7 @@ def leave_community(
             detail="You are not a member of this community",
         )
 
-    # 3. Prevent the community owner from leaving
+    # Prevent the community owner from leaving 
     if community.created_by == current_user.id:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
@@ -539,27 +530,27 @@ def leave_community(
         )
 
     try:
-        # 4. Find all events belonging to this community
+        # Find all events belonging to this community
         community_event_ids = (
-            db.query(CommunityEvent.id)
-            .filter(CommunityEvent.community_id == community_id)
+            db.query(Event.id)
+            .filter(Event.community_id == community_id)
             .subquery()
         )
 
-        # 5. Cancel all active event RSVPs made by this user
-        db.query(EventAttendance).filter(
-            EventAttendance.user_id == current_user.id,
-            EventAttendance.event_id.in_(community_event_ids),
-            EventAttendance.status == "going",
+        # Cancel all active event RSVPs made by this user
+        db.query(EventRSVP).filter(
+            EventRSVP.user_id == current_user.id,
+            EventRSVP.event_id.in_(community_event_ids),
+            EventRSVP.status == "going",
         ).update(
-            {EventAttendance.status: "cancelled"},
+            {EventRSVP.status: "cancelled"},
             synchronize_session=False,
         )
 
-        # 6. Remove the user's community membership
+        # Remove the user's community membership
         db.delete(membership)
 
-        # 7. Save both changes together
+        # Save both changes together
         db.commit()
 
     except Exception:
@@ -582,7 +573,7 @@ def leave_community(
 )
 def create_community_event(
     community_id: int,
-    request: Request4event,
+    request: EventCreate,
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
@@ -608,7 +599,7 @@ def create_community_event(
             ),
         )
 
-    event = CommunityEvent(
+    event = Event(
         community_id=community.id,
         created_by=current_user.id,
         title=request.title,
@@ -663,9 +654,9 @@ def list_community_events(
 
     # Retrieve events for this community, earliest first
     events = (
-        db.query(CommunityEvent)
-        .filter(CommunityEvent.community_id == community_id)
-        .order_by(CommunityEvent.start_at)
+        db.query(Event)
+        .filter(Event.community_id == community_id)
+        .order_by(Event.start_at)
         .all()
     )
 
@@ -686,16 +677,16 @@ def list_community_events(
 
 #Attend Events organized by community
 
-@app.post("/events/{event_id}/attend", status_code=status.HTTP_201_CREATED)
+@app.post("/events/{event_id}/rsvp", status_code=status.HTTP_201_CREATED)
 def attend_event(
     event_id: int,
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
-    # 1. Check whether the event exists
+    # Check whether the event exists
     event = (
-        db.query(CommunityEvent)
-        .filter(CommunityEvent.id == event_id)
+        db.query(Event)
+        .filter(Event.id == event_id)
         .first()
     )
 
@@ -705,7 +696,7 @@ def attend_event(
             detail="Event not found",
         )
 
-    # 2. Check whether the user belongs to this community
+    # Check whether the user belongs to this community
     membership = (
         db.query(Membership)
         .filter(
@@ -721,130 +712,128 @@ def attend_event(
             detail="Join this community before attending its events",
         )
 
-    # 3. Check for an existing attendance record
-    attendance = (
-        db.query(EventAttendance)
+    # Check for an existing rsvp record
+    rsvp = (
+        db.query(EventRSVP)
         .filter(
-            EventAttendance.event_id == event_id,
-            EventAttendance.user_id == current_user.id,
+            EventRSVP.event_id == event_id,
+            EventRSVP.user_id == current_user.id,
         )
         .first()
     )
 
-    if attendance is not None:
-        if attendance.status == "going":
-            raise HTTPException(
-                status_code=status.HTTP_409_CONFLICT,
-                detail="You are already attending this event",
-            )
-
-        # Reactivate a previously cancelled RSVP
-        attendance.status = "going"
-
-    else:
-        attendance = EventAttendance(
-            event_id=event_id,
-            user_id=current_user.id,
-            status="going",
-        )
-        db.add(attendance)
-
     try:
-        db.commit()
-        db.refresh(attendance)
+        if rsvp is not None:
+            db.delete(rsvp)
+            db.commit()
+            return {
+                "message": "RSVP removed",
+                "event_id": event_id,
+                "user_id": current_user.id,
+                "status": "not going",
+            }
+
+        else:
+            rsvp = EventRSVP(
+                event_id=event_id,
+                user_id=current_user.id,
+                status="going",
+            )
+            db.add(rsvp)
+            db.commit()
+            db.refresh(rsvp)
+            return {
+                "message": "Successfully RSVPd for the event",
+                "event_id": event_id,
+                "user_id": current_user.id,
+                "status": rsvp.status,
+            }
+
     except Exception:
         db.rollback()
         raise HTTPException(
             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Failed to register attendance",
+            detail="Failed to register rsvp",
         )
 
-    return {
-        "message": "Successfully registered for the event",
-        "event_id": event_id,
-        "user_id": current_user.id,
-        "status": attendance.status,
-    }
 
 #API to choose to abstain from attending the event which was previously opted to attend
+# tried going/notgoing in single api , will use this again if that really didnt work out as planned
+# @app.delete("/events/{event_id}/attend")
+# def cancel_event_attendance(
+#     event_id: int,
+#     current_user: User = Depends(get_current_user),
+#     db: Session = Depends(get_db),
+# ):
+#     # Check whether the event exists
+#     event = (
+#         db.query(Event)
+#         .filter(Event.id == event_id)
+#         .first()
+#     )
 
+#     if event is None:
+#         raise HTTPException(
+#             status_code=status.HTTP_404_NOT_FOUND,
+#             detail="Event not found",
+#         )
 
-@app.delete("/events/{event_id}/attend")
-def cancel_event_attendance(
-    event_id: int,
-    current_user: User = Depends(get_current_user),
-    db: Session = Depends(get_db),
-):
-    # 1. Check whether the event exists
-    event = (
-        db.query(CommunityEvent)
-        .filter(CommunityEvent.id == event_id)
-        .first()
-    )
+#     # Find this user's rsvp record
+#     rsvp = (
+#         db.query(EventRSVP)
+#         .filter(
+#             EventRSVP.event_id == event_id,
+#             EventRSVP.user_id == current_user.id,
+#         )
+#         .first()
+#     )
 
-    if event is None:
-        raise HTTPException(
-            status_code=status.HTTP_404_NOT_FOUND,
-            detail="Event not found",
-        )
+#     if rsvp is None or rsvp.status != "going":
+#         raise HTTPException(
+#             status_code=status.HTTP_409_CONFLICT,
+#             detail="You are not currently attending this event",
+#         )
 
-    # 2. Find this user's attendance record
-    attendance = (
-        db.query(EventAttendance)
-        .filter(
-            EventAttendance.event_id == event_id,
-            EventAttendance.user_id == current_user.id,
-        )
-        .first()
-    )
+#     # Change status instead of deleting the record
+#     rsvp.status = "cancelled"
 
-    if attendance is None or attendance.status != "going":
-        raise HTTPException(
-            status_code=status.HTTP_409_CONFLICT,
-            detail="You are not currently attending this event",
-        )
+#     try:
+#         db.commit()
+#     except Exception:
+#         db.rollback()
+#         raise HTTPException(
+#             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+#             detail="Failed to cancel rsvp",
+#         )
 
-    # 3. Change status instead of deleting the record
-    attendance.status = "cancelled"
-
-    try:
-        db.commit()
-    except Exception:
-        db.rollback()
-        raise HTTPException(
-            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-            detail="Failed to cancel attendance",
-        )
-
-    return {
-        "message": "Attendance successfully cancelled",
-        "event_id": event_id,
-        "user_id": current_user.id,
-        "status": attendance.status,
-    }
+#     return {
+#         "message": "Attendance successfully cancelled",
+#         "event_id": event_id,
+#         "user_id": current_user.id,
+#         "status": rsvp.status,
+#     }
 
 #Events being attended by a specific logged in user
 
-@app.get("/my-events")
+@app.get("/me/events")
 def get_my_events(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
-    attendances = (
-        db.query(EventAttendance)
+    rsvps = (
+        db.query(EventRSVP)
         .filter(
-            EventAttendance.user_id == current_user.id,
-            EventAttendance.status == "going",
+            EventRSVP.user_id == current_user.id,
         )
         .all()
     )
 
     events = []
 
-    for attendance in attendances:
+    for rsvp in rsvps:
         event = (
-            db.query(CommunityEvent)
-            .filter(CommunityEvent.id == attendance.event_id)
+            db.query(Event)
+            .filter(Event.id == rsvp.event_id)
             .first()
         )
 
@@ -860,7 +849,6 @@ def get_my_events(
             "end_at": event.end_at,
             "location": event.location,
             "image_url": event.image_url,
-            "attendance_status": attendance.status,
         })
 
     return events
@@ -874,7 +862,7 @@ def get_community_members(
     db: Session = Depends(get_db),
 ):
 
-    # 1. Check whether the community exists
+    # Check whether the community exists
     community = (
         db.query(Community)
         .filter(Community.id == community_id)
@@ -887,7 +875,7 @@ def get_community_members(
             detail="Community not found",
         )
 
-    # 2. Check whether the requesting user is a member
+    # Check whether the requesting user is a member
     membership = (
         db.query(Membership)
         .filter(
@@ -903,7 +891,7 @@ def get_community_members(
             detail="You must be a member of this community to view its participants",
         )
 
-    # 3. Fetch all community participants
+    # Fetch all community participants
     members = (
         db.query(Membership, User)
         .join(User, Membership.user_id == User.id)
@@ -911,7 +899,6 @@ def get_community_members(
         .all()
     )
 
-    # 4. Prepare the response
     return [
         {
             "user_id": user.id,
@@ -924,19 +911,19 @@ def get_community_members(
         }
         for membership, user in members
     ]
-#Endpoint for finding all the attendees of an event
+#Endpoint for finding all the rsvps of an event
 
-@app.get("/events/{event_id}/attendees")
-def get_event_attendees(
+@app.get("/events/{event_id}/rsvps")
+def get_event_rsvps(
     event_id: int,
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
 
-    # 1. Check whether the event exists
+    # Check whether the event exists
     event = (
-        db.query(CommunityEvent)
-        .filter(CommunityEvent.id == event_id)
+        db.query(Event)
+        .filter(Event.id == event_id)
         .first()
     )
 
@@ -946,7 +933,7 @@ def get_event_attendees(
             detail="Event not found",
         )
 
-    # 2. Check whether the requesting user belongs to the event's community
+    # Check whether the requesting user belongs to the event's community
     membership = (
         db.query(Membership)
         .filter(
@@ -959,21 +946,20 @@ def get_event_attendees(
     if membership is None:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
-            detail="You must be a member of this community to view event attendees",
+            detail="You must be a member of this community to view event rsvps",
         )
 
-    # 3. Fetch all users who are currently attending
-    attendees = (
-        db.query(EventAttendance, User)
-        .join(User, EventAttendance.user_id == User.id)
+    # Fetch all users who are currently attending
+    rsvps = (
+        db.query(EventRSVP, User)
+        .join(User, EventRSVP.user_id == User.id)
         .filter(
-            EventAttendance.event_id == event_id,
-            EventAttendance.status == "going",
+            EventRSVP.event_id == event_id,
+            # EventRSVP.status == "going",
         )
         .all()
     )
 
-    # 4. Prepare the response
     return [
         {
             "user_id": user.id,
@@ -982,5 +968,68 @@ def get_event_attendees(
             "degree_program": user.degree_program,
             "study_year": user.study_year,
         }
-        for attendance, user in attendees
+        for rsvp, user in rsvps
     ]
+
+@app.post("/events/{event_id}/comment", )
+def add_event_comment(
+    event_id: int,
+    req: CommentCreate,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    event = (db.query(Event).filter(Event.id == event_id).first())
+    if event is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Event not found")
+
+    comment = Comment(user_id = current_user.id, event_id = event_id, content = req.content)
+    try: 
+        db.add(comment)
+        db.commit()
+        db.refresh(comment)
+    except Exception:
+        db.rollback()
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Comment not created")
+
+    return {
+        "id": comment.id,
+        "author": {
+            "id": current_user.id,
+            "full_name": current_user.full_name
+        },
+        # "event": {
+        #     "id": event.id,
+        #     "title": event.title
+        # },
+        "event_id": comment.event_id,
+        "content": comment.content,
+        "created_at": comment.created_at
+    }
+
+@app.get("/events/{event_id}/comments")
+def get_event_comments(
+    event_id: int, 
+    db: Session = Depends(get_db)
+):
+    event = db.query(Event).filter(Event.id == event_id).first()
+    if event is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No such event exist.")
+
+    comments = db.query(Comment).filter(Comment.event_id == event_id).order_by(Comment.created_at.asc()).all()
+
+    return [
+        {
+            "id": comment.id,
+            "author": {
+                "id": comment.writer.id,
+                "full_name": comment.writer.full_name
+            },
+            "event_id": comment.event_id,
+            "content": comment.content,
+            "created_at": comment.created_at
+        }
+        for comment in comments
+    ]
+
+    
+    

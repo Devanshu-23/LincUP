@@ -97,20 +97,36 @@ class EventRSVP(Base):
     __tablename__ = "event_rsvp"
 
     id = Column(Integer, primary_key=True, index=True)
-    event_id = Column(Integer, ForeignKey("community_events.id"), nullable=False)
+    event_id = Column(Integer, ForeignKey("events.id"), nullable=False)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
 
-    status = Column(String(20), nullable=False, default="going") #going/not_going
     created_at = Column(
         DateTime(timezone=True),
         default=lambda: datetime.now(timezone.utc),
         nullable=False
     )
 
-    event = relationship("CommunityEvent")
+    event = relationship("Event")
     user = relationship("User")
 
     __table_args__ = (
         UniqueConstraint("event_id", "user_id", name="unique_event_attendance"),
     )
+
+class Comment(Base):
+    __tablename__ = "comments"
+    id = Column(Integer, primary_key = True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    event_id = Column(Integer, ForeignKey("events.id"), nullable=False) #posts-future scope
+    content = Column(String(200), nullable=False)
+    created_at = Column(
+        DateTime(timezone=True), 
+        default = lambda: datetime.now(timezone.utc),
+        nullable=False
+    )
+
+    writer = relationship("User")
+    event = relationship("Event")
+
+
 
