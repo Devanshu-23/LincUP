@@ -4,7 +4,7 @@ from fastapi import FastAPI, Depends, HTTPException, status, Request, Response
 from sqlalchemy.orm import Session
 from app.database import SessionLocal
 from app.models import User, Community, Membership, Event, EventRSVP, Comment
-from app.DbAPIStructures import UserCreate, CommunityCreate, EventCreate, UserProfileUpdate, CommentCreate
+from app.DbAPIStructures import UserCreate, UserLogin, CommunityCreate, EventCreate, UserProfileUpdate, CommentCreate
 from app.security import hash_password, verify_password
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError
@@ -17,7 +17,8 @@ app = FastAPI(title="LincUP API")
 #cors middleware to allow frontend to also access these apis
 origins = [
     "http://localhost:3000",
-    "http://127.0.0.1:3000"
+    "http://127.0.0.1:3000",
+    "http://localhost:5173"
 ]
 
 app.add_middleware(
@@ -102,12 +103,12 @@ def register(
 
 @app.post("/login")
 def login(
+    request: UserLogin,
     response: Response,
-    email: str,
-    password: str,
     db: Session = Depends(get_db),
 ):
-    email = email.strip().lower()
+    email = request.email.strip().lower()
+    password = request.password
 
     user = db.query(User).filter(User.email == email).first()
 

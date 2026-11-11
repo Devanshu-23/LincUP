@@ -36,7 +36,7 @@
 
 ## 2. Navigation Flow & Pages
 
-![1793651103777](image/design_doc/1793651103777.png)
+![1794404341151](image/design_doc/1794404341151.png)
 
 ### Home page tabs
 
