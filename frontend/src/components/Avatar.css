@@ -1,0 +1,17 @@
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  border-radius: 50%;
+  font-family: var(--font-display);
+  font-weight: 700;
+  user-select: none;
+}
+
+/* Shared tone classes (also used by community cards) */
+.tone-violet { background: var(--tint-violet); color: var(--tint-violet-ink); }
+.tone-sage { background: var(--tint-sage); color: var(--tint-sage-ink); }
+.tone-sky { background: var(--tint-sky); color: var(--tint-sky-ink); }
+.tone-sun { background: var(--tint-sun); color: var(--tint-sun-ink); }
+.tone-rose { background: var(--tint-rose); color: var(--tint-rose-ink); }
