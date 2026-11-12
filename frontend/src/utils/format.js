@@ -41,7 +41,18 @@ const fullFmt = new Intl.DateTimeFormat("en-IN", {
   year: "numeric",
 });
 
-export const toDate = (value) => (value instanceof Date ? value : new Date(value));
+// Timestamps the backend creates itself (created_at etc.) are UTC, but can
+// arrive without a zone suffix ("2026-11-12T23:24:23"). JS would read those
+// as local time, so treat zone-less ISO strings as UTC.
+const HAS_ZONE = /(Z|[+-]\d{2}:?\d{2})$/;
+
+export function toDate(value) {
+  if (value instanceof Date) return value;
+  if (typeof value === "string" && value.includes("T") && !HAS_ZONE.test(value)) {
+    return new Date(value + "Z");
+  }
+  return new Date(value);
+}
 
 export const formatTime = (value) => timeFmt.format(toDate(value));
 export const formatDay = (value) => dayFmt.format(toDate(value));

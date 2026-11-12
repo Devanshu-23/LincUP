@@ -32,6 +32,13 @@
   box-shadow: var(--shadow);
 }
 
+/* keep the name below the banner, next to the overlapping avatar */
+.profile-head > div {
+  flex: 1;
+  min-width: 0;
+  padding-top: 56px;
+}
+
 .profile-head h1 {
   font-size: 1.7rem;
   margin: 0;
