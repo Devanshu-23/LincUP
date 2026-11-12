@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useState } from "react";
-import { api } from "../api/client";
+import { api, SESSION_EXPIRED_EVENT } from "../api/client";
 import { AuthContext } from "./AuthContext";
 
 export default function AuthProvider({ children }) {
@@ -29,6 +29,13 @@ export default function AuthProvider({ children }) {
     return () => {
       cancelled = true;
     };
+  }, []);
+
+  // Any API call that gets a 401 means the session is gone
+  useEffect(() => {
+    const onExpired = () => setUser(null);
+    window.addEventListener(SESSION_EXPIRED_EVENT, onExpired);
+    return () => window.removeEventListener(SESSION_EXPIRED_EVENT, onExpired);
   }, []);
 
   const login = useCallback(

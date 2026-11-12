@@ -5,6 +5,8 @@
 
 const BASE_URL = import.meta.env.VITE_API_URL || "/api";
 
+export const SESSION_EXPIRED_EVENT = "lincup:session-expired";
+
 export class ApiError extends Error {
   constructor(message, status) {
     super(message);
@@ -45,6 +47,12 @@ async function request(path, { method = "GET", body } = {}) {
   const data = await response.json().catch(() => null);
 
   if (!response.ok) {
+    // Session cookie expired (backend tokens last 30 min): tell AuthProvider
+    // so the app returns to the login page. Login itself also returns 401
+    // for a wrong password, so skip that one.
+    if (response.status === 401 && path !== "/login") {
+      window.dispatchEvent(new Event(SESSION_EXPIRED_EVENT));
+    }
     const message =
       readErrorDetail(data?.detail) || `Request failed (${response.status})`;
     throw new ApiError(message, response.status);
