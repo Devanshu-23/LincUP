@@ -20,8 +20,16 @@ export default function AuthProvider({ children }) {
 
   // Restore an existing session on first load
   useEffect(() => {
-    refreshUser().finally(() => setLoading(false));
-  }, [refreshUser]);
+    let cancelled = false;
+    api
+      .getMe()
+      .then((me) => !cancelled && setUser(me))
+      .catch(() => !cancelled && setUser(null))
+      .finally(() => !cancelled && setLoading(false));
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   const login = useCallback(
     async (email, password) => {
