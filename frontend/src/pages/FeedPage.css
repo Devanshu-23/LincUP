@@ -113,7 +113,8 @@
 
 @media (max-width: 900px) {
   .feed-layout {
-    grid-template-columns: 1fr;
+    /* minmax(0, …) stops the horizontal scroller from widening the page */
+    grid-template-columns: minmax(0, 1fr);
   }
 
   .feed-side {
