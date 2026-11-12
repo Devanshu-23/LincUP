@@ -1,0 +1,143 @@
+/* ---------- Greeting hero ---------- */
+
+.feed-hero {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  padding: 1.8rem 2rem;
+  margin-bottom: 2rem;
+  border-radius: var(--radius-lg);
+  background: linear-gradient(135deg, #3d3bb8 0%, #2c2a94 60%, #221f6e 100%);
+  color: #fff;
+}
+
+.feed-hero::after {
+  content: "";
+  position: absolute;
+  width: 300px;
+  height: 300px;
+  right: -90px;
+  top: -120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(255, 122, 89, 0.5), transparent 65%);
+  pointer-events: none;
+}
+
+.feed-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.feed-hero .eyebrow {
+  color: #ffb39f;
+}
+
+.feed-hero h1 {
+  color: #fff;
+  font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+}
+
+.feed-hero-sub {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.feed-stats {
+  display: flex;
+  gap: 0.7rem;
+}
+
+.feed-stats div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 92px;
+  padding: 0.7rem 0.9rem;
+  border-radius: var(--radius);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(4px);
+}
+
+.feed-stats strong {
+  font: 800 1.7rem var(--font-display);
+  line-height: 1.1;
+}
+
+.feed-stats span {
+  font-size: 0.78rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+/* ---------- Two-column layout ---------- */
+
+.feed-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 320px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.feed-side {
+  position: sticky;
+  top: calc(var(--header-height) + 1.5rem);
+}
+
+.feed-side h2 {
+  font-size: 1.15rem;
+}
+
+.feed-communities {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.see-all {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+}
+
+.feed-hint {
+  padding: 1rem 1.1rem;
+  border-radius: var(--radius);
+  background: var(--surface-2);
+  margin: 0;
+}
+
+@media (max-width: 900px) {
+  .feed-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .feed-side {
+    position: static;
+    order: -1;
+  }
+
+  /* horizontal scroller of community cards on small screens */
+  .feed-communities {
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding-bottom: 0.4rem;
+    margin-bottom: 1.6rem;
+  }
+
+  .feed-communities .community-card {
+    flex: 0 0 250px;
+    scroll-snap-align: start;
+  }
+}
+
+@media (max-width: 560px) {
+  .feed-hero {
+    padding: 1.4rem 1.2rem;
+  }
+}
