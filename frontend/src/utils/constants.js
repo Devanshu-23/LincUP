@@ -1,0 +1,53 @@
+// Department names taken from backend/data/departments.csv.
+// TODO: replace with GET /departments once the backend exposes it.
+export const DEPARTMENTS = [
+  "Aerospace Engineering",
+  "Applied Geophysics",
+  "Ashank Desai Centre for Policy Studies",
+  "Biosciences and Bioengineering",
+  "Centre for Climate Studies",
+  "Centre for Educational Technology",
+  "Centre for Machine Intelligence and Data Science",
+  "Centre for Multidisciplinary Education",
+  "Centre for Research in Nanotechnology and Science",
+  "Centre for Systems and Control",
+  "Centre for Technology Alternatives for Rural Areas",
+  "Centre for Urban Science and Engineering",
+  "Centre of Studies in Resources Engineering",
+  "Chemical Engineering",
+  "Chemistry",
+  "Civil Engineering",
+  "Computer Science and Engineering",
+  "Desai Sethi School of Entrepreneurship",
+  "Earth Sciences",
+  "Economics",
+  "Electrical Engineering",
+  "Energy Science and Engineering",
+  "Engineering Physics",
+  "Environmental Science and Engineering",
+  "Humanities and Social Sciences",
+  "Industrial Design Centre",
+  "Industrial Engineering and Operations Research",
+  "Koita Centre for Digital Health",
+  "Mathematics",
+  "Mechanical Engineering",
+  "Metallurgical Engineering and Materials Science",
+  "Physics",
+  "Shailesh J. Mehta School of Management",
+  "Statistics",
+];
+
+export const DEGREE_PROGRAMS = [
+  "B.Tech",
+  "B.S.",
+  "B.Des",
+  "Dual Degree",
+  "M.Tech",
+  "M.Sc",
+  "M.Des",
+  "MBA",
+  "M.Phil",
+  "Ph.D",
+];
+
+export const STUDY_YEARS = [1, 2, 3, 4, 5, 6];
