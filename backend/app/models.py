@@ -8,6 +8,7 @@ from sqlalchemy import (
     Integer,
     Column,
     DateTime,
+    CheckConstraint,
 )
 from sqlalchemy.orm import relationship
 
@@ -113,11 +114,29 @@ class EventRSVP(Base):
         UniqueConstraint("event_id", "user_id", name="unique_event_attendance"),
     )
 
+class Post(Base):
+    __tablename__ = "posts"
+    id = Column(Integer, primary_key=True, index=True)
+    community_id = Column(Integer, ForeignKey("communities.id"), nullable=False)
+    created_by = Column(Integer, ForeignKey("users.id"), nullable=False)
+    title = Column(String(150), nullable=False)
+    description = Column(String(500), nullable=False)
+    image_url = Column(String(500), nullable=True) 
+    created_at = Column(
+        DateTime(timezone=True),
+        default=lambda: datetime.now(timezone.utc),
+        nullable=False,
+    )
+
+    community = relationship("Community") 
+    creator = relationship("User")
+
 class Comment(Base):
     __tablename__ = "comments"
     id = Column(Integer, primary_key = True, index=True)
     user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
-    event_id = Column(Integer, ForeignKey("events.id"), nullable=False) #posts-future scope
+    event_id = Column(Integer, ForeignKey("events.id"), nullable=True) 
+    post_id = Column(Integer,  ForeignKey("posts.id"), nullable=True)
     content = Column(String(200), nullable=False)
     created_at = Column(
         DateTime(timezone=True), 
@@ -127,6 +146,13 @@ class Comment(Base):
 
     writer = relationship("User")
     event = relationship("Event")
+    post = relationship("Post")
+
+    __table_args__ = (
+        CheckConstraint (
+            "(event_id IS NOT NULL AND post_id IS NULL) OR (event_id IS NULL AND post_id IS NOT NULL)", name = "post/event_comment"
+        )
+    ),
 
 
 
