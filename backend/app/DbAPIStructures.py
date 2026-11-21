@@ -97,6 +97,20 @@ class EventCreate(BaseModel):
 
         return self
 
+class PostCreate(BaseModel):
+    title: str = Field(min_length=2, max_length=150)
+    description: str = Field(min_length=1, max_length=1000)
+    image_url: Optional[str] = Field(default=None, max_length=250)
+
+    @field_validator("title", "description")
+    @classmethod
+    def strip_required_text(cls, value):
+        value = value.strip()
+        if not value:
+            raise ValueError(CANNOT_BE_NULL)
+        return value
+
+
 
 class UserProfileUpdate(BaseModel):
     full_name: str = Field(min_length=2, max_length=100)

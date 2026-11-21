@@ -3,9 +3,11 @@ import { Link, useParams } from "react-router-dom";
 import { api } from "../api/client";
 import Avatar from "../components/Avatar";
 import CreateEventModal from "../components/CreateEventModal";
+import CreatePostModal from "../components/CreatePostModal";
 import EmptyState from "../components/EmptyState";
 import EventCard from "../components/EventCard";
 import EventDrawer from "../components/EventDrawer";
+import PostDrawer from "../components/PostDrawer";
 import Icon from "../components/Icon";
 import Spinner from "../components/Spinner";
 import { useAuth } from "../context/AuthContext";
@@ -17,11 +19,13 @@ const loadCommunityPage = (id) =>
   Promise.all([
     api.getCommunity(id),
     api.listCommunityEvents(id),
+    api.listCommunityPosts(id),
     api.getMyCommunities(),
     api.getMyEvents(),
-  ]).then(([community, events, myCommunities, myEvents]) => ({
+  ]).then(([community, events, posts, myCommunities, myEvents]) => ({
     community,
     events,
+    posts,
     role: myCommunities.find((c) => c.id === community.id)?.role || null,
     goingIds: new Set(myEvents.map((e) => e.id)),
   }));
@@ -63,7 +67,9 @@ export default function CommunityDetailPage() {
   const [busy, setBusy] = useState(false);
   const [actionError, setActionError] = useState("");
   const [openEvent, setOpenEvent] = useState(null);
+  const [openPost, setOpenPost] = useState(null);
   const [showCreate, setShowCreate] = useState(false);
+  const [showCreatePost, setShowCreatePost] = useState(false);
 
   if (loading) return <Spinner label="Loading community…" />;
   if (error) {
@@ -82,7 +88,7 @@ export default function CommunityDetailPage() {
     );
   }
 
-  const { community, events, role, goingIds } = data;
+  const { community, events, posts, role, goingIds } = data;
   const isMember = Boolean(role);
   const isOwner = community.created_by === user.id;
   const tone = toneFor(community.id);
@@ -233,10 +239,52 @@ export default function CommunityDetailPage() {
         ))}
 
       {tab === "posts" && (
-        <EmptyState emoji="💬" title="General posts are coming soon">
-          Student hangouts like cycling trips, movie outings and study sessions
-          will live here once the posts API is ready.
-        </EmptyState>
+        <section className="section">
+          {isMember && posts.length > 0 && (
+            <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "12px" }}>
+              <button className="btn btn-primary" onClick={() => setShowCreatePost(true)}>
+                <Icon name="plus" size={16} /> New post
+              </button>
+            </div>
+          )}
+
+          {posts.length === 0 ? (
+            <EmptyState
+              emoji="💬"
+              title="No general posts yet"
+              action={
+                isMember && (
+                  <button className="btn btn-primary" onClick={() => setShowCreatePost(true)}>
+                    Create the first post
+                  </button>
+                )
+              }
+            >
+              {isMember
+                ? "Start a hangout, ask a question, or share something with the community."
+                : "Join this community to start posting and chatting with members."}
+            </EmptyState>
+          ) : (
+            <div className="event-list">
+              {posts.map((post) => (
+                <article
+                  key={post.id}
+                  className="card"
+                  onClick={() => setOpenPost(post)}
+                  style={{ padding: "18px", cursor: "pointer" }}
+                >
+                  <h3 style={{ margin: "0 0 6px" }}>{post.title}</h3>
+                  <p className="muted" style={{ margin: "0 0 10px" }}>
+                    {post.description}
+                  </p>
+                  <span style={{ fontSize: "0.85rem", fontWeight: 500 }}>
+                    View comments →
+                  </span>
+                </article>
+              ))}
+            </div>
+          )}
+        </section>
       )}
 
       {tab === "members" && isMember && <MembersTab communityId={community.id} />}
@@ -251,6 +299,15 @@ export default function CommunityDetailPage() {
         />
       )}
 
+      {openPost && (
+        <PostDrawer
+          post={openPost}
+          communityName={community.name}
+          isMember={isMember}
+          onClose={() => setOpenPost(null)}
+        />
+      )}
+
       {showCreate && (
         <CreateEventModal
           communityId={community.id}
@@ -258,6 +315,18 @@ export default function CommunityDetailPage() {
           onCreated={() => {
             setShowCreate(false);
             setTab("events");
+            reload();
+          }}
+        />
+      )}
+
+      {showCreatePost && (
+        <CreatePostModal
+          communityId={community.id}
+          onClose={() => setShowCreatePost(false)}
+          onCreated={() => {
+            setShowCreatePost(false);
+            setTab("posts");
             reload();
           }}
         />

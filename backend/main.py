@@ -3,8 +3,8 @@ load_dotenv()
 from fastapi import FastAPI, Depends, HTTPException, status, Request, Response
 from sqlalchemy.orm import Session
 from app.database import SessionLocal
-from app.models import User, Community, Membership, Event, EventRSVP, Comment
-from app.DbAPIStructures import UserCreate, UserLogin, CommunityCreate, EventCreate, UserProfileUpdate, CommentCreate
+from app.models import User, Community, Membership, Event, Post, EventRSVP, Comment
+from app.DbAPIStructures import UserCreate, UserLogin, CommunityCreate, EventCreate, UserProfileUpdate, CommentCreate, PostCreate
 from app.security import hash_password, verify_password
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError
@@ -692,6 +692,78 @@ def list_community_events(
         for event in events
     ]
 
+# ikf
+@app.post("/communities/{community_id}/posts", status_code=status.HTTP_201_CREATED)
+def create_community_post(
+    community_id: int,
+    request: PostCreate,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    community = (db.query(Community).filter(Community.id == community_id).first())
+
+    if community is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Community not found",
+        )
+
+    post = Post(
+        community_id = community.id,
+        created_by = current_user.id,
+        title = request.title,
+        description = request.description
+    )
+
+    try:
+        db.add(post)
+        db.commit()
+        db.refresh(post)
+    except Exception:
+        db.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to create event",
+        )
+
+    return {
+        "id": post.id,
+        "community_id": post.community_id,
+        "created_by": post.created_by,
+        "title": post.title,
+        "description": post.description,
+        "image_url": post.image_url,
+    }
+
+
+@app.get("/communities/{community_id}/posts")
+def list_community_posts(
+    community_id: int,
+    db: Session = Depends(get_db),
+):
+    community = (db.query(Community).filter(Community.id == community_id).first())
+
+    if community is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Community not found",
+        )
+
+    posts = (db.query(Post).filter(Post.community_id == community_id).order_by(Post.id).all())
+
+    return [
+        {
+            "id": post.id,
+            "community_id": post.community_id,
+            "created_by": post.created_by,
+            "title": post.title,
+            "description": post.description,
+            "image_url": post.image_url,
+        }
+        for post in posts
+    ]
+
+
 #Attend Events organized by community
 
 @app.post("/events/{event_id}/rsvp", status_code=status.HTTP_201_CREATED)
@@ -1048,5 +1120,65 @@ def get_event_comments(
         for comment in comments
     ]
 
+# post comments
+@app.post("/posts/{post_id}/comment", )
+def add_post_comment(
+    post_id: int,
+    req: CommentCreate,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    post = (db.query(Post).filter(Post.id == post_id).first())
+    if post is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Event not found")
+
+    comment = Comment(user_id = current_user.id, post_id = post_id, content = req.content)
+    try: 
+        db.add(comment)
+        db.commit()
+        db.refresh(comment)
+    except Exception:
+        db.rollback()
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Comment not created")
+
+    return {
+        "id": comment.id,
+        "author": {
+            "id": current_user.id,
+            "full_name": current_user.full_name
+        },
+        "post_id": comment.post_id,
+        "content": comment.content,
+        "created_at": comment.created_at
+    }
+
+@app.get("/posts/{post_id}/comments")
+def post_comments(
+    post_id: int, 
+    db: Session = Depends(get_db)
+):
+    event = db.query(Post).filter(Post.id == post_id).first()
+    if event is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No such event exist.")
+
+    comments = db.query(Comment).filter(Comment.post_id == post_id).order_by(Comment.created_at.asc()).all()
+
+    return [
+        {
+            "id": comment.id,
+            "author": {
+                "id": comment.writer.id,
+                "full_name": comment.writer.full_name
+            },
+            "post_id": comment.post_id,
+            "content": comment.content,
+            "created_at": comment.created_at
+        }
+        for comment in comments
+    ]
+
+
+    
+    
     
     
