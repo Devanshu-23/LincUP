@@ -159,6 +159,49 @@
   box-shadow: var(--shadow-sm);
 }
 
+/* ---------- Sign up steps ---------- */
+
+.auth-steps {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem 1.2rem;
+  margin: 0 0 1.1rem;
+  padding: 0;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.auth-steps li {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.auth-steps li span {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: var(--surface-2);
+}
+
+.auth-steps li.current {
+  color: var(--primary);
+}
+
+.auth-steps li.current span {
+  background: var(--primary-soft);
+}
+
+.auth-steps li.done span {
+  background: var(--tint-sage);
+  color: var(--tint-sage-ink);
+}
+
 /* ---------- Mobile ---------- */
 
 @media (max-width: 860px) {
@@ -174,5 +217,18 @@
   .auth-lead,
   .auth-stickers {
     display: none;
+  }
+
+  /* while verifying, keep just the logo so the code boxes and button fit */
+  .auth-page.is-verifying {
+    grid-template-rows: auto 1fr;
+  }
+
+  .is-verifying .auth-hero-copy {
+    display: none;
+  }
+
+  .is-verifying .auth-panel {
+    align-items: flex-start;
   }
 }

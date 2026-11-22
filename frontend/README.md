@@ -39,7 +39,7 @@ src/
 
 | Route              | Page                | Backend endpoints used |
 | ------------------ | ------------------- | ---------------------- |
-| `/login`           | Login / sign up     | `POST /login`, `POST /register` |
+| `/login`           | Login / sign up     | `POST /login`, `POST /register/sendotp`, `POST /register` |
 | `/home`            | Home feed           | `/me/communities`, `/me/events`, `/communities/:id/events` |
 | `/communities`     | Directory           | `GET/POST /communities`, join / leave |
 | `/communities/:id` | Community page      | community, events, posts, members, create event / post |
@@ -47,6 +47,13 @@ src/
 | (drawer)           | Post details        | `/posts/:id/comment(s)`, `/users/:id` |
 | `/planner`         | Personal planner    | `/me/events` (Calendar and All events tabs, clash detection) |
 | `/profile`         | Profile             | `GET/PUT /me` |
+
+## Email verification
+
+Sign up has two steps. "Send verification code" calls `POST /register/sendotp`, then
+the 4-digit code is sent along with the details as `otp` in `POST /register`.
+The backend emails through Gmail, so it needs `EMAIL` and `EMAIL_PASSWORD`
+(a Gmail app password) in `backend/.env`.
 
 ## Planner calendar
 
