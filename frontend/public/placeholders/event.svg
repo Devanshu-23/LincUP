@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360">
+  <!-- transparent background: the community tint shows through -->
+  <path d="M0 48Q160 112 320 62T640 48" fill="none" stroke="#6b6779" stroke-width="3" opacity=".5"/>
+  <g opacity=".85">
+    <path d="M60 68l40 8-24 34z" fill="#ff7a59"/>
+    <path d="M152 83l40-2-19 37z" fill="#3d3bb8"/>
+    <path d="M244 77l40-8-12 40z" fill="#e9b949"/>
+    <path d="M356 58l40-2-17 38z" fill="#5b9b6b"/>
+    <path d="M448 55l40 2-20 36z" fill="#ff7a59"/>
+    <path d="M540 57l40-3-18 37z" fill="#3d3bb8"/>
+  </g>
+  <path d="M0 290Q160 238 320 270T640 258V360H0z" fill="#3d3bb8" opacity=".16"/>
+  <path d="M0 328Q180 286 360 314T640 300V360H0z" fill="#3d3bb8" opacity=".18"/>
+  <g fill="#3d3bb8">
+    <circle cx="250" cy="206" r="22"/>
+    <path d="M214 300v-34a36 36 0 0 1 72 0v34z"/>
+  </g>
+  <g fill="#ff7a59">
+    <circle cx="320" cy="182" r="26"/>
+    <path d="M278 310v-52a42 42 0 0 1 84 0v52z"/>
+  </g>
+  <g fill="#e9b949">
+    <circle cx="390" cy="208" r="22"/>
+    <path d="M354 302v-35a36 36 0 0 1 72 0v35z"/>
+  </g>
+</svg>

@@ -1,8 +1,9 @@
 import { dateParts, formatRange, isPast, toneFor } from "../utils/format";
+import EventImage from "./EventImage";
 import Icon from "./Icon";
 import "./EventCard.css";
 
-// Compact event row with a calendar-style date block.
+// Compact event row with a calendar-style date block and a thumbnail.
 // Click opens the event details (RSVP + comments).
 export default function EventCard({ event, communityName, going, conflict, onOpen }) {
   const { day, month } = dateParts(event.start_at);
@@ -39,6 +40,8 @@ export default function EventCard({ event, communityName, going, conflict, onOpe
           </span>
         </div>
       </div>
+
+      <EventImage event={event} className="event-thumb" />
     </button>
   );
 }

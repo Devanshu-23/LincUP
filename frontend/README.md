@@ -31,7 +31,7 @@ src/
 ├── components/            # TopBar, BottomNav, cards, modals, drawers, comments
 ├── pages/                 # AuthPage, FeedPage, CommunitiesPage,
 │                          # CommunityDetailPage, PlannerPage, ProfilePage
-├── utils/                 # date formatting, clash detection, constants
+├── utils/                 # date formatting, clash detection, constants, image URLs
 └── index.css              # design tokens (light + dark) and base styles
 ```
 
@@ -48,8 +48,18 @@ src/
 | `/planner`         | Personal planner    | `/me/events` (+ clash detection) |
 | `/profile`         | Profile             | `GET/PUT /me` |
 
+## Images
+
+Events and the profile show a placeholder (`public/placeholders/`) until the backend
+has an image. All assumptions about the backend are in `utils/media.js`:
+
+- Events use the existing `image_url` field.
+- Profiles expect `image_url` on `GET /me`. Rename it there if the backend differs.
+- Values can be full `http(s)` URLs or paths served by the backend (`/uploads/x.png`).
+
 ## Waiting on backend
 
+- **Images**: `POST` events drops `image_url`, users have no image field, and there is no upload API.
 - **Posts**: no author name or `created_at` in the response; names are looked up with `/users/:id`.
   Text is capped at 500 characters in the UI because that is the size of the DB column.
 - **`GET /users/:id/feed`**: the feed is currently assembled in `loadFeed()` (`FeedPage.jsx`).

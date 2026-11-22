@@ -24,7 +24,7 @@
   align-items: flex-end;
   gap: 1rem;
   flex-wrap: wrap;
-  margin: -48px 0 1.4rem;
+  margin: -56px 0 1.4rem;
 }
 
 .profile-head .avatar {
@@ -36,7 +36,7 @@
 .profile-head > div {
   flex: 1;
   min-width: 0;
-  padding-top: 56px;
+  padding-top: 64px;
 }
 
 .profile-head h1 {

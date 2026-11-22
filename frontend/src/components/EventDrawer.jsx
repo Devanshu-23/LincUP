@@ -7,6 +7,7 @@ import { formatFullDate, formatTime, isPast } from "../utils/format";
 import Avatar from "./Avatar";
 import CommentsSection from "./CommentsSection";
 import Drawer from "./Drawer";
+import EventImage from "./EventImage";
 import Icon from "./Icon";
 
 // Side panel (bottom sheet on mobile) with full event details,
@@ -48,6 +49,8 @@ export default function EventDrawer({ event, communityName, isMember, onClose, o
       communityName={communityName}
       onClose={onClose}
     >
+      <EventImage event={event} className="drawer-cover" />
+
       <ul className="drawer-facts">
         <li>
           <Icon name="calendar" size={18} />

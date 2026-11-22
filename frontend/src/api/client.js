@@ -3,7 +3,7 @@
 // Authentication is a httpOnly cookie set by POST /login, so we only need
 // `credentials: "include"` - the token itself is never visible to JS.
 
-const BASE_URL = import.meta.env.VITE_API_URL || "/api";
+export const BASE_URL = import.meta.env.VITE_API_URL || "/api";
 
 export const SESSION_EXPIRED_EVENT = "lincup:session-expired";
 
