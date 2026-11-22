@@ -3,7 +3,7 @@
 // Authentication is a httpOnly cookie set by POST /login, so we only need
 // `credentials: "include"` - the token itself is never visible to JS.
 
-const BASE_URL = import.meta.env.VITE_API_URL || "/api";
+export const BASE_URL = import.meta.env.VITE_API_URL || "/api";
 
 export const SESSION_EXPIRED_EVENT = "lincup:session-expired";
 
@@ -62,6 +62,8 @@ async function request(path, { method = "GET", body } = {}) {
 
 export const api = {
   // ----- Auth -----
+  // Emails a 4-digit code, which then goes in the register payload as `otp`
+  sendOtp: (email) => request("/register/sendotp", { method: "POST", body: { email } }),
   register: (payload) => request("/register", { method: "POST", body: payload }),
   login: (email, password) =>
     request("/login", { method: "POST", body: { email, password } }),
@@ -95,10 +97,11 @@ export const api = {
   toggleRsvp: (eventId) => request(`/events/${eventId}/rsvp`, { method: "POST" }),
   getEventRsvps: (eventId) => request(`/events/${eventId}/rsvps`),
 
+  // ----- Posts -----
   listCommunityPosts: (id) => request(`/communities/${id}/posts`),
   createPost: (communityId, payload) =>
     request(`/communities/${communityId}/posts`, {
-      method: "POST", 
+      method: "POST",
       body: payload,
     }),
 

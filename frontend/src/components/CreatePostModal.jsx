@@ -1,91 +1,81 @@
 import { useState } from "react";
 import { api } from "../api/client";
+import Modal from "./Modal";
+
+// The API accepts 1000 characters but the posts.description column holds 500,
+// so anything longer fails with a 500 error when saved.
+const MAX_DESCRIPTION = 500;
 
 export default function CreatePostModal({ communityId, onClose, onCreated }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
-  const [busy, setBusy] = useState(false);
+  const [saving, setSaving] = useState(false);
   const [error, setError] = useState("");
+
+  const validate = () => {
+    if (title.trim().length < 2) return "Give your post a title.";
+    if (!description.trim()) return "Write something for your post.";
+    return null;
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!title.trim() || !description.trim()) return;
-
-    setBusy(true);
+    const problem = validate();
+    if (problem) return setError(problem);
+    setSaving(true);
     setError("");
     try {
-      await api.createPost(communityId, {
+      const post = await api.createPost(communityId, {
         title: title.trim(),
         description: description.trim(),
       });
-      onCreated();
+      onCreated(post);
     } catch (err) {
-      setError(err.message || "Failed to create post");
-    } finally {
-      setBusy(false);
+      setError(err.message);
+      setSaving(false);
     }
   };
 
   return (
-    <div
-      onClick={onClose}
-      style={{
-        position: "fixed",
-        inset: 0,
-        background: "rgba(0, 0, 0, 0.55)",
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        zIndex: 1000,
-        padding: "16px",
-      }}
-    >
-      <div
-        className="card"
-        onClick={(e) => e.stopPropagation()}
-        style={{ width: "100%", maxWidth: "480px", padding: "24px" }}
-      >
-        <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "16px" }}>
-          <h2 style={{ margin: 0 }}>New post</h2>
-          <button type="button" className="btn btn-outline" onClick={onClose}>
-            ✕
+    <Modal title="New post" onClose={onClose}>
+      {error && <div className="alert alert-error">{error}</div>}
+      <form onSubmit={handleSubmit}>
+        <div className="field">
+          <label htmlFor="post-title">Title</label>
+          <input
+            id="post-title"
+            className="input"
+            placeholder="e.g. Anyone up for chai at 5?"
+            maxLength={150}
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            autoFocus
+          />
+        </div>
+        <div className="field">
+          <label htmlFor="post-desc">Details</label>
+          <textarea
+            id="post-desc"
+            className="textarea"
+            rows={5}
+            placeholder="Share a plan, ask a question, find company…"
+            maxLength={MAX_DESCRIPTION}
+            value={description}
+            onChange={(e) => setDescription(e.target.value)}
+          />
+          <span className="field-hint field-count">
+            {description.length}/{MAX_DESCRIPTION}
+          </span>
+        </div>
+        <div className="modal-actions">
+          <button type="button" className="btn btn-ghost" onClick={onClose}>
+            Cancel
+          </button>
+          <button className="btn btn-primary" disabled={saving}>
+            {saving ? "Publishing…" : "Publish post"}
           </button>
         </div>
-
-        {error && <div className="alert alert-error">{error}</div>}
-
-        <form onSubmit={handleSubmit} style={{ display: "grid", gap: "14px" }}>
-          <label style={{ display: "grid", gap: "6px" }}>
-            <span>Title</span>
-            <input
-              type="text"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              maxLength={150}
-              required
-            />
-          </label>
-
-          <label style={{ display: "grid", gap: "6px" }}>
-            <span>Description</span>
-            <textarea
-              rows={4}
-              value={description}
-              onChange={(e) => setDescription(e.target.value)}
-              required
-            />
-          </label>
-
-          <div style={{ display: "flex", justifyContent: "flex-end", gap: "10px", marginTop: "6px" }}>
-            <button type="button" className="btn btn-outline" onClick={onClose} disabled={busy}>
-              Cancel
-            </button>
-            <button type="submit" className="btn btn-primary" disabled={busy}>
-              {busy ? "Posting…" : "Publish post"}
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
+      </form>
+    </Modal>
   );
 }

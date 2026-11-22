@@ -60,6 +60,7 @@
 .event-body h3 {
   margin: 0.15rem 0 0.35rem;
   font-size: 1.05rem;
+  overflow-wrap: anywhere;
 }
 
 .event-tags {
@@ -93,6 +94,39 @@
   display: inline-flex;
   align-items: center;
   gap: 0.3rem;
+}
+
+.event-thumb {
+  width: 136px;
+  min-height: 76px;
+  border-radius: 12px;
+}
+
+@media (max-width: 560px) {
+  .event-card {
+    gap: 0.7rem;
+    padding: 0.7rem;
+  }
+
+  .event-date {
+    width: 48px;
+  }
+
+  .event-day {
+    font-size: 1.4rem;
+  }
+
+  /* no room beside the text on phones: show the image as a banner */
+  .event-card {
+    flex-wrap: wrap;
+  }
+
+  .event-thumb {
+    order: -1;
+    width: 100%;
+    min-height: 0;
+    height: 96px;
+  }
 }
 
 .event-list {

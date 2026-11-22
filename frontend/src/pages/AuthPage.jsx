@@ -1,8 +1,13 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
+import { api } from "../api/client";
+import VerifyEmailStep from "../components/VerifyEmailStep";
 import { useAuth } from "../context/AuthContext";
 import { DEGREE_PROGRAMS, DEPARTMENTS, STUDY_YEARS } from "../utils/constants";
 import "./AuthPage.css";
+
+const RESEND_WAIT = 30; // seconds between two codes
+const IITB_EMAIL = /^[^\s@]+@iitb\.ac\.in$/;
 
 const EMPTY_SIGNUP = {
   full_name: "",
@@ -16,7 +21,7 @@ const EMPTY_SIGNUP = {
 // Same rules as the backend's UserCreate validator, checked early for nicer UX
 function validateSignup(form) {
   if (form.full_name.trim().length < 2) return "Please enter your full name.";
-  if (!form.email.trim().toLowerCase().endsWith("@iitb.ac.in"))
+  if (!IITB_EMAIL.test(form.email.trim().toLowerCase()))
     return "Use your IIT Bombay email (ending in @iitb.ac.in).";
   if (form.password.length < 8) return "Password must be at least 8 characters.";
   if (!/[a-zA-Z]/.test(form.password)) return "Password must contain a letter.";
@@ -28,6 +33,9 @@ function validateSignup(form) {
   if (!form.study_year) return "Please choose your year of study.";
   return null;
 }
+
+const sendErrorText = (err) =>
+  err.status >= 500 ? "We couldn't send the email. Please try again in a minute." : err.message;
 
 const STICKERS = [
   { emoji: "🚴", text: "Sunrise cycling to Powai Lake", tone: "sage" },
@@ -44,58 +52,142 @@ export default function AuthPage() {
   const [loginForm, setLoginForm] = useState({ email: "", password: "" });
   const [signupForm, setSignupForm] = useState(EMPTY_SIGNUP);
   const [error, setError] = useState("");
-  const [submitting, setSubmitting] = useState(false);
+  const [notice, setNotice] = useState("");
+  const [accountExists, setAccountExists] = useState(false);
+  const [busy, setBusy] = useState(null); // "login" | "send" | "verify"
+
+  // Sign up has two steps: "details", then "verify" with the emailed code
+  const [step, setStep] = useState("details");
+  const [codeSentTo, setCodeSentTo] = useState("");
+  const [code, setCode] = useState("");
+  const [codeInvalid, setCodeInvalid] = useState(false);
+  const [cooldown, setCooldown] = useState(0);
+  const alertRef = useRef(null);
+
+  useEffect(() => {
+    if (cooldown <= 0) return;
+    const timer = setTimeout(() => setCooldown((s) => s - 1), 1000);
+    return () => clearTimeout(timer);
+  }, [cooldown]);
+
+  // The sign up form is long, so on a phone the message can be off screen
+  useEffect(() => {
+    if (error || accountExists) alertRef.current?.scrollIntoView({ block: "nearest" });
+  }, [error, accountExists]);
 
   // Where to go after logging in (the page that sent us here, or the feed)
   const redirectTo = location.state?.from?.pathname || "/home";
 
   if (user) return <Navigate to={redirectTo} replace />;
 
+  const email = signupForm.email.trim().toLowerCase();
+  const verifying = mode === "signup" && step === "verify";
+
+  const clearMessages = () => {
+    setError("");
+    setNotice("");
+    setAccountExists(false);
+    setCodeInvalid(false);
+  };
+
   const switchMode = (next) => {
     setMode(next);
-    setError("");
+    clearMessages();
   };
 
   const handleLogin = async (e) => {
     e.preventDefault();
-    setError("");
-    setSubmitting(true);
+    clearMessages();
+    setBusy("login");
     try {
       await login(loginForm.email.trim(), loginForm.password);
       navigate(redirectTo, { replace: true });
     } catch (err) {
       setError(err.message);
     } finally {
-      setSubmitting(false);
+      setBusy(null);
     }
   };
 
-  const handleSignup = async (e) => {
+  // 409 from either endpoint: this email already has an account
+  const showAccountExists = () => {
+    setStep("details");
+    setCodeSentTo("");
+    setAccountExists(true);
+  };
+
+  const sendCode = async ({ resend = false } = {}) => {
+    clearMessages();
+    setBusy("send");
+    try {
+      await api.sendOtp(email);
+      setCodeSentTo(email);
+      setCode("");
+      setCooldown(RESEND_WAIT);
+      setStep("verify");
+      if (resend) setNotice("We sent a new code. The previous one no longer works.");
+    } catch (err) {
+      if (err.status === 409) return showAccountExists();
+      // the backend replaces the code before emailing it, so the old one may be dead
+      if (resend) setCodeSentTo("");
+      setError(sendErrorText(err));
+    } finally {
+      setBusy(null);
+    }
+  };
+
+  const handleDetails = (e) => {
     e.preventDefault();
+    if (busy) return;
+    clearMessages();
     const problem = validateSignup(signupForm);
     if (problem) return setError(problem);
-    setError("");
-    setSubmitting(true);
+    // Came back to edit something else: the code already sent is still good
+    if (codeSentTo === email) return setStep("verify");
+    sendCode();
+  };
+
+  const handleVerify = async () => {
+    clearMessages();
+    setBusy("verify");
     try {
       await register({
         ...signupForm,
         full_name: signupForm.full_name.trim(),
-        email: signupForm.email.trim().toLowerCase(),
+        email,
         study_year: Number(signupForm.study_year),
+        otp: code,
       });
       navigate("/home", { replace: true });
     } catch (err) {
-      setError(err.message);
+      if (err.status === 409) return showAccountExists();
+      if (err.status === 400) {
+        setCode("");
+        setCodeInvalid(true);
+        setError("That code didn't work. Check the newest email, or resend the code.");
+      } else {
+        setError(err.message);
+      }
     } finally {
-      setSubmitting(false);
+      setBusy(null);
     }
+  };
+
+  const backToDetails = () => {
+    clearMessages();
+    setStep("details");
+  };
+
+  const logInInstead = () => {
+    setLoginForm({ email, password: "" });
+    switchMode("login");
   };
 
   const updateSignup = (field) => (e) =>
     setSignupForm((f) => ({ ...f, [field]: e.target.value }));
 
   return (
-    <div className="auth-page">
+    <div className={`auth-page ${verifying ? "is-verifying" : ""}`}>
       <aside className="auth-hero">
         <div className="auth-brand">
           <span className="logo-mark" aria-hidden="true" />
@@ -130,6 +222,7 @@ export default function AuthPage() {
               aria-selected={mode === "login"}
               className={mode === "login" ? "active" : ""}
               onClick={() => switchMode("login")}
+              disabled={Boolean(busy)}
             >
               Log in
             </button>
@@ -138,21 +231,70 @@ export default function AuthPage() {
               aria-selected={mode === "signup"}
               className={mode === "signup" ? "active" : ""}
               onClick={() => switchMode("signup")}
+              disabled={Boolean(busy)}
             >
               Sign up
             </button>
           </div>
 
-          <h2>{mode === "login" ? "Welcome back 👋" : "Join LincUP"}</h2>
+          {mode === "signup" && (
+            <ol className="auth-steps" aria-label="Sign up progress">
+              <li className={verifying ? "done" : "current"} aria-current={verifying ? undefined : "step"}>
+                <span>{verifying ? "✓" : "1"}</span> Your details
+              </li>
+              <li className={verifying ? "current" : ""} aria-current={verifying ? "step" : undefined}>
+                <span>2</span> Verify email
+              </li>
+            </ol>
+          )}
+
+          <h2>
+            {mode === "login" ? "Welcome back 👋" : verifying ? "Check your inbox" : "Join LincUP"}
+          </h2>
           <p className="muted auth-sub">
             {mode === "login"
               ? "Log in with your IITB email to see what's happening."
-              : "Create your account with your @iitb.ac.in email."}
+              : verifying
+                ? "Enter the code we emailed you to finish creating your account."
+                : "Create your account with your @iitb.ac.in email."}
           </p>
 
-          {error && <div className="alert alert-error">{error}</div>}
+          {(error || accountExists) && (
+            <div className="alert alert-error" role="alert" ref={alertRef}>
+              {accountExists ? (
+                <>
+                  This email already has an account.{" "}
+                  <button type="button" className="link-btn" onClick={logInInstead}>
+                    Log in instead
+                  </button>
+                </>
+              ) : (
+                error
+              )}
+            </div>
+          )}
+          {notice && (
+            <div className="alert alert-success" role="status">
+              {notice}
+            </div>
+          )}
 
-          {mode === "login" ? (
+          {verifying ? (
+            <VerifyEmailStep
+              email={email}
+              code={code}
+              onCodeChange={(value) => {
+                setCode(value);
+                setCodeInvalid(false);
+              }}
+              invalid={codeInvalid}
+              busy={busy}
+              cooldown={cooldown}
+              onSubmit={handleVerify}
+              onResend={() => sendCode({ resend: true })}
+              onBack={backToDetails}
+            />
+          ) : mode === "login" ? (
             <form onSubmit={handleLogin} noValidate>
               <div className="field">
                 <label htmlFor="login-email">IITB email</label>
@@ -185,19 +327,20 @@ export default function AuthPage() {
               </div>
               <button
                 className="btn btn-primary btn-block"
-                disabled={submitting || !loginForm.email || !loginForm.password}
+                disabled={Boolean(busy) || !loginForm.email || !loginForm.password}
               >
-                {submitting ? "Logging in…" : "Log in"}
+                {busy === "login" ? "Logging in…" : "Log in"}
               </button>
             </form>
           ) : (
-            <form onSubmit={handleSignup} noValidate>
+            <form onSubmit={handleDetails} noValidate>
               <div className="field">
                 <label htmlFor="su-name">Full name</label>
                 <input
                   id="su-name"
                   className="input"
                   autoComplete="name"
+                  maxLength={100}
                   value={signupForm.full_name}
                   onChange={updateSignup("full_name")}
                 />
@@ -211,6 +354,7 @@ export default function AuthPage() {
                   autoComplete="email"
                   placeholder="rollno@iitb.ac.in"
                   value={signupForm.email}
+                  readOnly={busy === "send"}
                   onChange={updateSignup("email")}
                 />
               </div>
@@ -221,6 +365,7 @@ export default function AuthPage() {
                   className="input"
                   type="password"
                   autoComplete="new-password"
+                  maxLength={128}
                   value={signupForm.password}
                   onChange={updateSignup("password")}
                 />
@@ -274,8 +419,12 @@ export default function AuthPage() {
                   </select>
                 </div>
               </div>
-              <button className="btn btn-primary btn-block" disabled={submitting}>
-                {submitting ? "Creating account…" : "Create account"}
+              <button className="btn btn-primary btn-block" disabled={Boolean(busy)}>
+                {busy === "send"
+                  ? "Sending code…"
+                  : codeSentTo && codeSentTo === email
+                    ? "Continue to verification"
+                    : "Send verification code"}
               </button>
             </form>
           )}

@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { useAuth } from "../context/AuthContext";
 import useTheme from "../hooks/useTheme";
+import { profileImage } from "../utils/media";
 import Avatar from "./Avatar";
 import Icon from "./Icon";
 import { NAV_ITEMS } from "./navItems";
@@ -65,7 +66,12 @@ export default function TopBar() {
               aria-haspopup="menu"
               aria-expanded={menuOpen}
             >
-              <Avatar name={user?.full_name} id={user?.id} size={36} />
+              <Avatar
+                name={user?.full_name}
+                id={user?.id}
+                size={36}
+                src={profileImage(user)}
+              />
             </button>
             {menuOpen && (
               <div className="menu" role="menu">

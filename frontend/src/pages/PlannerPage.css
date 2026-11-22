@@ -1,3 +1,28 @@
+/* ---------- Tabs: calendar on the left, list on the right ---------- */
+
+.planner-tabs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 1.4rem;
+}
+
+.planner-tabs button {
+  justify-content: center;
+  padding-block: 0.6rem;
+}
+
+@media (max-width: 420px) {
+  .planner-tabs button {
+    padding-inline: 0.4rem;
+    font-size: 0.8rem;
+    white-space: nowrap;
+  }
+}
+
+.planner-filter {
+  margin-bottom: 1.2rem;
+}
+
 /* ---------- Summary tiles ---------- */
 
 .planner-summary {

@@ -27,11 +27,11 @@ Other scripts: `npm run lint`, `npm run build`, `npm run preview`.
 src/
 ├── api/client.js          # every backend endpoint in one place
 ├── context/               # AuthProvider + useAuth (session from /me)
-├── hooks/                 # useApi (loading/error state), useTheme
-├── components/            # TopBar, BottomNav, cards, modals, EventDrawer, comments
+├── hooks/                 # useApi (loading/error state), useTheme, useMediaQuery
+├── components/            # TopBar, BottomNav, cards, modals, drawers, comments
 ├── pages/                 # AuthPage, FeedPage, CommunitiesPage,
 │                          # CommunityDetailPage, PlannerPage, ProfilePage
-├── utils/                 # date formatting, clash detection, constants
+├── utils/                 # date formatting, clash detection, constants, image URLs
 └── index.css              # design tokens (light + dark) and base styles
 ```
 
@@ -39,17 +39,43 @@ src/
 
 | Route              | Page                | Backend endpoints used |
 | ------------------ | ------------------- | ---------------------- |
-| `/login`           | Login / sign up     | `POST /login`, `POST /register` |
+| `/login`           | Login / sign up     | `POST /login`, `POST /register/sendotp`, `POST /register` |
 | `/home`            | Home feed           | `/me/communities`, `/me/events`, `/communities/:id/events` |
 | `/communities`     | Directory           | `GET/POST /communities`, join / leave |
-| `/communities/:id` | Community page      | community, events, members, create event |
+| `/communities/:id` | Community page      | community, events, posts, members, create event / post |
 | (drawer)           | Event details       | `/events/:id/rsvp(s)`, `/events/:id/comment(s)` |
-| `/planner`         | Personal planner    | `/me/events` (+ clash detection) |
+| (drawer)           | Post details        | `/posts/:id/comment(s)`, `/users/:id` |
+| `/planner`         | Personal planner    | `/me/events` (Calendar and All events tabs, clash detection) |
 | `/profile`         | Profile             | `GET/PUT /me` |
+
+## Email verification
+
+Sign up has two steps. "Send verification code" calls `POST /register/sendotp`, then
+the 4-digit code is sent along with the details as `otp` in `POST /register`.
+The backend emails through Gmail, so it needs `EMAIL` and `EMAIL_PASSWORD`
+(a Gmail app password) in `backend/.env`.
+
+## Planner calendar
+
+The calendar is [FullCalendar](https://fullcalendar.io/) v6 (MIT, no API key).
+Overlapping upcoming events get a warning sign on the event and on the day.
+It is themed with our design tokens in `components/PlannerCalendar.css` and
+shows times in the browser's timezone. Run `npm install` after pulling.
+
+## Images
+
+Events and the profile show a placeholder (`public/placeholders/`) until the backend
+has an image. All assumptions about the backend are in `utils/media.js`:
+
+- Events use the existing `image_url` field.
+- Profiles expect `image_url` on `GET /me`. Rename it there if the backend differs.
+- Values can be full `http(s)` URLs or paths served by the backend (`/uploads/x.png`).
 
 ## Waiting on backend
 
-- **General posts**: tab placeholder on the community page until the posts API exists.
+- **Images**: `POST` events drops `image_url`, users have no image field, and there is no upload API.
+- **Posts**: no author name or `created_at` in the response; names are looked up with `/users/:id`.
+  Text is capped at 500 characters in the UI because that is the size of the DB column.
 - **`GET /users/:id/feed`**: the feed is currently assembled in `loadFeed()` (`FeedPage.jsx`).
 - **`GET /departments`**: departments come from `utils/constants.js` for now.
 - **Community categories / club info**: not returned by `/communities` yet.

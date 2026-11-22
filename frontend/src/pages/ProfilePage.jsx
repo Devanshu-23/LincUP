@@ -4,6 +4,7 @@ import Avatar from "../components/Avatar";
 import { useAuth } from "../context/AuthContext";
 import { DEGREE_PROGRAMS, DEPARTMENTS, STUDY_YEARS } from "../utils/constants";
 import { formatFullDate } from "../utils/format";
+import { PLACEHOLDERS, profileImage } from "../utils/media";
 import "./ProfilePage.css";
 
 // Make sure a value saved earlier still shows up in a dropdown
@@ -45,7 +46,7 @@ export default function ProfilePage() {
       });
       // eslint-disable-next-line no-unused-vars
       const { message: _ignored, ...profile } = updated;
-      setUser(profile);
+      setUser((current) => ({ ...current, ...profile })); // keep fields PUT /me omits (image)
       setEditing(false);
       setMessage({ type: "success", text: "Profile updated." });
     } catch (err) {
@@ -60,7 +61,13 @@ export default function ProfilePage() {
       <section className="profile-card">
         <div className="profile-banner" aria-hidden="true" />
         <div className="profile-head">
-          <Avatar name={user.full_name} id={user.id} size={96} />
+          <Avatar
+            name={user.full_name}
+            id={user.id}
+            size={112}
+            src={profileImage(user)}
+            placeholder={PLACEHOLDERS.profile}
+          />
           <div>
             <h1>{user.full_name}</h1>
             <p className="muted">{user.email}</p>

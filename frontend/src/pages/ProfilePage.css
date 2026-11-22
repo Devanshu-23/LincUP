@@ -21,10 +21,10 @@
 
 .profile-head {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   gap: 1rem;
   flex-wrap: wrap;
-  margin: -48px 0 1.4rem;
+  margin: -56px 0 1.4rem;
 }
 
 .profile-head .avatar {
@@ -36,7 +36,7 @@
 .profile-head > div {
   flex: 1;
   min-width: 0;
-  padding-top: 56px;
+  padding-top: 64px;
 }
 
 .profile-head h1 {
@@ -48,7 +48,14 @@
   margin: 0;
 }
 
+/* long names and emails wrap instead of running under the button */
+.profile-head h1,
+.profile-head p {
+  overflow-wrap: anywhere;
+}
+
 .profile-edit {
+  align-self: flex-end;
   margin-left: auto;
 }
 
@@ -91,7 +98,21 @@
     grid-template-columns: 1fr;
   }
 
+  /* no room for three columns: stack photo, name and email, then button */
+  .profile-head {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 0.7rem;
+  }
+
+  .profile-head > div {
+    flex: none;
+    width: 100%;
+    padding-top: 0;
+  }
+
   .profile-edit {
+    align-self: flex-start;
     margin-left: 0;
   }
 }
