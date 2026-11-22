@@ -62,6 +62,8 @@ async function request(path, { method = "GET", body } = {}) {
 
 export const api = {
   // ----- Auth -----
+  // Emails a 4-digit code, which then goes in the register payload as `otp`
+  sendOtp: (email) => request("/register/sendotp", { method: "POST", body: { email } }),
   register: (payload) => request("/register", { method: "POST", body: payload }),
   login: (email, password) =>
     request("/login", { method: "POST", body: { email, password } }),
