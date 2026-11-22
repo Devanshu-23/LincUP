@@ -7,8 +7,9 @@ import CreatePostModal from "../components/CreatePostModal";
 import EmptyState from "../components/EmptyState";
 import EventCard from "../components/EventCard";
 import EventDrawer from "../components/EventDrawer";
-import PostDrawer from "../components/PostDrawer";
 import Icon from "../components/Icon";
+import PostDrawer from "../components/PostDrawer";
+import PostsTab from "../components/PostsTab";
 import Spinner from "../components/Spinner";
 import { useAuth } from "../context/AuthContext";
 import useApi from "../hooks/useApi";
@@ -19,16 +20,34 @@ const loadCommunityPage = (id) =>
   Promise.all([
     api.getCommunity(id),
     api.listCommunityEvents(id),
-    api.listCommunityPosts(id),
     api.getMyCommunities(),
     api.getMyEvents(),
-  ]).then(([community, events, posts, myCommunities, myEvents]) => ({
+  ]).then(([community, events, myCommunities, myEvents]) => ({
     community,
     events,
-    posts,
     role: myCommunities.find((c) => c.id === community.id)?.role || null,
     goingIds: new Set(myEvents.map((e) => e.id)),
   }));
+
+// Loaded separately, so a problem with posts doesn't take down the whole page.
+// Posts only carry the author's id, so look the names up as well.
+async function loadPosts(communityId) {
+  const posts = await api.listCommunityPosts(communityId);
+  const authorIds = [...new Set(posts.map((p) => p.created_by))];
+  const names = new Map(
+    await Promise.all(
+      authorIds.map((id) =>
+        api
+          .getUser(id)
+          .then((author) => [id, author.full_name])
+          .catch(() => [id, "LincUP member"]),
+      ),
+    ),
+  );
+  return posts
+    .map((p) => ({ ...p, authorName: names.get(p.created_by) }))
+    .sort((a, b) => b.id - a.id); // newest first
+}
 
 function MembersTab({ communityId }) {
   const { data, loading, error } = useApi(
@@ -63,6 +82,7 @@ export default function CommunityDetailPage() {
     () => loadCommunityPage(communityId),
     [communityId],
   );
+  const posts = useApi(() => loadPosts(communityId), [communityId]);
   const [tab, setTab] = useState("events");
   const [busy, setBusy] = useState(false);
   const [actionError, setActionError] = useState("");
@@ -88,7 +108,7 @@ export default function CommunityDetailPage() {
     );
   }
 
-  const { community, events, posts, role, goingIds } = data;
+  const { community, events, role, goingIds } = data;
   const isMember = Boolean(role);
   const isOwner = community.created_by === user.id;
   const tone = toneFor(community.id);
@@ -190,7 +210,7 @@ export default function CommunityDetailPage() {
           className={tab === "posts" ? "active" : ""}
           onClick={() => setTab("posts")}
         >
-          General posts
+          General posts {posts.data && <span>{posts.data.length}</span>}
         </button>
         {isMember && (
           <button
@@ -239,52 +259,12 @@ export default function CommunityDetailPage() {
         ))}
 
       {tab === "posts" && (
-        <section className="section">
-          {isMember && posts.length > 0 && (
-            <div style={{ display: "flex", justifyContent: "flex-end", marginBottom: "12px" }}>
-              <button className="btn btn-primary" onClick={() => setShowCreatePost(true)}>
-                <Icon name="plus" size={16} /> New post
-              </button>
-            </div>
-          )}
-
-          {posts.length === 0 ? (
-            <EmptyState
-              emoji="💬"
-              title="No general posts yet"
-              action={
-                isMember && (
-                  <button className="btn btn-primary" onClick={() => setShowCreatePost(true)}>
-                    Create the first post
-                  </button>
-                )
-              }
-            >
-              {isMember
-                ? "Start a hangout, ask a question, or share something with the community."
-                : "Join this community to start posting and chatting with members."}
-            </EmptyState>
-          ) : (
-            <div className="event-list">
-              {posts.map((post) => (
-                <article
-                  key={post.id}
-                  className="card"
-                  onClick={() => setOpenPost(post)}
-                  style={{ padding: "18px", cursor: "pointer" }}
-                >
-                  <h3 style={{ margin: "0 0 6px" }}>{post.title}</h3>
-                  <p className="muted" style={{ margin: "0 0 10px" }}>
-                    {post.description}
-                  </p>
-                  <span style={{ fontSize: "0.85rem", fontWeight: 500 }}>
-                    View comments →
-                  </span>
-                </article>
-              ))}
-            </div>
-          )}
-        </section>
+        <PostsTab
+          posts={posts}
+          isMember={isMember}
+          onOpen={setOpenPost}
+          onCreate={() => setShowCreatePost(true)}
+        />
       )}
 
       {tab === "members" && isMember && <MembersTab communityId={community.id} />}
@@ -303,7 +283,6 @@ export default function CommunityDetailPage() {
         <PostDrawer
           post={openPost}
           communityName={community.name}
-          isMember={isMember}
           onClose={() => setOpenPost(null)}
         />
       )}
@@ -327,7 +306,7 @@ export default function CommunityDetailPage() {
           onCreated={() => {
             setShowCreatePost(false);
             setTab("posts");
-            reload();
+            posts.reload();
           }}
         />
       )}

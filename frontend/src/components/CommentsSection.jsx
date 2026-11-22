@@ -8,20 +8,29 @@ import Icon from "./Icon";
 
 const MAX_COMMENT = 200; // backend limit (CommentCreate.content)
 
-// Discussion thread under an event.
-export default function CommentsSection({ eventId }) {
+const THREADS = {
+  event: { load: api.getEventComments, add: api.addEventComment },
+  post: { load: api.getPostComments, add: api.addPostComment },
+};
+
+// Discussion thread under an event or a post.
+export default function CommentsSection({ target, id }) {
   const { user } = useAuth();
   const { data: comments, loading, error, setData } = useApi(
-    () => api.getEventComments(eventId),
-    [eventId],
+    () => THREADS[target].load(id),
+    [target, id],
   );
   const [text, setText] = useState("");
   const [posting, setPosting] = useState(false);
   const [postError, setPostError] = useState("");
   const listEnd = useRef(null);
+  const justPosted = useRef(false);
 
-  // Keep the newest comment in view
+  // Show the comment you just posted. Not on first load: that would open the
+  // drawer scrolled past the details.
   useEffect(() => {
+    if (!justPosted.current) return;
+    justPosted.current = false;
     listEnd.current?.scrollIntoView({ block: "nearest" });
   }, [comments?.length]);
 
@@ -32,7 +41,8 @@ export default function CommentsSection({ eventId }) {
     setPosting(true);
     setPostError("");
     try {
-      const comment = await api.addEventComment(eventId, content);
+      const comment = await THREADS[target].add(id, content);
+      justPosted.current = true;
       setData((list) => [...(list || []), comment]);
       setText("");
     } catch (err) {
@@ -55,7 +65,7 @@ export default function CommentsSection({ eventId }) {
         <div className="alert alert-error">{error.message}</div>
       ) : comments.length === 0 ? (
         <p className="muted comments-empty">
-          No comments yet. Ask a question or say you're coming! 👋
+          No comments yet. Start the discussion! 👋
         </p>
       ) : (
         <ul className="comment-list">

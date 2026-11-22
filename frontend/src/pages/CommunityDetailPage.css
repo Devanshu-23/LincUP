@@ -90,6 +90,29 @@
   margin-bottom: 1.4rem;
   max-width: 100%;
   overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.community-tabs button {
+  white-space: nowrap;
+}
+
+.section-title .list-heading {
+  margin: 0;
+}
+
+@media (max-width: 420px) {
+  .community-tabs button {
+    padding-inline: 0.6rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 350px) {
+  .community-tabs button {
+    padding-inline: 0.4rem;
+    font-size: 0.74rem;
+  }
 }
 
 .list-heading {

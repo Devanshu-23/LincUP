@@ -95,10 +95,11 @@ export const api = {
   toggleRsvp: (eventId) => request(`/events/${eventId}/rsvp`, { method: "POST" }),
   getEventRsvps: (eventId) => request(`/events/${eventId}/rsvps`),
 
+  // ----- Posts -----
   listCommunityPosts: (id) => request(`/communities/${id}/posts`),
   createPost: (communityId, payload) =>
     request(`/communities/${communityId}/posts`, {
-      method: "POST", 
+      method: "POST",
       body: payload,
     }),
 

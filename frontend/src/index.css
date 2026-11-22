@@ -333,6 +333,10 @@ img {
   color: var(--text-faint);
 }
 
+.field-count {
+  align-self: flex-end;
+}
+
 /* ---------- Cards, chips & misc ---------- */
 
 .card {

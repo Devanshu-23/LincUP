@@ -28,7 +28,7 @@ src/
 ├── api/client.js          # every backend endpoint in one place
 ├── context/               # AuthProvider + useAuth (session from /me)
 ├── hooks/                 # useApi (loading/error state), useTheme
-├── components/            # TopBar, BottomNav, cards, modals, EventDrawer, comments
+├── components/            # TopBar, BottomNav, cards, modals, drawers, comments
 ├── pages/                 # AuthPage, FeedPage, CommunitiesPage,
 │                          # CommunityDetailPage, PlannerPage, ProfilePage
 ├── utils/                 # date formatting, clash detection, constants
@@ -42,14 +42,16 @@ src/
 | `/login`           | Login / sign up     | `POST /login`, `POST /register` |
 | `/home`            | Home feed           | `/me/communities`, `/me/events`, `/communities/:id/events` |
 | `/communities`     | Directory           | `GET/POST /communities`, join / leave |
-| `/communities/:id` | Community page      | community, events, members, create event |
+| `/communities/:id` | Community page      | community, events, posts, members, create event / post |
 | (drawer)           | Event details       | `/events/:id/rsvp(s)`, `/events/:id/comment(s)` |
+| (drawer)           | Post details        | `/posts/:id/comment(s)`, `/users/:id` |
 | `/planner`         | Personal planner    | `/me/events` (+ clash detection) |
 | `/profile`         | Profile             | `GET/PUT /me` |
 
 ## Waiting on backend
 
-- **General posts**: tab placeholder on the community page until the posts API exists.
+- **Posts**: no author name or `created_at` in the response; names are looked up with `/users/:id`.
+  Text is capped at 500 characters in the UI because that is the size of the DB column.
 - **`GET /users/:id/feed`**: the feed is currently assembled in `loadFeed()` (`FeedPage.jsx`).
 - **`GET /departments`**: departments come from `utils/constants.js` for now.
 - **Community categories / club info**: not returned by `/communities` yet.

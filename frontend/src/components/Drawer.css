@@ -32,6 +32,7 @@
   margin: 0.2rem 2.5rem 0 0;
   font-size: 1.6rem;
   color: inherit;
+  overflow-wrap: anywhere;
 }
 
 .drawer-close {
@@ -82,8 +83,22 @@
   font-size: 0.92rem;
 }
 
+.drawer-author {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  margin-bottom: 1.1rem;
+}
+
+.drawer-author > div {
+  display: flex;
+  flex-direction: column;
+  font-size: 0.92rem;
+}
+
 .drawer-description {
   white-space: pre-wrap;
+  overflow-wrap: anywhere;
   margin-bottom: 1.3rem;
 }
 
@@ -169,6 +184,7 @@
 
 .comment-list li.comment-anchor {
   height: 0;
+  scroll-margin-bottom: 4rem;
 }
 
 .comment-bubble {
@@ -201,6 +217,7 @@
 
 .comment-form {
   position: sticky;
+  z-index: 1;
   bottom: -1.6rem;
   display: flex;
   gap: 0.5rem;
