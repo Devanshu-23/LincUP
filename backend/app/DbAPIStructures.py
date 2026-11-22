@@ -5,6 +5,18 @@ from datetime import datetime
 
 CANNOT_BE_NULL = "This field cannot be empty"
 
+class OTPCreate(BaseModel):
+    email: EmailStr
+    @field_validator("email")
+    @classmethod
+    def email_accept(cls, email):
+        email = str(email).strip().lower()
+
+        if not email.endswith("@iitb.ac.in"):
+            raise ValueError("Only IIT Bombay email addresses are allowed")
+
+        return email
+
 class UserCreate(BaseModel):
     full_name: str = Field(min_length=2, max_length=100)
     email: EmailStr
@@ -12,6 +24,7 @@ class UserCreate(BaseModel):
     department: str = Field(min_length=2, max_length=150)
     degree_program: str
     study_year: int = Field(ge=1)
+    otp: str = Field(min_length=4, max_length=4)
 
     @field_validator("full_name", "department")
     @classmethod

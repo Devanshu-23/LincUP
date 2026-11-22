@@ -4,8 +4,9 @@ from fastapi import FastAPI, Depends, HTTPException, status, Request, Response
 from sqlalchemy.orm import Session
 from app.database import SessionLocal
 from app.models import User, Community, Membership, Event, Post, EventRSVP, Comment
-from app.DbAPIStructures import UserCreate, UserLogin, CommunityCreate, EventCreate, UserProfileUpdate, CommentCreate, PostCreate
+from app.DbAPIStructures import UserCreate, UserLogin, CommunityCreate, EventCreate, UserProfileUpdate, CommentCreate, PostCreate, OTPCreate
 from app.security import hash_password, verify_password
+from app.otp_service import create_otp, send_otp, check_otp 
 from fastapi.security import OAuth2PasswordBearer
 from jose import JWTError
 from app.auth import create_access_token, verify_access_token
@@ -52,6 +53,31 @@ def home():
 # def hello():
 #     return {"message": "Hello, LincUP!"}
 
+@app.post("/register/sendotp")
+def register_otp(
+    request: OTPCreate,
+    db: Session = Depends(get_db),
+):
+    email = str(request.email).strip().lower()
+    user = db.query(User).filter(User.email == email).first()
+    if user:
+        raise HTTPException(
+            status_code = status.HTTP_409_CONFLICT,
+            detail="User already exists"
+        )
+    try:
+        otp = create_otp(email)
+        send_otp(email, otp)
+    except Exception:
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="OTP Generation Failed",
+        )
+
+    return {
+        "message": "OTP generated Successfully"
+    }
+
 
 @app.post("/register", status_code=status.HTTP_201_CREATED)
 def register(
@@ -67,6 +93,12 @@ def register(
         raise HTTPException(
             status_code=status.HTTP_409_CONFLICT,
             detail="This email is already registered",
+        )
+
+    if not check_otp(email, request.otp):
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="Invalid OTP",
         )
 
     # Create and save the user
