@@ -145,6 +145,19 @@ export default function CommunityDetailPage() {
     });
   };
 
+  // Heading of an event list. The first one also has the "New event" button,
+  // in the same place as "New post" on the posts tab.
+  const renderHeading = (title, isFirst) => (
+    <div className="section-title">
+      <h2 className="list-heading">{title}</h2>
+      {isFirst && isOwner && (
+        <button className="btn btn-primary btn-sm" onClick={() => setShowCreate(true)}>
+          <Icon name="plus" size={16} /> New event
+        </button>
+      )}
+    </div>
+  );
+
   const renderEvents = (list) => (
     <div className="event-list">
       {list.map((ev) => (
@@ -176,12 +189,8 @@ export default function CommunityDetailPage() {
           <h1>{community.name}</h1>
           <p className="muted">{community.description || "No description yet."}</p>
         </div>
-        <div className="community-hero-actions">
-          {isOwner ? (
-            <button className="btn btn-accent" onClick={() => setShowCreate(true)}>
-              <Icon name="plus" size={18} /> New event
-            </button>
-          ) : (
+        {!isOwner && (
+          <div className="community-hero-actions">
             <button
               className={`btn ${isMember ? "btn-outline" : "btn-primary"}`}
               onClick={toggleMembership}
@@ -189,8 +198,8 @@ export default function CommunityDetailPage() {
             >
               {isMember ? "Leave community" : "Join community"}
             </button>
-          )}
-        </div>
+          </div>
+        )}
       </header>
 
       {actionError && <div className="alert alert-error">{actionError}</div>}
@@ -245,13 +254,13 @@ export default function CommunityDetailPage() {
           <>
             {upcoming.length > 0 && (
               <section className="section">
-                <h2 className="list-heading">Upcoming</h2>
+                {renderHeading("Upcoming", true)}
                 {renderEvents(upcoming)}
               </section>
             )}
             {past.length > 0 && (
               <section className="section">
-                <h2 className="list-heading">Past</h2>
+                {renderHeading("Past", upcoming.length === 0)}
                 {renderEvents(past)}
               </section>
             )}
