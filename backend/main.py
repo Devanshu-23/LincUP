@@ -558,9 +558,9 @@ def leave_community(
         db.query(EventRSVP).filter(
             EventRSVP.user_id == current_user.id,
             EventRSVP.event_id.in_(community_event_ids),
-            EventRSVP.status == "going",
-        ).update(
-            {EventRSVP.status: "cancelled"},
+            # EventRSVP.status == "going",
+        ).delete(
+            # {EventRSVP.status: "cancelled"},
             synchronize_session=False,
         )
 
@@ -826,7 +826,7 @@ def attend_event(
             rsvp = EventRSVP(
                 event_id=event_id,
                 user_id=current_user.id,
-                status="going",
+                # status="going",
             )
             db.add(rsvp)
             db.commit()
@@ -835,7 +835,7 @@ def attend_event(
                 "message": "Successfully RSVPd for the event",
                 "event_id": event_id,
                 "user_id": current_user.id,
-                "status": rsvp.status,
+                "status": "going",
             }
 
     except Exception:
@@ -1000,6 +1000,7 @@ def get_community_members(
         }
         for membership, user in members
     ]
+
 #Endpoint for finding all the rsvps of an event
 
 @app.get("/events/{event_id}/rsvps")
