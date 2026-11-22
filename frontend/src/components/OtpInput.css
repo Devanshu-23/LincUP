@@ -1,0 +1,50 @@
+.otp {
+  position: relative;
+  display: flex;
+  gap: 0.7rem;
+  max-width: 304px;
+}
+
+/* invisible, but it is the field that gets the taps, typing and paste */
+.otp-input {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  border: 0;
+  opacity: 0;
+  font-size: 16px; /* smaller makes iOS zoom in on focus */
+  cursor: text;
+}
+
+.otp-box {
+  flex: 1;
+  min-width: 0;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--surface);
+  color: var(--text);
+  font: 800 1.8rem var(--font-display);
+  transition:
+    border-color 0.15s,
+    box-shadow 0.15s;
+}
+
+.otp-box.is-filled {
+  border-color: var(--primary);
+}
+
+.otp.is-invalid .otp-box {
+  border-color: var(--danger);
+}
+
+.otp .otp-box.is-active {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px var(--primary-soft);
+}
