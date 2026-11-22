@@ -27,7 +27,7 @@ Other scripts: `npm run lint`, `npm run build`, `npm run preview`.
 src/
 ├── api/client.js          # every backend endpoint in one place
 ├── context/               # AuthProvider + useAuth (session from /me)
-├── hooks/                 # useApi (loading/error state), useTheme
+├── hooks/                 # useApi (loading/error state), useTheme, useMediaQuery
 ├── components/            # TopBar, BottomNav, cards, modals, drawers, comments
 ├── pages/                 # AuthPage, FeedPage, CommunitiesPage,
 │                          # CommunityDetailPage, PlannerPage, ProfilePage
@@ -45,8 +45,14 @@ src/
 | `/communities/:id` | Community page      | community, events, posts, members, create event / post |
 | (drawer)           | Event details       | `/events/:id/rsvp(s)`, `/events/:id/comment(s)` |
 | (drawer)           | Post details        | `/posts/:id/comment(s)`, `/users/:id` |
-| `/planner`         | Personal planner    | `/me/events` (+ clash detection) |
+| `/planner`         | Personal planner    | `/me/events` (Calendar and All events tabs, clash detection) |
 | `/profile`         | Profile             | `GET/PUT /me` |
+
+## Planner calendar
+
+The calendar is [FullCalendar](https://fullcalendar.io/) v6 (MIT, no API key).
+It is themed with our design tokens in `components/PlannerCalendar.css` and
+shows times in the browser's timezone. Run `npm install` after pulling.
 
 ## Images
 

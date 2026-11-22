@@ -39,3 +39,13 @@ export function dayLabel(date) {
   if (date.toDateString() === tomorrow.toDateString()) return "Tomorrow";
   return null;
 }
+
+// Events that overlap the given day, so a trek from 10pm to 8am is on both days.
+// One that ends exactly at midnight doesn't count for the day that starts then.
+export function eventsOnDay(events, date) {
+  const dayStart = new Date(date.getFullYear(), date.getMonth(), date.getDate());
+  const dayEnd = new Date(date.getFullYear(), date.getMonth(), date.getDate() + 1);
+  return events
+    .filter((e) => toDate(e.start_at) < dayEnd && toDate(e.end_at) > dayStart)
+    .sort(byStart);
+}

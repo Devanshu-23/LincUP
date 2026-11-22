@@ -1,0 +1,249 @@
+/* ---------- Layout ---------- */
+
+.planner-calendar {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 300px;
+  gap: 1.2rem;
+  align-items: start;
+}
+
+.calendar-panel {
+  min-width: 0;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+/* ---------- Day details ---------- */
+
+.day-agenda {
+  min-width: 0;
+  padding: 1rem;
+  border-radius: var(--radius-lg);
+  background: var(--surface-2);
+}
+
+.day-agenda-head h2 {
+  margin-bottom: 0.8rem;
+}
+
+.day-agenda-head .eyebrow {
+  margin-bottom: 0.2rem;
+}
+
+.day-agenda-empty p {
+  font-size: 0.9rem;
+}
+
+/* narrow column: the image goes on top, like on phones */
+.day-agenda .event-card {
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  padding: 0.7rem;
+}
+
+.day-agenda .event-date {
+  width: 48px;
+}
+
+.day-agenda .event-day {
+  font-size: 1.4rem;
+}
+
+.day-agenda .event-thumb {
+  order: -1;
+  width: 100%;
+  min-height: 0;
+  height: 84px;
+}
+
+/* ---------- FullCalendar theme ---------- */
+
+.calendar-panel .fc {
+  --fc-border-color: var(--border);
+  --fc-page-bg-color: var(--surface);
+  --fc-neutral-bg-color: var(--surface-2);
+  --fc-today-bg-color: transparent;
+  --fc-now-indicator-color: var(--accent);
+  --fc-button-bg-color: transparent;
+  --fc-button-border-color: var(--border);
+  --fc-button-text-color: var(--text);
+  --fc-button-hover-bg-color: var(--surface-2);
+  --fc-button-hover-border-color: var(--border);
+  --fc-button-active-bg-color: var(--primary-soft);
+  --fc-button-active-border-color: var(--primary-soft);
+  --fc-more-link-text-color: var(--primary);
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+}
+
+.calendar-panel .fc .fc-toolbar {
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.calendar-panel .fc .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 0.9rem;
+}
+
+.calendar-panel .fc .fc-toolbar-title {
+  margin: 0;
+  font-size: 1.3rem;
+}
+
+.calendar-panel .fc .fc-button {
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font: 600 0.82rem var(--font-body);
+  box-shadow: none;
+}
+
+/* grouped buttons (prev/next, Month/Week) stay joined */
+.calendar-panel .fc .fc-button-group > .fc-button:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.calendar-panel .fc .fc-button-group > .fc-button:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.calendar-panel .fc .fc-button-primary:not(:disabled).fc-button-active {
+  color: var(--primary);
+}
+
+.calendar-panel .fc .fc-button:focus-visible {
+  outline: 3px solid var(--primary);
+  outline-offset: 2px;
+}
+
+.calendar-panel .fc a {
+  color: inherit;
+}
+
+.calendar-panel .fc .fc-col-header-cell-cushion {
+  padding: 0.5rem 0.2rem;
+  font-weight: 700;
+  color: var(--text-muted);
+}
+
+.calendar-panel .fc .fc-daygrid-day {
+  cursor: pointer;
+}
+
+.calendar-panel .fc .fc-daygrid-day-frame {
+  min-height: 96px;
+}
+
+.calendar-panel .fc .fc-daygrid-day-number {
+  min-width: 26px;
+  margin: 3px;
+  padding: 2px 4px;
+  border-radius: var(--radius-pill);
+  text-align: center;
+  font-weight: 600;
+}
+
+.calendar-panel .fc .fc-day-today .fc-daygrid-day-number {
+  background: var(--accent);
+  color: #fff;
+}
+
+/* td only: the "+more" popover gets the day's classes too */
+.calendar-panel .fc td.fc-day.is-selected {
+  background: var(--primary-soft);
+}
+
+/* events use the same tint as their community */
+.calendar-panel .fc .fc-event {
+  --fc-event-bg-color: var(--cal-bg);
+  --fc-event-border-color: var(--cal-bg);
+  --fc-event-text-color: var(--cal-ink);
+  color: var(--cal-ink);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.74rem;
+}
+
+.calendar-panel .cal-tone-violet { --cal-bg: var(--tint-violet); --cal-ink: var(--tint-violet-ink); }
+.calendar-panel .cal-tone-sage { --cal-bg: var(--tint-sage); --cal-ink: var(--tint-sage-ink); }
+.calendar-panel .cal-tone-sky { --cal-bg: var(--tint-sky); --cal-ink: var(--tint-sky-ink); }
+.calendar-panel .cal-tone-sun { --cal-bg: var(--tint-sun); --cal-ink: var(--tint-sun-ink); }
+.calendar-panel .cal-tone-rose { --cal-bg: var(--tint-rose); --cal-ink: var(--tint-rose-ink); }
+
+.calendar-panel .fc .fc-event.is-clash {
+  border-left: 3px solid var(--accent);
+}
+
+.calendar-panel .fc .fc-event.is-past {
+  opacity: 0.6;
+}
+
+.calendar-panel .fc .fc-event-time {
+  font-weight: 700;
+}
+
+.calendar-panel .fc .fc-more-link {
+  font-weight: 700;
+}
+
+/* FullCalendar uses 9999, which would cover the top bar and the event drawer */
+.calendar-panel .fc .fc-popover {
+  z-index: 15;
+  border-radius: var(--radius-sm);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+/* ---------- Smaller screens ---------- */
+
+@media (max-width: 900px) {
+  .planner-calendar {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .calendar-panel {
+    padding: 0.6rem;
+  }
+
+  .calendar-panel .fc .fc-toolbar-title {
+    font-size: 1.05rem;
+  }
+
+  .calendar-panel .fc .fc-button {
+    padding: 0.3rem 0.55rem;
+    font-size: 0.76rem;
+  }
+
+  .calendar-panel .fc .fc-daygrid-day-frame {
+    min-height: 52px;
+  }
+
+  /* cells are too small for titles: show bars, and a tap picks the day */
+  .calendar-panel .fc .fc-daygrid-event-harness,
+  .calendar-panel .fc .fc-daygrid-day-bottom {
+    pointer-events: none;
+  }
+
+  .calendar-panel .fc .fc-daygrid-event {
+    height: 6px;
+    min-height: 0;
+    overflow: hidden;
+    border-radius: 3px;
+    background: var(--cal-ink);
+    border-color: var(--cal-ink);
+  }
+
+  .calendar-panel .fc .fc-daygrid-event .fc-event-main {
+    visibility: hidden;
+  }
+
+  .calendar-panel .fc .fc-more-link {
+    font-size: 0.64rem;
+  }
+}
