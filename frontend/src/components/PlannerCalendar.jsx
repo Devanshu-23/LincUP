@@ -5,6 +5,7 @@ import timeGridPlugin from "@fullcalendar/timegrid";
 import { useMemo, useRef, useState } from "react";
 import useMediaQuery from "../hooks/useMediaQuery";
 import { isPast, toDate, toneFor } from "../utils/format";
+import { byStart, hasClashOn } from "../utils/schedule";
 import DayAgenda from "./DayAgenda";
 import "./PlannerCalendar.css";
 
@@ -48,6 +49,15 @@ export default function PlannerCalendar({
     [events, conflicts],
   );
 
+  const clashing = useMemo(
+    () => events.filter((event) => conflicts.has(event.id)).sort(byStart),
+    [events, conflicts],
+  );
+  // The first day with an overlap, which may be in a month that isn't on screen.
+  const firstClashDay = clashing
+    .map((event) => toDate(event.start_at))
+    .find((date) => hasClashOn(clashing, date));
+
   // After prev/next, move the selection if that day is no longer on screen.
   const handleDatesSet = ({ view }) => {
     setIsWeek(view.type === "timeGridWeek");
@@ -66,6 +76,17 @@ export default function PlannerCalendar({
   return (
     <div className="planner-calendar">
       <div className="calendar-panel">
+        {firstClashDay && (
+          <div className="clash-banner" role="status">
+            <span className="clash-sign" aria-hidden="true" />
+            <span>
+              <strong>{clashing.length} events clash.</strong> They overlap in time.
+            </span>
+            <button className="btn btn-danger btn-sm" onClick={() => jumpToDay(firstClashDay)}>
+              Show
+            </button>
+          </div>
+        )}
         <FullCalendar
           // remount when crossing the breakpoint, so a phone never shows the week view
           key={narrow ? "narrow" : "wide"}
@@ -84,6 +105,7 @@ export default function PlannerCalendar({
           scrollTime="08:00:00"
           nowIndicator
           dayMaxEvents={narrow ? 2 : 3}
+          moreLinkText={narrow ? "" : "more"} // just "+3" on phones
           eventDisplay="block"
           eventInteractive
           eventTimeFormat={TIME_FORMAT}
@@ -101,7 +123,14 @@ export default function PlannerCalendar({
             onOpen(event.extendedProps.event);
           }}
           dayCellClassNames={({ date }) =>
-            date.toDateString() === selectedDay.toDateString() ? ["is-selected"] : []
+            [
+              date.toDateString() === selectedDay.toDateString() && "is-selected",
+              hasClashOn(clashing, date) && "has-clash",
+            ].filter(Boolean)
+          }
+          // only the week view has a date in each column header
+          dayHeaderClassNames={({ date, view }) =>
+            view.type === "timeGridWeek" && hasClashOn(clashing, date) ? ["has-clash"] : []
           }
           datesSet={handleDatesSet}
         />

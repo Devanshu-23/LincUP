@@ -31,6 +31,9 @@ export function groupByDay(events) {
   return [...groups.values()];
 }
 
+// true if two of the events overlap at some point during that day
+export const hasClashOn = (events, date) => findConflicts(eventsOnDay(events, date)).size > 0;
+
 export function dayLabel(date) {
   const today = new Date();
   const tomorrow = new Date();

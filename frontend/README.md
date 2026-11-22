@@ -51,6 +51,7 @@ src/
 ## Planner calendar
 
 The calendar is [FullCalendar](https://fullcalendar.io/) v6 (MIT, no API key).
+Overlapping upcoming events get a warning sign on the event and on the day.
 It is themed with our design tokens in `components/PlannerCalendar.css` and
 shows times in the browser's timezone. Run `npm install` after pulling.
 

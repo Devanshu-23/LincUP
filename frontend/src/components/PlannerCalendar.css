@@ -174,8 +174,88 @@
 .calendar-panel .cal-tone-sun { --cal-bg: var(--tint-sun); --cal-ink: var(--tint-sun-ink); }
 .calendar-panel .cal-tone-rose { --cal-bg: var(--tint-rose); --cal-ink: var(--tint-rose-ink); }
 
+/* ---------- Clashes: warning sign on the event, the day and the banner ---------- */
+
+.planner-calendar {
+  --clash-sign: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 3 22 20H2z' fill='%23d1423f' stroke='%23d1423f' stroke-width='3' stroke-linejoin='round'/%3E%3Cpath d='M12 9v5M12 17.5v.01' stroke='%23fff' stroke-width='2.6' stroke-linecap='round'/%3E%3C/svg%3E");
+}
+
+.clash-banner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem 0.6rem;
+  padding: 0.55rem 0.7rem;
+  margin-bottom: 0.9rem;
+  border-radius: var(--radius-sm);
+  background: var(--danger-soft);
+  font-size: 0.86rem;
+}
+
+.clash-banner > span:not(.clash-sign) {
+  flex: 1;
+  min-width: 0;
+}
+
+.clash-banner .btn {
+  margin-left: auto;
+}
+
+.clash-sign {
+  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  background: var(--clash-sign) center / contain no-repeat;
+}
+
 .calendar-panel .fc .fc-event.is-clash {
-  border-left: 3px solid var(--accent);
+  border: 1.5px solid var(--danger);
+}
+
+.calendar-panel .fc .fc-event.is-clash .fc-event-main {
+  position: relative;
+  padding-left: 17px;
+}
+
+.calendar-panel .fc .fc-event.is-clash .fc-event-main::before {
+  content: "";
+  content: "" / "Clash: "; /* read out by screen readers */
+  position: absolute;
+  left: 1px;
+  top: 2px;
+  width: 14px;
+  height: 14px;
+  background: var(--clash-sign) center / contain no-repeat;
+}
+
+/* sign in the day's top-left corner (the row is reversed, so ::after is leftmost) */
+.calendar-panel .fc td.has-clash .fc-daygrid-day-top::after {
+  content: "";
+  content: "" / "Has a clash";
+  flex: 0 0 16px;
+  height: 16px;
+  margin: 5px auto 0 4px;
+  background: var(--clash-sign) center / contain no-repeat;
+}
+
+/* days of the next/previous month are faded, but their warning shouldn't be */
+.calendar-panel .fc .fc-day-other.has-clash .fc-daygrid-day-top {
+  opacity: 1;
+}
+
+.calendar-panel .fc .fc-day-other.has-clash .fc-daygrid-day-number {
+  opacity: 0.3;
+}
+
+.calendar-panel .fc th.has-clash .fc-col-header-cell-cushion::before {
+  content: "";
+  content: "" / "Has a clash, ";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-right: 4px;
+  vertical-align: -2px;
+  background: var(--clash-sign) center / contain no-repeat;
 }
 
 .calendar-panel .fc .fc-event.is-past {
@@ -245,5 +325,20 @@
 
   .calendar-panel .fc .fc-more-link {
     font-size: 0.64rem;
+  }
+}
+
+@media (max-width: 420px) {
+  /* room for the warning sign beside two-digit dates */
+  .calendar-panel .fc .fc-daygrid-day-number {
+    min-width: 20px;
+    margin: 2px 1px;
+    padding: 2px 1px;
+  }
+
+  .calendar-panel .fc td.has-clash .fc-daygrid-day-top::after {
+    flex-basis: 13px;
+    height: 13px;
+    margin: 4px auto 0 2px;
   }
 }
