@@ -19,6 +19,28 @@ export function findConflicts(events) {
   return clashing;
 }
 
+const overlap = (a, b) =>
+  toDate(a.start_at) < toDate(b.end_at) && toDate(b.start_at) < toDate(a.end_at);
+
+// event id -> the other events it overlaps with
+export function clashPartners(events) {
+  const partners = new Map();
+  const sorted = [...events].sort(byStart);
+  for (let i = 0; i < sorted.length; i++) {
+    // sorted by start, so once one starts after this ends, the rest do too
+    for (let j = i + 1; j < sorted.length && toDate(sorted[j].start_at) < toDate(sorted[i].end_at); j++) {
+      const [a, b] = [sorted[i], sorted[j]];
+      partners.set(a.id, [...(partners.get(a.id) || []), b]);
+      partners.set(b.id, [...(partners.get(b.id) || []), a]);
+    }
+  }
+  return partners;
+}
+
+// The events in `plans` that `event` would overlap with
+export const overlapsWith = (event, plans) =>
+  plans.filter((p) => p.id !== event.id && overlap(event, p));
+
 // [{ key: "Mon Nov 17 2026", date: Date, events: [...] }, ...] in order
 export function groupByDay(events) {
   const groups = new Map();

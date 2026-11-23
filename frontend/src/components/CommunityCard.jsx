@@ -3,7 +3,7 @@ import { toneFor } from "../utils/format";
 import "./CommunityCard.css";
 
 // Card used on the Communities directory and the Feed.
-// `membership` is the user's role ("owner"/"member") or null if not joined.
+// `membership` is the user's role ("owner"/"convener"/"member") or null if not joined.
 export default function CommunityCard({ community, membership, onJoin, onLeave, busy }) {
   const tone = toneFor(community.id);
   const isOwner = membership === "owner";
@@ -25,7 +25,7 @@ export default function CommunityCard({ community, membership, onJoin, onLeave, 
       <div className="community-card-foot">
         {membership ? (
           <span className="chip chip-primary">
-            {isOwner ? "★ Owner" : "✓ Joined"}
+            {isOwner ? "★ Owner" : membership === "convener" ? "✓ Convener" : "✓ Joined"}
           </span>
         ) : (
           <span className="chip">Open to all</span>

@@ -1,8 +1,15 @@
 import { BASE_URL } from "../api/client";
 
 // Everything the app assumes about images from the backend is in this file.
-// - events already return `image_url` (null until uploads are built)
+// - events take and return `image_url` (a link, until uploads are built)
 // - users have no image field yet; assuming the same name, change it here if not
+
+export const MAX_IMAGE_LINK = 250; // backend EventCreate.image_url
+
+// Links people type in must be full http(s) addresses
+export function isImageLink(value) {
+  return /^https?:\/\/\S+$/i.test(value) && URL.canParse(value);
+}
 
 export const PLACEHOLDERS = {
   event: `${import.meta.env.BASE_URL}placeholders/event.svg`,

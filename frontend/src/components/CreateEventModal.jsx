@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { api } from "../api/client";
+import { isImageLink } from "../utils/media";
+import ImageLinkField from "./ImageLinkField";
 import Modal from "./Modal";
 
-const EMPTY = { title: "", description: "", start: "", end: "", location: "" };
+const EMPTY = { title: "", description: "", start: "", end: "", location: "", image: "" };
 
 // <input type="datetime-local"> gives local time without a zone; the backend
 // requires a timezone, so convert to a full ISO string (UTC).
@@ -22,6 +24,8 @@ export default function CreateEventModal({ communityId, onClose, onCreated }) {
     if (new Date(form.end) <= new Date(form.start))
       return "End time must be after the start time.";
     if (!form.location.trim()) return "Where is it happening?";
+    if (form.image.trim() && !isImageLink(form.image.trim()))
+      return "The image link must start with http:// or https://";
     return null;
   };
 
@@ -38,6 +42,7 @@ export default function CreateEventModal({ communityId, onClose, onCreated }) {
         start_at: toIso(form.start),
         end_at: toIso(form.end),
         location: form.location.trim(),
+        image_url: form.image.trim() || null,
       });
       onCreated(event);
     } catch (err) {
@@ -49,7 +54,7 @@ export default function CreateEventModal({ communityId, onClose, onCreated }) {
   return (
     <Modal title="New event" onClose={onClose} wide>
       {error && <div className="alert alert-error">{error}</div>}
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} noValidate>
         <div className="field">
           <label htmlFor="ev-title">Title</label>
           <input
@@ -107,6 +112,11 @@ export default function CreateEventModal({ communityId, onClose, onCreated }) {
             onChange={update("description")}
           />
         </div>
+        <ImageLinkField
+          id="ev-image"
+          value={form.image}
+          onChange={(image) => setForm((f) => ({ ...f, image }))}
+        />
         <div className="modal-actions">
           <button type="button" className="btn btn-ghost" onClick={onClose}>
             Cancel

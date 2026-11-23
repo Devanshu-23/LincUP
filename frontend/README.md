@@ -42,11 +42,22 @@ src/
 | `/login`           | Login / sign up     | `POST /login`, `POST /register/sendotp`, `POST /register` |
 | `/home`            | Home feed           | `/me/communities`, `/me/events`, `/communities/:id/events` |
 | `/communities`     | Directory           | `GET/POST /communities`, join / leave |
-| `/communities/:id` | Community page      | community, events, posts, members, create event / post |
-| (drawer)           | Event details       | `/events/:id/rsvp(s)`, `/events/:id/comment(s)` |
+| `/communities/:id` | Community page      | community, events, posts, members, create event / post, nominate convener |
+| (drawer)           | Event details       | `/events/:id/rsvp(s)`, `/events/:id/comment(s)`, `DELETE /events/:id` |
 | (drawer)           | Post details        | `/posts/:id/comment(s)`, `/users/:id` |
 | `/planner`         | Personal planner    | `/me/events` (Calendar and All events tabs, clash detection) |
 | `/profile`         | Profile             | `GET/PUT /me` |
+
+## Roles
+
+| Role     | Create / delete events | Nominate conveners | Leave |
+| -------- | ---------------------- | ------------------ | ----- |
+| owner    | yes                    | yes                | no    |
+| convener | yes                    | no                 | yes   |
+| member   | no                     | no                 | yes   |
+
+The rule for events is `canManageEvents()` in `utils/roles.js`, matching
+`verify_community_privilege()` on the backend.
 
 ## Email verification
 
@@ -67,13 +78,14 @@ shows times in the browser's timezone. Run `npm install` after pulling.
 Events and the profile show a placeholder (`public/placeholders/`) until the backend
 has an image. All assumptions about the backend are in `utils/media.js`:
 
-- Events use the existing `image_url` field.
+- Events use the `image_url` field, filled from the "Image link" box when creating an event.
 - Profiles expect `image_url` on `GET /me`. Rename it there if the backend differs.
 - Values can be full `http(s)` URLs or paths served by the backend (`/uploads/x.png`).
 
 ## Waiting on backend
 
-- **Images**: `POST` events drops `image_url`, users have no image field, and there is no upload API.
+- **Images**: posts drop `image_url`, users have no image field, and there is no upload API.
+- **Conveners**: there is no API to remove the convener role.
 - **Posts**: no author name or `created_at` in the response; names are looked up with `/users/:id`.
   Text is capped at 500 characters in the UI because that is the size of the DB column.
 - **`GET /users/:id/feed`**: the feed is currently assembled in `loadFeed()` (`FeedPage.jsx`).

@@ -4,7 +4,7 @@ import { byStart, dayLabel, eventsOnDay } from "../utils/schedule";
 import EventCard from "./EventCard";
 
 // Details of the events on the day picked in the calendar.
-export default function DayAgenda({ day, events, communityNames, conflicts, onOpen, onJump }) {
+export default function DayAgenda({ day, events, communityNames, partners, onOpen, onJump }) {
   const onDay = eventsOnDay(events, day);
   const next = events.filter((e) => !isPast(e)).sort(byStart)[0];
   const label = dayLabel(day);
@@ -23,7 +23,7 @@ export default function DayAgenda({ day, events, communityNames, conflicts, onOp
               key={event.id}
               event={event}
               communityName={communityNames[event.community_id]}
-              conflict={conflicts.has(event.id)}
+              clashesWith={partners.get(event.id)}
               onOpen={onOpen}
             />
           ))}

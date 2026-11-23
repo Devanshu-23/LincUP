@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import { api } from "../api/client";
 import Avatar from "../components/Avatar";
+import ConfirmDialog from "../components/ConfirmDialog";
 import CreateEventModal from "../components/CreateEventModal";
 import CreatePostModal from "../components/CreatePostModal";
 import EmptyState from "../components/EmptyState";
@@ -14,6 +15,7 @@ import Spinner from "../components/Spinner";
 import { useAuth } from "../context/AuthContext";
 import useApi from "../hooks/useApi";
 import { isPast, toneFor } from "../utils/format";
+import { canManageEvents, leaveWarning } from "../utils/roles";
 import "./CommunityDetailPage.css";
 
 const loadCommunityPage = (id) =>
@@ -49,28 +51,71 @@ async function loadPosts(communityId) {
     .sort((a, b) => b.id - a.id); // newest first
 }
 
-function MembersTab({ communityId }) {
-  const { data, loading, error } = useApi(
+function MembersTab({ communityId, isOwner }) {
+  const { data, loading, error, setData } = useApi(
     () => api.getCommunityMembers(communityId),
     [communityId],
   );
+  const [nominee, setNominee] = useState(null);
   if (loading) return <Spinner label="Loading members…" />;
   if (error) return <div className="alert alert-error">{error.message}</div>;
+  const nominate = async () => {
+    try {
+      await api.nominateConvener(communityId, nominee.user_id);
+    } catch (err) {
+      if (err.status !== 409) throw err; // 409: already a convener, same end result
+    }
+    setData((list) =>
+      list.map((m) => (m.user_id === nominee.user_id ? { ...m, role: "convener" } : m)),
+    );
+    setNominee(null);
+  };
+
   return (
-    <ul className="member-list">
-      {data.map((m) => (
-        <li key={m.user_id} className="card">
-          <Avatar name={m.full_name} id={m.user_id} size={42} />
-          <div>
-            <strong>{m.full_name}</strong>
-            <span className="muted">
-              {m.degree_program} · Year {m.study_year} · {m.department}
-            </span>
-          </div>
-          {m.role !== "member" && <span className="chip chip-accent">{m.role}</span>}
-        </li>
-      ))}
-    </ul>
+    <>
+      {isOwner && (
+        <p className="members-hint muted">
+          {data.length > 1
+            ? "Conveners help you run the community: they can create and delete its events."
+            : "When students join, you can make them conveners to help you run events."}
+        </p>
+      )}
+      <ul className="member-list">
+        {data.map((m) => (
+          <li key={m.user_id} className="card">
+            <Avatar name={m.full_name} id={m.user_id} size={42} />
+            <div>
+              <strong>{m.full_name}</strong>
+              <span className="muted">
+                {m.degree_program} · Year {m.study_year} · {m.department}
+              </span>
+              {isOwner && m.role === "member" && (
+                <button
+                  className="btn btn-outline btn-sm member-promote"
+                  onClick={() => setNominee(m)}
+                  aria-label={`Make ${m.full_name} a convener`}
+                >
+                  Make convener
+                </button>
+              )}
+            </div>
+            {m.role !== "member" && <span className="chip chip-accent">{m.role}</span>}
+          </li>
+        ))}
+      </ul>
+      {nominee && (
+        <ConfirmDialog
+          title="Make convener?"
+          confirmLabel="Make convener"
+          busyLabel="Saving…"
+          onConfirm={nominate}
+          onClose={() => setNominee(null)}
+        >
+          <strong>{nominee.full_name}</strong> will be able to create events and delete any event
+          in this community. Only choose someone you trust.
+        </ConfirmDialog>
+      )}
+    </>
   );
 }
 
@@ -111,6 +156,7 @@ export default function CommunityDetailPage() {
   const { community, events, role, goingIds } = data;
   const isMember = Boolean(role);
   const isOwner = community.created_by === user.id;
+  const canManage = canManageEvents(role);
   const tone = toneFor(community.id);
   const upcoming = events.filter((e) => !isPast(e));
   const past = events.filter(isPast).reverse();
@@ -118,7 +164,7 @@ export default function CommunityDetailPage() {
   const toggleMembership = async () => {
     if (
       isMember &&
-      !window.confirm(`Leave ${community.name}? Your RSVPs for its events will be cancelled.`)
+      !window.confirm(leaveWarning(community.name, role))
     ) {
       return;
     }
@@ -145,12 +191,16 @@ export default function CommunityDetailPage() {
     });
   };
 
+  const handleEventDeleted = (eventId) => {
+    setData((d) => ({ ...d, events: d.events.filter((e) => e.id !== eventId) }));
+  };
+
   // Heading of an event list. The first one also has the "New event" button,
   // in the same place as "New post" on the posts tab.
   const renderHeading = (title, isFirst) => (
     <div className="section-title">
       <h2 className="list-heading">{title}</h2>
-      {isFirst && isOwner && (
+      {isFirst && canManage && (
         <button className="btn btn-primary btn-sm" onClick={() => setShowCreate(true)}>
           <Icon name="plus" size={16} /> New event
         </button>
@@ -184,7 +234,11 @@ export default function CommunityDetailPage() {
         <div className="community-hero-text">
           <div className="community-hero-chips">
             {isOwner && <span className="chip chip-accent">★ You own this</span>}
-            {isMember && !isOwner && <span className="chip chip-primary">✓ Member</span>}
+            {isMember && !isOwner && (
+              <span className="chip chip-primary">
+                {role === "convener" ? "✓ Convener" : "✓ Member"}
+              </span>
+            )}
           </div>
           <h1>{community.name}</h1>
           <p className="muted">{community.description || "No description yet."}</p>
@@ -239,14 +293,14 @@ export default function CommunityDetailPage() {
             emoji="📅"
             title="No events yet"
             action={
-              isOwner && (
+              canManage && (
                 <button className="btn btn-primary" onClick={() => setShowCreate(true)}>
                   Create the first event
                 </button>
               )
             }
           >
-            {isOwner
+            {canManage
               ? "Plan something for your members, like a meetup, a workshop or a trip."
               : "When this community plans something, it will show up here."}
           </EmptyState>
@@ -276,15 +330,17 @@ export default function CommunityDetailPage() {
         />
       )}
 
-      {tab === "members" && isMember && <MembersTab communityId={community.id} />}
+      {tab === "members" && isMember && <MembersTab communityId={community.id} isOwner={isOwner} />}
 
       {openEvent && (
         <EventDrawer
           event={openEvent}
           communityName={community.name}
           isMember={isMember}
+          canManage={canManage}
           onClose={() => setOpenEvent(null)}
           onRsvpChange={handleRsvpChange}
+          onDeleted={handleEventDeleted}
         />
       )}
 

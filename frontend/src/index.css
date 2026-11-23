@@ -353,6 +353,14 @@ img {
   color: var(--text-faint);
 }
 
+.field-hint-error {
+  color: var(--danger);
+}
+
+.input[aria-invalid="true"] {
+  border-color: var(--danger);
+}
+
 .field-count {
   align-self: flex-end;
 }
@@ -382,6 +390,16 @@ img {
 .chip-primary {
   background: var(--primary-soft);
   color: var(--primary);
+}
+
+.chip-danger {
+  background: var(--danger-soft);
+  color: var(--danger);
+}
+
+.chip-warn {
+  background: var(--tint-sun);
+  color: var(--tint-sun-ink);
 }
 
 .chip-accent {
