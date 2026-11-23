@@ -7,13 +7,14 @@ import EmptyState from "../components/EmptyState";
 import Icon from "../components/Icon";
 import Spinner from "../components/Spinner";
 import useApi from "../hooks/useApi";
+import { leaveWarning } from "../utils/roles";
 import "./CommunitiesPage.css";
 
 const loadCommunities = () =>
   Promise.all([api.listCommunities(), api.getMyCommunities()]).then(
     ([all, mine]) => ({
       all,
-      // community id -> my role ("owner" / "member")
+      // community id -> my role ("owner" / "convener" / "member")
       roles: Object.fromEntries(mine.map((c) => [c.id, c.role])),
     }),
   );
@@ -55,7 +56,7 @@ export default function CommunitiesPage() {
 
   const handleLeave = (id) => {
     const name = data.all.find((c) => c.id === id)?.name;
-    if (window.confirm(`Leave ${name}? Your RSVPs for its events will be cancelled.`)) {
+    if (window.confirm(leaveWarning(name, data.roles[id]))) {
       runAction(id, api.leaveCommunity);
     }
   };

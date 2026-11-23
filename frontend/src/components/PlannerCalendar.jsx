@@ -24,6 +24,7 @@ export default function PlannerCalendar({
   events,
   communityNames,
   conflicts,
+  partners,
   selectedDay,
   onSelectDay,
   onOpen,
@@ -140,7 +141,7 @@ export default function PlannerCalendar({
         day={selectedDay}
         events={events}
         communityNames={communityNames}
-        conflicts={conflicts}
+        partners={partners}
         onOpen={onOpen}
         onJump={jumpToDay}
       />

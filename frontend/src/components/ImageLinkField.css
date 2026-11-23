@@ -1,0 +1,12 @@
+.image-link-preview {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: var(--radius-sm);
+  background: var(--surface-2);
+}
+
+.image-link-error {
+  font-size: 0.78rem;
+  color: var(--danger);
+}

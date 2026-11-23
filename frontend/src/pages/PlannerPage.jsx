@@ -8,7 +8,8 @@ import Icon from "../components/Icon";
 import Spinner from "../components/Spinner";
 import useApi from "../hooks/useApi";
 import { formatDay, isPast } from "../utils/format";
-import { dayLabel, findConflicts, groupByDay } from "../utils/schedule";
+import { canManageEvents } from "../utils/roles";
+import { clashPartners, dayLabel, findConflicts, groupByDay } from "../utils/schedule";
 import "./PlannerPage.css";
 
 // FullCalendar is big, so it is only downloaded when the planner needs it
@@ -21,7 +22,7 @@ const loadPlanner = () =>
     ([events, communities, mine]) => ({
       events,
       communityNames: Object.fromEntries(communities.map((c) => [c.id, c.name])),
-      memberOf: new Set(mine.map((c) => c.id)),
+      roles: new Map(mine.map((c) => [c.id, c.role])),
     }),
   );
 
@@ -32,13 +33,14 @@ export default function PlannerPage() {
   const [view, setView] = useState("upcoming");
   const [openEvent, setOpenEvent] = useState(null);
 
-  const { upcoming, past, conflicts } = useMemo(() => {
+  const { upcoming, past, conflicts, partners } = useMemo(() => {
     const events = data?.events || [];
     const upcoming = events.filter((e) => !isPast(e));
     return {
       upcoming,
       past: events.filter(isPast),
       conflicts: findConflicts(upcoming),
+      partners: clashPartners(upcoming),
     };
   }, [data]);
 
@@ -56,6 +58,10 @@ export default function PlannerPage() {
       const others = d.events.filter((e) => e.id !== eventId);
       return { ...d, events: going && openEvent ? [...others, openEvent] : others };
     });
+  };
+
+  const handleEventDeleted = (eventId) => {
+    setData((d) => ({ ...d, events: d.events.filter((e) => e.id !== eventId) }));
   };
 
   return (
@@ -96,6 +102,7 @@ export default function PlannerPage() {
               events={data.events}
               communityNames={data.communityNames}
               conflicts={conflicts}
+              partners={partners}
               selectedDay={selectedDay}
               onSelectDay={setSelectedDay}
               onOpen={setOpenEvent}
@@ -172,7 +179,7 @@ export default function PlannerPage() {
                         key={ev.id}
                         event={ev}
                         communityName={data.communityNames[ev.community_id]}
-                        conflict={view === "upcoming" && conflicts.has(ev.id)}
+                        clashesWith={view === "upcoming" ? partners.get(ev.id) : undefined}
                         onOpen={setOpenEvent}
                       />
                     ))}
@@ -188,9 +195,11 @@ export default function PlannerPage() {
         <EventDrawer
           event={openEvent}
           communityName={data.communityNames[openEvent.community_id]}
-          isMember={data.memberOf.has(openEvent.community_id)}
+          isMember={data.roles.has(openEvent.community_id)}
+          canManage={canManageEvents(data.roles.get(openEvent.community_id))}
           onClose={() => setOpenEvent(null)}
           onRsvpChange={handleRsvpChange}
+          onDeleted={handleEventDeleted}
         />
       )}
     </>

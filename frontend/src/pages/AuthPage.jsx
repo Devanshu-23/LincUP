@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from "react";
 import { Navigate, useLocation, useNavigate } from "react-router-dom";
 import { api } from "../api/client";
+import PasswordInput from "../components/PasswordInput";
 import VerifyEmailStep from "../components/VerifyEmailStep";
 import { useAuth } from "../context/AuthContext";
 import { DEGREE_PROGRAMS, DEPARTMENTS, STUDY_YEARS } from "../utils/constants";
@@ -13,6 +14,7 @@ const EMPTY_SIGNUP = {
   full_name: "",
   email: "",
   password: "",
+  confirm_password: "", // only checked here, never sent
   department: "",
   degree_program: "",
   study_year: "",
@@ -28,6 +30,7 @@ function validateSignup(form) {
   if (!/\d/.test(form.password)) return "Password must contain a digit.";
   if (!/[^a-zA-Z0-9]/.test(form.password))
     return "Password must contain a special character.";
+  if (form.confirm_password !== form.password) return "The two passwords don't match.";
   if (!form.department) return "Please choose your department.";
   if (!form.degree_program) return "Please choose your degree program.";
   if (!form.study_year) return "Please choose your year of study.";
@@ -82,6 +85,11 @@ export default function AuthPage() {
 
   const email = signupForm.email.trim().toLowerCase();
   const verifying = mode === "signup" && step === "verify";
+  const { password, confirm_password: confirm } = signupForm;
+  const passwordsMatch = confirm !== "" && confirm === password;
+  // Wrong as soon as it can no longer become the password, not while still typing it
+  const passwordsDiffer =
+    confirm !== "" && !passwordsMatch && (confirm.length >= password.length || !password.startsWith(confirm));
 
   const clearMessages = () => {
     setError("");
@@ -151,8 +159,10 @@ export default function AuthPage() {
     clearMessages();
     setBusy("verify");
     try {
+      // eslint-disable-next-line no-unused-vars
+      const { confirm_password: _check, ...details } = signupForm;
       await register({
-        ...signupForm,
+        ...details,
         full_name: signupForm.full_name.trim(),
         email,
         study_year: Number(signupForm.study_year),
@@ -313,10 +323,8 @@ export default function AuthPage() {
               </div>
               <div className="field">
                 <label htmlFor="login-password">Password</label>
-                <input
+                <PasswordInput
                   id="login-password"
-                  className="input"
-                  type="password"
                   autoComplete="current-password"
                   value={loginForm.password}
                   onChange={(e) =>
@@ -360,17 +368,39 @@ export default function AuthPage() {
               </div>
               <div className="field">
                 <label htmlFor="su-password">Password</label>
-                <input
+                <PasswordInput
                   id="su-password"
-                  className="input"
-                  type="password"
                   autoComplete="new-password"
                   maxLength={128}
+                  aria-describedby="su-password-hint"
                   value={signupForm.password}
                   onChange={updateSignup("password")}
                 />
-                <span className="field-hint">
+                <span id="su-password-hint" className="field-hint">
                   8+ characters with a letter, a digit and a special character.
+                </span>
+              </div>
+              <div className="field">
+                <label htmlFor="su-confirm">Confirm password</label>
+                <PasswordInput
+                  id="su-confirm"
+                  autoComplete="new-password"
+                  maxLength={128}
+                  aria-invalid={passwordsDiffer}
+                  aria-describedby="su-confirm-hint"
+                  value={signupForm.confirm_password}
+                  onChange={updateSignup("confirm_password")}
+                />
+                <span
+                  id="su-confirm-hint"
+                  className={`field-hint ${passwordsDiffer ? "field-hint-error" : ""}`}
+                  aria-live="polite"
+                >
+                  {passwordsDiffer
+                    ? "Doesn't match the password above."
+                    : passwordsMatch
+                      ? "✓ Passwords match"
+                      : "Type the same password again."}
                 </span>
               </div>
               <div className="field">

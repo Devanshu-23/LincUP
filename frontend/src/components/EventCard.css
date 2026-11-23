@@ -24,6 +24,24 @@
   transform: translateY(-1px);
 }
 
+/* double-booked: red outline and edge, like the calendar */
+.event-card.is-clash,
+.event-card.is-clash:hover {
+  border-color: var(--danger);
+  box-shadow: inset 5px 0 0 var(--danger);
+}
+
+.event-card.is-clash:hover {
+  box-shadow:
+    inset 5px 0 0 var(--danger),
+    var(--shadow);
+}
+
+.chip-clash {
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
 .event-card.is-past {
   opacity: 0.65;
 }

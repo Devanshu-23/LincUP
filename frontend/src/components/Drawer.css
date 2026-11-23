@@ -152,6 +152,21 @@
   margin: 0.8rem 0 0;
 }
 
+/* ---------- Owner / convener actions ---------- */
+
+.drawer-manage {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+  padding: 0.7rem 1rem;
+  margin: -0.8rem 0 1.6rem;
+  border: 1.5px dashed var(--border);
+  border-radius: var(--radius);
+  font-size: 0.86rem;
+}
+
 /* ---------- Comments ---------- */
 
 .comments h3 {

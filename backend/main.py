@@ -158,7 +158,7 @@ def login(
         httponly=True,
         secure=COOKIE_SECURE,
         samesite="lax",
-        max_age=30 * 60,
+        max_age=30 * 60, # setting the cookie validity for 30 mins
         path="/",
     )
 
@@ -614,7 +614,80 @@ def leave_community(
         "community_id": community_id,
     }
 
-#Event creation by community creator only
+
+#Owner nominates a community member as a convener
+
+@app.post("/communities/{community_id}/conveners/{user_id}")
+def nominate_convener(
+    community_id: int,
+    user_id: int,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    #Check that the community exists before looking for making a convener
+    community = (
+        db.query(Community)
+        .filter(Community.id == community_id)
+        .first()
+    )
+
+    if community is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Community not found",
+        )
+
+    if community.created_by != current_user.id:
+        raise HTTPException(
+            status_code=status.HTTP_403_FORBIDDEN,
+            detail="Only the community owner can nominate conveners",
+        )
+
+    membership = (
+        db.query(Membership)
+        .filter(
+            Membership.community_id == community_id,
+            Membership.user_id == user_id,
+        )
+        .first()
+    )
+
+    if membership is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="This user is not a member of this community",
+        )
+
+    if membership.role == "owner":
+        raise HTTPException(
+            status_code=status.HTTP_400_BAD_REQUEST,
+            detail="The owner already has full permissions",
+        )
+
+    if membership.role == "convener":
+        raise HTTPException(
+            status_code=status.HTTP_409_CONFLICT,
+            detail="This user is already a convener",
+        )
+
+    membership.role = "convener" # Member promoted as convener
+
+    try:
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to nominate convener",
+        )
+    return {
+        "message": "User nominated as convener",
+        "community_id": community_id,
+        "user_id": user_id,
+        "role": membership.role,
+    }
+
+#Event creation by community creator and conveners
 
 @app.post(
     "/communities/{community_id}/events",
@@ -638,15 +711,8 @@ def create_community_event(
             detail="Community not found",
         )
 
-    # Only the creator of this community may create its events
-    if community.created_by != current_user.id:
-        raise HTTPException(
-            status_code=status.HTTP_403_FORBIDDEN,
-            detail=(
-                "You don't have permission to create events for "
-                "this community. Please contact the community creator."
-            ),
-        )
+    # Only the owner or a convener of this community cab create its events
+    verify_community_privilege(community_id, current_user, db)
 
     event = Event(
         community_id=community.id,
@@ -656,6 +722,7 @@ def create_community_event(
         start_at=request.start_at,
         end_at=request.end_at,
         location=request.location,
+        image_url=request.image_url,
     )
 
     try:
@@ -682,6 +749,52 @@ def create_community_event(
     }
 
 #Fetch events pertaining to a community
+
+
+#Delete an event (only the community owner or its conveners)
+
+@app.delete("/events/{event_id}")
+def delete_event(
+    event_id: int,
+    current_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    # 1. Find the event
+    event = (
+        db.query(Event)
+        .filter(Event.id == event_id)
+        .first()
+    )
+
+    if event is None:
+        raise HTTPException(
+            status_code=status.HTTP_404_NOT_FOUND,
+            detail="Event not found",
+        )
+
+    # 2. Only the owner or a convener of this event's community may delete it
+    verify_community_privilege(event.community_id, current_user, db)
+
+    try:
+        # 3. Remove everything that points to this event
+        db.query(EventRSVP).filter(EventRSVP.event_id == event_id).delete(
+            synchronize_session=False
+        )
+        db.query(Comment).filter(Comment.event_id == event_id).delete(
+            synchronize_session=False
+        )
+        db.delete(event)
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise HTTPException(
+            status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
+            detail="Failed to delete event",
+        )
+    return {
+        "message": "Event deleted successfully",
+        "event_id": event_id,
+    }
 
 @app.get("/communities/{community_id}/events")
 def list_community_events(

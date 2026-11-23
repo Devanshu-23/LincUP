@@ -10,7 +10,8 @@ import Spinner from "../components/Spinner";
 import { useAuth } from "../context/AuthContext";
 import useApi from "../hooks/useApi";
 import { isPast } from "../utils/format";
-import { byStart } from "../utils/schedule";
+import { canManageEvents } from "../utils/roles";
+import { byStart, clashPartners, overlapsWith } from "../utils/schedule";
 import "./FeedPage.css";
 
 // TODO: switch to GET /users/:id/feed once the backend adds it.
@@ -56,6 +57,8 @@ export default function FeedPage() {
   const firstName = user.full_name.split(" ")[0];
   const { myCommunities, myUpcoming, communityEvents, goingIds, communityNames } = data;
   const discover = communityEvents.filter((e) => !goingIds.has(e.id));
+  const clashes = clashPartners(myUpcoming); // all plans, not just the three shown
+  const clashCount = clashes.size;
 
   const handleRsvpChange = (eventId, going) => {
     setData((d) => {
@@ -75,6 +78,16 @@ export default function FeedPage() {
     });
   };
 
+  const roleIn = (communityId) => myCommunities.find((c) => c.id === communityId)?.role;
+
+  const handleEventDeleted = (eventId) => {
+    setData((d) => ({
+      ...d,
+      myUpcoming: d.myUpcoming.filter((e) => e.id !== eventId),
+      communityEvents: d.communityEvents.filter((e) => e.id !== eventId),
+    }));
+  };
+
   return (
     <>
       <section className="feed-hero">
@@ -88,6 +101,12 @@ export default function FeedPage() {
             {discover.length > 0 &&
               `${discover.length} more ${discover.length === 1 ? "event is" : "events are"} happening in your communities.`}
           </p>
+          {clashCount > 0 && (
+            <Link to="/planner" className="feed-clash-alert">
+              <Icon name="alert" size={18} />
+              {clashCount} of your plans clash. Review them in the Planner
+            </Link>
+          )}
         </div>
         <div className="feed-stats">
           <div>
@@ -138,6 +157,7 @@ export default function FeedPage() {
                       event={ev}
                       communityName={communityNames[ev.community_id]}
                       going
+                      clashesWith={clashes.get(ev.id)}
                       onOpen={setOpenEvent}
                     />
                   ))}
@@ -160,6 +180,7 @@ export default function FeedPage() {
                       key={ev.id}
                       event={ev}
                       communityName={communityNames[ev.community_id]}
+                      overlapsPlans={overlapsWith(ev, myUpcoming)}
                       onOpen={setOpenEvent}
                     />
                   ))}
@@ -189,8 +210,10 @@ export default function FeedPage() {
           event={openEvent}
           communityName={communityNames[openEvent.community_id]}
           isMember
+          canManage={canManageEvents(roleIn(openEvent.community_id))}
           onClose={() => setOpenEvent(null)}
           onRsvpChange={handleRsvpChange}
+          onDeleted={handleEventDeleted}
         />
       )}
     </>

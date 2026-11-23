@@ -85,6 +85,8 @@ export const api = {
   joinCommunity: (id) => request(`/communities/${id}/join`, { method: "POST" }),
   leaveCommunity: (id) =>
     request(`/communities/${id}/leave`, { method: "DELETE" }),
+  nominateConvener: (communityId, userId) =>
+    request(`/communities/${communityId}/conveners/${userId}`, { method: "POST" }),
   getCommunityMembers: (id) => request(`/communities/${id}/members`),
 
   // ----- Events -----
@@ -94,6 +96,7 @@ export const api = {
       method: "POST",
       body: payload,
     }),
+  deleteEvent: (eventId) => request(`/events/${eventId}`, { method: "DELETE" }),
   toggleRsvp: (eventId) => request(`/events/${eventId}/rsvp`, { method: "POST" }),
   getEventRsvps: (eventId) => request(`/events/${eventId}/rsvps`),
 
