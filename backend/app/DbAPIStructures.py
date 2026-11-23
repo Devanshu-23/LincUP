@@ -2,6 +2,7 @@
 from pydantic import BaseModel, EmailStr, Field, field_validator, model_validator
 from typing import Optional
 from datetime import datetime
+from typing import List  # oh no igot this from web , do i need to mark this too, oh no
 
 CANNOT_BE_NULL = "This field cannot be empty"
 
@@ -142,4 +143,14 @@ class UserProfileUpdate(BaseModel):
 
 class CommentCreate(BaseModel):
     content: str = Field(min_length = 1, max_length=200)
+
+class PollSlot(BaseModel):
+    start_at: datetime
+    end_at: datetime
+
+class PollCreate(BaseModel):
+    options: List[PollSlot] = Field(min_length=1, max_length=3) #1 is just like interested
+
+class PollVoteCreate(BaseModel):
+    option_id: int
     

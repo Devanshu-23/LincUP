@@ -5,6 +5,7 @@ import useApi from "../hooks/useApi";
 import { timeAgo } from "../utils/format";
 import Avatar from "./Avatar";
 import Icon from "./Icon";
+import PostPoll from "./PostPoll";
 
 const MAX_COMMENT = 200; // backend limit (CommentCreate.content)
 
@@ -14,7 +15,7 @@ const THREADS = {
 };
 
 // Discussion thread under an event or a post.
-export default function CommentsSection({ target, id }) {
+export default function CommentsSection({ target, id, post}) {
   const { user } = useAuth();
   const { data: comments, loading, error, setData } = useApi(
     () => THREADS[target].load(id),
@@ -53,11 +54,18 @@ export default function CommentsSection({ target, id }) {
   };
 
   return (
+    
     <section className="comments">
       <h3>
         <Icon name="chat" size={18} /> Discussion
         {comments && <span className="count">{comments.length}</span>}
       </h3>
+      {target === "post" && (
+        <PostPoll
+          postId={id}
+          ownerId={post?.created_by}
+        />
+      )}
 
       {loading ? (
         <p className="muted">Loading comments…</p>

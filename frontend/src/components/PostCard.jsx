@@ -3,7 +3,6 @@ import Avatar from "./Avatar";
 import Icon from "./Icon";
 import "./PostCard.css";
 
-// General post preview. Click opens the post with its comments.
 export default function PostCard({ post, onOpen }) {
   return (
     <button className="post-card" onClick={() => onOpen(post)}>

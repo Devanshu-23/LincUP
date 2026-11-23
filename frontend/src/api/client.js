@@ -61,7 +61,7 @@ async function request(path, { method = "GET", body } = {}) {
 }
 
 export const api = {
-  // ----- Auth -----
+  // Auth 
   // Emails a 4-digit code, which then goes in the register payload as `otp`
   sendOtp: (email) => request("/register/sendotp", { method: "POST", body: { email } }),
   register: (payload) => request("/register", { method: "POST", body: payload }),
@@ -70,14 +70,14 @@ export const api = {
   logout: () => request("/logout", { method: "POST" }),
   sessionCheck: () => request("/session-check"),
 
-  // ----- Profile -----
+  // Profile 
   getMe: () => request("/me"),
   updateMe: (payload) => request("/me", { method: "PUT", body: payload }),
   getUser: (userId) => request(`/users/${userId}`),
   getMyCommunities: () => request("/me/communities"),
   getMyEvents: () => request("/me/events"),
 
-  // ----- Communities -----
+  // Communities 
   listCommunities: () => request("/communities"),
   getCommunity: (id) => request(`/communities/${id}`),
   createCommunity: (payload) =>
@@ -87,7 +87,7 @@ export const api = {
     request(`/communities/${id}/leave`, { method: "DELETE" }),
   getCommunityMembers: (id) => request(`/communities/${id}/members`),
 
-  // ----- Events -----
+  // Events 
   listCommunityEvents: (id) => request(`/communities/${id}/events`),
   createEvent: (communityId, payload) =>
     request(`/communities/${communityId}/events`, {
@@ -97,7 +97,7 @@ export const api = {
   toggleRsvp: (eventId) => request(`/events/${eventId}/rsvp`, { method: "POST" }),
   getEventRsvps: (eventId) => request(`/events/${eventId}/rsvps`),
 
-  // ----- Posts -----
+  // Posts 
   listCommunityPosts: (id) => request(`/communities/${id}/posts`),
   createPost: (communityId, payload) =>
     request(`/communities/${communityId}/posts`, {
@@ -105,7 +105,7 @@ export const api = {
       body: payload,
     }),
 
-  // ----- Comments -----
+  // Comments 
   getEventComments: (eventId) => request(`/events/${eventId}/comments`),
   addEventComment: (eventId, content) =>
     request(`/events/${eventId}/comment`, {
@@ -117,5 +117,26 @@ export const api = {
     request(`/posts/${postId}/comment`, {
       method: "POST",
       body: { content },
+    }),
+
+// Post Polls
+  getPostPoll: (postId) =>
+    request(`/posts/${postId}/poll`),
+  
+  createPostPoll: (postId, payload) =>
+    request(`/posts/${postId}/poll`, {
+      method: "POST",
+      body: payload,
+    }),
+  
+  votePostPoll: (postId, payload) =>
+    request(`/posts/${postId}/poll/vote`, {
+      method: "POST",
+      body: payload,
+    }),
+  
+  finalizePostPoll: (postId) =>
+    request(`/posts/${postId}/poll/finalize`, {
+      method: "POST",
     }),
 };

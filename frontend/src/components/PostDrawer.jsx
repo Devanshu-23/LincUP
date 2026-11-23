@@ -21,7 +21,7 @@ export default function PostDrawer({ post, communityName, onClose }) {
 
       <p className="drawer-description">{post.description}</p>
 
-      <CommentsSection target="post" id={post.id} />
+      <CommentsSection target="post" id={post.id} post={post} />
     </Drawer>
   );
 }

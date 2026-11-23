@@ -3,8 +3,8 @@ load_dotenv()
 from fastapi import FastAPI, Depends, HTTPException, status, Request, Response
 from sqlalchemy.orm import Session
 from app.database import SessionLocal
-from app.models import User, Community, Membership, Event, Post, EventRSVP, Comment
-from app.DbAPIStructures import UserCreate, UserLogin, CommunityCreate, EventCreate, UserProfileUpdate, CommentCreate, PostCreate, OTPCreate
+from app.models import User, Community, Membership, Event, Post, EventRSVP, Comment, PollOption, PollVote
+from app.DbAPIStructures import UserCreate, UserLogin, CommunityCreate, EventCreate, UserProfileUpdate, CommentCreate, PostCreate, OTPCreate, PollCreate, PollVoteCreate
 from app.security import hash_password, verify_password
 from app.otp_service import create_otp, send_otp, check_otp 
 from fastapi.security import OAuth2PasswordBearer
@@ -1085,6 +1085,39 @@ def get_my_events(
             "image_url": event.image_url,
         })
 
+    planned_posts = (db.query(Post).filter(Post.start_at.is_not(None)).all())
+
+    for post in planned_posts:
+        created = post.created_by == current_user.id
+        voted = (
+            db.query(PollVote).join(PollOption, PollOption.id == PollVote.option_id)
+            .filter(
+                PollVote.post_id == post.id,
+                PollVote.user_id == current_user.id,
+                PollOption.start_at == post.start_at,
+                PollOption.end_at == post.end_at,
+            )
+            .first()
+            is not None
+        )
+        if created or voted :
+            events.append({
+                "id": -post.id,          
+                "post_id": post.id,
+                "is_post": True,
+                "community_id": post.community_id,
+                "created_by": post.created_by,
+                "title": f"[Hangout] {post.title}",
+                "description": post.description,
+                "start_at": post.start_at,
+                "end_at": post.end_at,
+                "location": "TBA",
+                "image_url": post.image_url,
+            })
+
+
+        
+
     return events
 
 #Endpoint for getting list of all participants of a community
@@ -1303,9 +1336,9 @@ def post_comments(
     post_id: int, 
     db: Session = Depends(get_db)
 ):
-    event = db.query(Post).filter(Post.id == post_id).first()
-    if event is None:
-        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No such event exist.")
+    post = db.query(Post).filter(Post.id == post_id).first()
+    if post is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No such post exist.")
 
     comments = db.query(Comment).filter(Comment.post_id == post_id).order_by(Comment.created_at.asc()).all()
 
@@ -1324,7 +1357,143 @@ def post_comments(
     ]
 
 
+@app.post("/posts/{post_id}/poll")
+def post_poll(
+    post_id: int,
+    req: PollCreate,
+    curr_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    post = db.query(Post).filter(Post.id == post_id).first()
+    if post is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No such post exist.")
+
+    if post.created_by != curr_user.id:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Not authorized")
+
+    try:
+        options = []
+        db.query(PollVote).filter(
+    PollVote.option_id.in_(
+        db.query(PollOption.id).filter(PollOption.post_id == post_id))).delete()
+        db.query(PollOption).filter(PollOption.post_id == post_id).delete()
+        for option in req.options:
+            opt = PollOption(
+                post_id = post_id,
+                start_at = option.start_at,
+                end_at = option.end_at,
+            )
+            db.add(opt)
+            options.append(opt)
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Poll not made")
+
+    return [
+        {
+            "id": opt.id,
+            "start_at": opt.start_at,
+            "end_at": opt.end_at,
+            "votes": 0,
+        }
+        for opt in options
+    ]
+
+@app.get("/posts/{post_id}/poll")
+def get_poll(
+    post_id: int,
+    curr_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    post = db.query(Post).filter(Post.id == post_id).first()
+    if post is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No such post exist.")   
+
+    options = db.query(PollOption).filter(PollOption.post_id == post_id).order_by(PollOption.id).all()
+    # if not options:
+    #     raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="NO POLL?")
     
+    voted = (db.query(PollVote).filter(PollVote.post_id == post_id,PollVote.user_id == curr_user.id,).first())
+
+    result = []
+    for opt in options:
+        count = db.query(PollVote).filter(PollVote.option_id == opt.id).count()
+        result.append({
+            "id": opt.id,
+            "start_at": opt.start_at,
+            "end_at": opt.end_at,
+            "votes": count,
+        })
+
+    return {
+        "post_id": post_id,
+        "voted_option": voted.option_id if voted else None,
+        "options": result,
+    }
+
+@app.post("/posts/{post_id}/poll/vote")
+def vote(
+    post_id: int,
+    req: PollVoteCreate,
+    curr_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db),
+):
+    option = (db.query(PollOption).filter(PollOption.id == req.option_id,PollOption.post_id == post_id,).first())
+    if option is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Poll option not found")
+
+    vote = (db.query(PollVote).filter(PollVote.post_id == post_id,PollVote.user_id == curr_user.id,).first())
+
+    try:
+        if vote:
+            vote.option_id = req.option_id
+        else:
+            db.add(PollVote(
+                post_id=post_id,
+                option_id=req.option_id,
+                user_id=curr_user.id,
+            ))
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="Failed to record vote")
+
+    return {"message": "Vote recorded", "option_id": req.option_id}
+    
+
+@app.post("/posts/{post_id}/poll/finalize")
+def finalize(
+    post_id: int,
+    curr_user: User = Depends(get_current_user),
+    db: Session = Depends(get_db)
+):
+    post = db.query(Post).filter(Post.id == post_id).first()
+    if post is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No such post exist.")   
+    if post.created_by != curr_user.id:
+        raise HTTPException(status_code=status.HTTP_401_UNAUTHORIZED, detail="Not authorized")
+
+    options = db.query(PollOption).filter(PollOption.post_id == post_id).order_by(PollOption.id).all()
+    if not options:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="No poll found")
+    choosen = max(options, key=lambda opt: db.query(PollVote).filter(PollVote.option_id == opt.id).count())
+
+    try: 
+        post.start_at = choosen.start_at
+        post.end_at = choosen.end_at
+        db.commit()
+    except Exception:
+        db.rollback()
+        raise HTTPException(status_code=status.HTTP_500_INTERNAL_SERVER_ERROR, detail="poll not finalized")
+
+    
+    return {
+        "message": "Poll finalized",
+        "post_id": post_id,
+        "start_at": post.start_at,
+        "end_at": post.end_at
+    }
     
     
     

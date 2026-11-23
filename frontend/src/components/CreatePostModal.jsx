@@ -2,8 +2,6 @@ import { useState } from "react";
 import { api } from "../api/client";
 import Modal from "./Modal";
 
-// The API accepts 1000 characters but the posts.description column holds 500,
-// so anything longer fails with a 500 error when saved.
 const MAX_DESCRIPTION = 500;
 
 export default function CreatePostModal({ communityId, onClose, onCreated }) {

@@ -121,7 +121,9 @@ class Post(Base):
     created_by = Column(Integer, ForeignKey("users.id"), nullable=False)
     title = Column(String(150), nullable=False)
     description = Column(String(500), nullable=False)
-    image_url = Column(String(500), nullable=True) 
+    image_url = Column(String(500), nullable=True) #not using for now, not really sure if we even need this, i mena might need
+    start_at = Column(DateTime(timezone=True), nullable=True)
+    end_at = Column(DateTime(timezone=True), nullable=True)
     created_at = Column(
         DateTime(timezone=True),
         default=lambda: datetime.now(timezone.utc),
@@ -149,9 +151,28 @@ class Comment(Base):
     post = relationship("Post")
 
     __table_args__ = (
-        CheckConstraint (
-            "(event_id IS NOT NULL AND post_id IS NULL) OR (event_id IS NULL AND post_id IS NOT NULL)", name = "post/event_comment"
-        )
+        CheckConstraint ("(event_id IS NOT NULL AND post_id IS NULL) OR (event_id IS NULL AND post_id IS NOT NULL)")
+    ),
+
+class PollOption(Base):
+    __tablename__ = "poll_options"
+
+    id = Column(Integer, primary_key=True, index=True)
+    post_id = Column(Integer, ForeignKey("posts.id"), nullable=False)
+    start_at = Column(DateTime(timezone=True), nullable=False)
+    end_at = Column(DateTime(timezone=True), nullable=False)
+
+
+class PollVote(Base):
+    __tablename__ = "poll_vote"
+
+    id = Column(Integer, primary_key=True, index=True)
+    user_id = Column(Integer, ForeignKey("users.id"), nullable=False)
+    post_id = Column(Integer, ForeignKey("posts.id"), nullable=False)
+    option_id = Column(Integer, ForeignKey("poll_options.id"), nullable=False)
+
+    __table_args__ = (
+        UniqueConstraint("post_id", "user_id")
     ),
 
 
