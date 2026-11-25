@@ -14,7 +14,7 @@ import { canManageEvents } from "../utils/roles";
 import { byStart, clashPartners, overlapsWith } from "../utils/schedule";
 import "./FeedPage.css";
 
-// TODO: switch to GET /users/:id/feed once the backend adds it.
+
 // Until then, build the feed from my communities + their events.
 async function loadFeed() {
   const [myCommunities, myEvents] = await Promise.all([

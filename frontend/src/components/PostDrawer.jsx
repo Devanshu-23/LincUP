@@ -2,7 +2,6 @@ import Avatar from "./Avatar";
 import CommentsSection from "./CommentsSection";
 import Drawer from "./Drawer";
 
-// Full text of a general post and its comments thread.
 export default function PostDrawer({ post, communityName, onClose }) {
   return (
     <Drawer

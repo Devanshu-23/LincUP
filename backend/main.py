@@ -49,9 +49,6 @@ def home():
     return {"message": "Welcome to LincUP API"}
 
 
-# @app.get("/hello")
-# def hello():
-#     return {"message": "Hello, LincUP!"}
 
 @app.post("/register/sendotp")
 def register_otp(
@@ -542,7 +539,6 @@ def leave_community(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
-    # Check whether the community exists
     community = (
         db.query(Community)
         .filter(Community.id == community_id)
@@ -555,7 +551,6 @@ def leave_community(
             detail="Community not found",
         )
 
-    # Check whether the user is a member of this community
     membership = (
         db.query(Membership)
         .filter(
@@ -571,7 +566,6 @@ def leave_community(
             detail="You are not a member of this community",
         )
 
-    # Prevent the community owner from leaving 
     if community.created_by == current_user.id:
         raise HTTPException(
             status_code=status.HTTP_403_FORBIDDEN,
@@ -579,27 +573,22 @@ def leave_community(
         )
 
     try:
-        # Find all events belonging to this community
+
         community_event_ids = (
             db.query(Event.id)
             .filter(Event.community_id == community_id)
             .subquery()
         )
 
-        # Cancel all active event RSVPs made by this user
         db.query(EventRSVP).filter(
             EventRSVP.user_id == current_user.id,
             EventRSVP.event_id.in_(community_event_ids),
             # EventRSVP.status == "going",
         ).delete(
-            # {EventRSVP.status: "cancelled"},
             synchronize_session=False,
         )
 
-        # Remove the user's community membership
         db.delete(membership)
-
-        # Save both changes together
         db.commit()
 
     except Exception:
@@ -748,9 +737,6 @@ def create_community_event(
         "image_url": event.image_url,
     }
 
-#Fetch events pertaining to a community
-
-
 #Delete an event (only the community owner or its conveners)
 
 @app.delete("/events/{event_id}")
@@ -759,24 +745,20 @@ def delete_event(
     current_user: User = Depends(get_current_user),
     db: Session = Depends(get_db),
 ):
-    # 1. Find the event
     event = (
         db.query(Event)
         .filter(Event.id == event_id)
         .first()
     )
-
     if event is None:
         raise HTTPException(
             status_code=status.HTTP_404_NOT_FOUND,
             detail="Event not found",
         )
 
-    # 2. Only the owner or a convener of this event's community may delete it
     verify_community_privilege(event.community_id, current_user, db)
 
     try:
-        # 3. Remove everything that points to this event
         db.query(EventRSVP).filter(EventRSVP.event_id == event_id).delete(
             synchronize_session=False
         )
@@ -795,6 +777,8 @@ def delete_event(
         "message": "Event deleted successfully",
         "event_id": event_id,
     }
+
+#Fetch events pertaining to a community
 
 @app.get("/communities/{community_id}/events")
 def list_community_events(
@@ -837,7 +821,7 @@ def list_community_events(
         for event in events
     ]
 
-# ikf
+
 @app.post("/communities/{community_id}/posts", status_code=status.HTTP_201_CREATED)
 def create_community_post(
     community_id: int,
@@ -990,62 +974,6 @@ def attend_event(
             detail="Failed to register rsvp",
         )
 
-
-#API to choose to abstain from attending the event which was previously opted to attend
-# tried going/notgoing in single api , will use this again if that really didnt work out as planned
-# @app.delete("/events/{event_id}/attend")
-# def cancel_event_attendance(
-#     event_id: int,
-#     current_user: User = Depends(get_current_user),
-#     db: Session = Depends(get_db),
-# ):
-#     # Check whether the event exists
-#     event = (
-#         db.query(Event)
-#         .filter(Event.id == event_id)
-#         .first()
-#     )
-
-#     if event is None:
-#         raise HTTPException(
-#             status_code=status.HTTP_404_NOT_FOUND,
-#             detail="Event not found",
-#         )
-
-#     # Find this user's rsvp record
-#     rsvp = (
-#         db.query(EventRSVP)
-#         .filter(
-#             EventRSVP.event_id == event_id,
-#             EventRSVP.user_id == current_user.id,
-#         )
-#         .first()
-#     )
-
-#     if rsvp is None or rsvp.status != "going":
-#         raise HTTPException(
-#             status_code=status.HTTP_409_CONFLICT,
-#             detail="You are not currently attending this event",
-#         )
-
-#     # Change status instead of deleting the record
-#     rsvp.status = "cancelled"
-
-#     try:
-#         db.commit()
-#     except Exception:
-#         db.rollback()
-#         raise HTTPException(
-#             status_code=status.HTTP_500_INTERNAL_SERVER_ERROR,
-#             detail="Failed to cancel rsvp",
-#         )
-
-#     return {
-#         "message": "Attendance successfully cancelled",
-#         "event_id": event_id,
-#         "user_id": current_user.id,
-#         "status": rsvp.status,
-#     }
 
 #Events being attended by a specific logged in user
 

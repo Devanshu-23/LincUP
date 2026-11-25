@@ -36,11 +36,11 @@
 
 ## 2. Navigation Flow & Pages
 
-![1794404341151](image/design_doc/1794404341151.png)
+![1795584253348](image/design_doc/1795584253348.png)
 
 ### Home page tabs
 
-Tab 1: Home Feed (`/home`) 
+Tab 1: Home Feed (`/home`)
 
 - Upcoming RSVP'd activities and posts
 - Joined community cards
@@ -102,7 +102,7 @@ Comments Drawer
 - id, community\_id, title, content
 - location, event\_time, author\_id, created\_at
 
-### RSVPs (D) 
+### RSVPs (D)
 
 - id, user\_id, activity\_id, post\_id
 - created\_at
